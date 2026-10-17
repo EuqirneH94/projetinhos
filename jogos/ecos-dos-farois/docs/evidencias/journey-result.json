@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "method": "Cliente WebSocket em tempo real, sem teleporte ou mutação da simulação. Movimento respeita os obstáculos compartilhados.",
+  "quests": 2,
+  "fragments": [
+    "eco-1",
+    "eco-2",
+    "eco-3"
+  ],
+  "boss": true,
+  "restored": true,
+  "choice": "flow",
+  "coins": 113,
+  "level": 4,
+  "weapon": "dawnSword",
+  "restartedAndResumed": true,
+  "elapsedScope": "Jogo local em Linux/Node 24. Não substitui teste de Windows ou carga MMORPG."
+}

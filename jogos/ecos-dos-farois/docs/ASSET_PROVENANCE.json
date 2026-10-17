@@ -1,0 +1,34 @@
+{
+  "project": "Ecos dos Faróis",
+  "release": "0.3.0-alpha",
+  "visuals": {
+    "method": "Geometria, materiais, textura, animação procedural e interface criados em código para esta entrega.",
+    "external_3d_assets": [],
+    "reference_art_not_bundled": true,
+    "asset_pipeline": {
+      "loader": "GLTFLoader, same-origin resources with fallback",
+      "source": "scripts/create-resonator-asset.mjs",
+      "provenance": "client/public/art/PROVENANCE.json",
+      "status": "original provisional representative architectural asset; not a final hero rig"
+    }
+  },
+  "audio": {
+    "source": "Laboratório de Áudio V1.1 da mesma conversa",
+    "method": "Síntese original em Python/NumPy/SciPy e síntese Web Audio",
+    "third_party_samples": [],
+    "unchanged_source_samples": 7,
+    "voice_recordings": "16 PT-BR dialogue cues have no recording; subtitle-only, no TTS claim"
+  },
+  "runtime_dependencies": [
+    {
+      "name": "Three.js",
+      "version": "0.186.1",
+      "license": "MIT"
+    },
+    {
+      "name": "ws",
+      "version": "8.22.0",
+      "license": "MIT"
+    }
+  ]
+}

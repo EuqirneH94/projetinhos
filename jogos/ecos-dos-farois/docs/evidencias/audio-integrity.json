@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "file": "01_farol_estavel.wav",
+      "sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "02_farol_enfraquecido.wav",
+      "sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "03_farol_critico.wav",
+      "sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "04_descarga_arcana.mp3",
+      "sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "05_barreira_protetora.mp3",
+      "sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "06_flecha_especial.mp3",
+      "sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+      "matches_audio_lab_v1_1": true
+    },
+    {
+      "file": "07_pulso_de_cura.mp3",
+      "sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+      "matches_audio_lab_v1_1": true
+    }
+  ]
+}

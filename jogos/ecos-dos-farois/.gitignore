@@ -1,0 +1,12 @@
+node_modules/
+build/
+client/dist/
+data/
+*.log
+.env
+checkpoints/*.zip
+
+journey-verification/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal

@@ -1,0 +1,42 @@
+{
+  "name": "ecos-dos-farois-alpha",
+  "version": "0.3.0-alpha",
+  "private": true,
+  "type": "module",
+  "description": "Ecos dos Faróis — Alpha 3D multiplayer de fantasia heroica arcana",
+  "engines": {
+    "node": ">=24.13.0 <25"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n SERVIDOR,CLIENTE -c yellow,cyan npm:dev:server npm:dev:client",
+    "dev:server": "node --watch-preserve-output --import tsx --watch server/src/index.ts",
+    "dev:client": "vite --config vite.config.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && tsc -p tsconfig.server.json && vite build",
+    "start": "node build/server/src/index.js",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "check": "npm run build && npm test",
+    "audio:preview": "node --import tsx scripts/render-audio.ts",
+    "doctor": "node scripts/doctor.mjs",
+    "verify:files": "node scripts/verify-files.mjs",
+    "test:journey": "node --import tsx scripts/replay-alpha.ts",
+    "test:slice": "node --import tsx scripts/replay-slice.ts",
+    "test:soak": "node --import tsx scripts/soak-alpha.ts"
+  },
+  "dependencies": {
+    "three": "0.186.1",
+    "ws": "8.22.0"
+  },
+  "devDependencies": {
+    "@types/jsdom": "21.1.7",
+    "@types/node": "24.10.0",
+    "@types/three": "0.183.1",
+    "@types/ws": "8.18.1",
+    "concurrently": "9.2.5",
+    "jsdom": "26.1.0",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "web-audio-engine": "0.13.4"
+  }
+}

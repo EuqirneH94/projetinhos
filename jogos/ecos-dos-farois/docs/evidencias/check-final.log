@@ -1,0 +1,106 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> ecos-dos-farois-alpha@0.2.0-alpha check
+> npm run build && npm test
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> ecos-dos-farois-alpha@0.2.0-alpha build
+> npm run typecheck && tsc -p tsconfig.server.json && vite build
+
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> ecos-dos-farois-alpha@0.2.0-alpha typecheck
+> tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 23 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.10 kB │ gzip:   0.63 kB
+dist/accounts.html                  2.22 kB │ gzip:   1.14 kB
+dist/assets/main-BELcShxn.css      21.91 kB │ gzip:   5.86 kB
+dist/assets/identity-fyB6oboV.js    0.81 kB │ gzip:   0.46 kB
+dist/assets/accounts-BJ3IwcNg.js    2.30 kB │ gzip:   1.19 kB
+dist/assets/main-Bbn0fwSL.js      668.34 kB │ gzip: 180.18 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.59s
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> ecos-dos-farois-alpha@0.2.0-alpha test
+> node --import tsx --test tests/*.test.ts
+
+✔ WS autentica, cria/lista só personagens próprios e não permite trocar identidade (197.914116ms)
+✔ WS cria oito com corrida no último slot, recusa nono e aceita ambos os lados (171.838086ms)
+✔ WS uma sessão por conta entre personagens distintos; leave e close antigo não expulsam a nova (160.567865ms)
+✔ WS persiste progresso individual em banco de contas e retoma após reiniciar sem token legado (112.795794ms)
+✔ WS revalida revogação durante jogo e libera lease sem derrubar legado (86.444664ms)
+✔ servidor sem opt-in recusa conta, mas mantém o fluxo legado (39.643909ms)
+✔ falha de bind libera lock de contas e não encerra servidor alheio (13.547358ms)
+{"time":"2026-10-17T18:48:58.670Z","event":"server_unhealthy","pid":105,"ppid":98,"node":"v24.19.0","platform":"linux","phase":"storage","error":{"name":"Error","code":"ERR_SQLITE_ERROR","message":"fixture write failure","stack":"Error: fixture write failure\n    at AccountStore.save (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/server/src/accounts.ts:111:81)\n    at persist (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/server/src/server.ts:56:57)\n    at flush (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/server/src/server.ts:67:62)\n    at WebSocket.<anonymous> (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/server/src/server.ts:130:71)\n    at WebSocket.emit (node:events:509:28)\n    at Receiver.receiverOnMessage (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/node_modules/ws/lib/websocket.js:1253:20)\n    at Receiver.emit (node:events:509:28)\n    at Receiver.dataMessage (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/node_modules/ws/lib/receiver.js:633:14)\n    at Receiver.getData (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/node_modules/ws/lib/receiver.js:532:10)\n    at Receiver.startLoop (/workspace/scratch/e4d7005b7f70/edf_playable_work/project/reinos-de-nexo/node_modules/ws/lib/receiver.js:190:16)"}}
+✔ falha real de gravação de conta fecha sessões e sinaliza health sem confirmar progresso (41.916237ms)
+✔ duas seleções simultâneas na mesma conta concedem só uma lease (49.762664ms)
+✔ conta de teste guarda hash e expira credencial sem expor progresso (5.8326ms)
+✔ oito slots por conta, duas facções e isolamento entre proprietários (4.122449ms)
+✔ dezesseis combinações da Alpha preservam identidade e equipam armas e armaduras elegíveis (5.384473ms)
+✔ facção/povo e classe forjados são recusados em domínio e protocolo (1.463738ms)
+✔ falha de escrita reverte criação e não consome vaga (5.751237ms)
+✔ lease por conta rejeita segunda sessão, escrita alheia e liberação antiga (1.225279ms)
+✔ personagem, carteira e missão persistem; backup frio restaura dados sem migrar legado (21.480977ms)
+✔ banco v1 é recusado como contas sem alterar bytes; rollback conserva token e save v1 (11.65873ms)
+✔ arquivo de contas tem um único escritor de mundo e rejeita versão futura (14.245822ms)
+✔ provisionamento reverte conta e token se entrega da credencial falhar (1.157155ms)
+✔ combate à distância pertence ao kit da classe; cliente não pode impor dano ou classe livre (3.649847ms)
+✔ conjuração só causa dano ao concluir e movimento a interrompe sem consumir energia (2.3529ms)
+✔ facções iniciam em mundos separados; alvo e eventos de outra facção são recusados (1.268804ms)
+✔ equipamentos incompatíveis não alteram inventário, arma ou armadura (0.467685ms)
+✔ ressonâncias e restauração exigem distância, progresso, chefe e escolha; recompensa única (0.516239ms)
+✔ história e aparência persistem; a restauração pessoal não altera a história de outro jogador (1.649529ms)
+✔ barreira reduz dano temporariamente e cura usa recurso e recarga no servidor (1.272089ms)
+✔ chefe concede crédito pessoal somente aos participantes elegíveis (0.498402ms)
+✔ partitura e efeitos renderizam áudio finito e com margem contra clipping (228.539729ms)
+✔ posição estéreo direciona efeito para o lado correto e silenciar reduz o sinal (22.109405ms)
+✔ alcance, recarga e energia são verificados antes do dano (4.68672ms)
+✔ círculo atinge área e morte de um inimigo só é processada uma vez (1.072919ms)
+✔ IA persegue, ataca e retorna; personagem morto aguarda para reaparecer (6.545705ms)
+✔ protocolo rejeita posição, dano, energia, apelido HTML e entradas malformadas (1.798002ms)
+✔ movimento normaliza diagonal, limita tempo e respeita obstáculos e bordas (3.547883ms)
+✔ dois WebSockets recebem IDs diferentes e observam movimento autoritativo (416.033946ms)
+✔ dois clientes veem o mesmo combate, missão e saque; desconectar e retomar preserva o personagem (543.54983ms)
+✔ arquivo SQLite preserva todos os campos após fechar e reiniciar o servidor (52.140677ms)
+✔ retomar a mesma sessão substitui o socket antigo sem apagar o novo jogador (112.117305ms)
+✔ sessões expiram por inatividade; tokens incorretos não recuperam progresso (1.116515ms)
+✔ origem não autorizada, quadro muito grande e spam são rejeitados (29.225772ms)
+✔ HTTP serve o cliente compilado e restringe acesso a arquivos fora de dist (23.070755ms)
+✔ processo real: character_enter recebe 20 estados, encerra e reabre preservando conta/personagem (2141.443813ms)
+✔ processo real: falha controlada tick libera lock e permite reinício (350.884818ms)
+✔ processo real: falha controlada rejection libera lock e permite reinício (381.177669ms)
+✔ processo real: falha controlada exception libera lock e permite reinício (379.881123ms)
+✔ processo real: falha controlada exit libera lock e permite reinício (379.78014ms)
+✔ término forçado: guard liberado pelo SO, órfão arquivado, dois reinícios disputam um único escritor (372.388559ms)
+✔ lock B1 vazio e proprietário vivo são preservados e bloqueiam recuperação automática (8.781038ms)
+✔ falha de inicialização diagnosticada libera somente recursos próprios (148.075943ms)
+✔ API: origem inválida libera recursos e encerramento é idempotente (15.464781ms)
+✔ release recusa apagar metadado substituído e falha de schema limpa lock próprio (9.591259ms)
+✔ pausa longa de renderização não fecha imediatamente um socket com mensagens pendentes (0.806758ms)
+✔ servidor silencioso com event loop responsivo é detectado; aba oculta aguarda retomada (0.116296ms)
+✔ missão requer NPC, objetivos e entrega; recompensa é concedida uma vez (2.380491ms)
+✔ inventário cheio cancela toda a entrega; liberar espaço permite a entrega (0.552694ms)
+✔ participantes recebem crédito uma vez; somente o maior dano coleta um único saque (0.621678ms)
+✔ equipamento troca no mesmo espaço; tônicos curam, consomem e têm recarga (0.265721ms)
+✔ progressão chega ao nível 5 e limita a experiência sem ultrapassar o teto (0.524481ms)
+✔ interface inicializa; entrada, ajuda, mochila, missão e ações usam os callbacks (106.171049ms)
+✔ volumes, silenciar e contagem de recarga respondem na interface (36.527287ms)
+ℹ tests 60
+ℹ suites 0
+ℹ pass 60
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4712.58821

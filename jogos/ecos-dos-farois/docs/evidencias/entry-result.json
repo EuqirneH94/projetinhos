@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "errors": [],
+  "initial": {
+    "metrics": {
+      "drawCalls": 174,
+      "triangles": 255680,
+      "geometry": 94,
+      "simulationDtMs": 33.4,
+      "faction": "vigilia",
+      "frameIntervalMs": 33.4
+    },
+    "formScroll": 585,
+    "formHeight": 403
+  },
+  "dialog": true,
+  "player": {
+    "x": -3.24,
+    "z": 15.900000000000013,
+    "classId": "sentinela",
+    "factionId": "vigilia",
+    "quest": {
+      "state": "active",
+      "brumino": 0,
+      "cerne": 0
+    },
+    "metrics": {
+      "drawCalls": 247,
+      "triangles": 282754,
+      "geometry": 130,
+      "simulationDtMs": 50,
+      "faction": "vigilia",
+      "frameIntervalMs": 233.4
+    }
+  }
+}

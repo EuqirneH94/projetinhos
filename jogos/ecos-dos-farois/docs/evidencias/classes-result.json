@@ -1,0 +1,209 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "classId": "sentinela",
+      "raceId": "valdarios",
+      "factionId": "vigilia",
+      "weapon": "trainingSword",
+      "classLabel": "Sentinela",
+      "metrics": {
+        "drawCalls": 236,
+        "triangles": 278136,
+        "geometry": 130,
+        "simulationDtMs": 50,
+        "faction": "vigilia",
+        "frameIntervalMs": 4916.5
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "rects": [
+        {
+          "selector": ".vitals",
+          "left": 26,
+          "right": 306,
+          "top": 86,
+          "bottom": 167
+        },
+        {
+          "selector": ".hotbar",
+          "left": 438.5,
+          "right": 1001.5,
+          "top": 762,
+          "bottom": 869
+        },
+        {
+          "selector": ".world-info",
+          "left": 1192,
+          "right": 1414,
+          "top": 87,
+          "bottom": 566.140625
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": true,
+      "errors": [],
+      "audio": [
+        {
+          "status": 200,
+          "file": "03_farol_critico.wav"
+        }
+      ]
+    },
+    {
+      "classId": "arcanista",
+      "raceId": "kordranios",
+      "factionId": "vigilia",
+      "weapon": "trainingStaff",
+      "classLabel": "Arcanista",
+      "metrics": {
+        "drawCalls": 220,
+        "triangles": 276614,
+        "geometry": 122,
+        "simulationDtMs": 50,
+        "faction": "vigilia",
+        "frameIntervalMs": 449.9
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "rects": [
+        {
+          "selector": ".vitals",
+          "left": 26,
+          "right": 306,
+          "top": 86,
+          "bottom": 167
+        },
+        {
+          "selector": ".hotbar",
+          "left": 358.5,
+          "right": 921.5,
+          "top": 587,
+          "bottom": 691
+        },
+        {
+          "selector": ".world-info",
+          "left": 1032,
+          "right": 1254,
+          "top": 82,
+          "bottom": 548.140625
+        }
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "bounds": true,
+      "errors": [],
+      "audio": [
+        {
+          "status": 200,
+          "file": "03_farol_critico.wav"
+        }
+      ]
+    },
+    {
+      "classId": "errante",
+      "raceId": "naquiros",
+      "factionId": "confluencia",
+      "weapon": "trainingBow",
+      "classLabel": "Errante",
+      "metrics": {
+        "drawCalls": 202,
+        "triangles": 268728,
+        "geometry": 114,
+        "simulationDtMs": 50,
+        "faction": "confluencia",
+        "frameIntervalMs": 1049.9
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "rects": [
+        {
+          "selector": ".vitals",
+          "left": 26,
+          "right": 306,
+          "top": 86,
+          "bottom": 167
+        },
+        {
+          "selector": ".hotbar",
+          "left": 358.5,
+          "right": 921.5,
+          "top": 587,
+          "bottom": 691
+        },
+        {
+          "selector": ".world-info",
+          "left": 1032,
+          "right": 1254,
+          "top": 82,
+          "bottom": 548.140625
+        }
+      ],
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "bounds": true,
+      "errors": [],
+      "audio": [
+        {
+          "status": 200,
+          "file": "03_farol_critico.wav"
+        }
+      ]
+    },
+    {
+      "classId": "ressonante",
+      "raceId": "eluvios",
+      "factionId": "confluencia",
+      "weapon": "trainingFocus",
+      "classLabel": "Ressonante",
+      "metrics": {
+        "drawCalls": 204,
+        "triangles": 272004,
+        "geometry": 115,
+        "simulationDtMs": 50,
+        "faction": "confluencia",
+        "frameIntervalMs": 683.3
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "rects": [
+        {
+          "selector": ".vitals",
+          "left": 26,
+          "right": 306,
+          "top": 86,
+          "bottom": 167
+        },
+        {
+          "selector": ".hotbar",
+          "left": 438.5,
+          "right": 1001.5,
+          "top": 762,
+          "bottom": 869
+        },
+        {
+          "selector": ".world-info",
+          "left": 1192,
+          "right": 1414,
+          "top": 87,
+          "bottom": 590.140625
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bounds": true,
+      "errors": [],
+      "audio": [
+        {
+          "status": 200,
+          "file": "03_farol_critico.wav"
+        }
+      ]
+    }
+  ]
+}

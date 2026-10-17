@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "packageRuntime": "Node.js 24.19.0/Linux; somente ws acompanha node_modules, sem dependências de desenvolvimento.",
+  "http": true,
+  "websocket": true,
+  "sameFactionPresence": 2,
+  "crossFactionIsolated": true,
+  "audio": [
+    {
+      "file": "01_farol_estavel.wav",
+      "status": 200,
+      "mime": "audio/wav"
+    },
+    {
+      "file": "02_farol_enfraquecido.wav",
+      "status": 200,
+      "mime": "audio/wav"
+    },
+    {
+      "file": "03_farol_critico.wav",
+      "status": 200,
+      "mime": "audio/wav"
+    },
+    {
+      "file": "04_descarga_arcana.mp3",
+      "status": 200,
+      "mime": "audio/mpeg"
+    },
+    {
+      "file": "05_barreira_protetora.mp3",
+      "status": 200,
+      "mime": "audio/mpeg"
+    },
+    {
+      "file": "06_flecha_especial.mp3",
+      "status": 200,
+      "mime": "audio/mpeg"
+    },
+    {
+      "file": "07_pulso_de_cura.mp3",
+      "status": 200,
+      "mime": "audio/mpeg"
+    }
+  ],
+  "windowsExecuted": false
+}

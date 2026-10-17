@@ -1,0 +1,23 @@
+{
+  "release": "0.3.0-alpha-candidate",
+  "assets": [{
+    "id": "EDF-RESONATOR-001",
+    "file": "resonator.gltf",
+    "buffers": ["resonator.bin"],
+    "source": "scripts/create-resonator-asset.mjs",
+    "author": "Original procedural geometry produced for Ecos dos Faróis in this Codex mission",
+    "date": "2026-10-17",
+    "origin_url": null,
+    "permission": "Created for the user project; redistribution with this project permitted. No downloaded meshes, textures or copied reference artwork.",
+    "license": "Project original; no third-party art license required",
+    "dependencies": [{"name":"Three.js geometry generators", "version":"0.186.1", "license":"MIT"}],
+    "modifications": "Original faceted lens, endcaps and two brass rings; five primitives; same-origin local binary buffer compatible with strict CSP; no external textures",
+    "status": "provisional representative interchange asset, not final approved art",
+    "use": "Lantern lens on the village gateway; procedural fallback on parse/network failure"
+  }],
+  "procedural_scene": {
+    "source_files": ["client/src/models.ts", "client/src/scenery.ts"],
+    "method": "Original runtime geometry, vertex colours, original canvas ground and glow maps; no imported reference image pixels",
+    "status": "provisional; no final DCC hero mesh or skeletal rig delivered"
+  }
+}
