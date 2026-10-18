@@ -1,0 +1,11 @@
+{
+  "baseline_commit": "fe8f7db487da9b58e1cc17a3fd06209b8099b3c6",
+  "arquivos_antes": 189,
+  "arquivos_depois": 189,
+  "alterados_adicionados_removidos": [],
+  "preservado": true,
+  "bancos_pessoais_acessados": false,
+  "observacao": "Somente copia isolada, baseline distribuida e fixtures sinteticas usadas para os ensaios. Nenhum processo de jogo foi iniciado com os bancos pessoais do usuario.",
+  "distribuicao_do_browser_identica_ao_jogo_do_repositorio": true,
+  "arquivos_distribuicao_do_browser": 189
+}

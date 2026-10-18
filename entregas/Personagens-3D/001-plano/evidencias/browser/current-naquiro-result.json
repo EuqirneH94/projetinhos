@@ -1,0 +1,120 @@
+{
+  "purpose": "Audit of EXISTING unmodified Alpha 0.3 Naquiro representation; not a new character asset. Current representation has no gender selection/metadata.",
+  "platform": "linux",
+  "renderer": "ANGLE SwiftShader software",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "creation": {
+    "factionId": "confluencia",
+    "raceId": "naquiros",
+    "classId": "sentinela",
+    "appearance": 0
+  },
+  "quality": "economy",
+  "pageErrors": [],
+  "console": [],
+  "instrumentation": "External harness wraps requestAnimationFrame: pause after a completed frame, resize while paused, render exactly one real application frame at target resolution, capture actual compositor pixels. No game/camera/world/save state injection; no FPS acceptance.",
+  "baseline": "/workspace/edf-alpha03/release/Ecos_dos_Farois_Alpha_0_3",
+  "frames": [
+    {
+      "stage": "creation",
+      "width": 1280,
+      "height": 720,
+      "metrics": {
+        "drawCalls": 92,
+        "triangles": 213311,
+        "geometry": 88,
+        "simulationDtMs": 50,
+        "faction": "confluencia",
+        "quality": "economy",
+        "economical": true,
+        "localPlayerX": null,
+        "localPlayerZ": null,
+        "pixelRatio": 1,
+        "reducedEffects": false,
+        "activeEffects": 0,
+        "cameraDistance": 6.8,
+        "cameraObstructed": false,
+        "asset": "loaded",
+        "frameIntervalMs": 949.9
+      },
+      "file": "current-naquiro-creation-1280x720.png"
+    },
+    {
+      "stage": "world",
+      "width": 1280,
+      "height": 720,
+      "metrics": {
+        "drawCalls": 138,
+        "triangles": 239297,
+        "geometry": 125,
+        "simulationDtMs": 50,
+        "faction": "confluencia",
+        "quality": "economy",
+        "economical": true,
+        "localPlayerX": 0,
+        "localPlayerZ": 24,
+        "pixelRatio": 1,
+        "reducedEffects": false,
+        "activeEffects": 0,
+        "cameraDistance": 10.5,
+        "cameraObstructed": false,
+        "asset": "loaded",
+        "frameIntervalMs": 1516.6
+      },
+      "file": "current-naquiro-world-1280x720.png"
+    }
+  ],
+  "hashesBefore": {
+    "client/src/models.ts": "5435fc56b1611cea18a781413612e97045275e9b12630a6658343681a33822c8",
+    "client/src/scene.ts": "cacbee1b2aaafe9cb691f129f09bc6d039cb1aad25e787075d1fb38f982e7876",
+    "client/src/ui.ts": "ea8879a5b452db39a781e9dde2557dab3575be89d53929f1c7d4f577f482803a",
+    "client/src/main.ts": "bfad4685123a2b84206084ad9638c937154fe12b7145502ccab368130ae20973",
+    "shared/identity.ts": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "server/src/accounts.ts": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+    "client/dist/index.html": "ceb890d4c3e776da5f5146122b425694be2bc827acd49f573c0f7b7cf006a322"
+  },
+  "healthBefore": {
+    "ok": true,
+    "players": 0,
+    "tick": 1,
+    "version": "0.3.0-alpha"
+  },
+  "browser": "154.0.8037.57",
+  "creationLabels": {
+    "race": "Náquiros",
+    "class": "Sentinela",
+    "faction": "A Confluência",
+    "entryVisible": true
+  },
+  "worldLabels": {
+    "name": "AuditoriaNaquiro",
+    "class": "Sentinela",
+    "zone": "Clareira da Confluência",
+    "entryHidden": true
+  },
+  "completed": true,
+  "healthAfter": {
+    "ok": true,
+    "players": 0,
+    "tick": 265,
+    "version": "0.3.0-alpha"
+  },
+  "ownServerExit": 0,
+  "hashesAfter": {
+    "client/src/models.ts": "5435fc56b1611cea18a781413612e97045275e9b12630a6658343681a33822c8",
+    "client/src/scene.ts": "cacbee1b2aaafe9cb691f129f09bc6d039cb1aad25e787075d1fb38f982e7876",
+    "client/src/ui.ts": "ea8879a5b452db39a781e9dde2557dab3575be89d53929f1c7d4f577f482803a",
+    "client/src/main.ts": "bfad4685123a2b84206084ad9638c937154fe12b7145502ccab368130ae20973",
+    "shared/identity.ts": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "server/src/accounts.ts": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+    "client/dist/index.html": "ceb890d4c3e776da5f5146122b425694be2bc827acd49f573c0f7b7cf006a322"
+  },
+  "baselineSelectedFilesUnchanged": true
+}

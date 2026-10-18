@@ -1,0 +1,25 @@
+
+> ecos-dos-farois-alpha@0.3.0-alpha build
+> npm run typecheck && tsc -p tsconfig.server.json && vite build
+
+
+> ecos-dos-farois-alpha@0.3.0-alpha typecheck
+> tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 30 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                     1.10 kB │ gzip:   0.63 kB
+dist/accounts.html                  2.22 kB │ gzip:   1.14 kB
+dist/assets/main-ColsHaWt.css      38.27 kB │ gzip:   9.27 kB
+dist/assets/identity-fyB6oboV.js    0.81 kB │ gzip:   0.46 kB
+dist/assets/accounts-BJ3IwcNg.js    2.30 kB │ gzip:   1.19 kB
+dist/assets/main-CvQ-KAuE.js      780.44 kB │ gzip: 212.89 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.33s

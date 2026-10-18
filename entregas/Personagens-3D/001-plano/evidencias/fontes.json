@@ -1,0 +1,56 @@
+[
+  {
+    "tipo": "missao",
+    "arquivo": "Texto colado.txt",
+    "sha256": "f7081b988b9e8a96e54648e35e924230f07de550e6b2fe6769f0138be445fbed",
+    "bytes": 5231
+  },
+  {
+    "tipo": "biblia",
+    "arquivo": "ART_DIRECTION.md",
+    "sha256": "db9a17096f7f03f143bec6e303def964658bc210b1b439be0b1bb4b30cb7bd11",
+    "bytes": 15668
+  },
+  {
+    "tipo": "biblia",
+    "arquivo": "DECISIONS_V1_1.md",
+    "sha256": "144471e2d54a7f9c18b6d1f852513200eed8629453b318e603ad850f842215da",
+    "bytes": 10137
+  },
+  {
+    "tipo": "biblia",
+    "arquivo": "ACCOUNTS_AND_CHARACTERS.md",
+    "sha256": "f4de8f8d47d1cfc10c02f78170b356ecb9d25e47c341651e848818b6b68446a1",
+    "bytes": 5357
+  },
+  {
+    "tipo": "biblia",
+    "arquivo": "CLASSES_AND_TALENTS.md",
+    "sha256": "91ab53565007eb8699c92d3ff5b57772c005f24d08854a0729400131052a815e",
+    "bytes": 15689
+  },
+  {
+    "tipo": "biblia",
+    "arquivo": "VISUAL_REFERENCE_INDEX.md",
+    "sha256": "81c63a0ea1520a3e3acd58149110e328787d52696a446af692457fac1240ca3d",
+    "bytes": 6895
+  },
+  {
+    "tipo": "referencia_visual",
+    "arquivo": "image-gen-1(4).png",
+    "sha256": "f75367308e6a9c412d686cec42d1a082dc74f35e94ec9cc8b71965646ceeb73f",
+    "bytes": 3410427
+  },
+  {
+    "tipo": "referencia_visual",
+    "arquivo": "image-gen-2(4).png",
+    "sha256": "664b339ac3fad371bd727ba96d97f4560c75b6152ebd148dccaa85a9ed031a7e",
+    "bytes": 3510241
+  },
+  {
+    "tipo": "referencia_visual",
+    "arquivo": "image-gen-3(4).png",
+    "sha256": "d392e9e991282ae1fb8789dffa7bbe2bc9ba0a11dfd7a1faa9027bf34598e902",
+    "bytes": 3581542
+  }
+]

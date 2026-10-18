@@ -1,0 +1,4 @@
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated scijs-window-functions@2.0.2: This package has been renamed 'window-function'. The API is otherwise the same. Please switch.
+
+added 113 packages in 2s

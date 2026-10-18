@@ -1,0 +1,6 @@
+SERVER_READY {'ok': True, 'players': 0, 'tick': 1, 'version': '0.3.0-alpha'}
+CREATION_READY {'race': 'Náquiros', 'class': 'Sentinela', 'faction': 'A Confluência', 'entryVisible': True}
+CAPTURED current-naquiro-creation-1280x720.png
+WORLD_READY {'name': 'AuditoriaNaquiro', 'class': 'Sentinela', 'zone': 'Clareira da Confluência', 'entryHidden': True}
+CAPTURED current-naquiro-world-1280x720.png
+DONE {'completed': True, 'unchanged': True, 'pageErrors': 0}

@@ -1,0 +1,14 @@
+✔ camera volume stops before a wall and its corner without changing player coordinates (1.975593ms)
+✔ camera detects a ridge along the path and stays finite at collider boundaries (0.253286ms)
+✔ all sixteen visual race/class kits animate with finite geometry and bounded render parts (262.709349ms)
+✔ distributed original glTF parses as actual geometry with provenance and no external asset host (51.771862ms)
+EDF art: local resonator unavailable; procedural fallback retained.
+✔ asset loading replaces fallback only on success and retains it on HTTP failure (21.683583ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 724.619809
