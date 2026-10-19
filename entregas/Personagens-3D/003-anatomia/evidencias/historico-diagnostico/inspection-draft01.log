@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py", line 433, in <module>
+    main()
+    ~~~~^^
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py", line 429, in main
+    raise RuntimeError('Anatomy study failed structural checks; read inspection-report.json without relaxing expectations.')
+RuntimeError: Anatomy study failed structural checks; read inspection-report.json without relaxing expectations.
+ANATOMY_INSPECTION FAIL {"archive_hidden": true, "46_study_bones": true, "neutral_materials": true, "normalized_max_four_bone_weights": true, "cage_and_evaluated_geometry": false, "continuous_body_neck_head_and_limbs": true, "neutral_symmetry": false, "four_finite_nondegenerate_diagnostic_poses": false, "source_unchanged": true}
+INSPECTED_SOURCE_SHA256 00d15c4cc4261c7ebb76991da58bcd8a4fe41811ba4d95e9ecf2c70c448ec585
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+
+Blender quit

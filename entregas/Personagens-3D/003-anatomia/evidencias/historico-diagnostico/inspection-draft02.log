@@ -1,0 +1,6 @@
+ANATOMY_INSPECTION PASS {"archive_hidden": true, "46_study_bones": true, "source_study_rig_neutral_pose_channels": true, "neutral_materials": true, "normalized_max_four_bone_weights": true, "cage_and_evaluated_geometry": true, "continuous_body_neck_head_and_limbs": true, "neutral_symmetry": true, "four_finite_nondegenerate_diagnostic_poses": true, "source_unchanged": true}
+INSPECTED_SOURCE_SHA256 f17253434abf7cf3da25cb335e9901e1ae72a1e0195f1548a3d57df2c12d582d
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+
+Blender quit

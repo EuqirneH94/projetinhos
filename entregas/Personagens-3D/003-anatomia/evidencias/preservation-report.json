@@ -1,0 +1,1415 @@
+{
+  "baseline_commit": "210c18d711ff832f2e2d7f1f17dc959720ad6ec3",
+  "scope": "All original tracked game files including original Blender sources, runtime assets and persistence code; additive anatomy-002 excluded",
+  "checked": 234,
+  "changed": [],
+  "all_original_files_unchanged": true,
+  "files": [
+    {
+      "path": "jogos/ecos-dos-farois/.gitignore",
+      "baseline_sha256": "53aabe95197e10bb8b78a343a7d3a3127bc784feec97f0029a43c89698003f95",
+      "current_sha256": "53aabe95197e10bb8b78a343a7d3a3127bc784feec97f0029a43c89698003f95",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/Iniciar_Jogo.ps1",
+      "baseline_sha256": "07234a32bb3bd94f7028a6d774329e32ac2ec70e9735899691fd391c75a83d0c",
+      "current_sha256": "07234a32bb3bd94f7028a6d774329e32ac2ec70e9735899691fd391c75a83d0c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/Jogar_Ecos_dos_Farois.cmd",
+      "baseline_sha256": "783331ff32f505480313f7cc596edfacc528814fca5a108543cc18afe9c45573",
+      "current_sha256": "783331ff32f505480313f7cc596edfacc528814fca5a108543cc18afe9c45573",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/LEIA_PRIMEIRO.md",
+      "baseline_sha256": "550a366ba4a8e3ed674fd5d382622395b6a270d4beb0a21c749105ec01a179c2",
+      "current_sha256": "550a366ba4a8e3ed674fd5d382622395b6a270d4beb0a21c749105ec01a179c2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/MANIFEST.sha256",
+      "baseline_sha256": "e9c9cefb8789cef5cab0483e3d5e30dda440ace34c3a8a37d3fd2f4fa3f462e9",
+      "current_sha256": "e9c9cefb8789cef5cab0483e3d5e30dda440ace34c3a8a37d3fd2f4fa3f462e9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/README.md",
+      "baseline_sha256": "1dcc3d4fcb711d57eaaea669c1dcb5332e1bdc1260b6cc2e4955c2898f600feb",
+      "current_sha256": "1dcc3d4fcb711d57eaaea669c1dcb5332e1bdc1260b6cc2e4955c2898f600feb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/THIRD_PARTY_NOTICES.md",
+      "baseline_sha256": "e8b99867e62ae848f2484d1d63470d878c347712a4f68b4eeb383ed8314da728",
+      "current_sha256": "e8b99867e62ae848f2484d1d63470d878c347712a4f68b4eeb383ed8314da728",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/base.blend",
+      "baseline_sha256": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da",
+      "current_sha256": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/inspect_asset.py",
+      "baseline_sha256": "849f57e0c5b667ddd7c12be5b443bdf2a30f1f6023df91dffd8353bb3c042aee",
+      "current_sha256": "849f57e0c5b667ddd7c12be5b443bdf2a30f1f6023df91dffd8353bb3c042aee",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/model-stats.json",
+      "baseline_sha256": "b349ae572c5dac2d1038016a243a908c79feaca5e705b9f8cd8f8a8c48c366a4",
+      "current_sha256": "b349ae572c5dac2d1038016a243a908c79feaca5e705b9f8cd8f8a8c48c366a4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/model.py",
+      "baseline_sha256": "a45294b04e5302abeecef277c60a22311b0c39a75b63fee91e286eba6c49ca9e",
+      "current_sha256": "a45294b04e5302abeecef277c60a22311b0c39a75b63fee91e286eba6c49ca9e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.blend",
+      "baseline_sha256": "f1746b0096233536a96ffdc54c02a58d1262ee99a22a06fe5e116d70218d940e",
+      "current_sha256": "f1746b0096233536a96ffdc54c02a58d1262ee99a22a06fe5e116d70218d940e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.glb",
+      "baseline_sha256": "a57e820bf896ad0354c3523a0c21609f6524f8887f8b5c2330bf4bfa8c758304",
+      "current_sha256": "a57e820bf896ad0354c3523a0c21609f6524f8887f8b5c2330bf4bfa8c758304",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/rig_export.py",
+      "baseline_sha256": "b2e2aeaee49a0f2ee07134a76945b2975649b3118940b7a6717c9943d85bf21f",
+      "current_sha256": "b2e2aeaee49a0f2ee07134a76945b2975649b3118940b7a6717c9943d85bf21f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_cloth_basecolor.png",
+      "baseline_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "current_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_basecolor.png",
+      "baseline_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "current_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_roughness.png",
+      "baseline_sha256": "043ce48dd3da3923547cb8dc88ee661d65da28b0253a637185d9e5f4c9cb2090",
+      "current_sha256": "043ce48dd3da3923547cb8dc88ee661d65da28b0253a637185d9e5f4c9cb2090",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_basecolor.png",
+      "baseline_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "current_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_normal.png",
+      "baseline_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "current_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_roughness.png",
+      "baseline_sha256": "b0fa0c636d3b3169b1bee4ecd2af0dad1b4a0457b696224c191a4e1fa8abed46",
+      "current_sha256": "b0fa0c636d3b3169b1bee4ecd2af0dad1b4a0457b696224c191a4e1fa8abed46",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/account-lock.js",
+      "baseline_sha256": "c689c0c2cd7b8ab380fc51438009a88cb05a2cb7fd7bc254d1b2df739959a0d2",
+      "current_sha256": "c689c0c2cd7b8ab380fc51438009a88cb05a2cb7fd7bc254d1b2df739959a0d2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/account-lock.js.map",
+      "baseline_sha256": "d380429909b6612a3b5a7c430a32b45ffa1d89768db07c72a14ed22a84bd6374",
+      "current_sha256": "d380429909b6612a3b5a7c430a32b45ffa1d89768db07c72a14ed22a84bd6374",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/accounts.js",
+      "baseline_sha256": "c3a451bdfdd5f729371f264681ff8fdaf83b506287f4f5576b9f145a61916364",
+      "current_sha256": "c3a451bdfdd5f729371f264681ff8fdaf83b506287f4f5576b9f145a61916364",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/accounts.js.map",
+      "baseline_sha256": "14958798c2defe4c6c1bfb5abffefe3cdc99b5032f5494a3246c974c86fbd5eb",
+      "current_sha256": "14958798c2defe4c6c1bfb5abffefe3cdc99b5032f5494a3246c974c86fbd5eb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/diagnostics.js",
+      "baseline_sha256": "faab889b2d4870d75ca2141d477de0f9940b59d530e009199983c0a1cb2ef944",
+      "current_sha256": "faab889b2d4870d75ca2141d477de0f9940b59d530e009199983c0a1cb2ef944",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/diagnostics.js.map",
+      "baseline_sha256": "0d2d9e5ca8074c0b8673031f709637787e1681716836a9b2f9900d51c9b34f81",
+      "current_sha256": "0d2d9e5ca8074c0b8673031f709637787e1681716836a9b2f9900d51c9b34f81",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/game.js",
+      "baseline_sha256": "685e138528344d1830629321c0e8823af99f458dc07b37c7890c3adc55ec7949",
+      "current_sha256": "685e138528344d1830629321c0e8823af99f458dc07b37c7890c3adc55ec7949",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/game.js.map",
+      "baseline_sha256": "f4f04414d9567fe426a76018c5f1a1f6181d20d1709e74d1cb616e76cc47dc5e",
+      "current_sha256": "f4f04414d9567fe426a76018c5f1a1f6181d20d1709e74d1cb616e76cc47dc5e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/index.js",
+      "baseline_sha256": "37c5e6a247ac5b433ff19bdb894e535d1af2613dd450da552a1220c928a2fc94",
+      "current_sha256": "37c5e6a247ac5b433ff19bdb894e535d1af2613dd450da552a1220c928a2fc94",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/index.js.map",
+      "baseline_sha256": "8f864f26766035f75f9de335c65a8fb013c9ee540bacfc3c2e94502651b48103",
+      "current_sha256": "8f864f26766035f75f9de335c65a8fb013c9ee540bacfc3c2e94502651b48103",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/protocol.js",
+      "baseline_sha256": "5cbb0185828b4445af745bf239ae8e3287c3db7ed8ab81aa42ec9d1a1084b6a6",
+      "current_sha256": "5cbb0185828b4445af745bf239ae8e3287c3db7ed8ab81aa42ec9d1a1084b6a6",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/protocol.js.map",
+      "baseline_sha256": "9651d3f4e08b350829ff8bb0a41436ebbdf67738e80464953bd7192e7b751f84",
+      "current_sha256": "9651d3f4e08b350829ff8bb0a41436ebbdf67738e80464953bd7192e7b751f84",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/server.js",
+      "baseline_sha256": "496a38ac27a319fbe76bef9912d1ab683bc57638968142cdb8c93487032de90a",
+      "current_sha256": "496a38ac27a319fbe76bef9912d1ab683bc57638968142cdb8c93487032de90a",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/server.js.map",
+      "baseline_sha256": "e8740ac13e8479772e8ceb5c57f7e22ab3863556b17e11f46de4ced0d7e3b1d8",
+      "current_sha256": "e8740ac13e8479772e8ceb5c57f7e22ab3863556b17e11f46de4ced0d7e3b1d8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/store.js",
+      "baseline_sha256": "5fcd008b0f3ea8a736ea93bfef06bb6a29b6969cfaaf95a172fb37b13061561c",
+      "current_sha256": "5fcd008b0f3ea8a736ea93bfef06bb6a29b6969cfaaf95a172fb37b13061561c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/server/src/store.js.map",
+      "baseline_sha256": "ddf18423e60d8d5c26b5f91fba17de8e61baf357561c08bce6fc5cdf940039c0",
+      "current_sha256": "ddf18423e60d8d5c26b5f91fba17de8e61baf357561c08bce6fc5cdf940039c0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/alpha.js",
+      "baseline_sha256": "1fa486a2b1d74668a21d7bf246bf9a98c73f83fb980639b0968c476c91e14a36",
+      "current_sha256": "1fa486a2b1d74668a21d7bf246bf9a98c73f83fb980639b0968c476c91e14a36",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/alpha.js.map",
+      "baseline_sha256": "154721868eacb1104b42b4dbbaf906bce3637013e8ed8ccbdf04c16340c3169b",
+      "current_sha256": "154721868eacb1104b42b4dbbaf906bce3637013e8ed8ccbdf04c16340c3169b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/config.js",
+      "baseline_sha256": "e50bec984f71efcf7814c12ec0fbd7bea759be0f631b32caa0b770a85df2bfb6",
+      "current_sha256": "e50bec984f71efcf7814c12ec0fbd7bea759be0f631b32caa0b770a85df2bfb6",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/config.js.map",
+      "baseline_sha256": "53e5c8709185329b59f30506b2a515f50c7a64eaed63751903a532807babc204",
+      "current_sha256": "53e5c8709185329b59f30506b2a515f50c7a64eaed63751903a532807babc204",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/extended.js",
+      "baseline_sha256": "e5c40f9f5f4e4c4af9ecd07d38a12ef1f77f732abb860598840430169d4bc0e7",
+      "current_sha256": "e5c40f9f5f4e4c4af9ecd07d38a12ef1f77f732abb860598840430169d4bc0e7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/extended.js.map",
+      "baseline_sha256": "4511d6afa52a06c9d8c8d8e17e90c5b6c311e0fdb81c73bab7f9181d8d1c99d4",
+      "current_sha256": "4511d6afa52a06c9d8c8d8e17e90c5b6c311e0fdb81c73bab7f9181d8d1c99d4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/identity.js",
+      "baseline_sha256": "7523d3cd4fe0d81c81f2dc6b2a33493d2a478792c47193b45fb74c04158cb87c",
+      "current_sha256": "7523d3cd4fe0d81c81f2dc6b2a33493d2a478792c47193b45fb74c04158cb87c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/identity.js.map",
+      "baseline_sha256": "617f384d4447d8f244416eb1610ffd5b119f81509b89e65a6a82becd668404a7",
+      "current_sha256": "617f384d4447d8f244416eb1610ffd5b119f81509b89e65a6a82becd668404a7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/movement.js",
+      "baseline_sha256": "874c062d5f452d580f256462eec82774cde00ee5573248c64f6bfc1bf90338ec",
+      "current_sha256": "874c062d5f452d580f256462eec82774cde00ee5573248c64f6bfc1bf90338ec",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/movement.js.map",
+      "baseline_sha256": "e5cf54571e0c64b3c7f25a2124ee5bc23346e99a605094e6844d5ce948af0f07",
+      "current_sha256": "e5cf54571e0c64b3c7f25a2124ee5bc23346e99a605094e6844d5ce948af0f07",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/release.js",
+      "baseline_sha256": "7b96529fc437379a5430719aa793d286440f5daaeddd7537d216183062a1e977",
+      "current_sha256": "7b96529fc437379a5430719aa793d286440f5daaeddd7537d216183062a1e977",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/release.js.map",
+      "baseline_sha256": "e00d7de63bceee98b62acac464892cbf3e4e3fd17a1750d3ca0aa22c7a03df3b",
+      "current_sha256": "e00d7de63bceee98b62acac464892cbf3e4e3fd17a1750d3ca0aa22c7a03df3b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/types.js",
+      "baseline_sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2",
+      "current_sha256": "01ae2a5b120382f9a648ced7ee8507493a134f216d100fc61600c6c9738235d2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/build/shared/types.js.map",
+      "baseline_sha256": "8ee0b83a5e6312387dee5917c2e01c3816079fb0a2f97cad088505e3d6c93ec1",
+      "current_sha256": "8ee0b83a5e6312387dee5917c2e01c3816079fb0a2f97cad088505e3d6c93ec1",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/checkpoints/etapa-01.zip",
+      "baseline_sha256": "d396ef6e62b5efe3e5225ab8d36e415bac9f85467c6f0845b218661f319db740",
+      "current_sha256": "d396ef6e62b5efe3e5225ab8d36e415bac9f85467c6f0845b218661f319db740",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/checkpoints/etapa-02.zip",
+      "baseline_sha256": "5e849409fc042477cfc1d9e4653ea48dd2bab2e3317bc9065ef3b44d395a115d",
+      "current_sha256": "5e849409fc042477cfc1d9e4653ea48dd2bab2e3317bc9065ef3b44d395a115d",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/checkpoints/etapa-03.zip",
+      "baseline_sha256": "80649c3d4a1d8e4b671e58f0b183cb397a6428dffed658b6d818b48b771c5592",
+      "current_sha256": "80649c3d4a1d8e4b671e58f0b183cb397a6428dffed658b6d818b48b771c5592",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/accounts.html",
+      "baseline_sha256": "ce1445e3ce6ca7abd9270d354992e6dc919d33cc3a110e75c75b4e231bec8e1c",
+      "current_sha256": "ce1445e3ce6ca7abd9270d354992e6dc919d33cc3a110e75c75b4e231bec8e1c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/character-lab.html",
+      "baseline_sha256": "df153844abce0bbdff7294a50b1e2f90c4d35d4c13c078ef9ecf6d2bea1e98f8",
+      "current_sha256": "df153844abce0bbdff7294a50b1e2f90c4d35d4c13c078ef9ecf6d2bea1e98f8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/accounts.html",
+      "baseline_sha256": "8d28b8dddb34c29ad2ff0f306beb109a154ebeabee82cc2c35acf66b40f7fcaa",
+      "current_sha256": "8d28b8dddb34c29ad2ff0f306beb109a154ebeabee82cc2c35acf66b40f7fcaa",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/PROVENANCE.json",
+      "baseline_sha256": "3f142da4df825f40c0e73118d5e3fe40b63a41ea6919365e797e1d8032f6bea8",
+      "current_sha256": "3f142da4df825f40c0e73118d5e3fe40b63a41ea6919365e797e1d8032f6bea8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/manifest.json",
+      "baseline_sha256": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5",
+      "current_sha256": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/naquiro-male.bin",
+      "baseline_sha256": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+      "current_sha256": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/naquiro-male.gltf",
+      "baseline_sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+      "current_sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_cloth_basecolor.png",
+      "baseline_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "current_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_leather_basecolor.png",
+      "baseline_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "current_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_leather_roughness.png",
+      "baseline_sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b",
+      "current_sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_skin_basecolor.png",
+      "baseline_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "current_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_skin_normal.png",
+      "baseline_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "current_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/characters/naquiro/textures/naquiro_skin_roughness.png",
+      "baseline_sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2",
+      "current_sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/resonator.bin",
+      "baseline_sha256": "c37986967d8d96b39c90a6e702a7ea512b7d4f3308bb278c46c42635e376799f",
+      "current_sha256": "c37986967d8d96b39c90a6e702a7ea512b7d4f3308bb278c46c42635e376799f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/art/resonator.gltf",
+      "baseline_sha256": "f003f03735ccbff6ee48d03208eb11bdfd611e6143f9dc6ef1a82abfd0e0f129",
+      "current_sha256": "f003f03735ccbff6ee48d03208eb11bdfd611e6143f9dc6ef1a82abfd0e0f129",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/accounts-DoWWA5Cw.js",
+      "baseline_sha256": "0f64466bc7a586a2d5bd6b9e44337520982efcfc96e23c5bc88f904d97504d5d",
+      "current_sha256": "0f64466bc7a586a2d5bd6b9e44337520982efcfc96e23c5bc88f904d97504d5d",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/character-assets-Bs3qe43D.js",
+      "baseline_sha256": "f711d16a61ecd5c9f1b5743b097cf54d60ca2ef64adf896cd6e9bc9bd5de6849",
+      "current_sha256": "f711d16a61ecd5c9f1b5743b097cf54d60ca2ef64adf896cd6e9bc9bd5de6849",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/characterLab-BqSbiFTr.js",
+      "baseline_sha256": "fbc1e66f2a219ac459270e5694b4fd7f3ea8a99aae19597ce03fe0ab36fb8186",
+      "current_sha256": "fbc1e66f2a219ac459270e5694b4fd7f3ea8a99aae19597ce03fe0ab36fb8186",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/characterLab-Csoda7jg.css",
+      "baseline_sha256": "5eb85432d6db861cfd7d31c35b9cf874c6bd82dadf64fbfb66e4ea5d02adbad5",
+      "current_sha256": "5eb85432d6db861cfd7d31c35b9cf874c6bd82dadf64fbfb66e4ea5d02adbad5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/identity-DoI0JpyJ.js",
+      "baseline_sha256": "19686585b38fef45c9b2077e865825b27c6cfeb8dc0c9b023761a4b9038bf929",
+      "current_sha256": "19686585b38fef45c9b2077e865825b27c6cfeb8dc0c9b023761a4b9038bf929",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/main-ColsHaWt.css",
+      "baseline_sha256": "07bae455d1cd8e44a590e6f697f418609ef0735108586655a300fbb739e4232f",
+      "current_sha256": "07bae455d1cd8e44a590e6f697f418609ef0735108586655a300fbb739e4232f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/main-D8qeZCxk.js",
+      "baseline_sha256": "2a8e25ef2efe307b1e575041acac6ad90ec9da010161a8ae804aa253b05156ab",
+      "current_sha256": "2a8e25ef2efe307b1e575041acac6ad90ec9da010161a8ae804aa253b05156ab",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/assets/modulepreload-polyfill-B5Qt9EMX.js",
+      "baseline_sha256": "d2a32840421496e872ade591618d2fa5c33797605d1aec04301717e5a90757d0",
+      "current_sha256": "d2a32840421496e872ade591618d2fa5c33797605d1aec04301717e5a90757d0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/01_farol_estavel.wav",
+      "baseline_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+      "current_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/02_farol_enfraquecido.wav",
+      "baseline_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+      "current_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/03_farol_critico.wav",
+      "baseline_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+      "current_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/04_descarga_arcana.mp3",
+      "baseline_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+      "current_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/05_barreira_protetora.mp3",
+      "baseline_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+      "current_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/06_flecha_especial.mp3",
+      "baseline_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+      "current_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/audio/07_pulso_de_cura.mp3",
+      "baseline_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+      "current_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/character-lab.html",
+      "baseline_sha256": "efe5ad4e280c6b15b31495752ea4567118e02c920fe2e4a77328149d0250c4b1",
+      "current_sha256": "efe5ad4e280c6b15b31495752ea4567118e02c920fe2e4a77328149d0250c4b1",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/dist/index.html",
+      "baseline_sha256": "c3290b5da6217e878a7a2501d13a9c21181526614db7034d39cb3a7cdc90168b",
+      "current_sha256": "c3290b5da6217e878a7a2501d13a9c21181526614db7034d39cb3a7cdc90168b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/index.html",
+      "baseline_sha256": "65492aee0da2b78458053bef1ef3aa0e96fba75db6c53a9637994dc0f4e9fe20",
+      "current_sha256": "65492aee0da2b78458053bef1ef3aa0e96fba75db6c53a9637994dc0f4e9fe20",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/PROVENANCE.json",
+      "baseline_sha256": "3f142da4df825f40c0e73118d5e3fe40b63a41ea6919365e797e1d8032f6bea8",
+      "current_sha256": "3f142da4df825f40c0e73118d5e3fe40b63a41ea6919365e797e1d8032f6bea8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/manifest.json",
+      "baseline_sha256": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5",
+      "current_sha256": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/naquiro-male.bin",
+      "baseline_sha256": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+      "current_sha256": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/naquiro-male.gltf",
+      "baseline_sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+      "current_sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_cloth_basecolor.png",
+      "baseline_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "current_sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_leather_basecolor.png",
+      "baseline_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "current_sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_leather_roughness.png",
+      "baseline_sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b",
+      "current_sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_basecolor.png",
+      "baseline_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "current_sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_normal.png",
+      "baseline_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "current_sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_roughness.png",
+      "baseline_sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2",
+      "current_sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/resonator.bin",
+      "baseline_sha256": "c37986967d8d96b39c90a6e702a7ea512b7d4f3308bb278c46c42635e376799f",
+      "current_sha256": "c37986967d8d96b39c90a6e702a7ea512b7d4f3308bb278c46c42635e376799f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/art/resonator.gltf",
+      "baseline_sha256": "f003f03735ccbff6ee48d03208eb11bdfd611e6143f9dc6ef1a82abfd0e0f129",
+      "current_sha256": "f003f03735ccbff6ee48d03208eb11bdfd611e6143f9dc6ef1a82abfd0e0f129",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/01_farol_estavel.wav",
+      "baseline_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+      "current_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/02_farol_enfraquecido.wav",
+      "baseline_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+      "current_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/03_farol_critico.wav",
+      "baseline_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+      "current_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/04_descarga_arcana.mp3",
+      "baseline_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+      "current_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/05_barreira_protetora.mp3",
+      "baseline_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+      "current_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/06_flecha_especial.mp3",
+      "baseline_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+      "current_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/public/audio/07_pulso_de_cura.mp3",
+      "baseline_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+      "current_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/accounts.ts",
+      "baseline_sha256": "cb17cb52f23224adbbd611a884ce664534d24ad20378593f15486d919e815f27",
+      "current_sha256": "cb17cb52f23224adbbd611a884ce664534d24ad20378593f15486d919e815f27",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/audio-synth.ts",
+      "baseline_sha256": "830d2c634dd73cdb768a405a77c90ecec83d5a154ee13bfdd48870ea113e0c54",
+      "current_sha256": "830d2c634dd73cdb768a405a77c90ecec83d5a154ee13bfdd48870ea113e0c54",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/audio.ts",
+      "baseline_sha256": "62751602df5a7346c53fb52bc37595c1dc3c53c42a1eb23c5dcb97c7a4d42912",
+      "current_sha256": "62751602df5a7346c53fb52bc37595c1dc3c53c42a1eb23c5dcb97c7a4d42912",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/character-animation.ts",
+      "baseline_sha256": "b88ef8b62acdc646297d5773cc017d6d64f50625a171ba5203403d0973c20698",
+      "current_sha256": "b88ef8b62acdc646297d5773cc017d6d64f50625a171ba5203403d0973c20698",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/character-assets.ts",
+      "baseline_sha256": "e20525dfac6a353adc1c8442b9601df9aa14957869604b83a19712f2a7a6cf69",
+      "current_sha256": "e20525dfac6a353adc1c8442b9601df9aa14957869604b83a19712f2a7a6cf69",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/character-lab.css",
+      "baseline_sha256": "5eb85432d6db861cfd7d31c35b9cf874c6bd82dadf64fbfb66e4ea5d02adbad5",
+      "current_sha256": "5eb85432d6db861cfd7d31c35b9cf874c6bd82dadf64fbfb66e4ea5d02adbad5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/character-lab.ts",
+      "baseline_sha256": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+      "current_sha256": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/character-runtime.ts",
+      "baseline_sha256": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+      "current_sha256": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/dialogue-audio.ts",
+      "baseline_sha256": "6dedcfe583d68e8f8c5eddc101135ccb6fc1d4fe231462d69ab196cf0d1d9812",
+      "current_sha256": "6dedcfe583d68e8f8c5eddc101135ccb6fc1d4fe231462d69ab196cf0d1d9812",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/input.ts",
+      "baseline_sha256": "7a0b6af1f388afbc5c03c2bbdaea65b8eba76b528615231762f0c31429cb819c",
+      "current_sha256": "7a0b6af1f388afbc5c03c2bbdaea65b8eba76b528615231762f0c31429cb819c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/main.ts",
+      "baseline_sha256": "bfad4685123a2b84206084ad9638c937154fe12b7145502ccab368130ae20973",
+      "current_sha256": "bfad4685123a2b84206084ad9638c937154fe12b7145502ccab368130ae20973",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/models.ts",
+      "baseline_sha256": "5435fc56b1611cea18a781413612e97045275e9b12630a6658343681a33822c8",
+      "current_sha256": "5435fc56b1611cea18a781413612e97045275e9b12630a6658343681a33822c8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/network.ts",
+      "baseline_sha256": "b7bbb57b4f5831a56da84ec68cc4cc5d4d41011b431acfd891628793ae5439c3",
+      "current_sha256": "b7bbb57b4f5831a56da84ec68cc4cc5d4d41011b431acfd891628793ae5439c3",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/render-assets.ts",
+      "baseline_sha256": "ee1b2e2abf44baa9777cb6a8d6a39e1508434d3abf9aca15d417d0be6d8df06b",
+      "current_sha256": "ee1b2e2abf44baa9777cb6a8d6a39e1508434d3abf9aca15d417d0be6d8df06b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/render-camera.ts",
+      "baseline_sha256": "4e3270ccf64799831152496906ad802fa0772f507313e145aa89c726ee8ad08b",
+      "current_sha256": "4e3270ccf64799831152496906ad802fa0772f507313e145aa89c726ee8ad08b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/scene.ts",
+      "baseline_sha256": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+      "current_sha256": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/scenery.ts",
+      "baseline_sha256": "8d5e3d189ce78df0c9e627502cebc96529dac1c157ce52d7ad30323b31b02957",
+      "current_sha256": "8d5e3d189ce78df0c9e627502cebc96529dac1c157ce52d7ad30323b31b02957",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/score.ts",
+      "baseline_sha256": "a6087ffbede2d3813905b75ea8f45d2a9ddb879b4e098c1cd501fe4f0f7647c6",
+      "current_sha256": "a6087ffbede2d3813905b75ea8f45d2a9ddb879b4e098c1cd501fe4f0f7647c6",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/style.css",
+      "baseline_sha256": "d7237fc7f228910de9ac5c45007ae3254b4b6450a71868101385c126b224e8cd",
+      "current_sha256": "d7237fc7f228910de9ac5c45007ae3254b4b6450a71868101385c126b224e8cd",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/ui-state.ts",
+      "baseline_sha256": "bdaf47e985d6e19638bafb4feb8d4bfccdbd88709870eb9fc9367915433fff7c",
+      "current_sha256": "bdaf47e985d6e19638bafb4feb8d4bfccdbd88709870eb9fc9367915433fff7c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/client/src/ui.ts",
+      "baseline_sha256": "ea8879a5b452db39a781e9dde2557dab3575be89d53929f1c7d4f577f482803a",
+      "current_sha256": "ea8879a5b452db39a781e9dde2557dab3575be89d53929f1c7d4f577f482803a",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ACCOUNTS_B1.md",
+      "baseline_sha256": "2cd86f9837c8e1e7015cbdff5a7bcc2c506cc480fd12b171e708e6af47b590a7",
+      "current_sha256": "2cd86f9837c8e1e7015cbdff5a7bcc2c506cc480fd12b171e708e6af47b590a7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ARQUITETURA.md",
+      "baseline_sha256": "81db4141a10ba8276e26c39ad620046b1148482742446b09838628225a676dd2",
+      "current_sha256": "81db4141a10ba8276e26c39ad620046b1148482742446b09838628225a676dd2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ART_ALPHA_0_3.md",
+      "baseline_sha256": "eccda335bd07b7932f321bf52a20cde06eb48b49a7889ac7acaf105b9c0932bb",
+      "current_sha256": "eccda335bd07b7932f321bf52a20cde06eb48b49a7889ac7acaf105b9c0932bb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ASSET_PROVENANCE.json",
+      "baseline_sha256": "6f5f7ca66468058a15424ad2d2e46f2cdfd1008187f4d56d08a31700c8329d6c",
+      "current_sha256": "6f5f7ca66468058a15424ad2d2e46f2cdfd1008187f4d56d08a31700c8329d6c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/AUDIO.md",
+      "baseline_sha256": "ac2ebe20cc48506ee4c3bdae9f5e6035ea7875b8539fe1b276f246ccb833ac10",
+      "current_sha256": "ac2ebe20cc48506ee4c3bdae9f5e6035ea7875b8539fe1b276f246ccb833ac10",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/AUDIO_ALPHA_0_3.md",
+      "baseline_sha256": "2f0d2a6640076927fc1e19def28bc2d16d40b10bb89bcbdd92dc815773b522be",
+      "current_sha256": "2f0d2a6640076927fc1e19def28bc2d16d40b10bb89bcbdd92dc815773b522be",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/BALANCEAMENTO.md",
+      "baseline_sha256": "b18d88c7919fc281f396ca0109c1f0ad73cc5c76c89f1e7d5a46552f75701175",
+      "current_sha256": "b18d88c7919fc281f396ca0109c1f0ad73cc5c76c89f1e7d5a46552f75701175",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/CHANGELOG_ALPHA_0_3.md",
+      "baseline_sha256": "5feb1353415d618bcf59bf44ed0b7e4cbc3ae66df71283cd12fe7f1630508ed4",
+      "current_sha256": "5feb1353415d618bcf59bf44ed0b7e4cbc3ae66df71283cd12fe7f1630508ed4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/CHARACTER_NAQUIRO_001.md",
+      "baseline_sha256": "bf3628646b17fed22670fa2cf45c12f649829eee824c80f89705fd4580fe038c",
+      "current_sha256": "bf3628646b17fed22670fa2cf45c12f649829eee824c80f89705fd4580fe038c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/CONTAS_ALPHA.md",
+      "baseline_sha256": "e28624f0fc4441bd63389c65eaf1eb0d65b9895d02a795cf55cab269fec0e8c1",
+      "current_sha256": "e28624f0fc4441bd63389c65eaf1eb0d65b9895d02a795cf55cab269fec0e8c1",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ENTREGA_ALPHA_0_2.md",
+      "baseline_sha256": "69cd2e82157cc671799e9c61336ee17f625829416f02b414cdf7c1dccd58ca9c",
+      "current_sha256": "69cd2e82157cc671799e9c61336ee17f625829416f02b414cdf7c1dccd58ca9c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/ETAPAS.md",
+      "baseline_sha256": "8c9949ed4e310ceb060640266661d9f4afd31c1dce7e67a341f1cb7937828ccb",
+      "current_sha256": "8c9949ed4e310ceb060640266661d9f4afd31c1dce7e67a341f1cb7937828ccb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/EXTENDED_ALPHA_0_3.md",
+      "baseline_sha256": "a62d2339e404fb8d86d0f146b1565b5e44085e03eb85556eaafd394f3ad1a36f",
+      "current_sha256": "a62d2339e404fb8d86d0f146b1565b5e44085e03eb85556eaafd394f3ad1a36f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/MATRIZ_ALPHA_0_3.md",
+      "baseline_sha256": "d70ae35cb3bf1932658a30834c1b8fdc049a514601c28def911af0507ac4a5b8",
+      "current_sha256": "d70ae35cb3bf1932658a30834c1b8fdc049a514601c28def911af0507ac4a5b8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/REPORT_001_B1_1.md",
+      "baseline_sha256": "674cffe1c1f62176269a237dab9beb2ff35443027498482b27ba143f27678aa5",
+      "current_sha256": "674cffe1c1f62176269a237dab9beb2ff35443027498482b27ba143f27678aa5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/REPORT_ALPHA_0_3.md",
+      "baseline_sha256": "cb7cfde9ad593ae5020755886958a92421b8ef644e09cc5f809419cd084c0176",
+      "current_sha256": "cb7cfde9ad593ae5020755886958a92421b8ef644e09cc5f809419cd084c0176",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/RFC_001_B1.md",
+      "baseline_sha256": "8220a0c162f3597004a0d51946ebaeccd68d52580e128dd7e90a403eac35d3f4",
+      "current_sha256": "8220a0c162f3597004a0d51946ebaeccd68d52580e128dd7e90a403eac35d3f4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/RFC_001_B1_1.md",
+      "baseline_sha256": "95ad5ed2bf38bddcbc53a623b85f669635af3b1f8b0a8de6cc5ce5ae8052668f",
+      "current_sha256": "95ad5ed2bf38bddcbc53a623b85f669635af3b1f8b0a8de6cc5ce5ae8052668f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/VALIDACAO_ALPHA_0_2.md",
+      "baseline_sha256": "5b12abb05d7e648c08c0858206706aee5e3e25f615b050be536488bc9c974096",
+      "current_sha256": "5b12abb05d7e648c08c0858206706aee5e3e25f615b050be536488bc9c974096",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/VERIFICACAO.md",
+      "baseline_sha256": "d31da54cf64781b2fd75030fce8c17d494e2bf22ee876c0dc01ab6b6d09fc576",
+      "current_sha256": "d31da54cf64781b2fd75030fce8c17d494e2bf22ee876c0dc01ab6b6d09fc576",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/WINDOWS_001_B1_1.md",
+      "baseline_sha256": "356b98603cdafd64c169633179bda812b05192188ca947f3df8b381907d5b806",
+      "current_sha256": "356b98603cdafd64c169633179bda812b05192188ca947f3df8b381907d5b806",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/WINDOWS_ALPHA_0_3.md",
+      "baseline_sha256": "536e9a21fa3a103097352891a54fc1309919e65ca6e0a373d2d93a7636580000",
+      "current_sha256": "536e9a21fa3a103097352891a54fc1309919e65ca6e0a373d2d93a7636580000",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/WINDOWS_NAQUIRO_001.md",
+      "baseline_sha256": "db68ec45a5f6dd7f7a7bb4a683e155dbe81213adc679a53f81c625896bbe75d4",
+      "current_sha256": "db68ec45a5f6dd7f7a7bb4a683e155dbe81213adc679a53f81c625896bbe75d4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/audio/previa-vale-alvor.wav",
+      "baseline_sha256": "d40ca697c50c2972db44b049ec28bf68a60484678eb2e5abf7997de6787f4458",
+      "current_sha256": "d40ca697c50c2972db44b049ec28bf68a60484678eb2e5abf7997de6787f4458",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/audio-integrity.json",
+      "baseline_sha256": "771ef78f41f5998b42f4643a619cc140778414c28511b45361f0536c9c3e83dd",
+      "current_sha256": "771ef78f41f5998b42f4643a619cc140778414c28511b45361f0536c9c3e83dd",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/check-final.log",
+      "baseline_sha256": "c022f1787bd0482e250607f6ffc93871190098f85a854c07d9d80552b00f7412",
+      "current_sha256": "c022f1787bd0482e250607f6ffc93871190098f85a854c07d9d80552b00f7412",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/classes-result.json",
+      "baseline_sha256": "e02e78942031bf20868b224329358c8c6227e7858f01159f687b4263400eb2f1",
+      "current_sha256": "e02e78942031bf20868b224329358c8c6227e7858f01159f687b4263400eb2f1",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/entry-result.json",
+      "baseline_sha256": "7d9d1fc42b1bc149f986de942939a366b5c51593a04c3c73b24bbaee5fb594d7",
+      "current_sha256": "7d9d1fc42b1bc149f986de942939a366b5c51593a04c3c73b24bbaee5fb594d7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/journey-result.json",
+      "baseline_sha256": "3f3794e28402e6c73d880c8ddc3ca8c166e9f472d70d9c71c0590f2e06a1047c",
+      "current_sha256": "3f3794e28402e6c73d880c8ddc3ca8c166e9f472d70d9c71c0590f2e06a1047c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/docs/evidencias/release-smoke.json",
+      "baseline_sha256": "a390723df4ea405913dbf17a0150949539d848fe39a2bf78e071d422a8c6bc25",
+      "current_sha256": "a390723df4ea405913dbf17a0150949539d848fe39a2bf78e071d422a8c6bc25",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/licenses/three-LICENSE.txt",
+      "baseline_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "current_sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/licenses/ws-LICENSE.txt",
+      "baseline_sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "current_sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/LICENSE",
+      "baseline_sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "current_sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/README.md",
+      "baseline_sha256": "bb979132f3cbff08ce47f36d041e18071f8f534d01f591c0b129ba7abf1e480e",
+      "current_sha256": "bb979132f3cbff08ce47f36d041e18071f8f534d01f591c0b129ba7abf1e480e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/browser.js",
+      "baseline_sha256": "010da44addea1d88b2b732540c3f1fd0cbcb28926b96623d4c64222e0ead2d0e",
+      "current_sha256": "010da44addea1d88b2b732540c3f1fd0cbcb28926b96623d4c64222e0ead2d0e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/index.js",
+      "baseline_sha256": "924564d5be26d59b9682c4263f68320e48dde7240bd2d1ad17ec305537429dd2",
+      "current_sha256": "924564d5be26d59b9682c4263f68320e48dde7240bd2d1ad17ec305537429dd2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/buffer-util.js",
+      "baseline_sha256": "8b0a45739132f82e25ea13163780abf547ccfe989267f3eb7abb475beec92da3",
+      "current_sha256": "8b0a45739132f82e25ea13163780abf547ccfe989267f3eb7abb475beec92da3",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/constants.js",
+      "baseline_sha256": "391e823142b8b370e55a2fd32b022deaf03b8415c56000009674ebc86a0b4f86",
+      "current_sha256": "391e823142b8b370e55a2fd32b022deaf03b8415c56000009674ebc86a0b4f86",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/event-target.js",
+      "baseline_sha256": "c45d3c6e12d170c860c0c3f1a050aa0f864d9806632b609a1e607d675aba128c",
+      "current_sha256": "c45d3c6e12d170c860c0c3f1a050aa0f864d9806632b609a1e607d675aba128c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/extension.js",
+      "baseline_sha256": "852564f0f6b460287043803eae732666fb5610f676874354fc89f06aa4e986ed",
+      "current_sha256": "852564f0f6b460287043803eae732666fb5610f676874354fc89f06aa4e986ed",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/limiter.js",
+      "baseline_sha256": "e0469d4b83f6ba764b15f80e1766b75c136fbff68f048f4c050f0b1c7f065f69",
+      "current_sha256": "e0469d4b83f6ba764b15f80e1766b75c136fbff68f048f4c050f0b1c7f065f69",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/permessage-deflate.js",
+      "baseline_sha256": "16a91536988a53c23047ee5882392068728a839a244178c3b09b8c54982f58b0",
+      "current_sha256": "16a91536988a53c23047ee5882392068728a839a244178c3b09b8c54982f58b0",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/receiver.js",
+      "baseline_sha256": "a6ada33c9a2d54eaf595824b821ea89ca2c6395f89aa06755c52142148274884",
+      "current_sha256": "a6ada33c9a2d54eaf595824b821ea89ca2c6395f89aa06755c52142148274884",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/sender.js",
+      "baseline_sha256": "d0791d30c3defd44dcabbddb879a901c757993fea2c00a7ffea01d53b23b4b77",
+      "current_sha256": "d0791d30c3defd44dcabbddb879a901c757993fea2c00a7ffea01d53b23b4b77",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/stream.js",
+      "baseline_sha256": "a56fcb6e2b152097ee820b6f5410b1f71e59819b45d08d9f8bda588fe39070ec",
+      "current_sha256": "a56fcb6e2b152097ee820b6f5410b1f71e59819b45d08d9f8bda588fe39070ec",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/subprotocol.js",
+      "baseline_sha256": "be3f6323d6f549568577dcba9004c1479d95c65a7abb0fe0c582875b9fac0b7c",
+      "current_sha256": "be3f6323d6f549568577dcba9004c1479d95c65a7abb0fe0c582875b9fac0b7c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/validation.js",
+      "baseline_sha256": "41ce8e83d0d434132e1704895fedb91f6703a701b42d91c80954ab29b2845593",
+      "current_sha256": "41ce8e83d0d434132e1704895fedb91f6703a701b42d91c80954ab29b2845593",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/websocket-server.js",
+      "baseline_sha256": "6d8dd89a841748c80445fd5fcdb5ba8005369b53cc3525135e11304c8b9c55e5",
+      "current_sha256": "6d8dd89a841748c80445fd5fcdb5ba8005369b53cc3525135e11304c8b9c55e5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/lib/websocket.js",
+      "baseline_sha256": "7ccf305925f0cdb74e06b75b4c84de134b1bd771a220ef409b24520def08128f",
+      "current_sha256": "7ccf305925f0cdb74e06b75b4c84de134b1bd771a220ef409b24520def08128f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/package.json",
+      "baseline_sha256": "c1ef91ca04eb4754c011c5f0e7638b5078ff71104fada400c44ac761cf93e0b1",
+      "current_sha256": "c1ef91ca04eb4754c011c5f0e7638b5078ff71104fada400c44ac761cf93e0b1",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/node_modules/ws/wrapper.mjs",
+      "baseline_sha256": "fe154662301fd558f935f9c217fccbe7a7dac02ff39e648a000589403ff27c7f",
+      "current_sha256": "fe154662301fd558f935f9c217fccbe7a7dac02ff39e648a000589403ff27c7f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/package-lock.json",
+      "baseline_sha256": "6b0b44d6ffb2ededf056a4fd7d34795b73e2b0882bf12e3ba44303a49301bb90",
+      "current_sha256": "6b0b44d6ffb2ededf056a4fd7d34795b73e2b0882bf12e3ba44303a49301bb90",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/package.json",
+      "baseline_sha256": "96adb0be6edaf402458b1a661d31b1d8e3e35f5a6a2621df7bab498d2b8861eb",
+      "current_sha256": "96adb0be6edaf402458b1a661d31b1d8e3e35f5a6a2621df7bab498d2b8861eb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/account-admin.ts",
+      "baseline_sha256": "0bc4d6121521ca912afc7a65a13463fa9095e90913202eda586f82fda4255cec",
+      "current_sha256": "0bc4d6121521ca912afc7a65a13463fa9095e90913202eda586f82fda4255cec",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/check-account-db.mjs",
+      "baseline_sha256": "52d6139bb7d8aa8013179239306d990ef2da9410ec20c864f261a313a6f7c899",
+      "current_sha256": "52d6139bb7d8aa8013179239306d990ef2da9410ec20c864f261a313a6f7c899",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/create-resonator-asset.mjs",
+      "baseline_sha256": "306fb8ef05ad839709ab878bb37d798b60be19bbc7a80e15fcf2f55b846fc78e",
+      "current_sha256": "306fb8ef05ad839709ab878bb37d798b60be19bbc7a80e15fcf2f55b846fc78e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/doctor.mjs",
+      "baseline_sha256": "b4e29c13aff002f7552712dde9c6527ef560d4cf2e94449761a08fec9000c218",
+      "current_sha256": "b4e29c13aff002f7552712dde9c6527ef560d4cf2e94449761a08fec9000c218",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/inspect-account-lock.mjs",
+      "baseline_sha256": "1752562a100d4244ba578a18e7e164d7e791cf9122e07d9faaac74faab7e7c37",
+      "current_sha256": "1752562a100d4244ba578a18e7e164d7e791cf9122e07d9faaac74faab7e7c37",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/probe-watch.mjs",
+      "baseline_sha256": "0eeb030031fdbb1261c00aa2b9dde15b3debe42e163c30a086c90d2aee0855ac",
+      "current_sha256": "0eeb030031fdbb1261c00aa2b9dde15b3debe42e163c30a086c90d2aee0855ac",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/render-audio.ts",
+      "baseline_sha256": "8f820c52cb666fba3b60c14560829d81d2d5b73f8b14ae05c9a94873fdef0ddd",
+      "current_sha256": "8f820c52cb666fba3b60c14560829d81d2d5b73f8b14ae05c9a94873fdef0ddd",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/replay-alpha.ts",
+      "baseline_sha256": "da8c95f6b49a7ec19d865f94b1e3fd287fe01466a7a131add748d1efbe4cce8f",
+      "current_sha256": "da8c95f6b49a7ec19d865f94b1e3fd287fe01466a7a131add748d1efbe4cce8f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/replay-slice.ts",
+      "baseline_sha256": "3d7f1ab0c6bb555375ce38d5062351f620cd1b28745c157944bf2d79242e2661",
+      "current_sha256": "3d7f1ab0c6bb555375ce38d5062351f620cd1b28745c157944bf2d79242e2661",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/soak-alpha.ts",
+      "baseline_sha256": "dfddcc4a1473febada695f790d05e1a04ef95997b27f47b862a16a204dc9458e",
+      "current_sha256": "dfddcc4a1473febada695f790d05e1a04ef95997b27f47b862a16a204dc9458e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/validate-alpha-windows.ps1",
+      "baseline_sha256": "61eb0d4bbd15b22d05b939a1b2a98e6f750cb7ba1daa1ddc890a512f84103a26",
+      "current_sha256": "61eb0d4bbd15b22d05b939a1b2a98e6f750cb7ba1daa1ddc890a512f84103a26",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/validate-b11-windows.ps1",
+      "baseline_sha256": "907a4523f3fb14c5d80410bbaadb62d5aadeeaecb86ff13db667c45fe69d41bf",
+      "current_sha256": "907a4523f3fb14c5d80410bbaadb62d5aadeeaecb86ff13db667c45fe69d41bf",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/scripts/verify-files.mjs",
+      "baseline_sha256": "bd67870a5a1804254520045e1415102ce8ffe883c26f12c2422561792e1296f4",
+      "current_sha256": "bd67870a5a1804254520045e1415102ce8ffe883c26f12c2422561792e1296f4",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/account-lock.ts",
+      "baseline_sha256": "25b4f8267b280ccb8a0adf3c1b3254b20475dc123ba6c655f209deb122aa0f31",
+      "current_sha256": "25b4f8267b280ccb8a0adf3c1b3254b20475dc123ba6c655f209deb122aa0f31",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/accounts.ts",
+      "baseline_sha256": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+      "current_sha256": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/diagnostics.ts",
+      "baseline_sha256": "2e919304c8f9777ccf1ba362fba37dcfa1d6d6f5db42a217c8f8435f4673477c",
+      "current_sha256": "2e919304c8f9777ccf1ba362fba37dcfa1d6d6f5db42a217c8f8435f4673477c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/game.ts",
+      "baseline_sha256": "9d124275f3c06cbae3f5244ca5e9ff2d8ed3ecaa31ab3ea9f884b8f9fa390cf5",
+      "current_sha256": "9d124275f3c06cbae3f5244ca5e9ff2d8ed3ecaa31ab3ea9f884b8f9fa390cf5",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/index.ts",
+      "baseline_sha256": "c9c5e3a68f2e918460a26c6ec2fdfd2ede2d06720580501c4b3430053c0c4d42",
+      "current_sha256": "c9c5e3a68f2e918460a26c6ec2fdfd2ede2d06720580501c4b3430053c0c4d42",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/protocol.ts",
+      "baseline_sha256": "06009a8a1d16b9015f92af9487eac37a631190865788aaa50d84ecce8f8d7fcb",
+      "current_sha256": "06009a8a1d16b9015f92af9487eac37a631190865788aaa50d84ecce8f8d7fcb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/server.ts",
+      "baseline_sha256": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+      "current_sha256": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/server/src/store.ts",
+      "baseline_sha256": "85197fe42264f25cb97d30ad7fc3928bda9598dce18462e90c9184c008357e90",
+      "current_sha256": "85197fe42264f25cb97d30ad7fc3928bda9598dce18462e90c9184c008357e90",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/alpha.ts",
+      "baseline_sha256": "ce501536aea9a3413fa42df262cfc3e56024d89e681515f6c7e3da9000bf8223",
+      "current_sha256": "ce501536aea9a3413fa42df262cfc3e56024d89e681515f6c7e3da9000bf8223",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/config.ts",
+      "baseline_sha256": "4e6fb7041c941b7861f80b8fdc3ce2793c2d8a7294db7fb63a6fccd798e523db",
+      "current_sha256": "4e6fb7041c941b7861f80b8fdc3ce2793c2d8a7294db7fb63a6fccd798e523db",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/extended.ts",
+      "baseline_sha256": "db292d291df0cfff229e25b4721d4abca7cdae2a07e73664f8d62b94422fd328",
+      "current_sha256": "db292d291df0cfff229e25b4721d4abca7cdae2a07e73664f8d62b94422fd328",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/identity.ts",
+      "baseline_sha256": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+      "current_sha256": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/movement.ts",
+      "baseline_sha256": "925461a9ef44b49529bd0c0ccd52cd54bbbee731568c0dcd4fd4bea3a3dbb628",
+      "current_sha256": "925461a9ef44b49529bd0c0ccd52cd54bbbee731568c0dcd4fd4bea3a3dbb628",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/release.ts",
+      "baseline_sha256": "fe4d12ab87dc1cf660fd4018a7842154000d95448dcb3cda847eec14493936e8",
+      "current_sha256": "fe4d12ab87dc1cf660fd4018a7842154000d95448dcb3cda847eec14493936e8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/shared/types.ts",
+      "baseline_sha256": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+      "current_sha256": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/accounts-network.test.ts",
+      "baseline_sha256": "e3e1e5375ee89c3af7b791c4ed20322ef03d69052a7691a67cf33796da7ee866",
+      "current_sha256": "e3e1e5375ee89c3af7b791c4ed20322ef03d69052a7691a67cf33796da7ee866",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/accounts.test.ts",
+      "baseline_sha256": "58528fd91418d49a983efc3cde4daebb1a1924a78c9ebbedab1ba26e0090c458",
+      "current_sha256": "58528fd91418d49a983efc3cde4daebb1a1924a78c9ebbedab1ba26e0090c458",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/alpha.test.ts",
+      "baseline_sha256": "35a6e1657f3b6d4a0a693fb2f5991083e5c5221145d81f1659662d42ebaf87f9",
+      "current_sha256": "35a6e1657f3b6d4a0a693fb2f5991083e5c5221145d81f1659662d42ebaf87f9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/audio-engine.d.ts",
+      "baseline_sha256": "63c11795c7eb9af84c3a465879338bc9f032eb08e19e4c55923f1f141ba73edb",
+      "current_sha256": "63c11795c7eb9af84c3a465879338bc9f032eb08e19e4c55923f1f141ba73edb",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/audio-voice.test.ts",
+      "baseline_sha256": "4b67639d39fb944ac566c17d4740d1224a64445c7ca195b6e071699a1dafb7ba",
+      "current_sha256": "4b67639d39fb944ac566c17d4740d1224a64445c7ca195b6e071699a1dafb7ba",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/audio.test.ts",
+      "baseline_sha256": "cc59c269f0941c9dab9314e551292ab0b5ad61495c2be0929c0eeeec82a0ef17",
+      "current_sha256": "cc59c269f0941c9dab9314e551292ab0b5ad61495c2be0929c0eeeec82a0ef17",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/character.test.ts",
+      "baseline_sha256": "6dd388d3ff150e10e56b313fa997b279e2e6f1096ab7fc186807fd44331a42ac",
+      "current_sha256": "6dd388d3ff150e10e56b313fa997b279e2e6f1096ab7fc186807fd44331a42ac",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/combat.test.ts",
+      "baseline_sha256": "3ec4ca55eb7f8fe4a8c0b86f93028ff5272278bbe283d3c56c741dfb1ed4a1a9",
+      "current_sha256": "3ec4ca55eb7f8fe4a8c0b86f93028ff5272278bbe283d3c56c741dfb1ed4a1a9",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/extended.test.ts",
+      "baseline_sha256": "cc1d2271714facbdfca663370b13b35775a5f8443bf49244aa3b817c2e22fa81",
+      "current_sha256": "cc1d2271714facbdfca663370b13b35775a5f8443bf49244aa3b817c2e22fa81",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/foundation.test.ts",
+      "baseline_sha256": "e9d94af5e36db333393a4e5be5ac27f3290ce0e3e6804eb925a0b21b552be4a8",
+      "current_sha256": "e9d94af5e36db333393a4e5be5ac27f3290ce0e3e6804eb925a0b21b552be4a8",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/helpers.ts",
+      "baseline_sha256": "68406406235e7aa6a98fa7e70a981e65232b97e58cdfc2ffadc1df9dbe5fc228",
+      "current_sha256": "68406406235e7aa6a98fa7e70a981e65232b97e58cdfc2ffadc1df9dbe5fc228",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/integration.test.ts",
+      "baseline_sha256": "a71bec9c60e7bb2a3107b87dcfff5e151e8616e6368cc240c8288285aa464b63",
+      "current_sha256": "a71bec9c60e7bb2a3107b87dcfff5e151e8616e6368cc240c8288285aa464b63",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/lifecycle.test.ts",
+      "baseline_sha256": "5292cfd2160379e03ce93004bbf63d545fdb2815440c474b85959b13e274e227",
+      "current_sha256": "5292cfd2160379e03ce93004bbf63d545fdb2815440c474b85959b13e274e227",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/network-watchdog.test.ts",
+      "baseline_sha256": "0607b471b7998d9845065cbe12f54d172465db1e4490316132f39bc72f0a23bc",
+      "current_sha256": "0607b471b7998d9845065cbe12f54d172465db1e4490316132f39bc72f0a23bc",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/progression.test.ts",
+      "baseline_sha256": "33ba2f9f14d11b66439deab09ceebefd89899c46099eb21d7c12e622c1ba9889",
+      "current_sha256": "33ba2f9f14d11b66439deab09ceebefd89899c46099eb21d7c12e622c1ba9889",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/render.test.ts",
+      "baseline_sha256": "b24fcc4af3a1d1d2d9d3ea6906d0e54a76a34108e64d3c05d82e12099ff5c22f",
+      "current_sha256": "b24fcc4af3a1d1d2d9d3ea6906d0e54a76a34108e64d3c05d82e12099ff5c22f",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/scene-audio.test.ts",
+      "baseline_sha256": "609c68210270083cba7354c13f22c270571a5bbb1ea81efb910585232fad894b",
+      "current_sha256": "609c68210270083cba7354c13f22c270571a5bbb1ea81efb910585232fad894b",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/support/lifecycle-hook.ts",
+      "baseline_sha256": "5ea10fddd349ce78693467dc97dfd073631c37930dd9688ec05ce9c8190d6546",
+      "current_sha256": "5ea10fddd349ce78693467dc97dfd073631c37930dd9688ec05ce9c8190d6546",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/ui-accessibility.test.ts",
+      "baseline_sha256": "879b1b87f5afdaedc9e6b57aea4afa4fc16bf2a92d9b4f50c8e8474e53a9ea5c",
+      "current_sha256": "879b1b87f5afdaedc9e6b57aea4afa4fc16bf2a92d9b4f50c8e8474e53a9ea5c",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tests/ui.test.ts",
+      "baseline_sha256": "2a10c52ceea6bdd9ae4b1a7bf398a7c59bec78eb22de696cee3771c18c7a87f6",
+      "current_sha256": "2a10c52ceea6bdd9ae4b1a7bf398a7c59bec78eb22de696cee3771c18c7a87f6",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tools/audio-lab-v1_1/ajustar_volume.py",
+      "baseline_sha256": "8a13f180a674b5f5b1baa6d586c46a5547fcd0ada95dd20a05cc915ccb79a020",
+      "current_sha256": "8a13f180a674b5f5b1baa6d586c46a5547fcd0ada95dd20a05cc915ccb79a020",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tools/audio-lab-v1_1/audio_core.py",
+      "baseline_sha256": "626f4257a21630cb94d33101190daf69952d581365c82cf6a55b7a51d3326c9e",
+      "current_sha256": "626f4257a21630cb94d33101190daf69952d581365c82cf6a55b7a51d3326c9e",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tools/audio-lab-v1_1/requirements.txt",
+      "baseline_sha256": "6bd31e587c06276bf231cec25395b5d4a0b1e38c4d2b00813b2dd96aad14f17a",
+      "current_sha256": "6bd31e587c06276bf231cec25395b5d4a0b1e38c4d2b00813b2dd96aad14f17a",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tools/audio-lab-v1_1/sintetizar_edf_v1_1.py",
+      "baseline_sha256": "a44e078cd1607859be42839b306c6e2bcd84a1bb0c8f576df0b61f596d5bb382",
+      "current_sha256": "a44e078cd1607859be42839b306c6e2bcd84a1bb0c8f576df0b61f596d5bb382",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tsconfig.json",
+      "baseline_sha256": "46696dc74567bb9f3fc47b3ed09d02549f8848845639628ba99fce7a2478d4e3",
+      "current_sha256": "46696dc74567bb9f3fc47b3ed09d02549f8848845639628ba99fce7a2478d4e3",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/tsconfig.server.json",
+      "baseline_sha256": "1c363ff32739b5deb74b52b214930994098c79b8d5f33ca1bff6f6e0798f98df",
+      "current_sha256": "1c363ff32739b5deb74b52b214930994098c79b8d5f33ca1bff6f6e0798f98df",
+      "unchanged": true
+    },
+    {
+      "path": "jogos/ecos-dos-farois/vite.config.ts",
+      "baseline_sha256": "7ead748397921776e922ae71cfbb2f5fc03b3a79498e5554ff271a4bf85dcd2d",
+      "current_sha256": "7ead748397921776e922ae71cfbb2f5fc03b3a79498e5554ff271a4bf85dcd2d",
+      "unchanged": true
+    }
+  ],
+  "databases_opened_or_migrated": false,
+  "runtime_exported": false
+}

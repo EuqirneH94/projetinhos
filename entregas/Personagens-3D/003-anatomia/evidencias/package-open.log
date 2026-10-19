@@ -1,0 +1,6 @@
+ANATOMY_INSPECTION PASS {"archive_hidden": true, "standalone_images_and_no_linked_libraries": true, "46_study_bones": true, "source_study_rig_neutral_pose_channels": true, "neutral_materials": true, "normalized_max_four_bone_weights": true, "cage_and_evaluated_geometry": true, "continuous_body_neck_head_and_limbs": true, "neutral_symmetry": true, "six_finite_nondegenerate_diagnostic_poses": true, "source_unchanged": true}
+INSPECTED_SOURCE_SHA256 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+Blender 4.3.2
+Read blend: "/workspace/edf-naquiro-anatomy/package-open-test/anatomy-002/naquiro-anatomia-002.blend"
+
+Blender quit

@@ -1,0 +1,255 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "rest",
+  "pose_rotations": [],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "neutral-rest-front.png",
+      "sha256": "cc862ab56e2aad4d473e6ce522d4a9ee4a20333a52d097c1d97586857916eec7",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "location": [
+        0.0,
+        -6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "neutral-rest-side.png",
+      "sha256": "a2517b4379306d9ca34e5ef0a86d4f9024c8f272471740f4f5e2f5412ec1e068",
+      "camera": "CAM_side",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "location": [
+        6.0,
+        0.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.0,
+        1.5707963705062866
+      ]
+    },
+    {
+      "file": "neutral-rest-back.png",
+      "sha256": "483526daa6acae0cd0f5cf82ee8d1202ac830d5bae641417116480b9eae7e30f",
+      "camera": "CAM_back",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "location": [
+        0.0,
+        6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        -1.570796251296997,
+        3.141592502593994,
+        -0.0
+      ]
+    },
+    {
+      "file": "neutral-rest-three-quarter.png",
+      "sha256": "459b2c4a8defce690930b1b0a274e3736ed69ae53e30cf908d8db77d2ed1d319",
+      "camera": "CAM_three-quarter",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "location": [
+        4.0,
+        -6.0,
+        2.0999999046325684
+      ],
+      "rotation_euler": [
+        1.4384466409683228,
+        4.631068861726817e-08,
+        0.588002622127533
+      ]
+    },
+    {
+      "file": "neutral-rest-face-front.png",
+      "sha256": "a5b9982b24c21be5c238d655b5f2b052129625a31a492a5c86b1861c6a6f95c5",
+      "camera": "CAM_face-front",
+      "type": "ORTHO",
+      "orthographic_scale": 0.4300000071525574,
+      "location": [
+        0.0,
+        -4.0,
+        2.0899999141693115
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "neutral-rest-face-side.png",
+      "sha256": "39dd7b73ff91cfbae053dd14f677a090025d7e9a4e963f00b3bfe2ce90ae424f",
+      "camera": "CAM_face-side",
+      "type": "ORTHO",
+      "orthographic_scale": 0.4300000071525574,
+      "location": [
+        4.0,
+        0.0,
+        2.0899999141693115
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.0,
+        1.5707963705062866
+      ]
+    },
+    {
+      "file": "neutral-rest-face-three-quarter.png",
+      "sha256": "7c17d2637a38aa0d8f59c3541fda9f0813fb365d758cbb914c0c914b888df8b0",
+      "camera": "CAM_face-three-quarter",
+      "type": "ORTHO",
+      "orthographic_scale": 0.46000000834465027,
+      "location": [
+        2.0,
+        -4.0,
+        2.1600000858306885
+      ],
+      "rotation_euler": [
+        1.5551451444625854,
+        5.3428816926270883e-08,
+        0.46364763379096985
+      ]
+    },
+    {
+      "file": "neutral-rest-shoulder.png",
+      "sha256": "667e2e9d4a67a51c30bf87722d44266609bd10c2871f39ead9922c61ae980a18",
+      "camera": "CAM_shoulder",
+      "type": "ORTHO",
+      "orthographic_scale": 0.699999988079071,
+      "location": [
+        1.5,
+        -4.0,
+        2.299999952316284
+      ],
+      "rotation_euler": [
+        1.423917293548584,
+        -2.219480776943783e-08,
+        0.30288487672805786
+      ]
+    },
+    {
+      "file": "neutral-rest-hand-dorsal.png",
+      "sha256": "b38e3a2818abf8717317e3410b3b06eb946407465d7bd7e9dc88afe863db8d26",
+      "camera": "CAM_hand-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3700000047683716,
+      "location": [
+        0.7200000286102295,
+        -3.0,
+        1.100000023841858
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -6.585407774650776e-10,
+        0.006756667513400316
+      ]
+    },
+    {
+      "file": "neutral-rest-hand-palmar.png",
+      "sha256": "e3df0f1aba71687755aca359c7fb300730b1c6e6896a0361ec3f3410427793d0",
+      "camera": "CAM_hand-palmar",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3700000047683716,
+      "location": [
+        0.7200000286102295,
+        3.0,
+        1.100000023841858
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -3.06741512190456e-08,
+        3.1350138187408447
+      ]
+    },
+    {
+      "file": "neutral-rest-feet-dorsal.png",
+      "sha256": "b55827c5d6768f06850b88c4130f7228ae7ccd831e7535cfce06b0acfdfe49ea",
+      "camera": "CAM_feet-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.800000011920929,
+      "location": [
+        0.3499999940395355,
+        -2.0,
+        1.2000000476837158
+      ],
+      "rotation_euler": [
+        1.0493050813674927,
+        9.270757495016824e-09,
+        0.18216830492019653
+      ]
+    },
+    {
+      "file": "neutral-rest-feet-side.png",
+      "sha256": "ffdcb5216f78e7cf30c972f88c65f644838d7d77b7ebc4b53f0c3d46c078c302",
+      "camera": "CAM_feet-side",
+      "type": "ORTHO",
+      "orthographic_scale": 0.5299999713897705,
+      "location": [
+        3.0,
+        -0.05000000074505806,
+        0.20000000298023224
+      ],
+      "rotation_euler": [
+        1.5357248783111572,
+        9.193090733106146e-08,
+        1.581322193145752
+      ]
+    },
+    {
+      "file": "neutral-rest-feet-sole.png",
+      "sha256": "418ed90aaf1f0cc3f90491cc18ffa550204f4c0f5f6ecf8f7b82bd51e2321d0f",
+      "camera": "CAM_feet-sole",
+      "type": "ORTHO",
+      "orthographic_scale": 0.800000011920929,
+      "location": [
+        0.0,
+        -0.10000000149011612,
+        -3.0
+      ],
+      "rotation_euler": [
+        8.742277657347586e-08,
+        -3.1415927410125732,
+        -8.742278367890322e-08
+      ]
+    },
+    {
+      "file": "neutral-rest-ear.png",
+      "sha256": "54a935e51e145180079e7dd855d838aee60d5c42c6e7de4472334b40e45e335d",
+      "camera": "CAM_ear",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3400000035762787,
+      "location": [
+        1.0,
+        -3.0,
+        2.1600000858306885
+      ],
+      "rotation_euler": [
+        1.5611671209335327,
+        2.235815266260488e-08,
+        0.27300870418548584
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

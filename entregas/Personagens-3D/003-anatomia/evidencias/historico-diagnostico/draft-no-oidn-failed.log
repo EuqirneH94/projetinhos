@@ -1,0 +1,45 @@
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Fra:1 Mem:41.36M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Corpo_Base_002_Continuo
+Fra:1 Mem:42.36M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ESTUDIO_Chao
+Fra:1 Mem:42.36M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Orelha_Membrana_R
+Fra:1 Mem:44.60M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Pupila_R
+Fra:1 Mem:45.30M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Iris_R
+Fra:1 Mem:45.84M (Peak 45.92M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Globo_R
+Fra:1 Mem:45.93M (Peak 45.93M) | Time:00:00.23 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Orelha_Membrana_L
+Fra:1 Mem:46.10M (Peak 46.10M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Pupila_L
+Fra:1 Mem:46.13M (Peak 46.13M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Iris_L
+Fra:1 Mem:46.18M (Peak 46.18M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | ANAT002_Globo_L
+Fra:1 Mem:46.27M (Peak 46.27M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_R_3
+Fra:1 Mem:46.35M (Peak 46.35M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_R_2.001
+Fra:1 Mem:46.42M (Peak 46.42M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_R_1.001
+Fra:1 Mem:46.50M (Peak 46.50M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_L_3
+Fra:1 Mem:46.74M (Peak 46.74M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_L_2.001
+Fra:1 Mem:47.64M (Peak 47.64M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Pe_L_1.001
+Fra:1 Mem:47.72M (Peak 47.72M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_R_3
+Fra:1 Mem:47.79M (Peak 47.79M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_R_2.001
+Fra:1 Mem:47.87M (Peak 47.87M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_R_1.001
+Fra:1 Mem:47.94M (Peak 47.94M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_L_3
+Fra:1 Mem:48.02M (Peak 48.02M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_L_2.001
+Fra:1 Mem:48.09M (Peak 48.09M) | Time:00:00.24 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Synchronizing object | Membrana_Mao_L_1.001
+Fra:1 Mem:49.49M (Peak 49.49M) | Time:00:00.25 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Initializing
+Fra:1 Mem:37.44M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Waiting for render to start
+Failed to denoise, build has no OpenImageDenoise support
+Fra:1 Mem:37.45M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading render kernels (may take a few minutes the first time)
+Fra:1 Mem:37.45M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Scene
+Fra:1 Mem:37.45M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Updating Shaders
+Fra:1 Mem:37.53M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Loading denoising kernels (may take a few minutes the first time)
+Fra:1 Mem:37.53M (Peak 49.49M) | Time:00:00.26 | Mem:0.00M, Peak:0.00M | Scene, ViewLayer | Failed to denoise, build has no OpenImageDenoise support
+Traceback (most recent call last):
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/render_study.py", line 50, in <module>
+    bpy.ops.render.render(write_still=True)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/usr/share/blender/scripts/modules/bpy/ops.py", line 109, in __call__
+    ret = _op_call(self.idname_py(), kw)
+RuntimeError: Error: Failed to denoise, build has no OpenImageDenoise support
+Error: Failed to denoise, build has no OpenImageDenoise support
+
+Error: Failed to denoise, build has no OpenImageDenoise support
+Error: Failed to denoise, build has no OpenImageDenoise support
+
+Blender quit

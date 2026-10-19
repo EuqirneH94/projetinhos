@@ -1,0 +1,1828 @@
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/.gitignore b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/.gitignore
+new file mode 100644
+index 0000000..53b5338
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/.gitignore
+@@ -0,0 +1,5 @@
++__pycache__/
++*.pyc
++*.blend1
++*.blend2
++evidence-local/
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/README.md b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/README.md
+new file mode 100644
+index 0000000..4359d96
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/README.md
+@@ -0,0 +1,40 @@
++# Corpo base Náquiro masculino — estudo 002
++
++Abra `naquiro-anatomia-002.blend` em Blender 4.3.2 e use **Save As** antes de editar. O corpo usa material neutro, sem roupas ou acessórios visíveis. A coleção `00_CHECKPOINT_001_OCULTO` conserva os objetos anteriores; as fontes 001 no diretório pai continuam intactas.
++
++As coleções `01`/`02` mostram a anatomia; `03` contém o rig de estudo. `80` é uma comparação do corpo anterior, também neutra. `90` mostra as arestas reais do cage, com subdivisão desativada. Oculte `01`/`02` antes de exibir `80` ou `90`. As câmeras `CAM_front`, `CAM_side`, `CAM_back` e as aproximações já estão no arquivo.
++
++O novo estudo **não foi exportado para o jogo**. Não há migração de dados ou alteração dos saves. Roupas, texturas detalhadas, efeitos, versão feminina e rig final ficam para etapas posteriores. As proporções e a escala técnica de 2,25 unidades são revisáveis, não uma decisão de lore.
++
++## Verificação somente de leitura
++
++No Linux, a partir deste diretório:
++
++```bash
++OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 blender -b --threads 2 --python-exit-code 1 --python inspect_study.py -- --blend naquiro-anatomia-002.blend --out /tmp/edf-anatomia-inspecao
++OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 blender -b --threads 2 --python-exit-code 1 --python render_study.py -- --blend naquiro-anatomia-002.blend --out /tmp/edf-anatomia-vistas --engine workbench --views front,side,back
++```
++
++Use diretórios novos de evidências para conservar cada execução. Os scripts de inspeção/render não salvam o `.blend` nem exportam assets. Uma falha Python retorna erro de processo com `--python-exit-code 1`.
++
++`inspect_study.py` verifica conectividade, orientação de arestas, áreas, simetria, pesos, materiais e seis poses reais. O PASS estrutural não comprova ausência de auto-interseções nem aprovação artística. O maior estiramento medido no corpo, com braços elevados, foi 3,58×: pesos e corretivos ainda precisam de revisão manual.
++
++## Fontes e reprodução da construção
++
++- `anatomy_body.py`: cage explícito conectado de tronco/membros/mãos/pés e membranas separadas.
++- `anatomy_head.py`: pele facial com anéis orbitais/periorais, olhos e barbatanas auriculares.
++- `build_study.py`: abre fontes 001 somente para leitura, arquiva objetos, une o pescoço, adapta um rig separado e salva o novo estudo.
++- `render_study.py`: vistas neutras, comparação anterior, cage e poses documentadas.
++- `inspect_study.py`: auditoria sem reparo automático ou gravação do arquivo.
++
++A construção precisa dos arquivos originais no diretório pai: `base.blend`, `naquiro-male.blend`, `model.py` e `rig_export.py`. O `.blend` entregue abre sem eles; as imagens antigas do checkpoint já estão incorporadas.
++
++Para reproduzir, use um checkout separado da branch da entrega e uma saída **nova**, preservando seus ajustes manuais:
++
++```bash
++OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=2 blender -b --threads 2 --python-exit-code 1 --python build_study.py -- --blend /tmp/naquiro-anatomia-reconstruida.blend --evidence /tmp/edf-anatomia-reconstrucao
++```
++
++Não execute o gerador com uma saída que contenha trabalho manual. Não execute o exportador antigo para substituir o runtime neste incremento.
++
++Relatório, vistas, hashes e guia PowerShell: `entregas/Personagens-3D/003-anatomia` na raiz do repositório.
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_body.py b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_body.py
+new file mode 100644
+index 0000000..02fca99
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_body.py
+@@ -0,0 +1,497 @@
++"""Editable, explicitly connected anatomy study. No remesh/decimation.
++
++The authored cage deliberately uses broad anatomical masses rather than a skin
++texture.  Dimensions are study coordinates, not a canonical racial height.
++"""
++import math
++import bpy
++import bmesh
++from mathutils import Vector
++
++TAU = 2.0 * math.pi
++
++
++class Cage:
++    def __init__(self):
++        self.v = []
++        self.f = []
++        self.regions = {}
++
++    def vertex(self, p):
++        self.v.append(tuple(p))
++        return len(self.v) - 1
++
++    def face(self, ids):
++        self.f.append(tuple(ids))
++
++    def bridge(self, a, b):
++        """Join loops, choosing the least-distorted cyclic correspondence."""
++        if len(a) == len(b):
++            def error(loop):
++                return sum((Vector(self.v[x]) - Vector(self.v[y])).length_squared
++                           for x, y in zip(a, loop))
++            candidates = []
++            for seq in (b, list(reversed(b))):
++                for shift in range(len(seq)):
++                    loop = seq[shift:] + seq[:shift]
++                    candidates.append((error(loop), loop))
++            b = min(candidates, key=lambda item: item[0])[1]
++            for j in range(len(a)):
++                k = (j + 1) % len(a)
++                self.face((a[j], a[k], b[k], b[j]))
++            return b
++        if len(a) == 2 * len(b):
++            # Deliberate 2:1 transition at ankle, not inside knee bend loops.
++            # Each sector consists of one quad and one triangle.
++            def error(loop):
++                return sum((Vector(self.v[a[2*j]]) - Vector(self.v[loop[j]])).length_squared
++                           for j in range(len(loop)))
++            candidates = []
++            for seq in (b, list(reversed(b))):
++                for shift in range(len(seq)):
++                    loop = seq[shift:] + seq[:shift]
++                    candidates.append((error(loop), loop))
++            b = min(candidates, key=lambda item: item[0])[1]
++            for j in range(len(b)):
++                k = (j + 1) % len(b)
++                a0, a1, a2 = a[2*j], a[2*j+1], a[(2*j+2) % len(a)]
++                self.face((a0, a1, b[k], b[j]))
++                self.face((a1, a2, b[k]))
++            return b
++        raise ValueError('Unsupported cage loop ratio %d:%d' % (len(a), len(b)))
++
++    def tube(self, boundary, sections, axis, up=(0, -1, 0)):
++        """Extrude a real boundary with correspondingly sampled oval rings."""
++        tangent = Vector(axis).normalized()
++        u = Vector(up).normalized()
++        u = (u - tangent * u.dot(tangent)).normalized()
++        w = tangent.cross(u).normalized()
++        count = len(boundary)
++        # Fixed geometric sampling makes left/right vertex sets true mirrors.
++        # Deriving phase from the first irregular branch-boundary vertex caused
++        # a measurable 9 mm side difference in draft01, despite symmetric radii.
++        # bridge() still chooses the correct cyclic/winding correspondence.
++        phase = 0.0
++        direction = 1
++        previous = boundary
++        rings = []
++        for center, ru, rw in sections:
++            center = Vector(center)
++            ring = []
++            for j in range(count):
++                angle = phase + direction * TAU * j / count
++                p = center + u * (ru * math.cos(angle)) + w * (rw * math.sin(angle))
++                ring.append(self.vertex(p))
++            previous = self.bridge(previous, ring)
++            rings.append(previous)
++        return previous, rings
++
++    def cap(self, loop, center):
++        # A quad fan, with one central polygon when the perimeter is divisible4.
++        # Tips use a small terminal ring and planar quad/n-gon cap, not a spike.
++        self.face(tuple(reversed(loop)))
++
++
++def _gaussian(value, center, width):
++    return math.exp(-((value-center)/width)**2)
++
++
++def _box(cage, nx, ny, nz, point, holes):
++    """Shared-vertex quad box, with intentional rectangular branching holes.
++
++    A hole is (fixed_axis, fixed_coordinate, u0, u1, v0, v1), where the
++    remaining axes are in ascending order. Returns its welded coordinate map.
++    """
++    dims = (nx, ny, nz)
++    mapping = {}
++
++    def vertex(coords):
++        key = tuple(coords)
++        if key not in mapping:
++            mapping[key] = cage.vertex(point(*coords))
++        return mapping[key]
++
++    for axis in range(3):
++        other = [i for i in range(3) if i != axis]
++        for side in (0, dims[axis]):
++            for u in range(dims[other[0]]):
++                for v in range(dims[other[1]]):
++                    if any(h[0] == axis and h[1] == side and h[2] <= u < h[3]
++                           and h[4] <= v < h[5] for h in holes):
++                        continue
++                    corners = []
++                    for du, dv in ((0, 0), (1, 0), (1, 1), (0, 1)):
++                        coords = [0, 0, 0]
++                        coords[axis] = side
++                        coords[other[0]] = u + du
++                        coords[other[1]] = v + dv
++                        corners.append(vertex(coords))
++                    cage.face(corners)
++
++    def perimeter(hole):
++        axis, side, lo, hi, bot, top = hole
++        other = [i for i in range(3) if i != axis]
++        path = ([(u, bot) for u in range(lo, hi)] +
++                [(hi, v) for v in range(bot, top)] +
++                [(u, top) for u in range(hi, lo, -1)] +
++                [(lo, v) for v in range(top, bot, -1)])
++        result = []
++        for u, v in path:
++            coords = [0, 0, 0]
++            coords[axis], coords[other[0]], coords[other[1]] = side, u, v
++            result.append(vertex(coords))
++        return result
++    return [perimeter(hole) for hole in holes]
++
++
++def _digit(cage, boundary, start, direction, length, radius, flattened=.83):
++    direction = Vector(direction).normalized()
++    start = Vector(start)
++    sections = []
++    for t, scale in ((.08, 1), (.22, .94), (.39, .88), (.45, .90),
++                     (.51, .84), (.65, .76), (.72, .78), (.79, .68),
++                     (.91, .57), (.975, .40), (1.0, .25)):
++        # Gentle distal curl: the dorsal/ventral silhouette remains anatomical.
++        p = start + direction * (length*t) + Vector((0, -.004*t*t, 0))
++        sections.append((p, radius*flattened*scale, radius*scale))
++    end, rings = cage.tube(boundary, sections, direction)
++    cage.cap(end, start + direction*length)
++    return rings
++
++
++def _hand(cage, side, wrist_loop):
++    s = side
++    origin = Vector((s*.666, -.018, 1.170))
++    longitudinal = Vector((s*.27, -.015, -.963)).normalized()
++    across = Vector((s*.963, 0, .27)).normalized()
++    normal = Vector((0, -1, 0))
++    nx, ny, nz = 11, 2, 6
++    length = .081
++
++    def point(i, j, k):
++        t = k/nz
++        width = .035 + .019*math.sin(t*math.pi*.63)
++        thickness = .0115 + .004*math.sin(t*math.pi) - .0025*t
++        x = (i/nx*2-1)*width
++        depth = (j/ny*2-1)*thickness
++        # Thenar eminence is volumetric and fades into wrist/palm.
++        depth += .0035*_gaussian(i/nx, .20, .23)*math.sin(t*math.pi)
++        return origin + longitudinal*(length*t) + across*x + normal*depth
++
++    wrist = (2, 0, 0, nx, 0, ny)
++    roots = [(2, nz, i, i+2, 0, 2) for i in (0, 3, 6, 9)]
++    thumb = (0, 0, 0, ny, 2, 4)
++    loops = _box(cage, nx, ny, nz, point, [wrist] + roots + [thumb])
++    cage.bridge(wrist_loop, loops[0])
++    fingers = []
++    for k, (loop, finger_length) in enumerate(zip(loops[1:5], (.094, .112, .106, .084))):
++        start = sum((Vector(cage.v[i]) for i in loop), Vector())/len(loop)
++        spread = (-.14, -.035, .055, .18)[k]
++        direction = (longitudinal + across*spread).normalized()
++        rings = _digit(cage, loop, start, direction, finger_length, .0114)
++        fingers.append({'root': loop, 'rings': rings, 'length': finger_length})
++    loop = loops[5]
++    start = sum((Vector(cage.v[i]) for i in loop), Vector())/len(loop)
++    direction = (longitudinal*.75 - across*.72 + normal*.10).normalized()
++    thumb_rings = _digit(cage, loop, start, direction, .073, .014)
++    return {'fingers': fingers, 'thumb': {'root': loop, 'rings': thumb_rings},
++            'wrist': loops[0], 'side': 'L' if side > 0 else 'R'}
++
++
++def _foot(cage, side, ankle_loop):
++    s = side
++    nx, ny, nz = 11, 10, 2
++    xcenter = s*.153
++
++    def point(i, j, k):
++        xx = (i/nx*2-1)
++        # Front is -Y. Narrow heel and widened metatarsal platform.
++        yy = -.158 + .238*j/ny
++        halfwidth = .077 - .031*(j/ny)**2
++        # The ankle opening is narrower than the forefoot without a rigid cuff.
++        if k == nz and 2 <= i <= 10 and 2 <= j <= 10:
++            xx = (i-6)/4
++            halfwidth = .046
++            yy = -.044 + .094*(j-2)/8
++        zz = .027 + .040*k/nz
++        if k == 0:
++            zz += .012*_gaussian(yy, -.005, .055)*(1-abs(xx))
++        if k == nz:
++            zz += .065*_gaussian(yy, .013, .07)
++        return (xcenter + s*xx*halfwidth, yy, zz)
++
++    ankle = (2, nz, 2, 10, 2, 10)  # 32 boundary vertices
++    roots = [(1, 0, i, i+2, 0, nz) for i in (0, 3, 6, 9)]
++    loops = _box(cage, nx, ny, nz, point, [ankle] + roots)
++    cage.bridge(ankle_loop, loops[0])
++    toes = []
++    for k, (loop, toe_length) in enumerate(zip(loops[1:], (.071, .090, .080, .060))):
++        start = sum((Vector(cage.v[i]) for i in loop), Vector())/len(loop)
++        direction = Vector((s*(-.13 + k*.085), -1, -.13)).normalized()
++        rings = _digit(cage, loop, start, direction, toe_length, .0165, .68)
++        toes.append({'root': loop, 'rings': rings, 'length': toe_length})
++    return {'ankle': loops[0], 'toes': toes, 'side': 'L' if side > 0 else 'R'}
++
++
++def _membrane(name, collection, material, a, b, side, scale):
++    """Editable thickened partial web; free edge is concave and tips are free."""
++    # The web follows 2 adjacent digit surfaces, not a plate closing the tips.
++    vertices, faces = [], []
++    rows, cols = 6, 8
++    for i in range(rows+1):
++        t = i/rows
++        for j in range(cols+1):
++            u = j/cols
++            # Low center of free margin makes a concave interdigital arc.
++            max_t = .64 - .30*math.sin(math.pi*u)
++            at = t*max_t
++            pa = a[0].lerp(a[1], at)
++            pb = b[0].lerp(b[1], at)
++            p = pa.lerp(pb, u)
++            p.y += .002*math.sin(math.pi*u)*math.sin(math.pi*t)
++            vertices.append(tuple(p))
++    for i in range(rows):
++        for j in range(cols):
++            k = i*(cols+1)+j
++            faces.append((k, k+1, k+cols+2, k+cols+1))
++    mesh = bpy.data.meshes.new(name+'_Cage')
++    mesh.from_pydata(vertices, [], faces)
++    mesh.update()
++    ob = bpy.data.objects.new(name, mesh)
++    collection.objects.link(ob)
++    ob.data.materials.append(material)
++    for p in mesh.polygons:
++        p.use_smooth = True
++    solid = ob.modifiers.new('Espessura_Editavel_0008', 'SOLIDIFY')
++    solid.thickness = .0008
++    solid.offset = 0
++    sub = ob.modifiers.new('Membrana_Subdivisao_1', 'SUBSURF')
++    sub.levels = 1
++    sub.render_levels = 1
++    ob['edf_region'] = 'web.'+('L' if side > 0 else 'R')
++    ob['topology_note'] = 'Separate editable web surface; nonzero thickness modifier. Digit roots are overlaid, not welded into body cage.'
++    return ob
++
++
++def build_body(material, collection):
++    cage = Cage()
++    n = 64
++    # z, half-width, depth, center-Y. Broad transitions articulate bones/muscles.
++    profile = [
++        (1.025, .245, .133, .014), (1.075, .233, .137, .018),
++        (1.125, .217, .137, .014), (1.185, .194, .122, .010),
++        (1.250, .174, .112, .008), (1.325, .175, .120, .010),
++        (1.400, .196, .135, .014), (1.475, .226, .149, .018),
++        (1.535, .247, .154, .024), (1.590, .258, .150, .025),
++        (1.650, .264, .141, .026), (1.700, .259, .126, .026),
++        (1.750, .235, .112, .025), (1.800, .218, .092, .024),
++        (1.825, .135, .074, .021), (1.860, .080, .065, .018),
++        (1.895, .065, .058, .016), (1.925, .061, .056, .015),
++    ]
++    torso = []
++    for row, (z, rx, ry, cy) in enumerate(profile):
++        loop = []
++        for j in range(n):
++            th = TAU*j/n
++            x, y = rx*math.sin(th), cy-ry*math.cos(th)
++            front = max(0.0, math.cos(th))
++            back = max(0.0, -math.cos(th))
++            # Broad pec lobes, sternum and serratus transitions are real volume.
++            pec = .017*_gaussian(abs(x), .105, .082)*_gaussian(z, 1.585, .085)
++            sternum = .007*_gaussian(x, 0, .021)*_gaussian(z, 1.535, .16)
++            abdomen = .007*_gaussian(abs(x), .059, .037)*_gaussian(z, 1.365, .15)
++            clavicle_z = 1.720 + .046*math.sin(min(1, abs(x)/.26)*math.pi*.5)
++            clavicle = .007*_gaussian(z, clavicle_z, .018)*_gaussian(abs(x), .13, .13)
++            oblique = .004*_gaussian(abs(x), .133, .045)*_gaussian(z, 1.365, .12)
++            y -= (pec - sternum + abdomen + oblique)*front**3 + clavicle*front**6
++            # The rectangular armhole's anterior/posterior borders originally
++            # sat behind BOTH the pectoral/scapular surface and the first arm
++            # ring. That produced an insertion-like vertical groove. Restore
++            # tissue volume along that local border, tapering across adjacent
++            # angular sectors and into the actual lower axillary recess.
++            # This retains chest/shoulder landmarks without flattening torso.
++            shoulder_fill = {8: .012, 9: .025, 10: .030,
++                             11: .027, 12: .018, 13: .006}.get(row, 0)
++            side_angle = math.asin(min(1, abs(math.sin(th))))
++            border_weight = _gaussian(side_angle, math.pi*3/8, .23)
++            cos_th = math.cos(th)
++            if abs(cos_th) > 1e-10:
++                y -= math.copysign(shoulder_fill*border_weight*
++                                   min(1, abs(cos_th)/.30), cos_th)
++            # Scapula to latissimus, sacrum to gluteal transition.
++            y += back**3*(.012*_gaussian(abs(x), .115, .07)*_gaussian(z, 1.65, .11)
++                         + .015*_gaussian(abs(x), .104, .075)*_gaussian(z, 1.095, .09)
++                         - .006*_gaussian(x, 0, .025)*_gaussian(z, 1.37, .27))
++            # Subtle clavicular and trapezius slope avoids a flat shoulder shelf.
++            zz = z + .010*_gaussian(z, 1.78, .065)*(1-abs(math.sin(th)))
++            # Lift the lowest axillary edge toward the arm; the prior vertical
++            # side opening left a long narrow cleft despite being manifold.
++            # This is an authored tissue transition, not a global smoothing pass.
++            side_lifts = {8: .065, 9: .045, 10: .027, 11: .010,
++                          12: -.008, 13: -.015}
++            zz += side_lifts.get(row, 0)*abs(math.sin(th))**8
++            if row == len(profile)-1:  # contractual neck loop, undistorted
++                x, y, zz = .061*math.sin(th), .015-.056*math.cos(th), 1.925
++            loop.append(cage.vertex((x, y, zz)))
++        torso.append(loop)
++    # Branch openings: angular eight sectors and vertical five intervals =>26.
++    hole_low, hole_high = 8, 13
++    holes = ((12, 20), (44, 52))
++    for i in range(len(torso)-1):
++        for j in range(n):
++            if hole_low <= i < hole_high and any(a <= j < b for a, b in holes):
++                continue
++            cage.face((torso[i][j], torso[i][(j+1)%n],
++                       torso[i+1][(j+1)%n], torso[i+1][j]))
++
++    # Saddle crotch: both legs share exactly the same central boundary edges.
++    bottom = torso[0]
++    crotch = [bottom[32]]
++    for k in range(1, 32):
++        t = k/32
++        y = .014 + .122*math.cos(math.pi*t)
++        z = 1.025 - .072*math.sin(math.pi*t)
++        crotch.append(cage.vertex((0, y, z)))
++    crotch.append(bottom[0])
++    leg_boundaries = [bottom[:33] + crotch[1:-1],
++                      bottom[32:] + [bottom[0]] + list(reversed(crotch[1:-1]))]
++    hands, feet = [], []
++    limb_metadata = {}
++    for s, (jlo, jhi), leg_loop in zip((1, -1), holes, leg_boundaries):
++        side_name = 'L' if s > 0 else 'R'
++        boundary = ([torso[hole_low][j] for j in range(jlo, jhi)] +
++                    [torso[i][jhi] for i in range(hole_low, hole_high)] +
++                    [torso[hole_high][j] for j in range(jhi, jlo, -1)] +
++                    [torso[i][jlo] for i in range(hole_high, hole_low, -1)])
++        arm_sections = [
++            ((s*.276, .020, 1.685), .080, .092),
++            ((s*.315, .017, 1.667), .082, .090),
++            ((s*.349, .012, 1.630), .079, .085),
++            ((s*.389, .007, 1.580), .069, .078),
++            ((s*.433, .002, 1.524), .061, .070),
++            ((s*.475, -.004, 1.477), .055, .058),
++            ((s*.495, -.009, 1.455), .052, .055),
++            ((s*.509, -.012, 1.432), .056, .059),
++            ((s*.523, -.014, 1.408), .060, .063),
++            ((s*.549, -.014, 1.367), .060, .062),
++            ((s*.579, -.014, 1.320), .057, .058),
++            ((s*.611, -.016, 1.266), .049, .052),
++            ((s*.638, -.018, 1.220), .037, .043),
++            ((s*.651, -.018, 1.192), .028, .036),
++        ]
++        arm_end, arm_rings = cage.tube(boundary, arm_sections, (s*.64, 0, -.77))
++        hands.append(_hand(cage, s, arm_end))
++        # Ascending anatomical masses, with repeated support either side of knee.
++        leg_sections = [
++            ((s*.143, .019, .982), .118, .112),
++            ((s*.151, .012, .925), .114, .112),
++            ((s*.155, .003, .845), .106, .106),
++            ((s*.157, -.008, .760), .092, .094),
++            ((s*.157, -.024, .689), .079, .082),
++            ((s*.157, -.034, .652), .071, .075),
++            ((s*.157, -.039, .625), .070, .073),
++            ((s*.156, -.034, .598), .071, .074),
++            ((s*.155, -.021, .560), .076, .079),
++            ((s*.154, .003, .498), .083, .086),
++            ((s*.153, .017, .423), .080, .084),
++            ((s*.153, .024, .348), .066, .073),
++            ((s*.153, .023, .273), .052, .060),
++            ((s*.153, .020, .211), .046, .053),
++            ((s*.153, .016, .170), .043, .049),
++            ((s*.153, .015, .148), .043, .049),
++        ]
++        leg_end, leg_rings = cage.tube(leg_loop, leg_sections, (0, 0, -1))
++        feet.append(_foot(cage, s, leg_end))
++        # Moderate biceps/triceps, patella, tibial ridge and calf asymmetry.
++        # Keep landmarks in the real cage and avoid relying on normal maps.
++        for ring in arm_rings:
++            for vertex_id in ring:
++                x, y, z = cage.v[vertex_id]
++                frontness = max(0, min(1, (-y+.015)/.09))
++                backness = max(0, min(1, (y-.015)/.09))
++                y -= .007*_gaussian(z, 1.59, .075)*frontness**2
++                y += .008*_gaussian(z, 1.62, .085)*backness**2
++                cage.v[vertex_id] = (x, y, z)
++        for ring in leg_rings:
++            for vertex_id in ring:
++                x, y, z = cage.v[vertex_id]
++                frontness = max(0, min(1, (-y+.010)/.10))
++                y -= frontness**3*(.008*_gaussian(z, .625, .026)
++                                     + .007*_gaussian(z, .79, .11)
++                                     + .005*_gaussian(z, .40, .12))
++                cage.v[vertex_id] = (x, y, z)
++        limb_metadata[side_name] = {'arm_rings': arm_rings, 'leg_rings': leg_rings,
++                                   'armhole_loop': boundary}
++
++    # Remove no-longer-used interior branch vertices, preserving honest indices.
++    used = sorted({i for face in cage.f for i in face})
++    remap = {old: new for new, old in enumerate(used)}
++    mesh = bpy.data.meshes.new('Naquiro_Anatomia_Cage_Quads')
++    mesh.from_pydata([cage.v[i] for i in used], [],
++                     [tuple(remap[i] for i in face) for face in cage.f])
++    mesh.update()
++    bm = bmesh.new()
++    bm.from_mesh(mesh)
++    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
++    bm.to_mesh(mesh)
++    bm.free()
++    body = bpy.data.objects.new('Corpo_Base_002_Cage_Conectado', mesh)
++    collection.objects.link(body)
++    body.data.materials.append(material)
++    for p in mesh.polygons:
++        p.use_smooth = True
++    sub = body.modifiers.new('Estudo_Subdivisao_1_Editavel', 'SUBSURF')
++    sub.levels = 1
++    sub.render_levels = 1
++    body['edf_region'] = 'body'
++    body['topology_note'] = 'Explicit cage: welded torso/shoulders/arms/5-digit hands/pelvis/legs/4-toe feet. Neck intentionally open64 for head join. 32 transition triangles per ankle; digit tips contain small n-gon caps. No remesh or decimate.'
++
++    membranes = []
++    def end_points(digit):
++        root = sum((Vector(cage.v[i]) for i in digit['root']), Vector())/len(digit['root'])
++        tip = sum((Vector(cage.v[i]) for i in digit['rings'][-1]), Vector())/len(digit['rings'][-1])
++        return root, tip
++    for data in hands:
++        s = 1 if data['side'] == 'L' else -1
++        digits = data['fingers']
++        for k in range(3):
++            membranes.append(_membrane('Membrana_Mao_%s_%d'%(data['side'], k+1),
++                             collection, material, end_points(digits[k]),
++                             end_points(digits[k+1]), s, .001))
++    for data in feet:
++        s = 1 if data['side'] == 'L' else -1
++        for k in range(3):
++            membranes.append(_membrane('Membrana_Pe_%s_%d'%(data['side'], k+1),
++                             collection, material, end_points(data['toes'][k]),
++                             end_points(data['toes'][k+1]), s, .001))
++    def mapped_digit(data):
++        return {**data, 'root': [remap[i] for i in data['root']],
++                'rings': [[remap[i] for i in loop] for loop in data['rings']]}
++
++    metadata = {
++        'neck_loop': [remap[i] for i in torso[-1]],
++        'neck_boundary': {'count': 64, 'z': 1.925, 'rx': .061, 'ry': .056,
++                          'cy': .015, 'order': 'i=0 front(-Y); x=rx*sin(2pi*i/64), y=cy-ry*cos(...)'},
++        'extra_objects': membranes,
++        'membranes': membranes,
++        'junctions': {'body_limbs_digits': 'welded single cage',
++                      'neck': 'intentional open boundary64 for head weld',
++                      'membranes': 'separate thickened editable overlays at interdigital roots'},
++        'technical_conventions': {'hand_digits': 5, 'foot_digits': 4,
++                                  'height_not_canonical': True},
++        'limits': ['Ankle32 triangle transitions per side and small digit-tip caps remain candidates for manual retopology.',
++                   'Separate membranes need pose-specific collision/weight review.',
++                   'A predominantly quad cage is not proof of final deformation quality.'],
++        'limb_loops': {s: {k: [[remap[i] for i in loop] for loop in loops]
++                           if k.endswith('rings') else [remap[i] for i in loops]
++                          for k, loops in data.items()}
++                       for s, data in limb_metadata.items()},
++        'hand_data': [{**data, 'wrist': [remap[i] for i in data['wrist']],
++                       'fingers': [mapped_digit(digit) for digit in data['fingers']],
++                       'thumb': mapped_digit(data['thumb'])}
++                      for data in hands],
++        'foot_data': [{**data, 'ankle': [remap[i] for i in data['ankle']],
++                       'toes': [mapped_digit(digit) for digit in data['toes']]}
++                      for data in feet],
++    }
++    return body, metadata
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_head.py b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_head.py
+new file mode 100644
+index 0000000..6754297
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_head.py
+@@ -0,0 +1,363 @@
++"""Editable neutral Náquiro head study, separate from the shipped 001 asset.
++
++The facial skin is one quad surface: orbital and perioral rings replace real
++patches of the head cage and share their boundary vertices. No floating lid,
++lip or nasal primitives. Fins and eyeballs remain named anatomical submeshes.
++Z up, front -Y. Dimensions are study targets, not approved racial biology.
++"""
++import math
++import bpy
++from mathutils import Vector
++
++TAU = math.tau
++N = 64
++EYE_CY = -.046
++EYE_CZ = 2.113
++EYE_RX = .023
++EYE_RY = .012
++EYE_RZ = .013
++LID_SKIN_MARGIN = .0018
++
++
++def _gauss(x, z, cx, cz, sx, sz):
++    return math.exp(-((x-cx)/sx)**2-((z-cz)/sz)**2)
++
++
++def _interp(z, rows, column):
++    """Monotone cubic Hermite interpolation, with continuous derivatives.
++
++    Unlike a smoothstep on each segment this does not flatten the tangent at
++    every anatomical landmark, which made the first study look terraced.
++    """
++    if z <= rows[0][0]:
++        return rows[0][column]
++    h=[b[0]-a[0] for a,b in zip(rows,rows[1:])]
++    delta=[(b[column]-a[column])/step for a,b,step in zip(rows,rows[1:],h)]
++    slopes=[delta[0]]
++    for i in range(1,len(rows)-1):
++        if delta[i-1]*delta[i]<=0:
++            slopes.append(0.)
++        else:
++            w1=2*h[i]+h[i-1];w2=h[i]+2*h[i-1]
++            slopes.append((w1+w2)/(w1/delta[i-1]+w2/delta[i]))
++    slopes.append(delta[-1])
++    for i,(a, b) in enumerate(zip(rows, rows[1:])):
++        if z <= b[0]:
++            t = (z-a[0])/(b[0]-a[0])
++            t2=t*t;t3=t2*t;step=b[0]-a[0]
++            return ((2*t3-3*t2+1)*a[column]+(t3-2*t2+t)*step*slopes[i]
++                    +(-2*t3+3*t2)*b[column]+(t3-t2)*step*slopes[i+1])
++    return rows[-1][column]
++
++
++PROFILE = [
++    (1.925,.061,.056,.015), (1.943,.065,.060,.011),
++    (1.957,.075,.070,.004), (1.977,.087,.081,.007),
++    (2.011,.097,.084,.013), (2.061,.109,.089,.020),
++    (2.100,.112,.092,.024), (2.141,.107,.098,.032),
++    (2.185,.101,.099,.037), (2.217,.083,.086,.035),
++    (2.239,.052,.058,.031), (2.244,.030,.035,.028),
++]
++
++
++def _front_y(x, z):
++    rx, ry, cy = [_interp(z, PROFILE, k) for k in (1,2,3)]
++    front = math.sqrt(max(0, 1-(x/max(.001,rx))**2))
++    y = cy-ry*front
++    # Nose bridge, tip and alae are displacement of the continuous skin.
++    d = -.018*_gauss(x,z,0,2.111,.017,.045)
++    d -= .030*_gauss(x,z,0,2.072,.016,.014)
++    d -= .014*sum(_gauss(x,z,s*.017,2.069,.011,.009) for s in (-1,1))
++    # Recessed sockets, shaped brow and cheek planes, refined male jaw/chin.
++    d += .007*sum(_gauss(x,z,s*.049,2.113,.031,.015) for s in (-1,1))
++    d -= .013*sum(_gauss(x,z,s*.047,2.135,.036,.011) for s in (-1,1))
++    d -= .006*_gauss(x,z,0,2.136,.018,.018)
++    d -= .012*sum(_gauss(x,z,s*.069,2.089,.026,.015) for s in (-1,1))
++    d += .004*sum(_gauss(x,z,s*.080,2.045,.020,.026) for s in (-1,1))
++    d -= .008*_gauss(x,z,0,2.022,.042,.016)
++    d -= .014*_gauss(x,z,0,1.974,.038,.019)
++    # Soft philtral pillars link the nose base to the cupid bow continuously.
++    d -= .0025*sum(_gauss(x,z,s*.006,2.043,.0035,.012) for s in (-1,1))
++    # Nasal aperture is a small geometric crease, not a detached black tube.
++    d += .0048*sum(_gauss(x,z,s*.0145,2.062,.0055,.0032) for s in (-1,1))
++    return y+d*front**4
++
++
++def _object(name, verts, faces, material, collection):
++    data = bpy.data.meshes.new(name+'_Cage')
++    data.from_pydata(verts, [], faces)
++    data.materials.append(material)
++    data.update()
++    ob = bpy.data.objects.new(name, data)
++    collection.objects.link(ob)
++    for p in data.polygons:
++        p.use_smooth = True
++    return ob
++
++
++def _neutral(name, value, roughness=.5):
++    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
++    mat.use_nodes = True
++    mat.diffuse_color = (value,value,value,1)
++    p = mat.node_tree.nodes.get('Principled BSDF')
++    p.inputs['Base Color'].default_value = (value,value,value,1)
++    p.inputs['Roughness'].default_value = roughness
++    return mat
++
++
++def _uvsphere(name, center, scale, material, collection, seg=32, rings=20):
++    # Explicit small mesh, avoiding operators and active-collection surprises.
++    vs = [tuple(Vector(center)+Vector((0,0,-scale[2])))]
++    for j in range(1,rings):
++        a = -math.pi/2+math.pi*j/rings
++        for i in range(seg):
++            b = TAU*i/seg
++            vs.append((center[0]+scale[0]*math.cos(a)*math.sin(b),
++                       center[1]-scale[1]*math.cos(a)*math.cos(b),
++                       center[2]+scale[2]*math.sin(a)))
++    vs.append(tuple(Vector(center)+Vector((0,0,scale[2]))))
++    fs = []
++    for i in range(seg):
++        fs.append((0,1+(i+1)%seg,1+i))
++    for j in range(rings-2):
++        for i in range(seg):
++            a=1+j*seg+i; b=1+j*seg+(i+1)%seg
++            fs.append((a,b,b+seg,a+seg))
++    top=len(vs)-1; row=1+(rings-2)*seg
++    for i in range(seg):
++        fs.append((row+i,row+(i+1)%seg,top))
++    return _object(name,vs,fs,material,collection)
++
++
++def _eye_cap(name, cx, radius, surface_offset, material, collection):
++    """Thin editable iris/pupil cap conformed to the actual globe ellipsoid.
++
++    A shallow UV sphere is not conformal: its lower edge can protrude through
++    an otherwise correctly fitted eyelid. These patches stay only 0.1/0.2 mm
++    in front of the white globe, beneath the 1.8 mm eyelid safety shell.
++    Their outer boundaries intentionally remain open on the underlying globe.
++    """
++    segments=32; rings=6
++    def point(r,a):
++        dx=r*math.cos(a);dz=r*math.sin(a)
++        q=(dx/EYE_RX)**2+(dz/EYE_RZ)**2
++        y=EYE_CY-EYE_RY*math.sqrt(max(0,1-q))-surface_offset
++        return (cx+dx,y,EYE_CZ+dz)
++    verts=[point(0,0)]
++    for j in range(1,rings+1):
++        for i in range(segments):
++            verts.append(point(radius*j/rings,TAU*i/segments))
++    faces=[]
++    for i in range(segments):
++        faces.append((0,1+i,1+(i+1)%segments))
++    for j in range(rings-1):
++        inner=1+j*segments;outer=inner+segments
++        for i in range(segments):
++            ni=(i+1)%segments
++            faces.append((inner+i,outer+i,outer+ni,inner+ni))
++    ob=_object(name,verts,faces,material,collection)
++    ob['attachment_note']='Open anatomical cap conforms to globe ellipsoid; surface offset %.6f m.' % surface_offset
++    return ob
++
++
++def build_head(material, eye_material, collection):
++    """Return (objects, metadata), including main_mesh and ordered neck_loop.
++
++    Boundary is exactly 64 vertices at z=1.925, cy=.015, rx=.061, ry=.056.
++    Index 0 faces -Y; x=rx*sin(theta), y=cy-ry*cos(theta). The caller may
++    weld it to the identically sampled body boundary without a bridging gap.
++    """
++    verts=[]; faces=[]; objects=[]
++    zrows=[1.925+(2.244-1.925)*j/63 for j in range(64)]
++    for row,z in enumerate(zrows):
++        rx,ry,cy=[_interp(z,PROFILE,k) for k in (1,2,3)]
++        for i in range(N):
++            a=TAU*i/N; x=rx*math.sin(a); c=math.cos(a)
++            y=cy-ry*c
++            if c>0 and row>0:
++                # Reuse one projection function for nose/lids/mouth attachment.
++                y=_front_y(x,z)
++            verts.append((x,y,z))
++    # Mouth and orbit patches are actually removed, then replaced by rings.
++    nearest=lambda z:min(range(64),key=lambda j:abs(zrows[j]-z))
++    patches=[('eye.L',2,8,nearest(2.096),nearest(2.134),.049,2.113),
++             ('eye.R',56,62,nearest(2.096),nearest(2.134),-.049,2.113),
++             ('mouth',-5,5,nearest(2.006),nearest(2.040),0,2.022)]
++    removed=set()
++    for name,lo,hi,bottom,top,cx,cz in patches:
++        removed.update((j,i%N) for j in range(bottom,top) for i in range(lo,hi))
++    for j in range(63):
++        for i in range(N):
++            if (j,i) not in removed:
++                faces.append((j*N+i,j*N+(i+1)%N,(j+1)*N+(i+1)%N,(j+1)*N+i))
++
++    # Remaining construction below deliberately shares indices with the head.
++    patch_metadata={}
++    for name,lo,hi,bottom,top,cx,cz in patches:
++        outline=([bottom*N+i%N for i in range(lo,hi)]+
++                 [j*N+hi%N for j in range(bottom,top)]+
++                 [top*N+i%N for i in range(hi,lo,-1)]+
++                 [j*N+lo%N for j in range(top,bottom,-1)])
++        sx=max(abs(verts[k][0]-cx) for k in outline)
++        sz=max(abs(verts[k][2]-cz) for k in outline)
++        angles=[math.atan2((verts[k][2]-cz)/sz,(verts[k][0]-cx)/sx) for k in outline]
++        previous=outline
++        if name.startswith('eye'):
++            ring_defs=[(.34,.0275,.014,.012),(.68,.0235,.0090,.0070),(1,.0200,.0058,.0038)]
++            for t,rx,upper,lower in ring_defs:
++                current=[]
++                for k,a in enumerate(angles):
++                    x=cx+rx*math.cos(a)
++                    q=math.sin(a)
++                    z=cz+(upper if q>=0 else lower)*q*(.73+.27*abs(q))+.0015*math.cos(a)*(1 if cx>0 else -1)
++                    # Final lid edge is fitted to the globe's elliptical skin.
++                    g=max(.025,1-((x-cx)/EYE_RX)**2-((z-cz)/EYE_RZ)**2)
++                    globe_y=EYE_CY-EYE_RY*math.sqrt(g)-LID_SKIN_MARGIN
++                    y=_front_y(x,z)*(1-t)+globe_y*t
++                    current.append(len(verts));verts.append((x,y,z))
++                for k in range(len(current)):
++                    nk=(k+1)%len(current)
++                    faces.append((previous[k],previous[nk],current[nk],current[k]))
++                previous=current
++            # A support ring only .65 mm behind the lid prevents paper edges.
++            inside=[]
++            for k in previous:
++                x,y,z=verts[k]; inside.append(len(verts)); verts.append((x,y+.00065,z))
++            for k in range(len(previous)):
++                nk=(k+1)%len(previous);faces.append((previous[k],previous[nk],inside[nk],inside[k]))
++            patch_metadata[name]={'outer_boundary':outline,'lid_boundary':previous,'inner_boundary':inside}
++        else:
++            # Outer skin -> vermilion volume -> closed-looking oral edge -> cavity.
++            for rx,upper,lower,projection in [(.040,.009,.008,0),(.0375,.0054,.0047,-.0025),(.0355,.00060,.00050,-.0010),(.0335,.00050,.00045,.005)]:
++                current=[]
++                for a in angles:
++                    q=math.sin(a); x=rx*math.cos(a)
++                    # Cupid bow is small and male rather than a detached tube.
++                    z=cz+(upper if q>=0 else lower)*q-.0012*(abs(x)/rx)**1.8
++                    if q>0:
++                        z-=.0011*math.exp(-(x/.009)**2)*q
++                        z+=.0012*math.exp(-((abs(x)-.013)/.008)**2)*q
++                    y=_front_y(x,z)+projection
++                    current.append(len(verts));verts.append((x,y,z))
++                for k in range(len(current)):
++                    nk=(k+1)%len(current);faces.append((previous[k],previous[nk],current[nk],current[k]))
++                previous=current
++            # Narrow oral interior closes behind the lips. It is a cavity,
++            # not a floating line placed in front of the facial surface.
++            center=len(verts);verts.append((0,_front_y(0,cz)+.007,cz))
++            for k in range(len(previous)):
++                faces.append((previous[k],previous[(k+1)%len(previous)],center))
++            patch_metadata[name]={'outer_boundary':outline,'inner_boundary':previous}
++
++    # Crown cap is an editable 16x16 quad grid sharing the final 64-ring.
++    # A square-to-disc parameterization avoids a high-valence scalp pole.
++    perimeter=[]
++    m=16
++    perimeter += [(i,0) for i in range(m)]
++    perimeter += [(m,j) for j in range(m)]
++    perimeter += [(i,m) for i in range(m,0,-1)]
++    perimeter += [(0,j) for j in range(m,0,-1)]
++    mapping={p:63*N+k for k,p in enumerate(perimeter)}
++    # Preserve exact perimeter order; transfinite interpolation fills the disk.
++    def boundary(u,v):
++        # The four arcs correspond directly to the head's ordered top loop.
++        def arc(s):
++            a=TAU*s;return Vector((.030*math.sin(a),.028-.035*math.cos(a),2.244))
++        p00,p10,p11,p01=[arc(k/4) for k in range(4)]
++        b=arc(u/4);r=arc(.25+v/4);t=arc(.75-u/4);l=arc(1-v/4)
++        bil=p00*(1-u)*(1-v)+p10*u*(1-v)+p11*u*v+p01*(1-u)*v
++        p=b*(1-v)+t*v+l*(1-u)+r*u-bil
++        p.z=2.244+.006*math.sin(math.pi*u)*math.sin(math.pi*v)
++        return tuple(p)
++    for j in range(1,m):
++        for i in range(1,m):
++            mapping[(i,j)]=len(verts);verts.append(boundary(i/m,j/m))
++    for j in range(m):
++        for i in range(m):
++            faces.append((mapping[(i,j)],mapping[(i+1,j)],mapping[(i+1,j+1)],mapping[(i,j+1)]))
++
++    # Fit ALL facial skin over the globe, including the shared original cage
++    # boundary. Fitting only the last lid edge leaves some surrounding annulus
++    # points behind the white globe, so its full oval leaks through the skin.
++    # A safety shell also allows the editable Catmull-Clark surface to shrink
++    # slightly without cutting through the underlying eyeball. The tiny wall
++    # behind the aperture is intentionally excluded: it turns into the socket.
++    inner_lid_wall=set(k for name,data in patch_metadata.items()
++                       if name.startswith('eye') for k in data['inner_boundary'])
++    fitted_skin_vertices=set()
++    for vi,(x,y,z) in enumerate(verts):
++        if vi in inner_lid_wall or y>=0:
++            continue
++        for cx in (-.049,.049):
++            q=((x-cx)/EYE_RX)**2+((z-EYE_CZ)/EYE_RZ)**2
++            if q<=1.08:
++                front=EYE_CY-EYE_RY*math.sqrt(max(0,1-q))-LID_SKIN_MARGIN
++                if y>front:
++                    y=front
++                    fitted_skin_vertices.add(vi)
++        verts[vi]=(x,y,z)
++
++    # Prune unused vertices from the removed eye/mouth rectangles.
++    used=set(k for face in faces for k in face)
++    remap={old:new for new,old in enumerate(sorted(used))}
++    head=_object('ANAT002_Cabeca_Quad_Integrada',[verts[k] for k in sorted(used)],
++                 [tuple(remap[k] for k in f) for f in faces],material,collection)
++    head['edf_region']='head'
++    head['topology_note']='Continuous quad orbital/perioral skin; 64-vertex neck boundary for true body weld. Oral cavity fan and separate anatomical eye/fins disclosed.'
++    sub=head.modifiers.new('Superficie_Subdivisao_Editavel','SUBSURF');sub.levels=1;sub.render_levels=1
++    objects.append(head)
++    iris_mat=_neutral('ANAT002_Iris_Cinza',.19,.47)
++    pupil_mat=_neutral('ANAT002_Pupila_Cinza',.075,.44)
++    for side,sgn in [('L',1),('R',-1)]:
++        cx=sgn*.049
++        objects.append(_uvsphere('ANAT002_Globo_'+side,(cx,EYE_CY,EYE_CZ),(EYE_RX,EYE_RY,EYE_RZ),eye_material,collection))
++        objects.append(_eye_cap('ANAT002_Iris_'+side,cx,.0070,.0001,iris_mat,collection))
++        objects.append(_eye_cap('ANAT002_Pupila_'+side,cx,.0028,.0002,pupil_mat,collection))
++        objects.extend(_build_ear(side,sgn,material,collection))
++    return objects,{'main_mesh':head.name,'neck_loop':[remap[i] for i in range(N)],
++                    'neck_boundary':{'count':N,'z':1.925,'center_y':.015,'rx':.061,'ry':.056,'ordering':'i0 front -Y; x=rx*sin(theta), y=cy-ry*cos(theta)'},
++                    'patches':{name:{label:[remap[k] for k in ids] for label,ids in data.items()} for name,data in patch_metadata.items()},
++                    'eyelid_fit':{'globe_center_y':EYE_CY,'globe_center_z':EYE_CZ,
++                                  'globe_radii':[EYE_RX,EYE_RY,EYE_RZ],
++                                  'skin_margin':LID_SKIN_MARGIN,
++                                  'fitted_cage_vertices':len(fitted_skin_vertices & used),
++                                  'method':'All facial skin over projected globe ellipse fitted to safety shell; inner aperture wall excluded.'},
++                    'limits':['Ear roots are separate anatomical surfaces overlapping lateral skull, not welded.',
++                              'Iris and pupil are open thin caps on the globe, not closed independent spheres.',
++                              'Oral cavity has a small triangle fan behind lip surface; facial skin annuli are quads.',
++                              'Neutral study has no facial expression rig or final facial retopology approval.']}
++
++
++def _build_ear(side, sgn, material, collection):
++    """Curved posterior fin, small rim and continuous discrete root volume."""
++    controls=[(.113,.012,2.077),(.145,.035,2.082),(.176,.061,2.118),
++              (.201,.083,2.171),(.172,.059,2.156),(.141,.030,2.151),(.110,.010,2.132)]
++    # Closed Catmull interpolation softens the fan margin while preserving point.
++    contour=[]
++    for i in range(len(controls)):
++        a,b,c,d=[Vector(controls[k%len(controls)]) for k in (i-1,i,i+1,i+2)]
++        for n in range(4):
++            t=n/4
++            p=.5*((2*b)+(-a+c)*t+(2*a-5*b+4*c-d)*t*t+(-a+3*b-3*c+d)*t*t*t)
++            contour.append(p)
++    center=Vector((.132,.024,2.116));vs=[];fs=[];n=len(contour)
++    for t in (.18,.37,.58,.80,1):
++        for i,p in enumerate(contour):
++            q=center.lerp(p,t)
++            # Low-amplitude rays and saddle curvature, never rigid cone rods.
++            q.y-=.0065*math.sin(math.pi*t)+.0012*math.cos(TAU*i/4)*math.sin(math.pi*t)
++            vs.append((sgn*q.x,q.y,q.z))
++    for j in range(4):
++        for i in range(n):
++            f=(j*n+i,j*n+(i+1)%n,(j+1)*n+(i+1)%n,(j+1)*n+i)
++            fs.append(f if sgn>0 else tuple(reversed(f)))
++    # Central root uses a very small fan inside the skull overlap, explicitly.
++    k=len(vs);vs.append((sgn*center.x,center.y,center.z))
++    for i in range(n):
++        f=(k,(i+1)%n,i);fs.append(f if sgn>0 else tuple(reversed(f)))
++    ob=_object('ANAT002_Orelha_Membrana_'+side,vs,fs,material,collection)
++    ob['edf_region']='ear.'+side
++    ob['attachment_note']='Anatomical fin separate from skull; concealed 5 mm overlap at root, not a welded root.'
++    sub=ob.modifiers.new('Curvatura_Fina_Editavel','SUBSURF');sub.levels=1;sub.render_levels=1
++    sol=ob.modifiers.new('Espessura_Anatomica_1p8mm','SOLIDIFY');sol.thickness=.0018;sol.offset=0
++    return [ob]
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py
+new file mode 100644
+index 0000000..7729dd9
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py
+@@ -0,0 +1,288 @@
++"""Build an isolated, neutral anatomy study from the delivered Blender source.
++
++Blender 4.3.2: blender -b --threads 2 --python build_study.py -- --evidence DIR
++Never exports or writes runtime assets, saves, original .blend or textures.
++"""
++from pathlib import Path
++import argparse, ast, hashlib, importlib.util, json, math, sys
++import bpy
++from mathutils import Vector, Matrix
++
++HERE = Path(__file__).resolve().parent
++SOURCE = HERE.parent
++parser = argparse.ArgumentParser()
++parser.add_argument('--blend', default=str(HERE/'naquiro-anatomia-002.blend'))
++parser.add_argument('--evidence', required=True)
++args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
++E = Path(args.evidence); E.mkdir(parents=True, exist_ok=True)
++sha = lambda p: hashlib.sha256(Path(p).read_bytes()).hexdigest()
++source_hashes = {n:sha(SOURCE/n) for n in ['base.blend', 'naquiro-male.blend', 'model.py', 'rig_export.py']}
++study_hashes = {n:sha(HERE/n) for n in ['build_study.py','anatomy_body.py','anatomy_head.py']}
++bpy.ops.wm.open_mainfile(filepath=str(SOURCE/'base.blend'))
++
++def collection(name):
++    c = bpy.data.collections.new(name); bpy.context.scene.collection.children.link(c); return c
++
++archive = collection('00_CHECKPOINT_001_OCULTO')
++originals = list(bpy.context.scene.objects)
++for ob in originals:
++    for c in list(ob.users_collection): c.objects.unlink(ob)
++    archive.objects.link(ob)
++archive.hide_render = archive.hide_viewport = True
++archive['source_sha256'] = source_hashes['base.blend']
++archive['note'] = 'Original source objects, costume and accessories retained unchanged in a hidden collection.'
++body_collection = collection('01_CORPO_BASE_NEUTRO')
++head_collection = collection('02_CABECA_E_MEMBRANAS')
++rig_collection = collection('03_RIG_ESTUDO_NAO_RUNTIME')
++baseline_collection = collection('80_COMPARACAO_001_NEUTRA_OCULTA')
++wire_collection = collection('90_WIREFRAME_CAGE_OCULTO')
++studio = collection('99_ESTUDIO_NEUTRO')
++
++def material(name, value, roughness=.73):
++    m = bpy.data.materials.new(name); m.use_nodes = True
++    m.diffuse_color = (value, value, value, 1)
++    p = m.node_tree.nodes.get('Principled BSDF')
++    p.inputs['Base Color'].default_value = (value, value, value, 1)
++    p.inputs['Roughness'].default_value = roughness
++    return m
++
++clay = material('ESTUDO_Cinza_Neutro_Sem_Mapas', .32)
++eye_clay = material('ESTUDO_Olhos_Cinza_Neutro', .40, .70)
++dark = material('ESTUDO_Wireframe_Cinza_Escuro', .035)
++floor_mat = material('ESTUDO_Fundo_Cinza', .15, .9)
++
++def module(name):
++    spec = importlib.util.spec_from_file_location(name, HERE/(name+'.py'))
++    mod = importlib.util.module_from_spec(spec); spec.loader.exec_module(mod); return mod
++
++body_mod, head_mod = module('anatomy_body'), module('anatomy_head')
++body_result = body_mod.build_body(clay, body_collection)
++body, body_meta = body_result
++head_objects, head_meta = head_mod.build_head(clay, eye_clay, head_collection)
++head = bpy.data.objects[head_meta['main_mesh']]
++assert body.type == head.type == 'MESH'
++
++def center(indices):
++    return sum((body.data.vertices[i].co.copy() for i in indices),Vector())/len(indices)
++
++# Capture the authored joint loops before neck welding changes any indices.
++joint_targets={}
++for side,data in body_meta['limb_loops'].items():
++    ar,lr=data['arm_rings'],data['leg_rings']
++    joint_targets[side]={'shoulder':Vector(((1 if side=='L' else -1)*.286,.020,1.735)),'elbow':center(ar[7]),
++                         'wrist':center(ar[-1]),'knee':center(lr[6]),
++                         'ankle':center(lr[14])}
++digit_targets={}
++for data in body_meta['hand_data']:
++    side=data['side'];digit_targets[side]={}
++    for k,digit in enumerate(data['fingers'],1):
++        digit_targets[side]['finger'+str(k)]=[center(digit['root']),center(digit['rings'][5]),center(digit['rings'][-1])]
++    d=data['thumb'];digit_targets[side]['thumb']=[center(d['root']),center(d['rings'][5]),center(d['rings'][-1])]
++    joint_targets[side]['palm']=sum((v[0] for key,v in digit_targets[side].items() if key!='thumb'),Vector())/4
++for data in body_meta['foot_data']:
++    side=data['side']
++    joint_targets[side]['toe_root']=sum((center(d['root']) for d in data['toes']),Vector())/4
++    joint_targets[side]['toe_tip']=sum((center(d['rings'][-1]) for d in data['toes']),Vector())/4
++
++# Join only the intentional coincident neck boundaries. No voxel remeshing or
++# global merge that could destroy eyelids, finger gaps or membrane borders.
++body_loop = list(body_meta['neck_loop']); head_loop = list(head_meta['neck_loop'])
++assert len(body_loop) == len(head_loop) >= 16
++boundary_distance = max((body.matrix_world@body.data.vertices[a].co - head.matrix_world@head.data.vertices[b].co).length for a,b in zip(body_loop,head_loop))
++assert boundary_distance < 1e-5, ('Neck boundary coordinates disagree', boundary_distance)
++for ob, indices in [(body,body_loop),(head,head_loop)]:
++    g = ob.vertex_groups.new(name='ESTUDO_Solda_Pescoco'); g.add(indices,1,'REPLACE')
++bpy.ops.object.select_all(action='DESELECT')
++body.select_set(True); head.select_set(True); bpy.context.view_layer.objects.active=body
++bpy.ops.object.join()
++body.name = 'Corpo_Base_002_Continuo'
++import bmesh
++bm = bmesh.new(); bm.from_mesh(body.data); bm.verts.ensure_lookup_table()
++layer = bm.verts.layers.deform.verify(); gid = body.vertex_groups['ESTUDO_Solda_Pescoco'].index
++boundary = [v for v in bm.verts if v[layer].get(gid,0)>.5]
++before_neck = len(boundary)
++bmesh.ops.remove_doubles(bm, verts=boundary, dist=1e-5)
++bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces))
++bm.to_mesh(body.data); bm.free(); body.data.update()
++body['neck_weld'] = f'{before_neck} coincident boundary vertices welded; no whole-mesh remesh.'
++body['source_scope'] = 'Neutral anatomy study. Runtime and source001 are untouched.'
++
++# Read only the pure weight functions from the existing exporter. Executing the
++# exporter itself would write runtime files, so it is deliberately not imported.
++with bpy.data.libraries.load(str(SOURCE/'naquiro-male.blend'), link=False) as (src,dst):
++    dst.objects = ['NaquiroRig']
++rig = dst.objects[0]
++assert rig is not None
++rig_collection.objects.link(rig); rig.name='Rig_Anatomia_002_Estudo'
++rig.animation_data_clear(); rig.show_in_front=True;rig.matrix_world=Matrix.Identity(4)
++for pb in rig.pose.bones:
++    pb.rotation_mode='QUATERNION';pb.matrix_basis=Matrix.Identity(4)
++    pb.location=(0,0,0);pb.scale=(1,1,1);pb.rotation_quaternion=(1,0,0,0)
++rig['inherited_pose_cleared']='All transforms neutralized; no Idle grounding offsets inherited.'
++rig['scope']='Study of shoulders/elbows/knees. Does not replace the delivered runtime rig or Actions.'
++bpy.ops.object.select_all(action='DESELECT');rig.select_set(True);bpy.context.view_layer.objects.active=rig
++bpy.ops.object.mode_set(mode='EDIT')
++def edit_bone(name,head,tail):
++    b=rig.data.edit_bones[name];b.head=head;b.tail=tail
++neck_z=head_meta['neck_boundary']['z']
++edit_bone('neck',(0,0,1.79),(0,.015,neck_z))
++edit_bone('head',(0,.015,neck_z),(0,.028,2.25))
++for side,p in joint_targets.items():
++    sign=1 if side=='L' else -1
++    edit_bone('clavicle_'+side,(0,.02,1.735),p['shoulder'])
++    edit_bone('upperarm_'+side,p['shoulder'],p['elbow'])
++    edit_bone('forearm_'+side,p['elbow'],p['wrist'])
++    edit_bone('hand_'+side,p['wrist'],p['palm'])
++    edit_bone('thigh_'+side,(sign*.145,.016,1.05),p['knee'])
++    edit_bone('shin_'+side,p['knee'],p['ankle'])
++    edit_bone('foot_'+side,p['ankle'],p['toe_root'])
++    edit_bone('toe_'+side,p['toe_root'],p['toe_tip'])
++    edit_bone('ear_'+side,(sign*.110,.015,2.11),(sign*.20,.08,2.17))
++    for name,(root,mid,tip) in digit_targets[side].items():
++        edit_bone(name+'_01_'+side,root,mid)
++        edit_bone(name+'_02_'+side,mid,tip)
++bpy.ops.object.mode_set(mode='OBJECT')
++for pb in rig.pose.bones:pb.matrix_basis=Matrix.Identity(4)
++segments = {b.name:(b.head_local.copy(),b.tail_local.copy()) for b in rig.data.bones}
++tree = ast.parse((SOURCE/'rig_export.py').read_text())
++pure = ast.Module(body=[n for n in tree.body if isinstance(n,ast.FunctionDef) and n.name in ['dist_segment','weights']], type_ignores=[])
++namespace={'Vector':Vector,'segments':segments}
++exec(compile(pure,'original_weight_functions_readonly','exec'),namespace)
++weights = namespace['weights']
++anatomy_objects = [o for c in [body_collection,head_collection] for o in c.objects if o.type=='MESH']
++for ob in anatomy_objects:
++    if ob == body: region='body'
++    else: region=str(ob.get('edf_region','head'))
++    for g in list(ob.vertex_groups):
++        if g.name != 'ESTUDO_Solda_Pescoco': ob.vertex_groups.remove(g)
++    groups={n:ob.vertex_groups.new(name=n) for n in segments if n!='root'}
++    for v in ob.data.vertices:
++        if ob.name.startswith('Membrana_Mao_'):
++            _,_,side,number=ob.name.split('_');k=int(number.split('.')[0])
++            u=(v.index%9)/8;t=(v.index//9)/6
++            at=t*(.64-.30*math.sin(math.pi*u))
++            distal=max(0,min(1,(at-.32)/.28))
++            assigned=[(f'finger{k}_01_{side}',(1-u)*(1-distal)),
++                      (f'finger{k}_02_{side}',(1-u)*distal),
++                      (f'finger{k+1}_01_{side}',u*(1-distal)),
++                      (f'finger{k+1}_02_{side}',u*distal)]
++        elif ob.name.startswith('Membrana_Pe_'):
++            side=ob.name.split('_')[2];t=(v.index//9)/6
++            assigned=[('foot_'+side,1-.65*t),('toe_'+side,.65*t)]
++        else: assigned=weights(ob.matrix_world@v.co,region)
++        for n,w in assigned:
++            if w>0: groups[n].add([v.index],w,'REPLACE')
++    mod=ob.modifiers.new('Deformacao_de_Estudo','ARMATURE'); mod.object=rig
++    mod.use_deform_preserve_volume=True
++    # Skin must precede subdivision; the editable cage remains available.
++    while ob.modifiers.find(mod.name)>0:
++        index=ob.modifiers.find(mod.name)
++        if ob.modifiers[index-1].type not in ['SUBSURF']: break
++        bpy.context.view_layer.objects.active=ob
++        bpy.ops.object.modifier_move_up(modifier=mod.name)
++    ob['deformation_limit']='Distance-envelope study weights; manual corrective weighting/poses still require review.'
++
++# A neutral material-only comparison, at the same cameras and scale. No old
++# clothing, hair or jewelry is shown. Original objects themselves stay archived.
++for src in originals:
++    if src.type!='MESH': continue
++    region=str(src.get('edf_region',''))
++    if region not in ['body','head'] and not region.startswith(('ear.','hand.','foot.')): continue
++    names=[m.name.lower() for m in src.data.materials if m]
++    if any(any(s in n for s in ['cobre','couro','tecido','cabelo']) for n in names) and not src.name.startswith(('Pupila','Narina','Linha_Oral')): continue
++    ob=src.copy(); ob.data=src.data.copy(); baseline_collection.objects.link(ob); ob.name='ANTES001_'+src.name
++    ob.hide_render=False; ob.hide_set(False); ob.data.materials.clear(); ob.data.materials.append(clay)
++    for f in ob.data.polygons:f.material_index=0
++baseline_collection.hide_render=baseline_collection.hide_viewport=True
++
++# True control-cage wireframe, from the actual polygon edges, not a painted
++# texture. Subdivision is disabled on the cage view; count both in inspection.
++for src in anatomy_objects:
++    ob=src.copy(); ob.data=src.data.copy(); wire_collection.objects.link(ob); ob.name='CAGE_'+src.name
++    for m in list(ob.modifiers):
++        if m.type!='ARMATURE': ob.modifiers.remove(m)
++    ob.data.materials.clear(); ob.data.materials.append(clay); ob.data.materials.append(dark)
++    for f in ob.data.polygons:f.material_index=0
++    w=ob.modifiers.new('Arestas_Reais_Cage','WIREFRAME');w.thickness=.0007;w.use_replace=False;w.offset=1;w.material_offset=1
++wire_collection.hide_render=wire_collection.hide_viewport=True
++
++def move_to(ob,c):
++    for previous in list(ob.users_collection):previous.objects.unlink(ob)
++    c.objects.link(ob)
++
++bpy.ops.mesh.primitive_plane_add(size=200,location=(0,0,-.018))
++floor=bpy.context.object;floor.name='ESTUDIO_Chao';move_to(floor,studio);floor.data.materials.append(floor_mat)
++world=bpy.data.worlds.new('ESTUDIO_Mundo_Neutro');world.use_nodes=True
++world.node_tree.nodes['Background'].inputs[0].default_value=(.13,.13,.13,1)
++world.node_tree.nodes['Background'].inputs[1].default_value=.08
++scene=bpy.context.scene;scene.world=world
++for name,pos,energy,size in [('Key',(-3,-4,5),350,2.4),('Fill',(4,-2,3.5),85,3),('Rim',(2,3,4),250,3)]:
++    data=bpy.data.lights.new('ESTUDIO_'+name,'AREA');data.energy=energy;data.shape='DISK';data.size=size
++    ob=bpy.data.objects.new(data.name,data);studio.objects.link(ob);ob.location=pos
++    ob.rotation_euler=(Vector((0,0,1.25))-ob.location).to_track_quat('-Z','Y').to_euler()
++
++views={
++ 'front':((0,-6,1.14),(0,0,1.14),2.60),
++ 'side':((6,0,1.14),(0,0,1.14),2.60),
++ 'back':((0,6,1.14),(0,0,1.14),2.60),
++ 'three-quarter':((4,-6,2.1),(0,0,1.14),2.60),
++ 'face-front':((0,-4,2.09),(0,0,2.09),.43),
++ 'face-side':((4,0,2.09),(0,0,2.09),.43),
++ 'face-three-quarter':((2,-4,2.16),(0,0,2.09),.46),
++ 'shoulder':((1.5,-4,2.3),(.25,0,1.68),.70),
++ 'hand-dorsal':((.72,-3,1.10),(.70,-.04,1.10),.37),
++ 'hand-palmar':((.72,3,1.10),(.70,-.04,1.10),.37),
++ 'feet-dorsal':((.35,-2,1.2),(0,-.10,.09),.80),
++ 'feet-side':((3,-.05,.20),(.15,-.08,.10),.53),
++ 'feet-sole':((0,-.10,-3),(0,-.10,.08),.80),
++ 'ear':((1,-3,2.16),(.16,0,2.13),.34),
++}
++for name,(pos,target,scale) in views.items():
++    data=bpy.data.cameras.new('CAM_'+name);data.type='ORTHO';data.ortho_scale=scale
++    ob=bpy.data.objects.new(data.name,data);studio.objects.link(ob);ob.location=pos
++    ob.rotation_euler=(Vector(target)-ob.location).to_track_quat('-Z','Y').to_euler()
++scene.camera=bpy.data.objects['CAM_front']
++scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=8
++scene.cycles.use_denoising=False  # Debian Blender build has no OpenImageDenoise.
++scene.display.shading.light='STUDIO'
++scene.display.shading.color_type='MATERIAL'
++scene.display.shading.show_cavity=False
++scene.display.shading.show_specular_highlight=False
++scene.display.shading.show_shadows=False
++scene.display.shading.studio_light='paint.sl'
++scene.display.shading.background_type='WORLD'
++scene.display.render_aa='16'
++scene.render.resolution_x=800;scene.render.resolution_y=1100;scene.render.resolution_percentage=100
++scene.render.image_settings.file_format='PNG';scene.render.film_transparent=False
++scene.view_settings.view_transform='AgX'
++scene['study_id']='EDF-NAQUIRO-ANATOMIA-002'
++scene['scope']='Anatomy only; neutral materials; source001 hidden. No runtime export.'
++scene['technical_height_not_canonical']=2.25
++scene['views']=json.dumps(views)
++for screen in bpy.data.screens:
++    for area in screen.areas:
++        if area.type=='VIEW_3D':
++            area.spaces.active.shading.type='SOLID';area.spaces.active.shading.color_type='MATERIAL'
++            area.spaces.active.shading.show_cavity=False
++            area.spaces.active.shading.show_shadows=False
++            area.spaces.active.shading.show_specular_highlight=False
++            area.spaces.active.shading.light='STUDIO'
++            area.spaces.active.shading.studio_light='paint.sl'
++            area.spaces.active.region_3d.view_perspective='CAMERA'
++bpy.ops.object.select_all(action='DESELECT');body.select_set(True);bpy.context.view_layer.objects.active=body
++text=bpy.data.texts.new('LEIA_CORPO_BASE_002')
++text.write('Náquiro masculino — estudo anatômico 002\n\nCorpo cinza sem mapas, roupa/cabelo/acessórios ocultos.\nColeção00: checkpoint001 completo, não alterado.\nColeções01/02: nova anatomia. Coleção03: rig de estudo, sem substituir runtime.\nColeção80: comparação001 no mesmo material/luz/câmera.\nColeção90: wireframe do cage real (sem subdivisão).\n\nEste arquivo não exporta sobre o jogo. Abra as câmeras CAM_front/side/back e aproximações.\nPesos são um estudo por envelopes; correções manuais e aceite humano continuam necessários.\nFontes Python e relatório acompanham a entrega.\n')
++bpy.ops.file.pack_all()
++dest=Path(args.blend);dest.parent.mkdir(parents=True,exist_ok=True)
++bpy.ops.wm.save_as_mainfile(filepath=str(dest),compress=True)
++assert source_hashes=={n:sha(SOURCE/n) for n in source_hashes}, 'Original source changed unexpectedly'
++assert study_hashes=={n:sha(HERE/n) for n in study_hashes}, 'Study sources changed during build; rebuild from a frozen revision'
++
++def safe(value):
++    if isinstance(value,dict):return {str(k):safe(v) for k,v in value.items()}
++    if isinstance(value,(list,tuple)):return [safe(v) for v in value]
++    if value is None or isinstance(value,(str,int,float,bool)):return value
++    return getattr(value,'name',str(value))
++report={'study_id':scene['study_id'],'blender':bpy.app.version_string,'blend':dest.name,'blend_sha256':sha(dest),'original_sources_unchanged':source_hashes,'study_sources_sha256':study_hashes,'neck_weld':{'coincident_vertices_before':before_neck,'maximum_boundary_error':boundary_distance},'body':safe(body_meta),'head':safe(head_meta),'study_joint_landmarks':safe(joint_targets),'digit_landmarks':safe(digit_targets),'membrane_weights':'Hands: bilinear blend of the two adjacent digits, max4 normalized influences. Feet: foot/toe collective blend.','anatomy_objects':[o.name for o in anatomy_objects],'cameras':views,'neutral_material':'No texture, vertex color, metallic or emissive inputs','archive_hidden':archive.hide_render and archive.hide_viewport,'runtime_exported':False}
++(E/'build-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
++print('ANATOMY_STUDY_SAVED',dest,sha(dest))
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py
+new file mode 100644
+index 0000000..59ded98
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py
+@@ -0,0 +1,495 @@
++"""Read-only structural inspection of the editable Blender anatomy study.
++
++blender -b --threads 2 --python inspect_study.py -- --blend study.blend --out DIR
++No save, export, remesh, topology repair or production-file writes occur here.
++"""
++from pathlib import Path
++import argparse
++from collections import Counter, defaultdict, deque
++import hashlib
++import json
++import math
++import sys
++
++import bpy
++from mathutils import Vector, Quaternion, Matrix
++from mathutils.kdtree import KDTree
++
++AREA_EPSILON = 1e-12
++EDGE_EPSILON = 1e-8
++SYMMETRY_TOLERANCE = 2e-6
++NEUTRAL_TOLERANCE = 1e-8
++COLLECTIONS = ('01_CORPO_BASE_NEUTRO', '02_CABECA_E_MEMBRANAS')
++BODY_NAME = 'Corpo_Base_002_Continuo'
++RIG_NAME = 'Rig_Anatomia_002_Estudo'
++
++
++def digest(path):
++    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
++
++
++def bounds(points):
++    if not points:
++        return None
++    return {'minimum': [min(p[k] for p in points) for k in range(3)],
++            'maximum': [max(p[k] for p in points) for k in range(3)]}
++
++
++def topology(mesh, matrix, include_positions=False):
++    """Count the actual mesh, and enumerate each connected boundary graph."""
++    points = [matrix @ v.co for v in mesh.vertices]
++    edge_faces = Counter()
++    directions = defaultdict(list)
++    adjacency = [[] for _ in points]
++    used = set()
++    for edge in mesh.edges:
++        a, b = edge.vertices
++        adjacency[a].append(b)
++        adjacency[b].append(a)
++    polygon_areas = []
++    for polygon in mesh.polygons:
++        ids = list(polygon.vertices)
++        used.update(ids)
++        # Compute world-space area through the actual tessellation below.
++        for a, b in zip(ids, ids[1:] + ids[:1]):
++            pair = tuple(sorted((a, b)))
++            edge_faces[pair] += 1
++            directions[pair].append((a, b))
++    mesh.calc_loop_triangles()
++    areas_by_polygon = [0.0] * len(mesh.polygons)
++    for triangle in mesh.loop_triangles:
++        a, b, c = (points[k] for k in triangle.vertices)
++        areas_by_polygon[triangle.polygon_index] += (b-a).cross(c-a).length * .5
++    polygon_areas = areas_by_polygon
++    lengths = [(points[e.vertices[0]]-points[e.vertices[1]]).length for e in mesh.edges]
++    loose = [list(e.vertices) for e in mesh.edges if edge_faces[tuple(sorted(e.vertices))] == 0]
++    over = [list(e) for e, count in edge_faces.items() if count > 2]
++    inconsistent = [list(e) for e, ds in directions.items() if len(ds) == 2 and ds[0] == ds[1]]
++    boundary_edges = [e for e, count in edge_faces.items() if count == 1]
++    badj = defaultdict(list)
++    for a, b in boundary_edges:
++        badj[a].append(b)
++        badj[b].append(a)
++    cycles = []
++    pending = set(badj)
++    while pending:
++        seed = min(pending)
++        seen = {seed}
++        stack = [seed]
++        while stack:
++            i = stack.pop()
++            for j in badj[i]:
++                if j not in seen:
++                    seen.add(j)
++                    stack.append(j)
++        pending.difference_update(seen)
++        ps = [points[i] for i in sorted(seen)]
++        center = sum(ps, Vector()) / len(ps)
++        entry = {'vertices': len(seen), 'edges': sum(len(badj[i]) for i in seen)//2,
++                 'is_cycle': all(len(badj[i]) == 2 for i in seen),
++                 'center': list(center), 'bounds': bounds(ps)}
++        if include_positions:
++            entry['vertex_indices'] = sorted(seen)
++        cycles.append(entry)
++    components = []
++    pending = set(range(len(points)))
++    component_by_vertex = [-1] * len(points)
++    while pending:
++        seed = min(pending)
++        seen = {seed}
++        stack = [seed]
++        while stack:
++            i = stack.pop()
++            for j in adjacency[i]:
++                if j not in seen:
++                    seen.add(j)
++                    stack.append(j)
++        index = len(components)
++        for i in seen:
++            component_by_vertex[i] = index
++        components.append({'vertices': len(seen), 'bounds': bounds([points[i] for i in seen])})
++        pending.difference_update(seen)
++    finite = [i for i, p in enumerate(points) if not all(math.isfinite(x) for x in p)]
++    counts = Counter(len(p.vertices) for p in mesh.polygons)
++    report = {'vertices': len(points), 'edges': len(mesh.edges), 'polygons': len(mesh.polygons),
++              'triangles': counts[3], 'quads': counts[4],
++              'ngons': sum(v for k, v in counts.items() if k > 4),
++              'tessellated_triangles': len(mesh.loop_triangles),
++              'nonfinite_vertices': finite, 'bounds': bounds(points),
++              'zero_area_faces': [i for i, a in enumerate(polygon_areas) if a <= AREA_EPSILON],
++              'minimum_face_area': min(polygon_areas, default=None),
++              'minimum_edge_length': min(lengths, default=None),
++              'maximum_edge_length': max(lengths, default=None),
++              'collapsed_edges': [i for i, length in enumerate(lengths) if length <= EDGE_EPSILON],
++              'loose_edges': loose, 'unused_vertices': sorted(set(range(len(points))) - used),
++              'edges_with_more_than_two_faces': over,
++              'same_direction_shared_edges': inconsistent,
++              'boundary_edges': len(boundary_edges), 'boundary_components': cycles,
++              'connected_components': components}
++    internal = {'points': points, 'lengths': lengths, 'edge_faces': edge_faces,
++                'component_by_vertex': component_by_vertex}
++    return report, internal
++
++
++def expected_boundaries(name, report, evaluated=False):
++    """Classify documented openings, never silently accept arbitrary holes."""
++    loops = report['boundary_components']
++    if name == BODY_NAME:
++        expected = 'Two inner eyelid rings only; welded neck must be closed.'
++        okay = len(loops) == 2
++        for loop in loops:
++            x, y, z = loop['center']
++            valid = (loop['is_cycle'] and .025 < abs(x) < .075 and -.10 < y < -.045
++                     and 2.09 < z < 2.15)
++            loop['classification'] = 'intentional_inner_eyelid' if valid else 'UNEXPECTED_BODY_OPENING'
++            okay = okay and valid
++    elif name in ('ANAT002_Iris_L', 'ANAT002_Iris_R', 'ANAT002_Pupila_L', 'ANAT002_Pupila_R'):
++        expected = 'One intentional 32-edge perimeter of the thin anatomical cap conformed onto the closed underlying globe.'
++        okay = len(loops) == 1 and loops[0]['is_cycle'] and loops[0]['vertices'] == 32 and loops[0]['edges'] == 32
++        for loop in loops:
++            loop['classification'] = 'intentional_open_eye_cap_on_closed_globe' if okay else 'UNEXPECTED_EYE_CAP_BOUNDARY'
++    elif 'Membrana_' in name or 'Orelha_Membrana_' in name:
++        expected = ('Closed thickened membrane after modifiers.' if evaluated else
++                    'One open perimeter of editable membrane cage; Solidify supplies thickness.')
++        okay = len(loops) == (0 if evaluated else 1) and all(x['is_cycle'] for x in loops)
++        for loop in loops:
++            loop['classification'] = 'intentional_unthickened_membrane_perimeter'
++    else:
++        expected = 'Closed anatomical eye surface.'
++        okay = len(loops) == 0
++        for loop in loops:
++            loop['classification'] = 'UNEXPECTED_EYE_SURFACE_OPENING'
++    return {'expected': expected, 'pass': bool(okay)}
++
++
++def mesh_checks(report):
++    return all(not report[key] for key in (
++        'nonfinite_vertices', 'zero_area_faces', 'collapsed_edges', 'loose_edges',
++        'unused_vertices', 'edges_with_more_than_two_faces', 'same_direction_shared_edges'))
++
++
++def inspect_materials(objects):
++    reports = {}
++    for ob in objects:
++        for mat in ob.data.materials:
++            if mat is None or mat.name in reports:
++                continue
++            errors = []
++            if not mat.use_nodes or mat.node_tree is None:
++                errors.append('Material does not expose a node-based Principled surface.')
++                reports[mat.name] = {'pass': False, 'errors': errors}
++                continue
++            nodes = mat.node_tree.nodes
++            principled = [node for node in nodes if node.type == 'BSDF_PRINCIPLED']
++            prohibited = [node.name for node in nodes if node.type in (
++                'TEX_IMAGE', 'VERTEX_COLOR', 'NORMAL_MAP', 'BUMP', 'ATTRIBUTE') or node.type.startswith('TEX_')]
++            if prohibited:
++                errors.append('Texture, vertex-color, attribute or normal-processing nodes present.')
++            if len(principled) != 1:
++                errors.append('Expected exactly one Principled BSDF.')
++            values = {}
++            if len(principled) == 1:
++                p = principled[0]
++                for key in ['Base Color', 'Metallic', 'Roughness', 'Normal', 'Emission Color', 'Emission Strength']:
++                    socket = p.inputs.get(key)
++                    if socket is None:
++                        continue
++                    if socket.is_linked:
++                        errors.append(key + ' is linked rather than a neutral constant.')
++                    val = socket.default_value
++                    values[key] = list(val) if hasattr(val, '__len__') else float(val)
++                color = values.get('Base Color', [1, 0, 0, 1])
++                if max(color[:3])-min(color[:3]) > NEUTRAL_TOLERANCE or abs(color[3]-1) > NEUTRAL_TOLERANCE:
++                    errors.append('Base color is not opaque neutral grey.')
++                if abs(values.get('Metallic', 1)) > NEUTRAL_TOLERANCE:
++                    errors.append('Metallic response is nonzero.')
++                emission = values.get('Emission Color', [0, 0, 0, 1])[:3]
++                if max(abs(v) for v in emission) > NEUTRAL_TOLERANCE and values.get('Emission Strength', 0) > NEUTRAL_TOLERANCE:
++                    errors.append('Emissive response is nonzero.')
++            reports[mat.name] = {'pass': not errors, 'errors': errors,
++                                 'prohibited_nodes': prohibited, 'principled_inputs': values}
++    return reports
++
++
++def inspect_portability():
++    images = []
++    for image in bpy.data.images:
++        if image.source != 'FILE':
++            continue
++        packed_file = image.packed_file
++        packed_tiles = list(image.packed_files)
++        packed = packed_file is not None or bool(packed_tiles)
++        images.append({'name': image.name, 'source': image.source,
++                       'packed': packed, 'packed_entries': len(packed_tiles),
++                       'packed_bytes': packed_file.size if packed_file else
++                           sum(entry.packed_file.size for entry in packed_tiles),
++                       'external_file_present': Path(bpy.path.abspath(image.filepath)).is_file()})
++    libraries = [{'name': lib.name, 'filename': Path(lib.filepath).name,
++                  'external_file_present': Path(bpy.path.abspath(lib.filepath)).is_file()}
++                 for lib in bpy.data.libraries]
++    unpacked = [image['name'] for image in images if not image['packed']]
++    return {'pass': not unpacked and not libraries, 'file_images': images,
++            'unpacked_file_images': unpacked, 'linked_libraries': libraries,
++            'method': 'Every FILE image must be embedded/packed, including the hidden checkpoint; no externally linked .blend libraries allowed.',
++            'limits': 'Read-only dependency inspection; no file is unpacked, relinked or saved.'}
++
++
++def inspect_weights(objects, rig):
++    bones = {b.name for b in rig.data.bones if b.use_deform}
++    reports = {}
++    for ob in objects:
++        group_names = {group.index: group.name for group in ob.vertex_groups}
++        unweighted, bad_sums, excess, nonfinite = [], [], [], []
++        max_influences, lo, hi = 0, math.inf, -math.inf
++        used = set()
++        for v in ob.data.vertices:
++            bone_weights = [(group_names.get(g.group, ''), g.weight) for g in v.groups
++                            if group_names.get(g.group, '') in bones]
++            positives = [(n, w) for n, w in bone_weights if w > 1e-8]
++            used.update(n for n, w in positives)
++            if not positives:
++                unweighted.append(v.index)
++            if any(not math.isfinite(w) or w < 0 for n, w in bone_weights):
++                nonfinite.append(v.index)
++            total = sum(w for n, w in bone_weights)
++            lo, hi = min(lo, total), max(hi, total)
++            if abs(total-1) > 1e-5:
++                bad_sums.append({'vertex': v.index, 'sum': total})
++            if len(positives) > 4:
++                excess.append(v.index)
++            max_influences = max(max_influences, len(positives))
++        modifiers = [m for m in ob.modifiers if m.type == 'ARMATURE']
++        modifier_ok = len(modifiers) == 1 and modifiers[0].object == rig
++        ignored = [g.name for g in ob.vertex_groups if g.name not in bones]
++        reports[ob.name] = {'pass': not any([unweighted, bad_sums, excess, nonfinite]) and modifier_ok,
++                            'unweighted_vertices': unweighted, 'invalid_weight_sums': bad_sums,
++                            'over_four_influences': excess, 'nonfinite_or_negative_weights': nonfinite,
++                            'maximum_bone_influences': max_influences,
++                            'minimum_weight_sum': lo, 'maximum_weight_sum': hi,
++                            'bone_groups_used': sorted(used), 'ignored_nonbone_groups': ignored,
++                            'single_armature_modifier_targets_study_rig': modifier_ok}
++    return reports
++
++
++def symmetry(points):
++    tree = KDTree(len(points))
++    for i, p in enumerate(points):
++        tree.insert(p, i)
++    tree.balance()
++    distances = []
++    worst = []
++    for i, p in enumerate(points):
++        target = Vector((-p.x, p.y, p.z))
++        _co, _idx, distance = tree.find(target)
++        distances.append(distance)
++        if distance > SYMMETRY_TOLERANCE:
++            worst.append({'vertex': i, 'distance': distance, 'coordinate': list(p)})
++    return {'method': 'Nearest reflected vertex across world X=0, all anatomy meshes together.',
++            'tolerance': SYMMETRY_TOLERANCE, 'maximum_distance': max(distances, default=0),
++            'mean_distance': sum(distances)/len(distances) if distances else 0,
++            'vertices_above_tolerance': len(worst),
++            'worst_vertices': sorted(worst, key=lambda x: x['distance'], reverse=True)[:20],
++            'pass': not worst}
++
++
++def neck_and_connectivity(body, mesh_report, internals):
++    points = internals['points']
++    # The body builder preserves this metadata group at the actual weld. The
++    # group only locates a candidate plane: independent edge incidences and
++    # component traversal below establish genuine shared topology.
++    neck_group = body.vertex_groups.get('ESTUDO_Solda_Pescoco')
++    marked = [v.index for v in body.data.vertices if neck_group and
++              any(g.group == neck_group.index and g.weight > .5 for g in v.groups)]
++    ring_points = [points[i] for i in marked]
++    plane_z = sum(p.z for p in ring_points)/len(ring_points) if ring_points else 0
++    center_y = (max(p.y for p in ring_points)+min(p.y for p in ring_points))/2 if ring_points else 0
++    rx = max(abs(p.x) for p in ring_points) if ring_points else 0
++    ry = (max(p.y for p in ring_points)-min(p.y for p in ring_points))/2 if ring_points else 0
++    neck = [i for i, p in enumerate(points) if rx > 0 and ry > 0
++            and abs(p.z-plane_z) < 2e-6
++            and abs((p.x/rx)**2 + ((p.y-center_y)/ry)**2-1) < 1e-4]
++    nset = set(neck)
++    edges = [(a, b, faces) for (a, b), faces in internals['edge_faces'].items() if a in nset and b in nset]
++    landmarks = {}
++    for name, predicate in {
++        'torso': lambda p: abs(p.x) < .12 and 1.4 < p.z < 1.65,
++        'neck': lambda p: abs(p.x) < .07 and 1.9 < p.z < 1.99,
++        'head': lambda p: 2.03 < p.z < 2.20,
++        'left_hand': lambda p: p.x > .65 and 1.0 < p.z < 1.20,
++        'right_hand': lambda p: p.x < -.65 and 1.0 < p.z < 1.20,
++        'left_foot': lambda p: p.x > .10 and p.z < .15,
++        'right_foot': lambda p: p.x < -.10 and p.z < .15,
++    }.items():
++        ids = [i for i, p in enumerate(points) if predicate(p)]
++        landmarks[name] = {'vertices': len(ids),
++                           'component_indices': sorted({internals['component_by_vertex'][i] for i in ids})}
++    okay = (1.8 < plane_z < 2.05 and len(neck) == 64 and len(edges) == 64 and all(n == 2 for a, b, n in edges)
++            and len(mesh_report['connected_components']) == 1
++            and all(info['vertices'] > 0 and info['component_indices'] == [0] for info in landmarks.values()))
++    return {'pass': okay, 'neck_ring_vertices': len(neck), 'neck_ring_edges': len(edges),
++            'measured_neck_plane_z': plane_z, 'measured_ring_rx_ry_center_y': [rx, ry, center_y],
++            'neck_edge_face_incidence_histogram': dict(Counter(n for a, b, n in edges)),
++            'metadata_group_vertices': len(marked),
++            'metadata_group_matches_measured_ring': set(marked) == nset,
++            'landmarks': landmarks,
++            'method': 'Actual mesh-edge graph, metadata-located and independently coordinate-matched 64 vertex neck ring, two incident faces per ring edge; no overlap claimed as weld.'}
++
++
++def pose(rig, name):
++    for bone in rig.pose.bones:
++        bone.matrix_basis = Matrix.Identity(4)
++        bone.location = (0, 0, 0)
++        bone.scale = (1, 1, 1)
++        bone.rotation_mode = 'QUATERNION'
++        bone.rotation_quaternion = (1, 0, 0, 0)
++    rotations = []
++    def rotate(bone_name, axis, degrees):
++        bone = rig.pose.bones[bone_name]
++        local_axis = bone.bone.matrix_local.to_quaternion().inverted() @ Vector(axis)
++        bone.rotation_quaternion = Quaternion(local_axis, math.radians(degrees))
++        rotations.append({'bone': bone_name, 'world_rest_axis': axis, 'degrees': degrees})
++    if name in ('arms90', 'arms-up'):
++        degrees = 62 if name == 'arms90' else 115
++        rotate('upperarm_L', (0, 1, 0), -degrees)
++        rotate('upperarm_R', (0, 1, 0), degrees)
++    elif name == 'elbow90':
++        rotate('forearm_L', (1, 0, 0), -90)
++        rotate('forearm_R', (1, 0, 0), -90)
++    elif name == 'knee90':
++        rotate('thigh_L', (1, 0, 0), -25)
++        rotate('shin_L', (1, 0, 0), 90)
++    elif name == 'hand-curl':
++        # Partial closing only. Thumb opposition and collision acceptance are
++        # deliberately outside these structural measurements.
++        for side in ('L', 'R'):
++            for digit in range(1, 5):
++                rotate(f'finger{digit}_01_{side}', (1, 0, 0), -40)
++                rotate(f'finger{digit}_02_{side}', (1, 0, 0), -45)
++    elif name == 'toe-up':
++        rotate('toe_L', (1, 0, 0), -25)
++        rotate('toe_R', (1, 0, 0), -25)
++    bpy.context.view_layer.update()
++    return rotations
++
++
++def main():
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--blend', required=True)
++    parser.add_argument('--out', required=True)
++    args = parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
++    blend = Path(args.blend).resolve()
++    out = Path(args.out).resolve()
++    out.mkdir(parents=True, exist_ok=True)
++    before = digest(blend)
++    bpy.ops.wm.open_mainfile(filepath=str(blend))
++    scene = bpy.context.scene
++    objects = sorted({o for name in COLLECTIONS for o in bpy.data.collections[name].objects if o.type == 'MESH'}, key=lambda x: x.name)
++    rig = bpy.data.objects[RIG_NAME]
++    archive = bpy.data.collections['00_CHECKPOINT_001_OCULTO']
++    source_pose = []
++    for bone in rig.pose.bones:
++        q = bone.rotation_quaternion if bone.rotation_mode == 'QUATERNION' else bone.rotation_euler.to_quaternion()
++        if (bone.location.length > 1e-6 or (bone.scale-Vector((1,1,1))).length > 1e-6
++                or abs(abs(q.w)-1) > 1e-6 or Vector((q.x, q.y, q.z)).length > 1e-6):
++            source_pose.append({'bone': bone.name, 'location': list(bone.location),
++                                'rotation_quaternion': list(q), 'scale': list(bone.scale)})
++    report = {'study_id': scene.get('study_id'), 'blender': bpy.app.version_string,
++              'source_blend': blend.name, 'source_sha256_before': before,
++              'read_only': True, 'tolerances': {'polygon_area': AREA_EPSILON,
++                'edge_length': EDGE_EPSILON, 'symmetry': SYMMETRY_TOLERANCE,
++                'normalized_weight_sum': 1e-5},
++              'archive': {'name': archive.name, 'hide_render': archive.hide_render,
++                          'hide_viewport': archive.hide_viewport,
++                          'object_count': len(archive.objects),
++                          'pass': archive.hide_render and archive.hide_viewport and len(archive.objects) > 0},
++              'rig': {'name': rig.name, 'bones': len(rig.data.bones),
++                      'pass': len(rig.data.bones) == 46,
++                      'source_pose_nonidentity_channels': source_pose,
++                      'source_pose_is_neutral': not source_pose},
++              'materials': inspect_materials(objects), 'portability': inspect_portability(),
++              'weights': inspect_weights(objects, rig), 'objects': {}, 'poses': {},
++              'limits': ['Structural checks do not certify self-intersection absence, anatomical correctness or final rig/deformation quality.',
++                         'Separate membrane/fin/eye meshes remain separate; only the main body/head/neck and limb/digit cage is tested as one connected surface.',
++                         'Iris/pupil caps intentionally have one 32-edge open perimeter each and overlap the closed underlying eye globe; they are not welded facial skin.',
++                         'Six poses are in-memory diagnostic transformations of the study rig, not replacement runtime Actions.',
++                         'Symmetry is vertex proximity across X=0, not a proof of perfect mirrored polygon connectivity.']}
++    pose(rig, 'rest')
++    all_points = []
++    rest_lengths = {}
++    body_internal = None
++    for ob in objects:
++        cage, internals = topology(ob.data, ob.matrix_world)
++        cage['boundary_expectation'] = expected_boundaries(ob.name, cage)
++        cage['pass'] = mesh_checks(cage) and cage['boundary_expectation']['pass']
++        evaluated_ob = ob.evaluated_get(bpy.context.evaluated_depsgraph_get())
++        evaluated_mesh = evaluated_ob.to_mesh()
++        evaluated, evinternals = topology(evaluated_mesh, evaluated_ob.matrix_world)
++        evaluated['boundary_expectation'] = expected_boundaries(ob.name, evaluated, evaluated=True)
++        evaluated['pass'] = mesh_checks(evaluated) and evaluated['boundary_expectation']['pass']
++        all_points.extend(internals['points'])
++        rest_lengths[ob.name] = evinternals['lengths']
++        evaluated_ob.to_mesh_clear()
++        report['objects'][ob.name] = {'cage': cage, 'evaluated': evaluated,
++            'modifiers': [{'name': m.name, 'type': m.type, 'viewport': m.show_viewport,
++                           'render': m.show_render, **({'levels': m.levels, 'render_levels': m.render_levels} if m.type == 'SUBSURF' else {}),
++                           **({'thickness': m.thickness} if m.type == 'SOLIDIFY' else {})} for m in ob.modifiers]}
++        if ob.name == BODY_NAME:
++            report['body_connectivity'] = neck_and_connectivity(ob, cage, internals)
++    report['symmetry'] = symmetry(all_points)
++    count_keys = ('vertices', 'edges', 'polygons', 'triangles', 'quads', 'ngons', 'tessellated_triangles')
++    report['geometry_totals'] = {kind: {key: sum(entry[kind][key] for entry in report['objects'].values())
++                                      for key in count_keys} for kind in ('cage', 'evaluated')}
++    for name in ('arms90', 'arms-up', 'elbow90', 'knee90', 'hand-curl', 'toe-up'):
++        entry = {'rotations': pose(rig, name), 'objects': {}}
++        for ob in objects:
++            evaluated_ob = ob.evaluated_get(bpy.context.evaluated_depsgraph_get())
++            mesh = evaluated_ob.to_mesh()
++            metrics, internals = topology(mesh, evaluated_ob.matrix_world)
++            old = rest_lengths[ob.name]
++            new = internals['lengths']
++            if len(old) != len(new):
++                metrics['rest_edge_count_changed'] = True
++                metrics['edge_length_ratio_to_rest'] = None
++            else:
++                ratios = [a/b for a, b in zip(new, old) if b > EDGE_EPSILON]
++                metrics['rest_edge_count_changed'] = False
++                metrics['edge_length_ratio_to_rest'] = {'minimum': min(ratios, default=None),
++                    'maximum': max(ratios, default=None),
++                    'edges_below_quarter_rest_length': sum(x < .25 for x in ratios),
++                    'edges_above_four_times_rest_length': sum(x > 4 for x in ratios)}
++            # Posed boundaries may move; their topology (cycle counts) must match rest.
++            rest = report['objects'][ob.name]['evaluated']
++            metrics['boundary_topology_matches_rest'] = (
++                metrics['boundary_edges'] == rest['boundary_edges'] and
++                [x['vertices'] for x in metrics['boundary_components']] == [x['vertices'] for x in rest['boundary_components']])
++            metrics['pass'] = mesh_checks(metrics) and not metrics['rest_edge_count_changed'] and metrics['boundary_topology_matches_rest']
++            entry['objects'][ob.name] = metrics
++            evaluated_ob.to_mesh_clear()
++        entry['pass'] = all(x['pass'] for x in entry['objects'].values())
++        report['poses'][name] = entry
++    # The source file is never saved by the inspector; transformations above exist only in memory.
++    report['source_sha256_after'] = digest(blend)
++    report['source_blend_unchanged'] = report['source_sha256_after'] == before
++    checks = {
++        'archive_hidden': report['archive']['pass'],
++        'standalone_images_and_no_linked_libraries': report['portability']['pass'],
++        '46_study_bones': report['rig']['pass'],
++        'source_study_rig_neutral_pose_channels': report['rig']['source_pose_is_neutral'],
++        'neutral_materials': all(x['pass'] for x in report['materials'].values()),
++        'normalized_max_four_bone_weights': all(x['pass'] for x in report['weights'].values()),
++        'cage_and_evaluated_geometry': all(x[k]['pass'] for x in report['objects'].values() for k in ('cage', 'evaluated')),
++        'continuous_body_neck_head_and_limbs': report.get('body_connectivity', {}).get('pass', False),
++        'neutral_symmetry': report['symmetry']['pass'],
++        'six_finite_nondegenerate_diagnostic_poses': all(x['pass'] for x in report['poses'].values()),
++        'source_unchanged': report['source_blend_unchanged']}
++    report['checks'] = checks
++    report['pass'] = all(checks.values())
++    (out/'inspection-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n')
++    print('ANATOMY_INSPECTION', 'PASS' if report['pass'] else 'FAIL', json.dumps(checks, ensure_ascii=False))
++    print('INSPECTED_SOURCE_SHA256', before)
++    if not report['pass']:
++        raise RuntimeError('Anatomy study failed structural checks; read inspection-report.json without relaxing expectations.')
++
++
++if __name__ == '__main__':
++    main()
+diff --git a/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/render_study.py b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/render_study.py
+new file mode 100644
+index 0000000..710f000
+--- /dev/null
++++ b/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/render_study.py
+@@ -0,0 +1,98 @@
++"""Render actual Blender study cameras, control cage and diagnostic poses.
++
++No image compositing, simulated poses, texture substitution or runtime writes.
++"""
++from pathlib import Path
++import argparse, hashlib, json, math, sys
++import bpy
++from mathutils import Vector, Quaternion, Matrix
++
++HERE=Path(__file__).resolve().parent
++p=argparse.ArgumentParser()
++p.add_argument('--blend',default=str(HERE/'naquiro-anatomia-002.blend'))
++p.add_argument('--out',required=True)
++p.add_argument('--views',default='front,side,back,three-quarter,face-front,face-side,face-three-quarter,shoulder,hand-dorsal,hand-palmar,feet-dorsal,feet-side,feet-sole,ear')
++p.add_argument('--samples',type=int,default=8)
++p.add_argument('--engine',choices=['cycles','workbench'],default='cycles')
++p.add_argument('--width',type=int,default=800)
++p.add_argument('--height',type=int,default=1100)
++p.add_argument('--clip-end',type=float,default=None,help='Optional real camera far clipping distance, recorded per image.')
++p.add_argument('--mode',choices=['neutral','wire','baseline'],default='neutral')
++p.add_argument('--pose',choices=['rest','arms90','arms-up','elbow90','knee90','hand-curl','toe-up'],default='rest')
++a=p.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])
++blend=Path(a.blend).resolve();out=Path(a.out);out.mkdir(parents=True,exist_ok=True)
++digest=hashlib.sha256(blend.read_bytes()).hexdigest()
++bpy.ops.wm.open_mainfile(filepath=str(blend))
++scene=bpy.context.scene
++for name,hide in [('01_CORPO_BASE_NEUTRO',a.mode!='neutral'),('02_CABECA_E_MEMBRANAS',a.mode!='neutral'),('80_COMPARACAO_001_NEUTRA_OCULTA',a.mode!='baseline'),('90_WIREFRAME_CAGE_OCULTO',a.mode!='wire')]:
++    c=bpy.data.collections[name];c.hide_render=hide;c.hide_viewport=hide
++if a.mode=='wire':
++    for ob in bpy.data.collections['90_WIREFRAME_CAGE_OCULTO'].objects:
++        for modifier in ob.modifiers:
++            if modifier.type=='WIREFRAME': modifier.offset=0
++rig=bpy.data.objects['Rig_Anatomia_002_Estudo']
++for b in rig.pose.bones:
++    b.rotation_mode='QUATERNION';b.matrix_basis=Matrix.Identity(4)
++    b.location=(0,0,0);b.scale=(1,1,1);b.rotation_quaternion=(1,0,0,0)
++rotations=[]
++def rotate(name,axis,degrees):
++    b=rig.pose.bones[name]
++    local=b.bone.matrix_local.to_quaternion().inverted()@Vector(axis)
++    b.rotation_quaternion=Quaternion(local,math.radians(degrees))
++    rotations.append({'bone':name,'world_rest_axis':axis,'degrees':degrees})
++if a.pose in ['arms90','arms-up']:
++    degrees=62 if a.pose=='arms90' else 115
++    rotate('upperarm_L',(0,1,0),-degrees);rotate('upperarm_R',(0,1,0),degrees)
++elif a.pose=='elbow90':
++    rotate('forearm_L',(1,0,0),-90);rotate('forearm_R',(1,0,0),-90)
++elif a.pose=='knee90':
++    rotate('thigh_L',(1,0,0),-25);rotate('shin_L',(1,0,0),90)
++elif a.pose=='hand-curl':
++    for side in ['L','R']:
++        for digit in range(1,5):
++            rotate(f'finger{digit}_01_{side}',(1,0,0),-40)
++            rotate(f'finger{digit}_02_{side}',(1,0,0),-45)
++elif a.pose=='toe-up':
++    rotate('toe_L',(1,0,0),-25);rotate('toe_R',(1,0,0),-25)
++bpy.context.view_layer.update()
++scene.render.engine='CYCLES';scene.cycles.device='CPU';scene.cycles.samples=a.samples;scene.cycles.use_denoising=False
++if a.engine=='workbench':
++    scene.render.engine='BLENDER_WORKBENCH'
++    shading=scene.display.shading
++    shading.light='STUDIO';shading.color_type='MATERIAL';shading.show_cavity=False
++    shading.show_specular_highlight=False;shading.show_shadows=False;shading.background_type='WORLD'
++    shading.studio_light='paint.sl'
++    scene.view_settings.view_transform='Standard'
++    scene.view_settings.look='None'
++    scene.display.render_aa='16'
++scene.render.resolution_x=a.width;scene.render.resolution_y=a.height;scene.render.resolution_percentage=100
++records=[]
++for view in a.views.split(','):
++    camera=bpy.data.objects['CAM_'+view];scene.camera=camera
++    # Rest comparison cameras retain their identical authored scale. A posed
++    # full-body study needs enough frame for raised arms and extended fingers.
++    if a.pose!='rest' and view in ['front','side','back','three-quarter']:
++        points=[];inverse=camera.matrix_world.inverted()
++        for collection_name in ['01_CORPO_BASE_NEUTRO','02_CABECA_E_MEMBRANAS']:
++            for ob in bpy.data.collections[collection_name].objects:
++                if ob.type!='MESH': continue
++                evaluated=ob.evaluated_get(bpy.context.evaluated_depsgraph_get())
++                mesh=evaluated.to_mesh()
++                points.extend(inverse@(evaluated.matrix_world@v.co) for v in mesh.vertices)
++                evaluated.to_mesh_clear()
++        lo=[min(p[k] for p in points) for k in (0,1)]
++        hi=[max(p[k] for p in points) for k in (0,1)]
++        camera.data.ortho_scale=1.10*max(hi[1]-lo[1],(hi[0]-lo[0])*a.height/a.width)
++        camera.location+=camera.matrix_world.to_quaternion()@Vector(((lo[0]+hi[0])/2,(lo[1]+hi[1])/2,0))
++        bpy.context.view_layer.update()
++    if a.clip_end is not None:
++        if a.clip_end<=camera.data.clip_start:
++            raise ValueError('Far clipping distance must exceed near clipping distance')
++        camera.data.clip_end=a.clip_end
++    bpy.data.objects['ESTUDIO_Chao'].hide_render=(view=='feet-sole')
++    file=out/f'{a.mode}-{a.pose}-{view}.png';scene.render.filepath=str(file)
++    bpy.ops.render.render(write_still=True)
++    records.append({'file':file.name,'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'camera':camera.name,'type':camera.data.type,'orthographic_scale':camera.data.ortho_scale,'clip_start':camera.data.clip_start,'clip_end':camera.data.clip_end,'location':list(camera.location),'rotation_euler':list(camera.rotation_euler)})
++report={'blend_sha256':digest,'blender':bpy.app.version_string,'mode':a.mode,'pose':a.pose,'pose_rotations':rotations,'resolution':[a.width,a.height],'samples':a.samples if a.engine=='cycles' else None,'renderer':'Cycles CPU; actual neutral study materials' if a.engine=='cycles' else 'Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing','cage_method':'Actual mesh polygon edges via Wireframe modifier offset=0 for both sides of thin surfaces, Subsurf disabled' if a.mode=='wire' else None,'posed_full_body_camera_fit':'Evaluated geometry bounds with 10 percent margin' if a.pose!='rest' else None,'images':records,'source_blend_unchanged':hashlib.sha256(blend.read_bytes()).hexdigest()==digest}
++(out/f'render-{a.mode}-{a.pose}.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
++print('RENDER_STUDY_OK',len(records),a.mode,a.pose,digest)

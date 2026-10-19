@@ -1,0 +1,74 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "rest",
+  "pose_rotations": [],
+  "resolution": [
+    650,
+    900
+  ],
+  "samples": 32,
+  "renderer": "Cycles CPU; actual neutral study materials",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "neutral-rest-front.png",
+      "sha256": "9a000d801710f1f5111aee6bd961c1acc5f25edf75ab6ea0050dfc52e10b10da",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        -6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "neutral-rest-face-three-quarter.png",
+      "sha256": "1da2d2b3ea73cd30ad0a1e64e1b3c35a2dec92b52f351cc42ad59de447237776",
+      "camera": "CAM_face-three-quarter",
+      "type": "ORTHO",
+      "orthographic_scale": 0.46000000834465027,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        2.0,
+        -4.0,
+        2.1600000858306885
+      ],
+      "rotation_euler": [
+        1.5551451444625854,
+        5.3428816926270883e-08,
+        0.46364763379096985
+      ]
+    },
+    {
+      "file": "neutral-rest-shoulder.png",
+      "sha256": "09209c5a4671427ec41de4d60d0cb93852eee48a5d98171ccaba938a86db8c66",
+      "camera": "CAM_shoulder",
+      "type": "ORTHO",
+      "orthographic_scale": 0.699999988079071,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        1.5,
+        -4.0,
+        2.299999952316284
+      ],
+      "rotation_euler": [
+        1.423917293548584,
+        -2.219480776943783e-08,
+        0.30288487672805786
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

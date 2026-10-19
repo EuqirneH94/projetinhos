@@ -1,0 +1,36 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "rest",
+  "pose_rotations": [],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "neutral-rest-feet-sole.png",
+      "sha256": "0117599fcea5dc3fc156b0d60f7a17b15f649e305eb814683202dc4f1a25e4f4",
+      "camera": "CAM_feet-sole",
+      "type": "ORTHO",
+      "orthographic_scale": 0.800000011920929,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 3.2200000286102295,
+      "location": [
+        0.0,
+        -0.10000000149011612,
+        -3.0
+      ],
+      "rotation_euler": [
+        8.742277657347586e-08,
+        -3.1415927410125732,
+        -8.742278367890322e-08
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

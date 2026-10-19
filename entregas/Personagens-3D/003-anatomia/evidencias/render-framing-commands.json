@@ -1,0 +1,107 @@
+[
+  {
+    "destination": "wire",
+    "arguments": [
+      "--out",
+      "/workspace/edf-naquiro-anatomy/evidence/final/wire",
+      "--pose",
+      "rest",
+      "--mode",
+      "wire",
+      "--views",
+      "front,face-front,shoulder,hand-dorsal,feet-dorsal",
+      "--engine",
+      "workbench",
+      "--width",
+      "900",
+      "--height",
+      "1240"
+    ],
+    "render_script_sha256": "9269234d3c1c9e1ee5ae29d22c5b66d8a36ddc516e5fb57dce2b97b9e2a1f869",
+    "completed": true
+  },
+  {
+    "destination": "poses/arms90",
+    "arguments": [
+      "--out",
+      "/workspace/edf-naquiro-anatomy/evidence/final/poses/arms90",
+      "--pose",
+      "arms90",
+      "--mode",
+      "neutral",
+      "--views",
+      "front,shoulder",
+      "--engine",
+      "workbench",
+      "--width",
+      "900",
+      "--height",
+      "1240"
+    ],
+    "render_script_sha256": "9269234d3c1c9e1ee5ae29d22c5b66d8a36ddc516e5fb57dce2b97b9e2a1f869",
+    "completed": true
+  },
+  {
+    "destination": "poses/arms-up",
+    "arguments": [
+      "--out",
+      "/workspace/edf-naquiro-anatomy/evidence/final/poses/arms-up",
+      "--pose",
+      "arms-up",
+      "--mode",
+      "neutral",
+      "--views",
+      "front,shoulder",
+      "--engine",
+      "workbench",
+      "--width",
+      "900",
+      "--height",
+      "1240"
+    ],
+    "render_script_sha256": "9269234d3c1c9e1ee5ae29d22c5b66d8a36ddc516e5fb57dce2b97b9e2a1f869",
+    "completed": true
+  },
+  {
+    "destination": "poses/elbow90",
+    "arguments": [
+      "--out",
+      "/workspace/edf-naquiro-anatomy/evidence/final/poses/elbow90",
+      "--pose",
+      "elbow90",
+      "--mode",
+      "neutral",
+      "--views",
+      "three-quarter",
+      "--engine",
+      "workbench",
+      "--width",
+      "900",
+      "--height",
+      "1240"
+    ],
+    "render_script_sha256": "9269234d3c1c9e1ee5ae29d22c5b66d8a36ddc516e5fb57dce2b97b9e2a1f869",
+    "completed": true
+  },
+  {
+    "destination": "poses/knee90",
+    "arguments": [
+      "--out",
+      "/workspace/edf-naquiro-anatomy/evidence/final/poses/knee90",
+      "--pose",
+      "knee90",
+      "--mode",
+      "neutral",
+      "--views",
+      "three-quarter",
+      "--engine",
+      "workbench",
+      "--width",
+      "900",
+      "--height",
+      "1240"
+    ],
+    "render_script_sha256": "9269234d3c1c9e1ee5ae29d22c5b66d8a36ddc516e5fb57dce2b97b9e2a1f869",
+    "completed": true
+  }
+]

@@ -1,0 +1,93 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "baseline",
+  "pose": "rest",
+  "pose_rotations": [],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "baseline-rest-front.png",
+      "sha256": "dd50ef2c65b1f5ce3d8a4b352b642bfa0f98438b4d3a197f2be4bb2a7fe3b3cc",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        -6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "baseline-rest-side.png",
+      "sha256": "0271fc2efe09135df182e258d631bea3cdb8e98ef7a06fea018172750c4485b7",
+      "camera": "CAM_side",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        6.0,
+        0.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -0.0,
+        1.5707963705062866
+      ]
+    },
+    {
+      "file": "baseline-rest-back.png",
+      "sha256": "3fd742e41648dde435a91ae3d7108ce45c136b372cca8dde763fa5fe3bfa806f",
+      "camera": "CAM_back",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        -1.570796251296997,
+        3.141592502593994,
+        -0.0
+      ]
+    },
+    {
+      "file": "baseline-rest-face-front.png",
+      "sha256": "47d78ad5eda7771dab159ffc0d2a4a6ffcc96b9307af99741d37057861e1ad84",
+      "camera": "CAM_face-front",
+      "type": "ORTHO",
+      "orthographic_scale": 0.4300000071525574,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        -4.0,
+        2.0899999141693115
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

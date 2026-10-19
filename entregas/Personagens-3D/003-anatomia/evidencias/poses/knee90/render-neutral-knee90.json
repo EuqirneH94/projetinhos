@@ -1,0 +1,56 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "knee90",
+  "pose_rotations": [
+    {
+      "bone": "thigh_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -25
+    },
+    {
+      "bone": "shin_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": 90
+    }
+  ],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "posed_full_body_camera_fit": "Evaluated geometry bounds with 10 percent margin",
+  "images": [
+    {
+      "file": "neutral-knee90-three-quarter.png",
+      "sha256": "68de2bc3837b8f60d8bd6f3a6bde8134ad4f717fba9ef84f8e28510565df720a",
+      "camera": "CAM_three-quarter",
+      "type": "ORTHO",
+      "orthographic_scale": 2.442985773086548,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        3.9893219470977783,
+        -6.008130073547363,
+        2.0936782360076904
+      ],
+      "rotation_euler": [
+        1.4384466409683228,
+        4.631068861726817e-08,
+        0.588002622127533
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

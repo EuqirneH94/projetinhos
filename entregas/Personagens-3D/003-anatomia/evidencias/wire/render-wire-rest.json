@@ -1,0 +1,113 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "wire",
+  "pose": "rest",
+  "pose_rotations": [],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": "Actual mesh polygon edges via Wireframe modifier offset=0 for both sides of thin surfaces, Subsurf disabled",
+  "posed_full_body_camera_fit": null,
+  "images": [
+    {
+      "file": "wire-rest-front.png",
+      "sha256": "588ab809eb84203afe1e33cec41844fe4ab4a80d52a856388603dce587338978",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 2.5999999046325684,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        -6.0,
+        1.1399999856948853
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "wire-rest-face-front.png",
+      "sha256": "a255fbf2e58923c467082f5dc97cee412b56bb536a57dd38337b8339fe6c6fd4",
+      "camera": "CAM_face-front",
+      "type": "ORTHO",
+      "orthographic_scale": 0.4300000071525574,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.0,
+        -4.0,
+        2.0899999141693115
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "wire-rest-shoulder.png",
+      "sha256": "1a842764f4603a1a021021bebf286887c5c9712e242d5eeb34184fb4b66af3b9",
+      "camera": "CAM_shoulder",
+      "type": "ORTHO",
+      "orthographic_scale": 0.699999988079071,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        1.5,
+        -4.0,
+        2.299999952316284
+      ],
+      "rotation_euler": [
+        1.423917293548584,
+        -2.219480776943783e-08,
+        0.30288487672805786
+      ]
+    },
+    {
+      "file": "wire-rest-hand-dorsal.png",
+      "sha256": "844405af3a0858000e588af0810f46c1c53abe51a815e3a57e7a5694c4b9469a",
+      "camera": "CAM_hand-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3700000047683716,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.7200000286102295,
+        -3.0,
+        1.100000023841858
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -6.585407774650776e-10,
+        0.006756667513400316
+      ]
+    },
+    {
+      "file": "wire-rest-feet-dorsal.png",
+      "sha256": "f5fe2eaa4bf9df1de73068ab9cc3bafe8acc405cbb0398e666e464fbcce97ede",
+      "camera": "CAM_feet-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.800000011920929,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.3499999940395355,
+        -2.0,
+        1.2000000476837158
+      ],
+      "rotation_euler": [
+        1.0493050813674927,
+        9.270757495016824e-09,
+        0.18216830492019653
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

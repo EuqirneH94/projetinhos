@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py", line 161, in <module>
+    _,_,side,number=ob.name.split('_');k=int(number)
+                                         ~~~^^^^^^^^
+ValueError: invalid literal for int() with base 10: '1.001'
+
+Error: script failed, file: 'jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py', exiting.
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/base.blend"
+
+Blender quit

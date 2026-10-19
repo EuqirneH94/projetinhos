@@ -1,0 +1,189 @@
+{
+  "pass": true,
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "rendered_pngs": 36,
+  "all_image_hashes_match_render_manifests": true,
+  "all_captures_from_same_unchanged_blend": true,
+  "images": [
+    {
+      "file": "wire/wire-rest-front.png",
+      "sha256": "588ab809eb84203afe1e33cec41844fe4ab4a80d52a856388603dce587338978",
+      "manifest": "wire/render-wire-rest.json"
+    },
+    {
+      "file": "wire/wire-rest-face-front.png",
+      "sha256": "a255fbf2e58923c467082f5dc97cee412b56bb536a57dd38337b8339fe6c6fd4",
+      "manifest": "wire/render-wire-rest.json"
+    },
+    {
+      "file": "wire/wire-rest-shoulder.png",
+      "sha256": "1a842764f4603a1a021021bebf286887c5c9712e242d5eeb34184fb4b66af3b9",
+      "manifest": "wire/render-wire-rest.json"
+    },
+    {
+      "file": "wire/wire-rest-hand-dorsal.png",
+      "sha256": "844405af3a0858000e588af0810f46c1c53abe51a815e3a57e7a5694c4b9469a",
+      "manifest": "wire/render-wire-rest.json"
+    },
+    {
+      "file": "wire/wire-rest-feet-dorsal.png",
+      "sha256": "f5fe2eaa4bf9df1de73068ab9cc3bafe8acc405cbb0398e666e464fbcce97ede",
+      "manifest": "wire/render-wire-rest.json"
+    },
+    {
+      "file": "physical/neutral-rest-front.png",
+      "sha256": "9a000d801710f1f5111aee6bd961c1acc5f25edf75ab6ea0050dfc52e10b10da",
+      "manifest": "physical/render-neutral-rest.json"
+    },
+    {
+      "file": "physical/neutral-rest-face-three-quarter.png",
+      "sha256": "1da2d2b3ea73cd30ad0a1e64e1b3c35a2dec92b52f351cc42ad59de447237776",
+      "manifest": "physical/render-neutral-rest.json"
+    },
+    {
+      "file": "physical/neutral-rest-shoulder.png",
+      "sha256": "09209c5a4671427ec41de4d60d0cb93852eee48a5d98171ccaba938a86db8c66",
+      "manifest": "physical/render-neutral-rest.json"
+    },
+    {
+      "file": "comparison/baseline-rest-front.png",
+      "sha256": "dd50ef2c65b1f5ce3d8a4b352b642bfa0f98438b4d3a197f2be4bb2a7fe3b3cc",
+      "manifest": "comparison/render-baseline-rest.json"
+    },
+    {
+      "file": "comparison/baseline-rest-side.png",
+      "sha256": "0271fc2efe09135df182e258d631bea3cdb8e98ef7a06fea018172750c4485b7",
+      "manifest": "comparison/render-baseline-rest.json"
+    },
+    {
+      "file": "comparison/baseline-rest-back.png",
+      "sha256": "3fd742e41648dde435a91ae3d7108ce45c136b372cca8dde763fa5fe3bfa806f",
+      "manifest": "comparison/render-baseline-rest.json"
+    },
+    {
+      "file": "comparison/baseline-rest-face-front.png",
+      "sha256": "47d78ad5eda7771dab159ffc0d2a4a6ffcc96b9307af99741d37057861e1ad84",
+      "manifest": "comparison/render-baseline-rest.json"
+    },
+    {
+      "file": "sole-detail/neutral-rest-feet-sole.png",
+      "sha256": "0117599fcea5dc3fc156b0d60f7a17b15f649e305eb814683202dc4f1a25e4f4",
+      "manifest": "sole-detail/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-front.png",
+      "sha256": "cc862ab56e2aad4d473e6ce522d4a9ee4a20333a52d097c1d97586857916eec7",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-side.png",
+      "sha256": "a2517b4379306d9ca34e5ef0a86d4f9024c8f272471740f4f5e2f5412ec1e068",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-back.png",
+      "sha256": "483526daa6acae0cd0f5cf82ee8d1202ac830d5bae641417116480b9eae7e30f",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-three-quarter.png",
+      "sha256": "459b2c4a8defce690930b1b0a274e3736ed69ae53e30cf908d8db77d2ed1d319",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-face-front.png",
+      "sha256": "a5b9982b24c21be5c238d655b5f2b052129625a31a492a5c86b1861c6a6f95c5",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-face-side.png",
+      "sha256": "39dd7b73ff91cfbae053dd14f677a090025d7e9a4e963f00b3bfe2ce90ae424f",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-face-three-quarter.png",
+      "sha256": "7c17d2637a38aa0d8f59c3541fda9f0813fb365d758cbb914c0c914b888df8b0",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-shoulder.png",
+      "sha256": "667e2e9d4a67a51c30bf87722d44266609bd10c2871f39ead9922c61ae980a18",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-hand-dorsal.png",
+      "sha256": "b38e3a2818abf8717317e3410b3b06eb946407465d7bd7e9dc88afe863db8d26",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-hand-palmar.png",
+      "sha256": "e3df0f1aba71687755aca359c7fb300730b1c6e6896a0361ec3f3410427793d0",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-feet-dorsal.png",
+      "sha256": "b55827c5d6768f06850b88c4130f7228ae7ccd831e7535cfce06b0acfdfe49ea",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-feet-side.png",
+      "sha256": "ffdcb5216f78e7cf30c972f88c65f644838d7d77b7ebc4b53f0c3d46c078c302",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-feet-sole.png",
+      "sha256": "418ed90aaf1f0cc3f90491cc18ffa550204f4c0f5f6ecf8f7b82bd51e2321d0f",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "neutral/neutral-rest-ear.png",
+      "sha256": "54a935e51e145180079e7dd855d838aee60d5c42c6e7de4472334b40e45e335d",
+      "manifest": "neutral/render-neutral-rest.json"
+    },
+    {
+      "file": "poses/hand-curl/neutral-hand-curl-hand-dorsal.png",
+      "sha256": "783c9209e0c68438d2287fde1004883f001834a3062acc5b6cb6382fa65b033c",
+      "manifest": "poses/hand-curl/render-neutral-hand-curl.json"
+    },
+    {
+      "file": "poses/hand-curl/neutral-hand-curl-hand-palmar.png",
+      "sha256": "ea5f5499221ba1eaf4cb7875726932607bea7da58f938c5806853cf197586654",
+      "manifest": "poses/hand-curl/render-neutral-hand-curl.json"
+    },
+    {
+      "file": "poses/arms90/neutral-arms90-front.png",
+      "sha256": "fa7bec541ee1f76e92d74ffcce1dc7be74b1424036947b28c3c0a5181ada4b30",
+      "manifest": "poses/arms90/render-neutral-arms90.json"
+    },
+    {
+      "file": "poses/arms90/neutral-arms90-shoulder.png",
+      "sha256": "ae243647c31515c082b6614ce2d9ed9046f8545f4d0d89c42d40ffae5b6af230",
+      "manifest": "poses/arms90/render-neutral-arms90.json"
+    },
+    {
+      "file": "poses/arms-up/neutral-arms-up-front.png",
+      "sha256": "697f4a3ab73ca85efbf186f701aba8b16950b7eb685c0652ce11d9485c959023",
+      "manifest": "poses/arms-up/render-neutral-arms-up.json"
+    },
+    {
+      "file": "poses/arms-up/neutral-arms-up-shoulder.png",
+      "sha256": "35d316ac42ebe9011ace0c91ced0c9cc95971d747e17ea1306e80dd669969b6d",
+      "manifest": "poses/arms-up/render-neutral-arms-up.json"
+    },
+    {
+      "file": "poses/knee90/neutral-knee90-three-quarter.png",
+      "sha256": "68de2bc3837b8f60d8bd6f3a6bde8134ad4f717fba9ef84f8e28510565df720a",
+      "manifest": "poses/knee90/render-neutral-knee90.json"
+    },
+    {
+      "file": "poses/elbow90/neutral-elbow90-three-quarter.png",
+      "sha256": "1459915e565a5e14283cf4f2ed05b2dc1a9c9b49f3ad944a0e3234633d51963b",
+      "manifest": "poses/elbow90/render-neutral-elbow90.json"
+    },
+    {
+      "file": "poses/toe-up/neutral-toe-up-feet-dorsal.png",
+      "sha256": "e2d73b97f66dc94b3af04826222a9b28f4cff6e994421e3e65613ec313e3bbd5",
+      "manifest": "poses/toe-up/render-neutral-toe-up.json"
+    }
+  ]
+}

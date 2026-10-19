@@ -1,0 +1,33 @@
+{
+  "baseline_commit": "210c18d711ff832f2e2d7f1f17dc959720ad6ec3",
+  "branch": "refino/edf-naquiro-anatomia-002",
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "validation_platform": "Linux",
+  "windows_execution_pending": true,
+  "artistic_acceptance_pending": true,
+  "structural_check_groups": 11,
+  "actual_diagnostic_poses": 6,
+  "rendered_pngs": 36,
+  "original_game_files_unchanged": 234,
+  "sources_zip_independently_extracted_and_inspected": true,
+  "packed_checkpoint_images_without_external_files": 6,
+  "patch_forward_apply_text_files": 7,
+  "runtime_exported": false,
+  "artifacts": [
+    {
+      "file": "Ecos_dos_Farois_Naquiro_Anatomia_002_Fontes.zip",
+      "bytes": 9019395,
+      "sha256": "14f2e36df6d29560f7da506c3059c114474565b3bc4034700641b056355f3f11",
+      "zip_crc_pass": true,
+      "members": 8
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_Anatomia_002_Vistas.zip",
+      "bytes": 24725410,
+      "sha256": "44d3167e8bb2e33b4109239e5175eeee5df40a5472fdae9dfeb5fd46af3d571a",
+      "zip_crc_pass": true,
+      "members": 86
+    }
+  ]
+}

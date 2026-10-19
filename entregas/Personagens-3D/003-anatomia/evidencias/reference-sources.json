@@ -1,0 +1,131 @@
+{
+  "scope": "Read-only source and visual review for neutral male Naquiro anatomy refinement; no claim of canonical measurements",
+  "sources": [
+    {
+      "id": "VIS-018",
+      "path": "/workspace/edf-alpha03/references/image-gen-1(4).png",
+      "bytes": 3410427,
+      "sha256": "f75367308e6a9c412d686cec42d1a082dc74f35e94ec9cc8b71965646ceeb73f",
+      "canonical_expected_sha256": "f75367308e6a9c412d686cec42d1a082dc74f35e94ec9cc8b71965646ceeb73f",
+      "matches_canonical_hash": true,
+      "viewed": true
+    },
+    {
+      "id": "VIS-019",
+      "path": "/workspace/edf-alpha03/references/image-gen-2(4).png",
+      "bytes": 3510241,
+      "sha256": "664b339ac3fad371bd727ba96d97f4560c75b6152ebd148dccaa85a9ed031a7e",
+      "canonical_expected_sha256": "664b339ac3fad371bd727ba96d97f4560c75b6152ebd148dccaa85a9ed031a7e",
+      "matches_canonical_hash": true,
+      "viewed": true
+    },
+    {
+      "id": "VIS-020",
+      "path": "/workspace/edf-alpha03/references/image-gen-3(4).png",
+      "bytes": 3581542,
+      "sha256": "d392e9e991282ae1fb8789dffa7bbe2bc9ba0a11dfd7a1faa9027bf34598e902",
+      "canonical_expected_sha256": "d392e9e991282ae1fb8789dffa7bbe2bc9ba0a11dfd7a1faa9027bf34598e902",
+      "matches_canonical_hash": true,
+      "viewed": true
+    },
+    {
+      "id": "VISUAL_REFERENCE_INDEX.md",
+      "path": "/workspace/edf-audit-001/gdb-documental/EDF-GDB-1.1.0/VISUAL_REFERENCE_INDEX.md",
+      "bytes": 6895,
+      "sha256": "81c63a0ea1520a3e3acd58149110e328787d52696a446af692457fac1240ca3d",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": "read"
+    },
+    {
+      "id": "ART_DIRECTION.md",
+      "path": "/workspace/edf-audit-001/gdb-documental/EDF-GDB-1.1.0/ART_DIRECTION.md",
+      "bytes": 15668,
+      "sha256": "db9a17096f7f03f143bec6e303def964658bc210b1b439be0b1bb4b30cb7bd11",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": "read"
+    },
+    {
+      "id": "WORLD_LORE.md",
+      "path": "/workspace/edf-audit-001/gdb-documental/EDF-GDB-1.1.0/WORLD_LORE.md",
+      "bytes": 12508,
+      "sha256": "0efaec028109f2af852c2f3a1c51222f748fc9cb276682041716520dc3b33fec",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": "read"
+    },
+    {
+      "id": "DECISIONS_AND_PENDING.md",
+      "path": "/workspace/edf-audit-001/gdb-documental/EDF-GDB-1.1.0/DECISIONS_AND_PENDING.md",
+      "bytes": 22410,
+      "sha256": "b621841674635595c2525f327be598ecae0bad6a14295175118b5ae562c3140e",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": "read"
+    },
+    {
+      "id": "candidate-002:lab-front-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-front-1280x720.png",
+      "bytes": 179530,
+      "sha256": "2341d9a71d7c6022c720333def56e6b509e1feaaa3ceca26899bdbaf1435dad0",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:lab-face-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-face-1280x720.png",
+      "bytes": 281173,
+      "sha256": "879302252318babf5b8ac5aa6ac52669d9c7596573412da6359c03ad6e63d48f",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:lab-hands-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-hands-1280x720.png",
+      "bytes": 286588,
+      "sha256": "210932833a4abee4b8bc2046f5cf612e9a0235b4d6c4693faf045ac1dfd82383",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:lab-feet-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-feet-1280x720.png",
+      "bytes": 217325,
+      "sha256": "977f522008b4467f51c680d584667c09b0dc15084857687f5d425544247edaa7",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:lab-back-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-back-1280x720.png",
+      "bytes": 178361,
+      "sha256": "bbffbc8c0388a8dfc08e171471c40e803d5c2f8aee46d84c9a388d73518acb86",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:lab-side-1280x720.png",
+      "path": "/workspace/projetinhos/entregas/Personagens-3D/002-candidato/evidencias/browser/lab-side-1280x720.png",
+      "bytes": 136990,
+      "sha256": "5b17da7887102f751058064fe01113ec4f3ee726fb46affe41d96c7177bc2304",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": true
+    },
+    {
+      "id": "candidate-002:model.py",
+      "path": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/model.py",
+      "bytes": 32335,
+      "sha256": "a45294b04e5302abeecef277c60a22311b0c39a75b63fee91e286eba6c49ca9e",
+      "canonical_expected_sha256": null,
+      "matches_canonical_hash": null,
+      "viewed": "read"
+    }
+  ]
+}

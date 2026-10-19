@@ -1,0 +1,53 @@
+EGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+EGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/wire/wire-rest-front.png'
+Time: 00:04.54 (Saving: 00:00.24)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/wire/wire-rest-face-front.png'
+Time: 00:03.30 (Saving: 00:00.17)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/wire/wire-rest-shoulder.png'
+Time: 00:02.34 (Saving: 00:00.18)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/wire/wire-rest-hand-dorsal.png'
+Time: 00:02.11 (Saving: 00:00.15)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/wire/wire-rest-feet-dorsal.png'
+Time: 00:02.63 (Saving: 00:00.23)
+
+RENDER_STUDY_OK 5 wire rest 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+PRESENTATION_FRAME_OK wire
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/arms90/neutral-arms90-front.png'
+Time: 00:02.72 (Saving: 00:00.18)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/arms90/neutral-arms90-shoulder.png'
+Time: 00:02.06 (Saving: 00:00.17)
+
+RENDER_STUDY_OK 2 neutral arms90 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+PRESENTATION_FRAME_OK poses/arms90
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/arms-up/neutral-arms-up-front.png'
+Time: 00:02.57 (Saving: 00:00.20)
+
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/arms-up/neutral-arms-up-shoulder.png'
+Time: 00:02.06 (Saving: 00:00.17)
+
+RENDER_STUDY_OK 2 neutral arms-up 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+PRESENTATION_FRAME_OK poses/arms-up
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/elbow90/neutral-elbow90-three-quarter.png'
+Time: 00:02.39 (Saving: 00:00.18)
+
+RENDER_STUDY_OK 1 neutral elbow90 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+PRESENTATION_FRAME_OK poses/elbow90
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/naquiro-anatomia-002.blend"
+Saved: '/workspace/edf-naquiro-anatomy/evidence/final/poses/knee90/neutral-knee90-three-quarter.png'
+Time: 00:02.71 (Saving: 00:00.20)
+
+RENDER_STUDY_OK 1 neutral knee90 037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db
+PRESENTATION_FRAME_OK poses/knee90
+
+Blender quit

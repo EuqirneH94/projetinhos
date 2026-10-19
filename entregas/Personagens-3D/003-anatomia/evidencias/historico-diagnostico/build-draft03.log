@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py", line 269, in <module>
+    area.spaces.active.shading.studio_light='paint.sl'
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: bpy_struct: item.attr = val: enum "paint.sl" not found in ('basic_1.exr', 'basic_2.exr', 'basic_dark.exr', 'basic_side.exr', 'ceramic_dark.exr', 'ceramic_lightbulb.exr', 'check_normal+y.exr', 'check_rim_dark.exr', 'check_rim_light.exr', 'clay_brown.exr', 'clay_muddy.exr', 'clay_studio.exr', 'jade.exr', 'metal_anisotropic.exr', 'metal_carpaint.exr', 'metal_lead.exr', 'metal_shiny.exr', 'pearl.exr', 'reflection_check_horizontal.exr', 'reflection_check_vertical.exr', 'resin.exr', 'skin.exr', 'toon.exr')
+
+Error: script failed, file: 'jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py', exiting.
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/base.blend"
+
+Blender quit

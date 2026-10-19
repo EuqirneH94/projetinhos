@@ -1,0 +1,75 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "arms90",
+  "pose_rotations": [
+    {
+      "bone": "upperarm_L",
+      "world_rest_axis": [
+        0,
+        1,
+        0
+      ],
+      "degrees": -62
+    },
+    {
+      "bone": "upperarm_R",
+      "world_rest_axis": [
+        0,
+        1,
+        0
+      ],
+      "degrees": 62
+    }
+  ],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "posed_full_body_camera_fit": "Evaluated geometry bounds with 10 percent margin",
+  "images": [
+    {
+      "file": "neutral-arms90-front.png",
+      "sha256": "fa7bec541ee1f76e92d74ffcce1dc7be74b1424036947b28c3c0a5181ada4b30",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 3.4855449199676514,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        5.960464477539063e-08,
+        -6.0,
+        1.1384683847427368
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "neutral-arms90-shoulder.png",
+      "sha256": "ae243647c31515c082b6614ce2d9ed9046f8545f4d0d89c42d40ffae5b6af230",
+      "camera": "CAM_shoulder",
+      "type": "ORTHO",
+      "orthographic_scale": 0.699999988079071,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        1.5,
+        -4.0,
+        2.299999952316284
+      ],
+      "rotation_euler": [
+        1.423917293548584,
+        -2.219480776943783e-08,
+        0.30288487672805786
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

@@ -1,0 +1,200 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "hand-curl",
+  "pose_rotations": [
+    {
+      "bone": "finger1_01_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger1_02_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger2_01_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger2_02_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger3_01_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger3_02_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger4_01_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger4_02_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger1_01_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger1_02_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger2_01_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger2_02_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger3_01_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger3_02_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    },
+    {
+      "bone": "finger4_01_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -40
+    },
+    {
+      "bone": "finger4_02_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -45
+    }
+  ],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "neutral-hand-curl-hand-dorsal.png",
+      "sha256": "783c9209e0c68438d2287fde1004883f001834a3062acc5b6cb6382fa65b033c",
+      "camera": "CAM_hand-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3700000047683716,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.7200000286102295,
+        -3.0,
+        1.100000023841858
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -6.585407774650776e-10,
+        0.006756667513400316
+      ]
+    },
+    {
+      "file": "neutral-hand-curl-hand-palmar.png",
+      "sha256": "ea5f5499221ba1eaf4cb7875726932607bea7da58f938c5806853cf197586654",
+      "camera": "CAM_hand-palmar",
+      "type": "ORTHO",
+      "orthographic_scale": 0.3700000047683716,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.7200000286102295,
+        3.0,
+        1.100000023841858
+      ],
+      "rotation_euler": [
+        1.5707963705062866,
+        -3.06741512190456e-08,
+        3.1350138187408447
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

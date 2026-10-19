@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "patch": "EDF_NAQUIRO_001_PARA_ANATOMIA_002_FONTES.patch",
+  "forward_apply_in_empty_isolated_repository": true,
+  "matched_text_files": 7,
+  "files": [
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/inspect_study.py",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/.gitignore",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_head.py",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/render_study.py",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/README.md",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/build_study.py",
+    "jogos/ecos-dos-farois/art-source/naquiro-male/anatomy-002/anatomy_body.py"
+  ],
+  "binary_blend_included_in_patch": false,
+  "binary_blend_provided_in_sources_zip": true
+}

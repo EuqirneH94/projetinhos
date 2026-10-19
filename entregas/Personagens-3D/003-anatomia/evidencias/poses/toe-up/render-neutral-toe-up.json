@@ -1,0 +1,55 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "toe-up",
+  "pose_rotations": [
+    {
+      "bone": "toe_L",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -25
+    },
+    {
+      "bone": "toe_R",
+      "world_rest_axis": [
+        1,
+        0,
+        0
+      ],
+      "degrees": -25
+    }
+  ],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "images": [
+    {
+      "file": "neutral-toe-up-feet-dorsal.png",
+      "sha256": "e2d73b97f66dc94b3af04826222a9b28f4cff6e994421e3e65613ec313e3bbd5",
+      "camera": "CAM_feet-dorsal",
+      "type": "ORTHO",
+      "orthographic_scale": 0.800000011920929,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        0.3499999940395355,
+        -2.0,
+        1.2000000476837158
+      ],
+      "rotation_euler": [
+        1.0493050813674927,
+        9.270757495016824e-09,
+        0.18216830492019653
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}

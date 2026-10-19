@@ -1,0 +1,75 @@
+{
+  "blend_sha256": "037b321e0d836390669cab741260ca9525ff62e9a5010892a28d49077d9c90db",
+  "blender": "4.3.2",
+  "mode": "neutral",
+  "pose": "arms-up",
+  "pose_rotations": [
+    {
+      "bone": "upperarm_L",
+      "world_rest_axis": [
+        0,
+        1,
+        0
+      ],
+      "degrees": -115
+    },
+    {
+      "bone": "upperarm_R",
+      "world_rest_axis": [
+        0,
+        1,
+        0
+      ],
+      "degrees": 115
+    }
+  ],
+  "resolution": [
+    900,
+    1240
+  ],
+  "samples": null,
+  "renderer": "Blender Workbench paint.sl studio; material gray, Standard color, shadows/cavity/specular disabled, no texture or postprocessing",
+  "cage_method": null,
+  "posed_full_body_camera_fit": "Evaluated geometry bounds with 10 percent margin",
+  "images": [
+    {
+      "file": "neutral-arms-up-front.png",
+      "sha256": "697f4a3ab73ca85efbf186f701aba8b16950b7eb685c0652ce11d9485c959023",
+      "camera": "CAM_front",
+      "type": "ORTHO",
+      "orthographic_scale": 2.6870858669281006,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        5.960464477539063e-08,
+        -6.0,
+        1.2484169006347656
+      ],
+      "rotation_euler": [
+        1.5707964897155762,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "file": "neutral-arms-up-shoulder.png",
+      "sha256": "35d316ac42ebe9011ace0c91ced0c9cc95971d747e17ea1306e80dd669969b6d",
+      "camera": "CAM_shoulder",
+      "type": "ORTHO",
+      "orthographic_scale": 0.699999988079071,
+      "clip_start": 0.10000000149011612,
+      "clip_end": 1000.0,
+      "location": [
+        1.5,
+        -4.0,
+        2.299999952316284
+      ],
+      "rotation_euler": [
+        1.423917293548584,
+        -2.219480776943783e-08,
+        0.30288487672805786
+      ]
+    }
+  ],
+  "source_blend_unchanged": true
+}
