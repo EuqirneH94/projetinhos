@@ -1,0 +1,6 @@
+(node:71011) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"time":"2026-10-19T12:24:39.573Z","event":"server_ready","pid":71011,"ppid":71007,"node":"v24.14.0","platform":"linux","port":18931,"accountsEnabled":false}
+Ecos dos Faróis • servidor em http://127.0.0.1:18931
+{"time":"2026-10-19T12:25:43.039Z","event":"server_shutdown_begin","pid":71011,"ppid":71007,"node":"v24.14.0","platform":"linux","phase":"SIGTERM","exitCode":0}
+{"time":"2026-10-19T12:25:43.051Z","event":"server_shutdown_complete","pid":71011,"ppid":71007,"node":"v24.14.0","platform":"linux","phase":"SIGTERM","exitCode":0}

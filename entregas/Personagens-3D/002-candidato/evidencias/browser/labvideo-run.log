@@ -1,0 +1,3 @@
+continuous_lab_video_run_advances_during_pointer_orbit {'passed': True, 'detail': None}
+continuous_lab_video_no_unhandled_errors {'passed': True, 'detail': None}
+DONE {'completed': True, 'errors': 0}

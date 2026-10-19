@@ -1,0 +1,625 @@
+{
+  "source_base_sha256": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da",
+  "base_unchanged": true,
+  "vertex_color_sanitization": {
+    "space": "linear RGBA (.color), no additional gamma conversion",
+    "reason": "Prevent normalized unsigned glTF COLOR_0 quantization overflow",
+    "components_clamped": 4707,
+    "before_min_rgba": [
+      0.02800000086426735,
+      0.054999999701976776,
+      0.06400000303983688,
+      1.0
+    ],
+    "before_max_rgba": [
+      1.2000000476837158,
+      1.5,
+      1.7000000476837158,
+      1.0
+    ],
+    "after_min_rgba": [
+      0.02800000086426735,
+      0.054999999701976776,
+      0.06400000303983688,
+      1.0
+    ],
+    "after_max_rgba": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "geometry_uv_normals_weights_joints": [
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "72bfd5022fc976f8d76cc948cb9dc94972df4795defef260fb586f068d789dc5"
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "ed82ad0f2e469684178a8ff1947b62cb2d4642190072e938d7de21506eec88ee"
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "e68baee791891422716565d28194b97025ff116b824d35a17894efbdf4bba13d"
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": false,
+      "data_sha256": "fcee886bea51f4b8b5ef5feb01a6b3b81922bf5d3f6635b8b70893864ebcaacb",
+      "reason": "Blender tangent recalculation; one component differs by 1e-4; geometry and normals unchanged"
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "f879dcb88c3d3708068ec3788822fcafb143b2f2cdca888f772be79407386d5f"
+    },
+    {
+      "mesh": 0,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "f35717ecd3176574a13a924b84e91ccb76e4d641b3e09695faacff3e931731d5"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "d3f79501491762b9fd9cf41d9e35950f2727e5688d85396a9875aad7503e0a24"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "4ff2955878e90cdccf9549acf83b7b3817fdc349c87e4836bd7a408681be051a"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "425bc230304efe7630b4538d1c323aad7aa6927a531d41c34bbe0c811bbfd56a"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": true,
+      "data_sha256": "1c97a0c0ff97f206d481565cdc20270e7883a8a1069c9073e6ce437ccc7f1c89"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "f17d953affe26baa4610d14d92c88882703b115f3f3e51bb29dd5e2ea9ddc5a2"
+    },
+    {
+      "mesh": 1,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "c0c304ecf13e325645630ec2ef77c3509657265ba1561b02bb9ac35e986242d8"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "e53b90841be096179d23b206840da813c7cfdfcf68c32c3ea8bb5e51db7cca3e"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "842d38af25e73843ac67afe0876ab2a2693945ddf7ddc11f36f5fdf72aa717e0"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "929a91dde719ee009a5d840de2b61bc6feb1fb249eeea6ea832f0e1421b6befe"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": true,
+      "data_sha256": "707f687eb1fc5ad2376be369a4f82e05fc72d0c79ba0ce409cb324380d0a7e6e"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "cb3206d1bad7f1a3cfe5ae05f41f049f78cbd94b6045cd24b265f0af64a79d45"
+    },
+    {
+      "mesh": 2,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "5b2ed86ab8888e6c174625bcadb82df73f77b037d4673db092a6ee395d2b3920"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "c79680518e88f8806b64eb5a42f70f7b89bcf39aa4f9dc7c355dd26cda0130a7"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "bf3376d37f7f61615959b56441706d9b83cb0b592f6d0f3f2f46677e25cdf74f"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "231f78a3ed5e18fcd09ec8c937c971e9dcf75b803c59f6ddc733c6b473f623b8"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": true,
+      "data_sha256": "cc4f4708a522a66e7bf257de5bcf6402840a43978a2c651af67b107d99a20b7d"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "b7440e700dced95801840121c88c59b3be569fb413e255873061a06e1a2942d4"
+    },
+    {
+      "mesh": 3,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "ce7bf0e1a09850477e493db648d31060a3ac6257609303cd5718364e073e4184"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "b5f8206beaa04f981c915f65df7929ece94355d1fcfe342cf2fefa431a0521c8"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "fcd87777d8e856c15e6acbfe10dea3f9aa300befac6341ee27b0cccdb6c70e54"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "68bbb2d8fcb41dfe85fcec14bc36631e1269c8d97752dfb26491c48f089c889b"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": true,
+      "data_sha256": "848ca008d2f7ed1bcf511fb5bf7cdec9a3372be1cac1a96438846733a85f1761"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "3402974f2f29357b2a192a01208682fda18aab1b3f15e37d495f06242aec8d73"
+    },
+    {
+      "mesh": 4,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "93b4101484df69b31d0a7aeb1e8e397305d97a9caf0e7e053a8bb8ffba4c05cd"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "POSITION",
+      "identical": true,
+      "data_sha256": "2773b7d2eea7a89f35e30d5066b39c165e4ed311f289e45f29060add9584e9a1"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "NORMAL",
+      "identical": true,
+      "data_sha256": "a9212ae0e60fcc436b1b51ef4a221bc7d516bd3f0dc969722ac2d15340a91d12"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "TEXCOORD_0",
+      "identical": true,
+      "data_sha256": "a415247f5da9e134cc67ced0ec50cbfd2bcf3f8e48cde7b83117cee1d937dba5"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "TANGENT",
+      "identical": true,
+      "data_sha256": "7320ac72230c4cf1c4eaba69cb33e5a3c9d8b86d4d0e6b767aa18b5d5659a0c4"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "JOINTS_0",
+      "identical": true,
+      "data_sha256": "f755ee6e9062b5f40bab1c8db96104ef5ebe01f4671815b725046853dd77843b"
+    },
+    {
+      "mesh": 5,
+      "primitive": 0,
+      "semantic": "WEIGHTS_0",
+      "identical": true,
+      "data_sha256": "cf4bddb361cc9d5346df698329532ed8b7a2216314a4291c5697955cdffdef77"
+    }
+  ],
+  "indices_identical": true,
+  "materials_identical": true,
+  "nodes_and_bone_transforms_identical": true,
+  "skin_bindings_identical": true,
+  "animation_tracks_and_samples_identical": true,
+  "palettes": [
+    {
+      "mesh": "torso_sections",
+      "material": "01_Pele_Escamas_PBR_glTF",
+      "before": {
+        "min_rgba": [
+          0.0002746623941405356,
+          6.103608758678569e-05,
+          0.0,
+          1.0
+        ],
+        "max_rgba": [
+          0.9991912718394751,
+          0.9997558556496529,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.7388470650795351,
+          0.808552748032647,
+          0.8106854165176689,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          0.620004577706569,
+          0.8299992370489052,
+          0.8399938963912413,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.8096902284655465,
+          0.9283616046952842,
+          0.9751194842566553,
+          1.0
+        ]
+      },
+      "changed_rows": 2376,
+      "encoded": {
+        "data_sha256": "75255a6377f7a3a9015c4a9762762157afe9db9239503f015d4926d6005c3f39",
+        "count": 11054,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    },
+    {
+      "mesh": "Sphere",
+      "material": "06_Olhos_Membranas_glTF",
+      "before": {
+        "min_rgba": [
+          0.11999694819562066,
+          0.1250019073777371,
+          0.09500267032883192,
+          1.0
+        ],
+        "max_rgba": [
+          0.6599984740978103,
+          0.779995422293431,
+          0.779995422293431,
+          1.0
+        ],
+        "mean_rgba": [
+          0.37536330701064763,
+          0.58883093370374,
+          0.5511039064318174,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          0.11999694819562066,
+          0.1250019073777371,
+          0.09500267032883192,
+          1.0
+        ],
+        "max_rgba": [
+          0.6599984740978103,
+          0.779995422293431,
+          0.779995422293431,
+          1.0
+        ],
+        "mean_rgba": [
+          0.37536330701064763,
+          0.58883093370374,
+          0.5511039064318174,
+          1.0
+        ]
+      },
+      "changed_rows": 0,
+      "encoded": {
+        "data_sha256": "fdd9bb58ae917927c76244f123808177e61e16c634d1f20e75124a4415c1a0af",
+        "count": 2185,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    },
+    {
+      "mesh": "Sphere.003",
+      "material": "02_Cabelo_Azul_Petroleo_glTF",
+      "before": {
+        "min_rgba": [
+          0.028000305180437935,
+          0.0549935149156939,
+          0.03997863736934462,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.610104679239707,
+          0.7548280754953919,
+          0.5001682016652146,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          0.028000305180437935,
+          0.0549935149156939,
+          0.06399633783474479,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.6473921153655715,
+          0.778132634174221,
+          0.8312604780760144,
+          1.0
+        ]
+      },
+      "changed_rows": 932,
+      "encoded": {
+        "data_sha256": "dcc9c3f29f8ebd00fd6645dd06224d1bed968c485d5c7ff07a7857c65202a9b9",
+        "count": 2403,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    },
+    {
+      "mesh": "Conta_Tranca_L_0_5",
+      "material": "05_Cobre_Madrep\u00e9rola_glTF",
+      "before": {
+        "min_rgba": [
+          0.5000076295109483,
+          0.01998931868467231,
+          0.4899977111467155,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.785608009599312,
+          0.6301353475242237,
+          0.6877927478030476,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          0.5000076295109483,
+          0.6500038147554742,
+          0.4899977111467155,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          0.785608009599312,
+          0.8248011055854956,
+          0.6877927478030476,
+          1.0
+        ]
+      },
+      "changed_rows": 437,
+      "encoded": {
+        "data_sha256": "6378c43ed8503c910b8c8fcb4ebe0a34562cfd7654433b935cb77e6e079200ca",
+        "count": 2200,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    },
+    {
+      "mesh": "Colete_Lateral_L",
+      "material": "03_Couro_Maritimo_glTF",
+      "before": {
+        "min_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "changed_rows": 0,
+      "encoded": {
+        "data_sha256": "c6c38234ae4990c3803bfb736eb56cb306c9a8ad88eaba4b636ad8ad62778fe2",
+        "count": 1338,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    },
+    {
+      "mesh": "Tecido_Frontal",
+      "material": "04_Tecido_Azul_Profundo_glTF",
+      "before": {
+        "min_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "after": {
+        "min_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "max_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "mean_rgba": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "changed_rows": 0,
+      "encoded": {
+        "data_sha256": "333e0d6cb69b42d3e10970274437bd7d250ee18cd25df2f5fc9e7bfd024735ca",
+        "count": 180,
+        "componentType": 5123,
+        "normalized": true,
+        "type": "VEC4"
+      }
+    }
+  ],
+  "tangent_recalculation_difference": [
+    {
+      "vertex": 6217,
+      "before": [
+        -0.1039000004529953,
+        -0.13750000298023224,
+        -0.9850000143051147,
+        1.0
+      ],
+      "after": [
+        -0.10400000214576721,
+        -0.13750000298023224,
+        -0.9850000143051147,
+        1.0
+      ],
+      "maximum_absolute_delta": 0.00010000169277191162
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "version": "0.3.1-naquiro.1",
+  "baseline_commit": "00088c18aa0f789217d13ebf905d5e5ec0d2c7e8",
+  "runtime_files": 221,
+  "source_files": 13,
+  "runtime_archives": [
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_1_de_3.zip",
+      "bytes": 19492692,
+      "sha256": "ee19026fa3119d9573e152cb3289111a2fc2394aade90bee36aaf9adf7c873b2"
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_2_de_3.zip",
+      "bytes": 19492826,
+      "sha256": "8a2047616c8e51e09dbfd6d5966d235c5629acca30f118ebbfd105611397838c"
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_3_de_3.zip",
+      "bytes": 19492680,
+      "sha256": "26008547abb76bbe307d66652f703d455e2b383a498e29bfc2798c628e7dfd38"
+    }
+  ],
+  "source_archives": [
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Fontes_Blender_Parte_1_de_2.zip",
+      "bytes": 16448066,
+      "sha256": "0dc9d38bd2b539faadc9bdfcad740fbfca967cb0baa6d4bb8fe4ae2599161a77"
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Fontes_Blender_Parte_2_de_2.zip",
+      "bytes": 16311558,
+      "sha256": "2d5c9176dec27e7532551288b48b599d382ce9f1d318fa1a9597947aa3c4d99f"
+    }
+  ],
+  "patch": {
+    "file": "EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch",
+    "bytes": 24227180,
+    "sha256": "74c38e810bd801b59f1ac466afa21cb78d3bb0d5ebc22e1184b321400262c24d"
+  },
+  "all_zip_crcs_passed": true,
+  "all_zip_unions_equal_inputs": true,
+  "patch_clean_apply_to_published_baseline": true,
+  "patched_bytes_equal_runtime_distribution": true,
+  "maximum_archive_bytes": 25165824,
+  "userdata_credentials_development_dependencies_excluded": true,
+  "instructions": "Independent complementary ZIPs: extract every Jogo part into the same new directory; optional Fontes_Blender parts merge the source folder. Do not concatenate ZIPs."
+}

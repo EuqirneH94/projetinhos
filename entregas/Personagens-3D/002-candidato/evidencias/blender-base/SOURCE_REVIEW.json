@@ -1,0 +1,89 @@
+{
+  "status": "original Blender production candidate; not an artist-approved final character",
+  "final_source": {
+    "model.py": "a45294b04e5302abeecef277c60a22311b0c39a75b63fee91e286eba6c49ca9e",
+    "base.blend": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da"
+  },
+  "model_stats": {
+    "meshes": 138,
+    "vertices": 15269,
+    "triangles": 29866,
+    "materials": 6,
+    "maps": 6,
+    "height_representation": 2.3,
+    "retopology": "voxel-relaxed decimated candidate; hand retopology and extreme deformation review pending"
+  },
+  "maps": {
+    "naquiro_cloth_basecolor.png": {
+      "sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0",
+      "bytes": 217529
+    },
+    "naquiro_leather_basecolor.png": {
+      "sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9",
+      "bytes": 1264223
+    },
+    "naquiro_leather_roughness.png": {
+      "sha256": "043ce48dd3da3923547cb8dc88ee661d65da28b0253a637185d9e5f4c9cb2090",
+      "bytes": 1020257
+    },
+    "naquiro_skin_basecolor.png": {
+      "sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b",
+      "bytes": 1024807
+    },
+    "naquiro_skin_normal.png": {
+      "sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e",
+      "bytes": 2922746
+    },
+    "naquiro_skin_roughness.png": {
+      "sha256": "b0fa0c636d3b3169b1bee4ecd2af0dad1b4a0457b696224c191a4e1fa8abed46",
+      "bytes": 1108398
+    }
+  },
+  "changes": [
+    "Dark petroleum-blue hair and copper preserved by explicit source materials",
+    "Irregular tapered hair roots replace the straight helmet-like front edge",
+    "Smaller recessed sclera and anatomically closer eyelid annuli",
+    "Coral ear membranes with front-facing blue-green fan ribs",
+    "Fine skin relief authored at 288x192 scale cells per 1024 atlas; head UV stays in atlas bounds",
+    "Triangle reduction only in textiles and subpixel hair highlight strands; head, hands and ear mesh resolution preserved",
+    "Six source PNG maps packed in base.blend with //textures relative paths",
+    "Mouth and nasal details projected onto the same analytic front surface as the head; profile air gap removed",
+    "Nose bridge/tip/alar Gaussian depths reduced about 40 percent after profile comparison; global proportions and triangle counts unchanged"
+  ],
+  "limitations": [
+    "Candidate topology was fused, relaxed and decimated; manual character retopology remains pending",
+    "Sculpted expression, hair, hands and extreme deformation need artistic approval",
+    "Studio renders do not demonstrate browser GPU performance",
+    "glTF material export is handled by rig_export.py; source preview MixRGB alone is not proof of exported PBR bindings"
+  ],
+  "renders": {
+    "engine": "Blender 4.3.2 Cycles CPU",
+    "samples": 8,
+    "threads": 2,
+    "denoising": false,
+    "views": {
+      "front-face.png": {
+        "resolution": [
+          512,
+          512
+        ],
+        "sha256": "b2a32410f6b3e71c34fba3e6fc674c386e835468de60a6746a9e0e90d7658892"
+      },
+      "profile-face.png": {
+        "resolution": [
+          512,
+          512
+        ],
+        "sha256": "376997141da015d3cd6fa1d47cf13ae560fcfd3942ab0b7b5b0983674f76ca25"
+      },
+      "three-quarter-full.png": {
+        "resolution": [
+          448,
+          512
+        ],
+        "sha256": "f54d4a1f2b09353890c07d00f95a9e004a47f60c541fb7900282a6ad802b670a"
+      }
+    },
+    "status": "Latest source geometry previews; earlier model-reviewed renders are historical and predate the mouth/nose correction, not final asset proof"
+  }
+}

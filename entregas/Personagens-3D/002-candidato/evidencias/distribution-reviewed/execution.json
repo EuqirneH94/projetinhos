@@ -1,0 +1,31 @@
+{
+  "utc_recorded": "2026-10-19T12:34:53.518388+00:00",
+  "exit_code": 0,
+  "node": "v24.14.0",
+  "command": [
+    "/workspace/edf-001-b11/runtime/node-v24.14.0-linux-x64/bin/node",
+    "/workspace/edf-naquiro-production/support/distribution-smoke-naquiro.mjs",
+    "/workspace/edf-naquiro-production/zip-extraction/Ecos_dos_Farois_Naquiro_001",
+    "/workspace/edf-naquiro-production/evidence/distribution-reviewed"
+  ],
+  "input": "All complementary Jogo ZIPs really extracted; no source workspace used as runtime",
+  "archives_sha256_and_crc_checked": [
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_1_de_3.zip",
+      "bytes": 19492692,
+      "sha256": "ee19026fa3119d9573e152cb3289111a2fc2394aade90bee36aaf9adf7c873b2"
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_2_de_3.zip",
+      "bytes": 19492826,
+      "sha256": "8a2047616c8e51e09dbfd6d5966d235c5629acca30f118ebbfd105611397838c"
+    },
+    {
+      "file": "Ecos_dos_Farois_Naquiro_001_Jogo_Parte_3_de_3.zip",
+      "bytes": 19492680,
+      "sha256": "26008547abb76bbe307d66652f703d455e2b383a498e29bfc2798c628e7dfd38"
+    }
+  ],
+  "passed": true,
+  "fixture_data": "Synthetic private OS temp paths only; never copied into evidence or runtime"
+}

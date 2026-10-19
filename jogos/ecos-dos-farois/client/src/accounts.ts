@@ -29,7 +29,7 @@ el('login').onsubmit = event => {
         button.textContent = 'Entrar no mundo';
         button.onclick = () => {
           sessionStorage.setItem('edf.account-session', JSON.stringify({ token, characterId: c.id }));
-          sessionStorage.removeItem('nexo.session'); current.close(); location.assign('/');
+          sessionStorage.removeItem('nexo.session'); current.close(); location.assign(new URLSearchParams(location.search).get('character') === 'naquiro-male' ? '/?character=naquiro-male' : '/');
         };
         item.append(button); el('characters').append(item);
       }

@@ -1,0 +1,43 @@
+{
+  "issue": "A cabeça azul no Blender era verde/escura no navegador; adornos turquesa tinham canais vermelhos inesperados.",
+  "cause": "Tintas lineares HDR acima de 1 eram quantizadas para glTF COLOR_0 normalized UNSIGNED_SHORT sem saturação, causando overflow. Ler só o range decodificado [0,1] não detectava isso.",
+  "fix": "Sanitização explícita em RGBA linear via atributo .color para [0,1] antes de salvar o .blend rigado e exportar glTF/GLB. Sem segunda conversão gamma. A fonte base.blend não foi regravada.",
+  "components_clamped": 4707,
+  "before_max_rgba": [
+    1.2000000476837158,
+    1.5,
+    1.7000000476837158,
+    1.0
+  ],
+  "after_max_rgba": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "checks": "Inspectores glTF e GLB aprovados; tintas da pele >=.5 comprovadas no buffer. Comparador antes/depois comprova geometria, UVs, normais, índices, pesos, joints, bind, materiais, nodes e amostras de animação idênticos byte a byte.",
+  "disclosed_exporter_difference": "Um vértice TANGENT foi recalculado pelo Blender com delta máximo 0.00010000169277191162. Não houve edição manual do binário nem mudança de geometria ou normal.",
+  "budgets": {
+    "triangles": 29866,
+    "materials": 6,
+    "bones": 46,
+    "clips": 11
+  },
+  "backup_moved_to": "/workspace/edf-naquiro-production/checkpoints/blender-backups/naquiro-male.blend1.pre-color-clamp",
+  "source_script_hashes_verified_in_manifest": true,
+  "final_hashes": {
+    "art-source/naquiro-male/base.blend": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da",
+    "art-source/naquiro-male/naquiro-male.blend": "f1746b0096233536a96ffdc54c02a58d1262ee99a22a06fe5e116d70218d940e",
+    "art-source/naquiro-male/naquiro-male.glb": "a57e820bf896ad0354c3523a0c21609f6524f8887f8b5c2330bf4bfa8c758304",
+    "art-source/naquiro-male/rig_export.py": "b2e2aeaee49a0f2ee07134a76945b2975649b3118940b7a6717c9943d85bf21f",
+    "art-source/naquiro-male/inspect_asset.py": "849f57e0c5b667ddd7c12be5b443bdf2a30f1f6023df91dffd8353bb3c042aee",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+    "client/public/art/characters/naquiro/naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+    "client/public/art/characters/naquiro/manifest.json": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5"
+  },
+  "pending": "Aprovação visual final no navegador a ser executada pelo coordenador. Windows/GPU física e aceite artístico do usuário continuam pendentes. Abertura portátil foi comprovada no Blender da nuvem; nenhum render antigo aprova os bytes corrigidos.",
+  "portable_blend_opened_read_only": true,
+  "portable_blend_images_packed": 6,
+  "portable_blend_sha256_unchanged": "f1746b0096233536a96ffdc54c02a58d1262ee99a22a06fe5e116d70218d940e",
+  "portable_blend_vertex_color_elements": 15269
+}

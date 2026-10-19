@@ -1,0 +1,9 @@
+{
+  "meshes": 138,
+  "vertices": 15269,
+  "triangles": 29866,
+  "materials": 6,
+  "maps": 6,
+  "height_representation": 2.3,
+  "retopology": "voxel-relaxed decimated candidate; hand retopology and extreme deformation review pending"
+}

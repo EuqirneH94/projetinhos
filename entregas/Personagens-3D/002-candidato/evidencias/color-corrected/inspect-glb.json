@@ -1,0 +1,305 @@
+{
+  "asset": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.glb",
+  "sha256": "a57e820bf896ad0354c3523a0c21609f6524f8887f8b5c2330bf4bfa8c758304",
+  "triangles": 29866,
+  "vertices": 19360,
+  "skinned_vertices": 19360,
+  "blended_vertices": 7844,
+  "maximum_weight_sum_error": 1.3347016647458076e-07,
+  "materials": 6,
+  "skins": 1,
+  "joint_counts": [
+    46
+  ],
+  "images": [
+    {
+      "uri": "bufferView:8",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 2922746
+    },
+    {
+      "uri": "bufferView:9",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 1024807
+    },
+    {
+      "uri": "bufferView:10",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 1064842
+    },
+    {
+      "uri": "bufferView:44",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 1264223
+    },
+    {
+      "uri": "bufferView:45",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 979804
+    },
+    {
+      "uri": "bufferView:54",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 217529
+    }
+  ],
+  "clips": [
+    {
+      "name": "Attack",
+      "duration": 0.9999999590218067,
+      "channels": 138,
+      "varying_channels": 19
+    },
+    {
+      "name": "Cast",
+      "duration": 1.4999999590218067,
+      "channels": 138,
+      "varying_channels": 10
+    },
+    {
+      "name": "Death",
+      "duration": 1.416666705161333,
+      "channels": 138,
+      "varying_channels": 14
+    },
+    {
+      "name": "Hit",
+      "duration": 0.5000000186264515,
+      "channels": 138,
+      "varying_channels": 7
+    },
+    {
+      "name": "Idle",
+      "duration": 2.5000000782310963,
+      "channels": 138,
+      "varying_channels": 8
+    },
+    {
+      "name": "Jump",
+      "duration": 0.9166666455566883,
+      "channels": 138,
+      "varying_channels": 10
+    },
+    {
+      "name": "Land",
+      "duration": 0.5000000186264515,
+      "channels": 138,
+      "varying_channels": 10
+    },
+    {
+      "name": "Recover",
+      "duration": 1.4999999590218067,
+      "channels": 138,
+      "varying_channels": 14
+    },
+    {
+      "name": "Run",
+      "duration": 0.6666666455566883,
+      "channels": 138,
+      "varying_channels": 17
+    },
+    {
+      "name": "Swim",
+      "duration": 1.4999999590218067,
+      "channels": 138,
+      "varying_channels": 12
+    },
+    {
+      "name": "Walk",
+      "duration": 0.9999999590218067,
+      "channels": 138,
+      "varying_channels": 17
+    }
+  ],
+  "meshes": [
+    {
+      "mesh": "torso_sections",
+      "triangles": 17188,
+      "vertices": 11054,
+      "blended_vertices": 6552
+    },
+    {
+      "mesh": "Sphere",
+      "triangles": 3568,
+      "vertices": 2185,
+      "blended_vertices": 0
+    },
+    {
+      "mesh": "Sphere.003",
+      "triangles": 3474,
+      "vertices": 2403,
+      "blended_vertices": 0
+    },
+    {
+      "mesh": "Conta_Tranca_L_0_5",
+      "triangles": 3228,
+      "vertices": 2200,
+      "blended_vertices": 631
+    },
+    {
+      "mesh": "Colete_Lateral_L",
+      "triangles": 2136,
+      "vertices": 1338,
+      "blended_vertices": 661
+    },
+    {
+      "mesh": "Tecido_Frontal",
+      "triangles": 272,
+      "vertices": 180,
+      "blended_vertices": 0
+    }
+  ],
+  "vertex_colors": [
+    {
+      "mesh": "torso_sections",
+      "material": "01_Pele_Escamas_PBR_glTF",
+      "linear_min_rgba": [
+        0.620004577706569,
+        0.8299992370489052,
+        0.8399938963912413,
+        1.0
+      ],
+      "linear_max_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        0.8096902284655465,
+        0.9283616046952842,
+        0.9751194842566553,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    },
+    {
+      "mesh": "Sphere",
+      "material": "06_Olhos_Membranas_glTF",
+      "linear_min_rgba": [
+        0.11999694819562066,
+        0.1250019073777371,
+        0.09500267032883192,
+        1.0
+      ],
+      "linear_max_rgba": [
+        0.6599984740978103,
+        0.779995422293431,
+        0.779995422293431,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        0.37536330701064763,
+        0.58883093370374,
+        0.5511039064318174,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    },
+    {
+      "mesh": "Sphere.003",
+      "material": "02_Cabelo_Azul_Petroleo_glTF",
+      "linear_min_rgba": [
+        0.028000305180437935,
+        0.0549935149156939,
+        0.06399633783474479,
+        1.0
+      ],
+      "linear_max_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        0.6473921153655715,
+        0.778132634174221,
+        0.8312604780760144,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    },
+    {
+      "mesh": "Conta_Tranca_L_0_5",
+      "material": "05_Cobre_Madrep\u00e9rola_glTF",
+      "linear_min_rgba": [
+        0.5000076295109483,
+        0.6500038147554742,
+        0.4899977111467155,
+        1.0
+      ],
+      "linear_max_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        0.785608009599312,
+        0.8248011055854956,
+        0.6877927478030476,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    },
+    {
+      "mesh": "Colete_Lateral_L",
+      "material": "03_Couro_Maritimo_glTF",
+      "linear_min_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_max_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    },
+    {
+      "mesh": "Tecido_Frontal",
+      "material": "04_Tecido_Azul_Profundo_glTF",
+      "linear_min_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_max_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "linear_mean_rgba": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "component_type": 5123,
+      "normalized": true
+    }
+  ],
+  "scope": "Actual exported buffer validation. Does not approve anatomy, clipping, aesthetics or physical GPU performance."
+}

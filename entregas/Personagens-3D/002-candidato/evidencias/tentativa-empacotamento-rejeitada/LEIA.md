@@ -1,0 +1,1 @@
+Tentativa rejeitada pelo comparador: três ZIPs históricos de código foram omitidos do runtime mas continuavam presentes na baseline do patch. Nenhum pacote desta tentativa foi aprovado. A correção preserva esses checkpoints publicados, cuja inspeção não encontrou bancos/locks/credenciais por nome de arquivo.

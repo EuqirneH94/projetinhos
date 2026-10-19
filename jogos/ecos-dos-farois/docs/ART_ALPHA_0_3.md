@@ -1,5 +1,7 @@
 # Arte, câmera e pipeline — candidata Alpha 0.3
 
+Este documento registra a baseline Alpha 0.3. A opção esquelética posterior do Náquiro masculino está documentada em [CHARACTER_NAQUIRO_001.md](CHARACTER_NAQUIRO_001.md); ela não substitui automaticamente os atores procedurais descritos abaixo.
+
 Estado: primeiro passe original de arte para navegador; ainda não equivale às pranchas conceituais. O aceite visual, a validação em GPU/Windows e a produção dos modelos finais permanecem pendentes. Nenhum save, atributo, posição de colisão do jogador ou permissão de equipamento foi alterado neste passe.
 
 ## Referências efetivamente consultadas

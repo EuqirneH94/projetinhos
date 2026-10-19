@@ -1,0 +1,57 @@
+[
+  {
+    "file": "idle-front.png",
+    "source": "Blender4.3.2 actual rigged editable source",
+    "source_blend_sha256": "4f2ef11675682859f0232afae920c50243ae2d7d3995c5836f4857e903caa13f",
+    "clip": "Idle",
+    "frame": 1,
+    "resolution": [
+      512,
+      512
+    ]
+  },
+  {
+    "file": "idle-three-quarter.png",
+    "source": "Blender4.3.2 actual rigged editable source",
+    "source_blend_sha256": "4f2ef11675682859f0232afae920c50243ae2d7d3995c5836f4857e903caa13f",
+    "clip": "Idle",
+    "frame": 17,
+    "resolution": [
+      512,
+      512
+    ]
+  },
+  {
+    "file": "run-contact.png",
+    "source": "Blender4.3.2 actual rigged editable source",
+    "source_blend_sha256": "4f2ef11675682859f0232afae920c50243ae2d7d3995c5836f4857e903caa13f",
+    "clip": "Run",
+    "frame": 5,
+    "resolution": [
+      512,
+      512
+    ]
+  },
+  {
+    "file": "cast-front.png",
+    "source": "Blender4.3.2 actual rigged editable source",
+    "source_blend_sha256": "4f2ef11675682859f0232afae920c50243ae2d7d3995c5836f4857e903caa13f",
+    "clip": "Cast",
+    "frame": 13,
+    "resolution": [
+      512,
+      512
+    ]
+  },
+  {
+    "file": "death-final.png",
+    "source": "Blender4.3.2 actual rigged editable source",
+    "source_blend_sha256": "4f2ef11675682859f0232afae920c50243ae2d7d3995c5836f4857e903caa13f",
+    "clip": "Death",
+    "frame": 35,
+    "resolution": [
+      512,
+      512
+    ]
+  }
+]

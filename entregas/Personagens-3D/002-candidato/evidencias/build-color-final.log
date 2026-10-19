@@ -1,0 +1,30 @@
+
+> ecos-dos-farois-alpha@0.3.1-naquiro.1 build
+> npm run typecheck && tsc -p tsconfig.server.json && vite build
+
+
+> ecos-dos-farois-alpha@0.3.1-naquiro.1 typecheck
+> tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 37 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                   1.28 kB │ gzip:   0.67 kB
+dist/accounts.html                                2.31 kB │ gzip:   1.17 kB
+dist/character-lab.html                           2.77 kB │ gzip:   1.31 kB
+dist/assets/characterLab-Csoda7jg.css             2.74 kB │ gzip:   1.16 kB
+dist/assets/main-ColsHaWt.css                    38.27 kB │ gzip:   9.27 kB
+dist/assets/identity-DoI0JpyJ.js                  0.10 kB │ gzip:   0.10 kB
+dist/assets/modulepreload-polyfill-B5Qt9EMX.js    0.71 kB │ gzip:   0.40 kB
+dist/assets/accounts-DoWWA5Cw.js                  2.45 kB │ gzip:   1.26 kB
+dist/assets/characterLab-BqSbiFTr.js             25.08 kB │ gzip:   6.90 kB
+dist/assets/main-D8qeZCxk.js                    119.10 kB │ gzip:  42.89 kB
+dist/assets/character-assets-Bs3qe43D.js        688.71 kB │ gzip: 178.23 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 6.41s

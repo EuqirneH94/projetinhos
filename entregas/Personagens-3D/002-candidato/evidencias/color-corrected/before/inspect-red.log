@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/inspect_asset.py", line 82, in <module>
+    assert min(min(row[:3]) for row in colors)>=.5,('Wrapped skin vertex tint',m['name'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('Wrapped skin vertex tint', 'torso_sections')

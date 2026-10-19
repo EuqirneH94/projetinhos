@@ -1,0 +1,1053 @@
+{
+  "platform": "linux",
+  "renderer": "Chromium ANGLE SwiftShader software",
+  "scope": "Actual lab and legacy public entry flow. No Windows or physical GPU claim.",
+  "tests": {
+    "lab_has_11_clips": {
+      "passed": true,
+      "detail": [
+        {
+          "name": "Attack",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Cast",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Death",
+          "duration": 1.4583333730697632,
+          "tracks": 138
+        },
+        {
+          "name": "Hit",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Idle",
+          "duration": 2.5416667461395264,
+          "tracks": 138
+        },
+        {
+          "name": "Jump",
+          "duration": 0.9583333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Land",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Recover",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Run",
+          "duration": 0.7083333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Swim",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Walk",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        }
+      ]
+    },
+    "all_11_lab_clips_advance_real_time": {
+      "passed": true,
+      "detail": [
+        {
+          "clip": "Attack",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 1.0416666269302368,
+          "advanced": true
+        },
+        {
+          "clip": "Cast",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 1.5416666269302368,
+          "advanced": true
+        },
+        {
+          "clip": "Death",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 1.4583333730697632,
+          "advanced": true
+        },
+        {
+          "clip": "Hit",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 0.5416666865348816,
+          "advanced": true
+        },
+        {
+          "clip": "Idle",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 2.5416667461395264,
+          "advanced": true
+        },
+        {
+          "clip": "Jump",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 0.9583333134651184,
+          "advanced": true
+        },
+        {
+          "clip": "Land",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 0.5416666865348816,
+          "advanced": true
+        },
+        {
+          "clip": "Recover",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 1.5416666269302368,
+          "advanced": true
+        },
+        {
+          "clip": "Run",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 0.7083333134651184,
+          "advanced": true
+        },
+        {
+          "clip": "Swim",
+          "first": 0.1,
+          "last": 0.2,
+          "duration": 1.5416666269302368,
+          "advanced": true
+        },
+        {
+          "clip": "Walk",
+          "first": 0.1,
+          "last": 0.21750000000000003,
+          "duration": 1.0416666269302368,
+          "advanced": true
+        }
+      ]
+    },
+    "timeline_seek_pauses_at_requested_position": {
+      "passed": true,
+      "detail": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      }
+    },
+    "wireframe_control": {
+      "passed": true,
+      "detail": null
+    },
+    "lab_textures_loaded": {
+      "passed": true,
+      "detail": {
+        "gpuTextures": 8,
+        "assetTextures": 6
+      }
+    },
+    "lab_no_unhandled_browser_errors": {
+      "passed": true,
+      "detail": null
+    },
+    "lab_no_csp_errors": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "screenshots": [
+    {
+      "file": "lab-front-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-side-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-back-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-face-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 7,
+        "triangles": 29690,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-hands-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-feet-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 7,
+        "triangles": 23358,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-wireframe-1280x720.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 7,
+        "triangles": 288,
+        "textures": 8,
+        "wireframe": true
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    },
+    {
+      "file": "lab-front-1920x1080.png",
+      "metrics": {
+        "loaded": true,
+        "asset": "EDF-NAQUIRO-MALE-001",
+        "currentClip": "Idle",
+        "playing": false,
+        "currentTime": 0.4,
+        "clips": [
+          {
+            "name": "Attack",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Cast",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Death",
+            "duration": 1.4583333730697632,
+            "tracks": 138
+          },
+          {
+            "name": "Hit",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Idle",
+            "duration": 2.5416667461395264,
+            "tracks": 138
+          },
+          {
+            "name": "Jump",
+            "duration": 0.9583333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Land",
+            "duration": 0.5416666865348816,
+            "tracks": 138
+          },
+          {
+            "name": "Recover",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Run",
+            "duration": 0.7083333134651184,
+            "tracks": 138
+          },
+          {
+            "name": "Swim",
+            "duration": 1.5416666269302368,
+            "tracks": 138
+          },
+          {
+            "name": "Walk",
+            "duration": 1.0416666269302368,
+            "tracks": 138
+          }
+        ],
+        "stats": {
+          "meshes": 6,
+          "skinnedMeshes": 6,
+          "triangles": 29866,
+          "bones": 46,
+          "materials": 6,
+          "textures": 6,
+          "clips": 11
+        },
+        "drawCalls": 9,
+        "triangles": 30154,
+        "textures": 8,
+        "wireframe": false
+      },
+      "method": "Actual completed application frame. RAF held only for static resize/capture. Not an FPS measurement."
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "responses": [
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.gltf"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.bin"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "stage": "lab",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+    }
+  ],
+  "hashesBefore": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+  },
+  "mode": "lab",
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "healthBefore": {
+    "ok": true,
+    "players": 0,
+    "tick": 1,
+    "version": "0.3.1-naquiro.1"
+  },
+  "browser": "154.0.8037.57",
+  "labInitial": {
+    "loaded": true,
+    "asset": "EDF-NAQUIRO-MALE-001",
+    "currentClip": "Idle",
+    "playing": true,
+    "currentTime": 0.21000000000000002,
+    "clips": [
+      {
+        "name": "Attack",
+        "duration": 1.0416666269302368,
+        "tracks": 138
+      },
+      {
+        "name": "Cast",
+        "duration": 1.5416666269302368,
+        "tracks": 138
+      },
+      {
+        "name": "Death",
+        "duration": 1.4583333730697632,
+        "tracks": 138
+      },
+      {
+        "name": "Hit",
+        "duration": 0.5416666865348816,
+        "tracks": 138
+      },
+      {
+        "name": "Idle",
+        "duration": 2.5416667461395264,
+        "tracks": 138
+      },
+      {
+        "name": "Jump",
+        "duration": 0.9583333134651184,
+        "tracks": 138
+      },
+      {
+        "name": "Land",
+        "duration": 0.5416666865348816,
+        "tracks": 138
+      },
+      {
+        "name": "Recover",
+        "duration": 1.5416666269302368,
+        "tracks": 138
+      },
+      {
+        "name": "Run",
+        "duration": 0.7083333134651184,
+        "tracks": 138
+      },
+      {
+        "name": "Swim",
+        "duration": 1.5416666269302368,
+        "tracks": 138
+      },
+      {
+        "name": "Walk",
+        "duration": 1.0416666269302368,
+        "tracks": 138
+      }
+    ],
+    "stats": {
+      "meshes": 6,
+      "skinnedMeshes": 6,
+      "triangles": 29866,
+      "bones": 46,
+      "materials": 6,
+      "textures": 6,
+      "clips": 11
+    },
+    "drawCalls": 9,
+    "triangles": 30154,
+    "textures": 8,
+    "wireframe": false
+  },
+  "healthAfter": {
+    "ok": true,
+    "players": 0,
+    "tick": 457,
+    "version": "0.3.1-naquiro.1"
+  },
+  "completed": true,
+  "ownServerExit": 0,
+  "hashesAfter": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+  },
+  "selectedSourceFilesUnchanged": true
+}

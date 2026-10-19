@@ -1,0 +1,1 @@
+TENTATIVA REJEITADA: os controles e 11 clips passaram estruturalmente, mas a inspeção visual detectou cores verdes/pretas incorretas. Não usar estas imagens como evidência final. Causa: vertex colors acima de 1 sofreram wrap ao exportar o glTF. Exportação será corrigida e todos os testes visuais repetidos.

@@ -1,0 +1,287 @@
+{
+  "platform": "linux",
+  "renderer": "Chromium ANGLE SwiftShader software",
+  "scope": "Actual lab and legacy public entry flow. No Windows or physical GPU claim.",
+  "tests": {
+    "continuous_lab_video_run_advances_during_pointer_orbit": {
+      "passed": true,
+      "detail": null
+    },
+    "continuous_lab_video_no_unhandled_errors": {
+      "passed": true,
+      "detail": null
+    }
+  },
+  "screenshots": [],
+  "errors": [],
+  "console": [],
+  "responses": [
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.gltf"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.bin"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "stage": "continuous_lab_video",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+    }
+  ],
+  "hashesBefore": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+    "client/public/art/characters/naquiro/naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+    "client/dist/art/characters/naquiro/naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10"
+  },
+  "mode": "labvideo",
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "healthBefore": {
+    "ok": true,
+    "players": 0,
+    "tick": 1,
+    "version": "0.3.1-naquiro.1"
+  },
+  "browser": "154.0.8037.57",
+  "labVideo": {
+    "first": {
+      "loaded": true,
+      "asset": "EDF-NAQUIRO-MALE-001",
+      "currentClip": "Run",
+      "playing": true,
+      "currentTime": 0.13239999999850988,
+      "clips": [
+        {
+          "name": "Attack",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Cast",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Death",
+          "duration": 1.4583333730697632,
+          "tracks": 138
+        },
+        {
+          "name": "Hit",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Idle",
+          "duration": 2.5416667461395264,
+          "tracks": 138
+        },
+        {
+          "name": "Jump",
+          "duration": 0.9583333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Land",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Recover",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Run",
+          "duration": 0.7083333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Swim",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Walk",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        }
+      ],
+      "stats": {
+        "meshes": 6,
+        "skinnedMeshes": 6,
+        "triangles": 29866,
+        "bones": 46,
+        "materials": 6,
+        "textures": 6,
+        "clips": 11
+      },
+      "drawCalls": 9,
+      "triangles": 30154,
+      "textures": 8,
+      "wireframe": false
+    },
+    "last": {
+      "loaded": true,
+      "asset": "EDF-NAQUIRO-MALE-001",
+      "currentClip": "Run",
+      "playing": true,
+      "currentTime": 0.47906674613058564,
+      "clips": [
+        {
+          "name": "Attack",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Cast",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Death",
+          "duration": 1.4583333730697632,
+          "tracks": 138
+        },
+        {
+          "name": "Hit",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Idle",
+          "duration": 2.5416667461395264,
+          "tracks": 138
+        },
+        {
+          "name": "Jump",
+          "duration": 0.9583333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Land",
+          "duration": 0.5416666865348816,
+          "tracks": 138
+        },
+        {
+          "name": "Recover",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Run",
+          "duration": 0.7083333134651184,
+          "tracks": 138
+        },
+        {
+          "name": "Swim",
+          "duration": 1.5416666269302368,
+          "tracks": 138
+        },
+        {
+          "name": "Walk",
+          "duration": 1.0416666269302368,
+          "tracks": 138
+        }
+      ],
+      "stats": {
+        "meshes": 6,
+        "skinnedMeshes": 6,
+        "triangles": 29866,
+        "bones": 46,
+        "materials": 6,
+        "textures": 6,
+        "clips": 11
+      },
+      "drawCalls": 9,
+      "triangles": 30154,
+      "textures": 8,
+      "wireframe": false
+    },
+    "clipTimesDuringMouseOrbit": [
+      0.4245999999940396,
+      0.5245999999940396,
+      0.6245999999940396,
+      0.01626668652892116,
+      0.11626668652892116,
+      0.21626668652892117,
+      0.4162666865289212,
+      0.6162666865289211,
+      0.007933373063802707,
+      0.10793337306380271,
+      0.20793337306380272,
+      0.30793337306380275,
+      0.5079333730638027,
+      0.6079333730638027,
+      0.08740005959570407,
+      0.18740005959570408,
+      0.2874000595957041,
+      0.4874000595957041,
+      0.687400059595704,
+      0.07906674613058562,
+      0.17906674613058562,
+      0.27906674613058563,
+      0.37906674613058566,
+      0.47906674613058564
+    ],
+    "pointerHorizontalDistance": 620,
+    "canvasHeight": 620,
+    "continuousWallSeconds": 39.57683175499551,
+    "method": "Playwright continuous WebM of actual lab Run clip and ordinary pointer orbit. One canvas-height horizontal drag (OrbitControls 2*pi mapping), with 24 real clip-advance observations. No RAF pause, camera/state/clock/bone assignment. Software renderer; not GPU/FPS acceptance.",
+    "files": [
+      "page@6330520fb1b242bad8fc72ffb89db60b.webm"
+    ]
+  },
+  "healthAfter": {
+    "ok": true,
+    "players": 0,
+    "tick": 1178,
+    "version": "0.3.1-naquiro.1"
+  },
+  "completed": true,
+  "ownServerExit": 0,
+  "hashesAfter": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+    "client/public/art/characters/naquiro/naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10",
+    "client/dist/art/characters/naquiro/naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10"
+  },
+  "selectedSourceFilesUnchanged": true
+}

@@ -1,0 +1,85 @@
+{
+  "file": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.blend",
+  "sha256": "f1746b0096233536a96ffdc54c02a58d1262ee99a22a06fe5e116d70218d940e",
+  "mode": "Opened read-only in Blender 4.3.2; no save, no render, no export",
+  "packed_images": [
+    {
+      "name": "naquiro_cloth_basecolor",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 217529,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "name": "naquiro_leather_basecolor",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 1264223,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "name": "naquiro_leather_roughness",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 1020257,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "name": "naquiro_skin_basecolor",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 1024807,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "name": "naquiro_skin_normal",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 2922746,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_normal.png"
+    },
+    {
+      "name": "naquiro_skin_roughness",
+      "width": 1024,
+      "height": 1024,
+      "packed_bytes": 1108398,
+      "filepath_is_external_fallback": "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_roughness.png"
+    }
+  ],
+  "all_six_images_packed": true,
+  "linear_vertex_color_attributes": 6,
+  "linear_vertex_color_elements": 15269,
+  "linear_min_rgba": [
+    0.02800000086426735,
+    0.054999999701976776,
+    0.06400000303983688,
+    1.0
+  ],
+  "linear_max_rgba": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "all_vertex_colors_in_unit_range": true,
+  "bones": 46,
+  "actions": [
+    "Attack",
+    "Cast",
+    "Death",
+    "Hit",
+    "Idle",
+    "Jump",
+    "Land",
+    "Recover",
+    "Run",
+    "Swim",
+    "Walk"
+  ],
+  "file_unchanged": true,
+  "scope": "Proves file opening and packed resources in cloud Blender; Windows user opening remains pending."
+}
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.blend"
+
+Blender quit

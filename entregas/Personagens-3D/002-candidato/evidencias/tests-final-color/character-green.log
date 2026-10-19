@@ -1,0 +1,25 @@
+✔ real Náquiro has bounded triangulated UV geometry, normalized four-weight skin and finite bone bindings (1520.232875ms)
+EDF character EDF-NAQUIRO-MALE-001: HTTP 404 missing character; existing character retained.
+EDF character EDF-NAQUIRO-MALE-001: corrupt glTF JSON; existing character retained.
+EDF character EDF-NAQUIRO-MALE-001: Character animation missing or empty: Idle; existing character retained.
+✔ distributed character uses real local PBR atlas files, bounded PNG dimensions and explicit authorship (194.48048ms)
+✔ export preserves bright skin and pearl tints instead of wrapping HDR vertex colours (279.336423ms)
+✔ all eleven real exported clips contain finite changing bone tracks and distinct poses (1125.969593ms)
+✔ asset validation rejects missing clips and malformed skins before replacing a fallback (517.811707ms)
+✔ cache coalesces simultaneous loads and disposes resources only after the last idempotent release (164.022824ms)
+✔ failed/corrupt/missing-clip loads retain fallback, and a later acquisition can recover (1373.710839ms)
+✔ late loading never resurrects a disposed character or removes a surviving instance (645.7608ms)
+✔ a wholly abandoned loading generation cannot replace or release its newer replacement (404.142595ms)
+✔ two players share immutable resources while skeletons, actions and disposal remain independent (130.085933ms)
+✔ actual rig matches gait speed and crossfades without snapping to the complete death pose in one frame (243.592203ms)
+✔ locomotion follows actual displacement, stops at walls and ignores teleports/reconnection gaps (8.789773ms)
+✔ death, hit, cast cancellation and respawn have bounded priorities without requiring particles (40.186989ms)
+✔ experimental model is opt-in and restricted to the approved race/class without touching appearance (15.201044ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 9545.02231

@@ -1,0 +1,617 @@
+{
+  "baseline_commit": "00088c18aa0f789217d13ebf905d5e5ec0d2c7e8",
+  "current_head": "00088c18aa0f789217d13ebf905d5e5ec0d2c7e8",
+  "scope": "Read-only hashes and filename inventory; only this evidence JSON was written. No database opened, copied, converted or migrated by this check.",
+  "groups": [
+    {
+      "label": "server source",
+      "baseline_files": 8,
+      "unchanged_files": 8,
+      "all_unchanged": true,
+      "files": [
+        {
+          "file": "jogos/ecos-dos-farois/server/src/account-lock.ts",
+          "baseline_sha256": "25b4f8267b280ccb8a0adf3c1b3254b20475dc123ba6c655f209deb122aa0f31",
+          "current_sha256": "25b4f8267b280ccb8a0adf3c1b3254b20475dc123ba6c655f209deb122aa0f31",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/accounts.ts",
+          "baseline_sha256": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+          "current_sha256": "443ceee12ee0248671b28e2504caad11488b53352555882394742c7e38b9b5f2",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/diagnostics.ts",
+          "baseline_sha256": "2e919304c8f9777ccf1ba362fba37dcfa1d6d6f5db42a217c8f8435f4673477c",
+          "current_sha256": "2e919304c8f9777ccf1ba362fba37dcfa1d6d6f5db42a217c8f8435f4673477c",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/game.ts",
+          "baseline_sha256": "9d124275f3c06cbae3f5244ca5e9ff2d8ed3ecaa31ab3ea9f884b8f9fa390cf5",
+          "current_sha256": "9d124275f3c06cbae3f5244ca5e9ff2d8ed3ecaa31ab3ea9f884b8f9fa390cf5",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/index.ts",
+          "baseline_sha256": "c9c5e3a68f2e918460a26c6ec2fdfd2ede2d06720580501c4b3430053c0c4d42",
+          "current_sha256": "c9c5e3a68f2e918460a26c6ec2fdfd2ede2d06720580501c4b3430053c0c4d42",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/protocol.ts",
+          "baseline_sha256": "06009a8a1d16b9015f92af9487eac37a631190865788aaa50d84ecce8f8d7fcb",
+          "current_sha256": "06009a8a1d16b9015f92af9487eac37a631190865788aaa50d84ecce8f8d7fcb",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/server.ts",
+          "baseline_sha256": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+          "current_sha256": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/server/src/store.ts",
+          "baseline_sha256": "85197fe42264f25cb97d30ad7fc3928bda9598dce18462e90c9184c008357e90",
+          "current_sha256": "85197fe42264f25cb97d30ad7fc3928bda9598dce18462e90c9184c008357e90",
+          "unchanged": true
+        }
+      ],
+      "new_files": []
+    },
+    {
+      "label": "shared source excluding release metadata",
+      "baseline_files": 6,
+      "unchanged_files": 6,
+      "all_unchanged": true,
+      "files": [
+        {
+          "file": "jogos/ecos-dos-farois/shared/alpha.ts",
+          "baseline_sha256": "ce501536aea9a3413fa42df262cfc3e56024d89e681515f6c7e3da9000bf8223",
+          "current_sha256": "ce501536aea9a3413fa42df262cfc3e56024d89e681515f6c7e3da9000bf8223",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/shared/config.ts",
+          "baseline_sha256": "4e6fb7041c941b7861f80b8fdc3ce2793c2d8a7294db7fb63a6fccd798e523db",
+          "current_sha256": "4e6fb7041c941b7861f80b8fdc3ce2793c2d8a7294db7fb63a6fccd798e523db",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/shared/extended.ts",
+          "baseline_sha256": "db292d291df0cfff229e25b4721d4abca7cdae2a07e73664f8d62b94422fd328",
+          "current_sha256": "db292d291df0cfff229e25b4721d4abca7cdae2a07e73664f8d62b94422fd328",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/shared/identity.ts",
+          "baseline_sha256": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+          "current_sha256": "e9a81563da7a7a245d64a95ef4cd46388bba766892ca97b50c4d175d6d877892",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/shared/movement.ts",
+          "baseline_sha256": "925461a9ef44b49529bd0c0ccd52cd54bbbee731568c0dcd4fd4bea3a3dbb628",
+          "current_sha256": "925461a9ef44b49529bd0c0ccd52cd54bbbee731568c0dcd4fd4bea3a3dbb628",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/shared/types.ts",
+          "baseline_sha256": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+          "current_sha256": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+          "unchanged": true
+        }
+      ],
+      "new_files": []
+    },
+    {
+      "label": "original tests",
+      "baseline_files": 16,
+      "unchanged_files": 16,
+      "all_unchanged": true,
+      "files": [
+        {
+          "file": "jogos/ecos-dos-farois/tests/accounts-network.test.ts",
+          "baseline_sha256": "e3e1e5375ee89c3af7b791c4ed20322ef03d69052a7691a67cf33796da7ee866",
+          "current_sha256": "e3e1e5375ee89c3af7b791c4ed20322ef03d69052a7691a67cf33796da7ee866",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/accounts.test.ts",
+          "baseline_sha256": "58528fd91418d49a983efc3cde4daebb1a1924a78c9ebbedab1ba26e0090c458",
+          "current_sha256": "58528fd91418d49a983efc3cde4daebb1a1924a78c9ebbedab1ba26e0090c458",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/alpha.test.ts",
+          "baseline_sha256": "35a6e1657f3b6d4a0a693fb2f5991083e5c5221145d81f1659662d42ebaf87f9",
+          "current_sha256": "35a6e1657f3b6d4a0a693fb2f5991083e5c5221145d81f1659662d42ebaf87f9",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/audio-voice.test.ts",
+          "baseline_sha256": "4b67639d39fb944ac566c17d4740d1224a64445c7ca195b6e071699a1dafb7ba",
+          "current_sha256": "4b67639d39fb944ac566c17d4740d1224a64445c7ca195b6e071699a1dafb7ba",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/audio.test.ts",
+          "baseline_sha256": "cc59c269f0941c9dab9314e551292ab0b5ad61495c2be0929c0eeeec82a0ef17",
+          "current_sha256": "cc59c269f0941c9dab9314e551292ab0b5ad61495c2be0929c0eeeec82a0ef17",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/combat.test.ts",
+          "baseline_sha256": "3ec4ca55eb7f8fe4a8c0b86f93028ff5272278bbe283d3c56c741dfb1ed4a1a9",
+          "current_sha256": "3ec4ca55eb7f8fe4a8c0b86f93028ff5272278bbe283d3c56c741dfb1ed4a1a9",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/extended.test.ts",
+          "baseline_sha256": "cc1d2271714facbdfca663370b13b35775a5f8443bf49244aa3b817c2e22fa81",
+          "current_sha256": "cc1d2271714facbdfca663370b13b35775a5f8443bf49244aa3b817c2e22fa81",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/foundation.test.ts",
+          "baseline_sha256": "e9d94af5e36db333393a4e5be5ac27f3290ce0e3e6804eb925a0b21b552be4a8",
+          "current_sha256": "e9d94af5e36db333393a4e5be5ac27f3290ce0e3e6804eb925a0b21b552be4a8",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/integration.test.ts",
+          "baseline_sha256": "a71bec9c60e7bb2a3107b87dcfff5e151e8616e6368cc240c8288285aa464b63",
+          "current_sha256": "a71bec9c60e7bb2a3107b87dcfff5e151e8616e6368cc240c8288285aa464b63",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/lifecycle.test.ts",
+          "baseline_sha256": "5292cfd2160379e03ce93004bbf63d545fdb2815440c474b85959b13e274e227",
+          "current_sha256": "5292cfd2160379e03ce93004bbf63d545fdb2815440c474b85959b13e274e227",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/network-watchdog.test.ts",
+          "baseline_sha256": "0607b471b7998d9845065cbe12f54d172465db1e4490316132f39bc72f0a23bc",
+          "current_sha256": "0607b471b7998d9845065cbe12f54d172465db1e4490316132f39bc72f0a23bc",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/progression.test.ts",
+          "baseline_sha256": "33ba2f9f14d11b66439deab09ceebefd89899c46099eb21d7c12e622c1ba9889",
+          "current_sha256": "33ba2f9f14d11b66439deab09ceebefd89899c46099eb21d7c12e622c1ba9889",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/render.test.ts",
+          "baseline_sha256": "b24fcc4af3a1d1d2d9d3ea6906d0e54a76a34108e64d3c05d82e12099ff5c22f",
+          "current_sha256": "b24fcc4af3a1d1d2d9d3ea6906d0e54a76a34108e64d3c05d82e12099ff5c22f",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/scene-audio.test.ts",
+          "baseline_sha256": "609c68210270083cba7354c13f22c270571a5bbb1ea81efb910585232fad894b",
+          "current_sha256": "609c68210270083cba7354c13f22c270571a5bbb1ea81efb910585232fad894b",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/ui-accessibility.test.ts",
+          "baseline_sha256": "879b1b87f5afdaedc9e6b57aea4afa4fc16bf2a92d9b4f50c8e8474e53a9ea5c",
+          "current_sha256": "879b1b87f5afdaedc9e6b57aea4afa4fc16bf2a92d9b4f50c8e8474e53a9ea5c",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/tests/ui.test.ts",
+          "baseline_sha256": "2a10c52ceea6bdd9ae4b1a7bf398a7c59bec78eb22de696cee3771c18c7a87f6",
+          "current_sha256": "2a10c52ceea6bdd9ae4b1a7bf398a7c59bec78eb22de696cee3771c18c7a87f6",
+          "unchanged": true
+        }
+      ]
+    },
+    {
+      "label": "original audio payloads, source and distribution",
+      "baseline_files": 14,
+      "unchanged_files": 14,
+      "all_unchanged": true,
+      "files": [
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/01_farol_estavel.wav",
+          "baseline_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+          "current_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/02_farol_enfraquecido.wav",
+          "baseline_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+          "current_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/03_farol_critico.wav",
+          "baseline_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+          "current_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/04_descarga_arcana.mp3",
+          "baseline_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+          "current_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/05_barreira_protetora.mp3",
+          "baseline_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+          "current_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/06_flecha_especial.mp3",
+          "baseline_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+          "current_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/dist/audio/07_pulso_de_cura.mp3",
+          "baseline_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+          "current_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/01_farol_estavel.wav",
+          "baseline_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+          "current_sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/02_farol_enfraquecido.wav",
+          "baseline_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+          "current_sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/03_farol_critico.wav",
+          "baseline_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+          "current_sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/04_descarga_arcana.mp3",
+          "baseline_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+          "current_sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/05_barreira_protetora.mp3",
+          "baseline_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+          "current_sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/06_flecha_especial.mp3",
+          "baseline_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+          "current_sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab",
+          "unchanged": true
+        },
+        {
+          "file": "jogos/ecos-dos-farois/client/public/audio/07_pulso_de_cura.mp3",
+          "baseline_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+          "current_sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc",
+          "unchanged": true
+        }
+      ]
+    }
+  ],
+  "package_manifest": {
+    "dependencies": {
+      "unchanged": true,
+      "baseline": {
+        "three": "0.186.1",
+        "ws": "8.22.0"
+      },
+      "current": {
+        "three": "0.186.1",
+        "ws": "8.22.0"
+      }
+    },
+    "devDependencies": {
+      "unchanged": true,
+      "baseline": {
+        "@types/jsdom": "21.1.7",
+        "@types/node": "24.10.0",
+        "@types/three": "0.183.1",
+        "@types/ws": "8.18.1",
+        "concurrently": "9.2.5",
+        "jsdom": "26.1.0",
+        "tsx": "4.23.15",
+        "typescript": "5.9.3",
+        "vite": "7.3.7",
+        "web-audio-engine": "0.13.4"
+      },
+      "current": {
+        "@types/jsdom": "21.1.7",
+        "@types/node": "24.10.0",
+        "@types/three": "0.183.1",
+        "@types/ws": "8.18.1",
+        "concurrently": "9.2.5",
+        "jsdom": "26.1.0",
+        "tsx": "4.23.15",
+        "typescript": "5.9.3",
+        "vite": "7.3.7",
+        "web-audio-engine": "0.13.4"
+      }
+    },
+    "engines": {
+      "unchanged": true,
+      "baseline": {
+        "node": ">=24.13.0 <25"
+      },
+      "current": {
+        "node": ">=24.13.0 <25"
+      }
+    },
+    "scripts": {
+      "unchanged": true,
+      "baseline": {
+        "dev": "concurrently -k -n SERVIDOR,CLIENTE -c yellow,cyan npm:dev:server npm:dev:client",
+        "dev:server": "node --watch-preserve-output --import tsx --watch server/src/index.ts",
+        "dev:client": "vite --config vite.config.ts",
+        "typecheck": "tsc --noEmit",
+        "build": "npm run typecheck && tsc -p tsconfig.server.json && vite build",
+        "start": "node build/server/src/index.js",
+        "test": "node --import tsx --test tests/*.test.ts",
+        "check": "npm run build && npm test",
+        "audio:preview": "node --import tsx scripts/render-audio.ts",
+        "doctor": "node scripts/doctor.mjs",
+        "verify:files": "node scripts/verify-files.mjs",
+        "test:journey": "node --import tsx scripts/replay-alpha.ts",
+        "test:slice": "node --import tsx scripts/replay-slice.ts",
+        "test:soak": "node --import tsx scripts/soak-alpha.ts"
+      },
+      "current": {
+        "dev": "concurrently -k -n SERVIDOR,CLIENTE -c yellow,cyan npm:dev:server npm:dev:client",
+        "dev:server": "node --watch-preserve-output --import tsx --watch server/src/index.ts",
+        "dev:client": "vite --config vite.config.ts",
+        "typecheck": "tsc --noEmit",
+        "build": "npm run typecheck && tsc -p tsconfig.server.json && vite build",
+        "start": "node build/server/src/index.js",
+        "test": "node --import tsx --test tests/*.test.ts",
+        "check": "npm run build && npm test",
+        "audio:preview": "node --import tsx scripts/render-audio.ts",
+        "doctor": "node scripts/doctor.mjs",
+        "verify:files": "node scripts/verify-files.mjs",
+        "test:journey": "node --import tsx scripts/replay-alpha.ts",
+        "test:slice": "node --import tsx scripts/replay-slice.ts",
+        "test:soak": "node --import tsx scripts/soak-alpha.ts"
+      }
+    }
+  },
+  "package_version": {
+    "baseline": "0.3.0-alpha",
+    "current": "0.3.1-naquiro.1"
+  },
+  "package_lock_changes": [
+    {
+      "package": "(project root)",
+      "changes": {
+        "version": {
+          "baseline": "0.3.0-alpha",
+          "current": "0.3.1-naquiro.1"
+        }
+      }
+    }
+  ],
+  "protected_changes": [],
+  "working_tree_changes": [
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/LEIA_PRIMEIRO.md"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/README.md"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/build/shared/release.js"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/build/shared/release.js.map"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/client/dist/accounts.html"
+    },
+    {
+      "status": " D",
+      "file": "jogos/ecos-dos-farois/client/dist/assets/accounts-BJ3IwcNg.js"
+    },
+    {
+      "status": " D",
+      "file": "jogos/ecos-dos-farois/client/dist/assets/identity-fyB6oboV.js"
+    },
+    {
+      "status": " D",
+      "file": "jogos/ecos-dos-farois/client/dist/assets/main-CvQ-KAuE.js"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/client/dist/index.html"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/client/src/accounts.ts"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/client/src/scene.ts"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/docs/ART_ALPHA_0_3.md"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/docs/ASSET_PROVENANCE.json"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/package-lock.json"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/package.json"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/shared/release.ts"
+    },
+    {
+      "status": " M",
+      "file": "jogos/ecos-dos-farois/vite.config.ts"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/base.blend"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/inspect_asset.py"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/model-stats.json"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/model.py"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.blend"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/naquiro-male.glb"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/rig_export.py"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_normal.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/art-source/naquiro-male/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/character-lab.html"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/manifest.json"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/naquiro-male.bin"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/naquiro-male.gltf"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_normal.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/public/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/src/character-animation.ts"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/src/character-assets.ts"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/src/character-lab.css"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/src/character-lab.ts"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/client/src/character-runtime.ts"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/docs/CHARACTER_NAQUIRO_001.md"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/docs/WINDOWS_NAQUIRO_001.md"
+    },
+    {
+      "status": "??",
+      "file": "jogos/ecos-dos-farois/tests/character.test.ts"
+    }
+  ],
+  "expected_change_categories": [
+    "client rendering and opt-in preview",
+    "new character asset, Blender source, rig, animations and textures",
+    "new character regression tests",
+    "release metadata, generated client/shared release distribution and documentation"
+  ],
+  "privacy": {
+    "method": "Filename inventory across repository, excluding dependency caches and .git; no secret payload printed or opened.",
+    "candidate_sensitive_files": [],
+    "no_candidate_sensitive_files_in_repository": true,
+    "private_evidence_location": "/workspace/edf-naquiro-production/ (outside Git repository)",
+    "does_not_claim_archive_contents_or_all_possible_secret_names_scanned": true
+  },
+  "migration": {
+    "schema_or_server_source_changes_detected": false,
+    "performed_by_this_check": false,
+    "claim": "No migration command executed. Protected runtime source and original tests/audio remain byte-identical to the named baseline."
+  }
+}

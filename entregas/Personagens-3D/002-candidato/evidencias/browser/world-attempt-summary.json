@@ -1,0 +1,307 @@
+[
+  {
+    "attempt": "attempt-02-prefx-entry-timeout",
+    "completed": false,
+    "failure": "Page.wait_for_function: Timeout 60000ms exceeded.",
+    "checks": {},
+    "pageErrorCount": 0,
+    "loadedCharacterResponses": [
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.gltf"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.bin"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+      }
+    ],
+    "welcomesObserved": 0,
+    "socketClosesObserved": 0,
+    "serverExit": 0,
+    "selectedSourceFilesUnchanged": true,
+    "notes": "Failed/incomplete attempt retained for transparency. Software renderer and host pauses; not a Windows/GPU pass."
+  },
+  {
+    "attempt": "attempt-04-software-reconnect-movement",
+    "completed": false,
+    "failure": "Page.wait_for_function: Timeout 20000ms exceeded.",
+    "checks": {
+      "world_entry_retains_gameplay": {
+        "passed": true,
+        "detail": {
+          "drawCalls": 125,
+          "triangles": 257815,
+          "geometry": 122,
+          "simulationDtMs": 16.7,
+          "faction": "confluencia",
+          "quality": "economy",
+          "economical": true,
+          "localPlayerX": 0,
+          "localPlayerZ": 24,
+          "pixelRatio": 1,
+          "reducedEffects": false,
+          "activeEffects": 0,
+          "cameraDistance": 10.5,
+          "cameraObstructed": false,
+          "asset": "loaded",
+          "character": {
+            "status": "loaded",
+            "experimental": true,
+            "assetId": "EDF-NAQUIRO-MALE-001",
+            "clip": "Idle",
+            "stats": {
+              "meshes": 6,
+              "skinnedMeshes": 6,
+              "triangles": 29866,
+              "bones": 46,
+              "materials": 6,
+              "textures": 6,
+              "clips": 11
+            },
+            "error": null,
+            "locomotionSpeed": 0,
+            "playbackRate": 1
+          },
+          "characters": [
+            {
+              "id": "93aa7266-b11c-40dc-ab51-5f12a5a1247f",
+              "x": 0,
+              "z": 24,
+              "status": "loaded",
+              "experimental": true,
+              "assetId": "EDF-NAQUIRO-MALE-001",
+              "clip": "Idle",
+              "stats": {
+                "meshes": 6,
+                "skinnedMeshes": 6,
+                "triangles": 29866,
+                "bones": 46,
+                "materials": 6,
+                "textures": 6,
+                "clips": 11
+              },
+              "error": null,
+              "locomotionSpeed": 0,
+              "playbackRate": 1
+            }
+          ],
+          "frameIntervalMs": 16.7
+        }
+      }
+    },
+    "pageErrorCount": 0,
+    "loadedCharacterResponses": [
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.gltf"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.bin"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.gltf"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.bin"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+      }
+    ],
+    "welcomesObserved": 2,
+    "socketClosesObserved": 1,
+    "serverExit": 0,
+    "selectedSourceFilesUnchanged": true,
+    "notes": "Failed/incomplete attempt retained for transparency. Software renderer and host pauses; not a Windows/GPU pass."
+  },
+  {
+    "attempt": "browser-reviewed",
+    "completed": false,
+    "failure": "Page.wait_for_function: Timeout 60000ms exceeded.",
+    "checks": {},
+    "pageErrorCount": 0,
+    "loadedCharacterResponses": [
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.gltf"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.bin"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.gltf"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/naquiro-male.bin"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+      },
+      {
+        "stage": "world",
+        "status": 200,
+        "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+      }
+    ],
+    "welcomesObserved": 1,
+    "socketClosesObserved": 0,
+    "serverExit": 0,
+    "selectedSourceFilesUnchanged": true,
+    "notes": "Failed/incomplete attempt retained for transparency. Software renderer and host pauses; not a Windows/GPU pass."
+  }
+]

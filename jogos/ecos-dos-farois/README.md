@@ -1,4 +1,6 @@
-> **Versão atual: Alpha 0.3 candidata.** Comece por [LEIA_PRIMEIRO](LEIA_PRIMEIRO.md), [guia Windows](docs/WINDOWS_ALPHA_0_3.md), [relatório atual](docs/REPORT_ALPHA_0_3.md) e [cobertura](docs/MATRIZ_ALPHA_0_3.md). Se usar a fonte por Git, rode `npm.cmd ci`, `npm.cmd run build` e `npm.cmd start`; o iniciador com manifesto destina-se ao ZIP de distribuição completo. As seções históricas abaixo descrevem a base anterior e não substituem o relatório desta candidata. Nenhum aceite Windows ou estético é presumido.
+> **Versão atual: Náquiro 001, `0.3.1-naquiro.1`, candidato experimental.** Comece por [LEIA_PRIMEIRO](LEIA_PRIMEIRO.md), [guia Windows](docs/WINDOWS_NAQUIRO_001.md) e [relatório do personagem](docs/CHARACTER_NAQUIRO_001.md). O aceite artístico e Windows/GPU permanece pendente.
+
+**Incremento Náquiro 001 — `0.3.1-naquiro.1`:** modelo esquelético experimental, optativo para Náquiros Errantes, e ateliê de inspeção. Consulte [o guia de validação Windows](docs/WINDOWS_NAQUIRO_001.md) e [o relatório do personagem](docs/CHARACTER_NAQUIRO_001.md). O aceite artístico e Windows/GPU permanece pendente. As notas da base Alpha 0.3 abaixo conservam seu contexto histórico.
 
 # Ecos dos Faróis — Alpha jogável 0.2
 

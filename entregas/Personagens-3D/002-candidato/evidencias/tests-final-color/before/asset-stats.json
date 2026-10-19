@@ -1,0 +1,105 @@
+{
+  "node": "v24.14.0",
+  "files": {
+    "naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+    "naquiro-male.bin": "ec6c48c8a2f9d449274f91a5bfd20720427bafdc58bf5ffb5cebbc7e5b333d1f"
+  },
+  "palette": [
+    {
+      "material": "01_Pele_Escamas_PBR_glTF",
+      "vertices": 11054,
+      "minimum_rgb": [
+        0.0002746623941405356,
+        6.103608758678569e-05,
+        0.0
+      ],
+      "maximum_rgb": [
+        0.9991912718394751,
+        0.9997558556496529,
+        1.0
+      ],
+      "below_approved_tint_minimum": 2376,
+      "minimum_allowed": 0.5
+    },
+    {
+      "material": "06_Olhos_Membranas_glTF",
+      "vertices": 2185,
+      "minimum_rgb": [
+        0.11999694819562066,
+        0.1250019073777371,
+        0.09500267032883192
+      ],
+      "maximum_rgb": [
+        0.6599984740978103,
+        0.779995422293431,
+        0.779995422293431
+      ],
+      "below_approved_tint_minimum": 0,
+      "minimum_allowed": 0
+    },
+    {
+      "material": "02_Cabelo_Azul_Petroleo_glTF",
+      "vertices": 2403,
+      "minimum_rgb": [
+        0.028000305180437935,
+        0.0549935149156939,
+        0.03997863736934462
+      ],
+      "maximum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "below_approved_tint_minimum": 0,
+      "minimum_allowed": 0
+    },
+    {
+      "material": "05_Cobre_Madrep\u00e9rola_glTF",
+      "vertices": 2200,
+      "minimum_rgb": [
+        0.5000076295109483,
+        0.01998931868467231,
+        0.4899977111467155
+      ],
+      "maximum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "below_approved_tint_minimum": 437,
+      "minimum_allowed": 0.45
+    },
+    {
+      "material": "03_Couro_Maritimo_glTF",
+      "vertices": 1338,
+      "minimum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "maximum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "below_approved_tint_minimum": 0,
+      "minimum_allowed": 0
+    },
+    {
+      "material": "04_Tecido_Azul_Profundo_glTF",
+      "vertices": 180,
+      "minimum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "maximum_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "below_approved_tint_minimum": 0,
+      "minimum_allowed": 0
+    }
+  ]
+}

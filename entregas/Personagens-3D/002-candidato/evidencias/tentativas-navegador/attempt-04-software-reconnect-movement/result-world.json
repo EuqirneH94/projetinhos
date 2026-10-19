@@ -1,0 +1,324 @@
+{
+  "platform": "linux",
+  "renderer": "Chromium ANGLE SwiftShader software",
+  "scope": "Actual lab and legacy public entry flow. No Windows or physical GPU claim.",
+  "tests": {
+    "world_entry_retains_gameplay": {
+      "passed": true,
+      "detail": {
+        "drawCalls": 125,
+        "triangles": 257815,
+        "geometry": 122,
+        "simulationDtMs": 16.7,
+        "faction": "confluencia",
+        "quality": "economy",
+        "economical": true,
+        "localPlayerX": 0,
+        "localPlayerZ": 24,
+        "pixelRatio": 1,
+        "reducedEffects": false,
+        "activeEffects": 0,
+        "cameraDistance": 10.5,
+        "cameraObstructed": false,
+        "asset": "loaded",
+        "character": {
+          "status": "loaded",
+          "experimental": true,
+          "assetId": "EDF-NAQUIRO-MALE-001",
+          "clip": "Idle",
+          "stats": {
+            "meshes": 6,
+            "skinnedMeshes": 6,
+            "triangles": 29866,
+            "bones": 46,
+            "materials": 6,
+            "textures": 6,
+            "clips": 11
+          },
+          "error": null,
+          "locomotionSpeed": 0,
+          "playbackRate": 1
+        },
+        "characters": [
+          {
+            "id": "93aa7266-b11c-40dc-ab51-5f12a5a1247f",
+            "x": 0,
+            "z": 24,
+            "status": "loaded",
+            "experimental": true,
+            "assetId": "EDF-NAQUIRO-MALE-001",
+            "clip": "Idle",
+            "stats": {
+              "meshes": 6,
+              "skinnedMeshes": 6,
+              "triangles": 29866,
+              "bones": 46,
+              "materials": 6,
+              "textures": 6,
+              "clips": 11
+            },
+            "error": null,
+            "locomotionSpeed": 0,
+            "playbackRate": 1
+          }
+        ],
+        "frameIntervalMs": 16.7
+      }
+    }
+  },
+  "screenshots": [],
+  "errors": [],
+  "console": [],
+  "responses": [
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.gltf"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.bin"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.gltf"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/naquiro-male.bin"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_basecolor.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_roughness.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_skin_normal.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_basecolor.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_leather_roughness.png"
+    },
+    {
+      "stage": "world",
+      "status": 200,
+      "path": "/art/characters/naquiro/textures/naquiro_cloth_basecolor.png"
+    }
+  ],
+  "hashesBefore": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+  },
+  "mode": "world",
+  "ffmpeg": "ffmpeg version 7.1.5-0+deb13u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "healthBefore": {
+    "ok": true,
+    "players": 0,
+    "tick": 2,
+    "version": "0.3.1-naquiro.1"
+  },
+  "browser": "154.0.8037.57",
+  "websocketEvents": [
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "join"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "welcome"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "state"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "move"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "move"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "move"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "move"
+    },
+    {
+      "stage": "world",
+      "type": "socket_close"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "resume"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "welcome"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "move"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    },
+    {
+      "stage": "world",
+      "direction": "sent",
+      "type": "ping"
+    },
+    {
+      "stage": "world",
+      "direction": "received",
+      "type": "pong"
+    }
+  ],
+  "completed": false,
+  "failure": "Page.wait_for_function: Timeout 20000ms exceeded.",
+  "ownServerExit": 0,
+  "hashesAfter": {
+    "client/src/character-lab.ts": "a2ce15bd776c1f40eae9bdac5277ec2bc124d5e5e098f3882d506551886e2c0c",
+    "client/src/character-runtime.ts": "8a2464e6f1b773856693f61a9872139755d9092e05e71febcca6de8d7893b786",
+    "client/src/scene.ts": "152e5119a9a12281e81bd648dde6a5e45c0d8d0d6e546ef4af6985a7762d02bc",
+    "server/src/server.ts": "8f6969c7f0d185314bb82daf57ee47e34fb21f13fe5b64eeaf8b33a9d00f9ac7",
+    "shared/types.ts": "b55650173727e50dbd4acf928813148ed707963a4ef4713a6ddaf967c2d6fa53",
+    "client/public/art/characters/naquiro/naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+  },
+  "selectedSourceFilesUnchanged": true
+}

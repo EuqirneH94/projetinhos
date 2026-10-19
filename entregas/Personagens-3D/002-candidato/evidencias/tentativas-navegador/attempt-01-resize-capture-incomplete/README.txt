@@ -1,0 +1,1 @@
+Historical harness attempt. Real clip playback/seek tests passed, but 1280 captures raced ResizeObserver and must not be used as visual evidence. 1920 front was visible. Rerun with backing-buffer dimensions plus two real frames; game sources/assets unchanged.

@@ -1,6 +1,6 @@
 {
   "project": "Ecos dos Faróis",
-  "release": "0.3.0-alpha",
+  "release": "0.3.1-naquiro.1",
   "visuals": {
     "method": "Geometria, materiais, textura, animação procedural e interface criados em código para esta entrega.",
     "external_3d_assets": [],
@@ -10,6 +10,17 @@
       "source": "scripts/create-resonator-asset.mjs",
       "provenance": "client/public/art/PROVENANCE.json",
       "status": "original provisional representative architectural asset; not a final hero rig"
+    },
+    "character_experiment": {
+      "id": "EDF-NAQUIRO-MALE-001",
+      "status": "Experimental production candidate; reference fidelity, artistic review and Windows/GPU acceptance pending.",
+      "scope": "One male Naquiro / Errante pilot, presentation option only; default procedural actors retained.",
+      "method": "Original geometry, maps, skeleton and animation generated and inspected in Blender 4.3.2 with project scripts; not hand-sculpted final art.",
+      "sources": "art-source/naquiro-male/",
+      "runtime": "client/public/art/characters/naquiro/manifest.json",
+      "references": "User-provided VIS-018/019/020 and approved character mission; reference pixels not used as texture.",
+      "permissions": "Produced for Ecos dos Farois; project owner may use and edit these generated project assets. No downloaded third-party character or texture is included.",
+      "pending": "Manual deformation-oriented retopology, facial expression and hairstyle/wardrobe refinement, human comparison to concept, real Windows/GPU measurement."
     }
   },
   "audio": {

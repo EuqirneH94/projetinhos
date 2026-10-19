@@ -1,0 +1,160 @@
+{
+  "passed": true,
+  "node": "v24.14.0",
+  "platform": "linux",
+  "releaseVersion": "0.3.1-naquiro.1",
+  "packagedRuntimeOnlyWs": true,
+  "manifestFiles": 220,
+  "runtimeFilesUnchanged": true,
+  "httpAssets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 1275,
+      "sha256": "c3290b5da6217e878a7a2501d13a9c21181526614db7034d39cb3a7cdc90168b"
+    },
+    {
+      "path": "accounts.html",
+      "status": 200,
+      "bytes": 2308,
+      "sha256": "8d28b8dddb34c29ad2ff0f306beb109a154ebeabee82cc2c35acf66b40f7fcaa"
+    },
+    {
+      "path": "character-lab.html",
+      "status": 200,
+      "bytes": 2771,
+      "sha256": "efe5ad4e280c6b15b31495752ea4567118e02c920fe2e4a77328149d0250c4b1"
+    },
+    {
+      "path": "art/characters/naquiro/manifest.json",
+      "status": 200,
+      "bytes": 187000,
+      "sha256": "518688932797e9f113012680b635b41ed287705a28c8772f63f48cb7027b6bd5"
+    },
+    {
+      "path": "art/characters/naquiro/naquiro-male.bin",
+      "status": 200,
+      "bytes": 1752928,
+      "sha256": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10"
+    },
+    {
+      "path": "art/characters/naquiro/naquiro-male.gltf",
+      "status": 200,
+      "bytes": 535440,
+      "sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_cloth_basecolor.png",
+      "status": 200,
+      "bytes": 217529,
+      "sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_leather_basecolor.png",
+      "status": 200,
+      "bytes": 1264223,
+      "sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_leather_roughness.png",
+      "status": 200,
+      "bytes": 979804,
+      "sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_skin_basecolor.png",
+      "status": 200,
+      "bytes": 1024807,
+      "sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_skin_normal.png",
+      "status": 200,
+      "bytes": 2922746,
+      "sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e"
+    },
+    {
+      "path": "art/characters/naquiro/textures/naquiro_skin_roughness.png",
+      "status": 200,
+      "bytes": 1064842,
+      "sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2"
+    },
+    {
+      "path": "art/resonator.gltf",
+      "status": 200,
+      "bytes": 3334,
+      "sha256": "f003f03735ccbff6ee48d03208eb11bdfd611e6143f9dc6ef1a82abfd0e0f129"
+    },
+    {
+      "path": "art/resonator.bin",
+      "status": 200,
+      "bytes": 85824,
+      "sha256": "c37986967d8d96b39c90a6e702a7ea512b7d4f3308bb278c46c42635e376799f"
+    },
+    {
+      "path": "audio/01_farol_estavel.wav",
+      "status": 200,
+      "bytes": 6912302,
+      "sha256": "80a1596855c651407dc70c385a5e455b0c90886c5d47fa2eea5c5753fba8b563"
+    },
+    {
+      "path": "audio/02_farol_enfraquecido.wav",
+      "status": 200,
+      "bytes": 6912306,
+      "sha256": "d7accff051229b10818b12b40b0cd948701773adefa6859e70dd6c5d690c07a3"
+    },
+    {
+      "path": "audio/03_farol_critico.wav",
+      "status": 200,
+      "bytes": 6912316,
+      "sha256": "94e20d390930c688d0feb9180d69ca6e7bc5ee58f249ac8bce75bf99fbf420a9"
+    },
+    {
+      "path": "audio/04_descarga_arcana.mp3",
+      "status": 200,
+      "bytes": 83391,
+      "sha256": "7e8c98ebfed0838acc10c30b61d053d3cd95f6cd1678ff0c38c5559f08dcb888"
+    },
+    {
+      "path": "audio/05_barreira_protetora.mp3",
+      "status": 200,
+      "bytes": 97797,
+      "sha256": "ea35152fa52cf6b82ae89c2407c7302029ebf80a376e8b4a12e2ca96e982e6f7"
+    },
+    {
+      "path": "audio/06_flecha_especial.mp3",
+      "status": 200,
+      "bytes": 66683,
+      "sha256": "5fc6a7b20e82c09320988b72f6b83a719d946ec077e178133b95144bec21dfab"
+    },
+    {
+      "path": "audio/07_pulso_de_cura.mp3",
+      "status": 200,
+      "bytes": 102397,
+      "sha256": "b9f5391a5128d160f995e8f90e651e67d05a6ab6b1e97a5bf42a3e4e2f27dbbc"
+    }
+  ],
+  "legacyEntry": true,
+  "naquiroErranteAccountEntry": true,
+  "serverConfirmedMovementBothFlows": true,
+  "secondSessionRejected": true,
+  "gracefulRestart": true,
+  "accountWriterLockReleasedOnBothStops": true,
+  "diskSavesEqualBeforeRestart": true,
+  "legacyAndAccountProgressEqualAfterRestart": true,
+  "integrity": "ok",
+  "foreignKeyErrors": 0,
+  "shutdowns": [
+    {
+      "code": 0,
+      "signal": null
+    },
+    {
+      "code": 0,
+      "signal": null
+    }
+  ],
+  "realUserDataAccessed": false,
+  "fixtureLocation": "Private synthetic temporary directory; paths, credentials and database bodies excluded from this report",
+  "limits": "HTTP bytes/public WS/persistence smoke only; no model appearance, physical GPU, Windows, gameplay soak or historical B1.1 reproduction claim"
+}

@@ -1,28 +1,18 @@
-# Ecos dos Faróis — Alpha 0.3 candidata
+# Ecos dos Faróis — Náquiro 001, candidato experimental
 
-Esta versão evolui a Alpha 0.2 enviada pelo usuário: HUD mais compacto, alvo/alcance/recarga mais claros, passe de materiais/personagens/cena, câmera com obstáculos e efeitos reduzidos, áudio V1.1 refinado, uma receita e um companheiro básico do Errante.
+Versão `0.3.1-naquiro.1`. Inclui a base jogável Alpha 0.3 e a primeira representação esquelética optativa do Náquiro masculino Errante. Não é aceite de arte final nem validação Windows/GPU.
 
-**Continua candidata.** As artes conceituais ainda não foram atingidas. Modelos/rigs finais, dublagem PT-BR e aceite Windows continuam pendentes. O incidente original Windows B1.1 não foi declarado resolvido.
+1. Confira os hashes e extraia **todas as partes Jogo na mesma pasta nova**. São ZIPs independentes complementares; não concatene e não extraia sobre dados existentes.
+2. Tenha Node.js 24.13+ da linha24. Build, áudio e ws acompanham a distribuição; Blender e npm ci não são necessários para apenas jogar.
+3. Siga [docs/WINDOWS_NAQUIRO_001.md](docs/WINDOWS_NAQUIRO_001.md) para iniciar com bancos novos de laboratório e uma janela anônima/perfil separado. Isso preserva os arquivos e as chaves de retorno do navegador habitual.
+4. No navegador, abra o jogo com `?character=naquiro-male` e escolha **Confluência → Náquiros → Errante**. Sem a opção, ou nas outras combinações, o visual anterior permanece disponível.
+5. Abra `/character-lab.html` para examinar as vistas, as 11 animações, a linha do tempo e a topologia. Jump/Land/Swim são apresentações no ateliê; não adicionam mecânicas ao mundo.
+6. Encerre o servidor por Ctrl+C e aguarde a confirmação antes de reiniciar.
 
-## Jogar no Windows
+As fontes Blender são entregues em pacote separado: extraídas na mesma pasta principal, acrescentam `art-source/naquiro-male` com o .blend editável, GLB portátil, mapas e scripts. O jogo utiliza o glTF/PNGs locais exportados, mantendo a política de segurança existente.
 
-1. Confira SHA-256 e extraia as **duas partes na mesma pasta nova**. Não concatene os ZIPs e não misture com a versão anterior.
-2. Tenha Node.js 24.13+ da linha24 instalado.
-3. Na pasta `Ecos_dos_Farois_Alpha_0_3`, execute `Jogar_Ecos_dos_Farois.cmd`.
-4. Mantenha o terminal aberto; o navegador abre em http://127.0.0.1:8787/ após health confirmar a versão.
-5. Crie um personagem ou use a chave existente no banco correto. Aparência é cosmética.
-6. Encerre por Ctrl+C no terminal e aguarde a confirmação.
+Não mova bancos em uso, apague locks ou substitua os saves anteriores para experimentar o modelo. Use uma cópia fria dos dados somente depois do checkpoint e do procedimento do guia. Não há migração de esquema, mudança de gênero ou interpretação nova de appearance.
 
-Os builds, áudios e `ws` acompanham a entrega; não é necessário baixar dependências para jogar quando a extração estiver completa. Não abra o HTML diretamente.
+A modelagem atual é autoral assistida por scripts Blender, com malha deformável e materiais mapeados, mas a retopologia manual, o acabamento de rosto/cabelo/roupa, a revisão humana de fidelidade e a medição Windows/GPU ainda estão pendentes. [Detalhes técnicos e limites](docs/CHARACTER_NAQUIRO_001.md).
 
-## Percurso
-
-Converse com Elara ou Lyssara → aceite a missão → três Bruminos/dois Cernes → saque/retorno/recompensa → equipe → três ecos → Núcleo Fraturado → restaure o Farol. Depois da missão inicial, a bancada prepara tônico com duas Seivas claras e três moedas; Errante pode enfraquecer um Brumino a20–40%, parar o autoataque e iniciar vínculo de8s pelo menu Companheiro na mochila. Receita, nomes, números e vínculo único são experimentais.
-
-WASD/setas: mover; mouse direito/roda: câmera; Tab/clique: alvo;1/espaço:autoataque;2–5:habilidades;6:tônico;E:interagir;F:saque;I:mochila;J:diário;M:áudio;H:ajuda;Esc:fechar. Passe mouse/foco na hotbar para detalhes/prévia; o servidor decide o resultado.
-
-## Preservar dados e validar
-
-O banco padrão fica em `data/ecos-alpha.sqlite` da nova pasta. Não há importação, conversão ou restauração automática. Para reutilizar dados existentes, pare a versão anterior, confirme exclusividade, preserve backup frio e configure caminhos absolutos, mantendo legado e contas separados. Não apague bancos/WAL/SHM/locks/guard para iniciar.
-
-Leia **docs/WINDOWS_ALPHA_0_3.md** antes de usar saves existentes. Ali estão PowerShell, testes, som/silêncio, reinício e rollback. Consulte também **docs/REPORT_ALPHA_0_3.md**, **docs/MATRIZ_ALPHA_0_3.md**, **docs/ART_ALPHA_0_3.md** e **docs/AUDIO_ALPHA_0_3.md**. O ambiente executado nesta missão foi Linux; roteiro PowerShell não equivale a execução Windows.
+Controles e percurso da base preservados: WASD/setas mover, mouse direito/roda câmera, Tab/clique alvo, 1/Espaço autoataque, 2–5 habilidades, 6 tônico, E interagir, F saque, I mochila, J diário, M áudio, H ajuda e Esc fechar. Combate, missões, áudio, inventário, ofício/companheiro e autoridade do servidor seguem os contratos existentes.

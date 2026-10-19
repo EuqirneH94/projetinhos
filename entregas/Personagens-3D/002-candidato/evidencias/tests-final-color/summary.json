@@ -1,0 +1,112 @@
+{
+  "node": "v24.14.0",
+  "isolated_character_tests": {
+    "pass": 14,
+    "fail": 0,
+    "duration_ms": 9545.02231
+  },
+  "full_suite": {
+    "pass": 109,
+    "fail": 0,
+    "duration_ms": 205638.183686,
+    "infrastructure_observation": "Global cloud execution pause during three concurrent tests (~152 seconds each), also affected unrelated pwd/tail/API jobs; no application failures, no timeout changes."
+  },
+  "regression_red": {
+    "pass": 0,
+    "fail": 1,
+    "skin_vertex": 1843,
+    "rgb": [
+      0.8357824063477531,
+      0.9463797970550087,
+      0.004242008087281605
+    ]
+  },
+  "baseline_test_files": [
+    {
+      "file": "jogos/ecos-dos-farois/tests/accounts-network.test.ts",
+      "sha256": "e3e1e5375ee89c3af7b791c4ed20322ef03d69052a7691a67cf33796da7ee866",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/accounts.test.ts",
+      "sha256": "58528fd91418d49a983efc3cde4daebb1a1924a78c9ebbedab1ba26e0090c458",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/alpha.test.ts",
+      "sha256": "35a6e1657f3b6d4a0a693fb2f5991083e5c5221145d81f1659662d42ebaf87f9",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/audio-voice.test.ts",
+      "sha256": "4b67639d39fb944ac566c17d4740d1224a64445c7ca195b6e071699a1dafb7ba",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/audio.test.ts",
+      "sha256": "cc59c269f0941c9dab9314e551292ab0b5ad61495c2be0929c0eeeec82a0ef17",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/combat.test.ts",
+      "sha256": "3ec4ca55eb7f8fe4a8c0b86f93028ff5272278bbe283d3c56c741dfb1ed4a1a9",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/extended.test.ts",
+      "sha256": "cc1d2271714facbdfca663370b13b35775a5f8443bf49244aa3b817c2e22fa81",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/foundation.test.ts",
+      "sha256": "e9d94af5e36db333393a4e5be5ac27f3290ce0e3e6804eb925a0b21b552be4a8",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/integration.test.ts",
+      "sha256": "a71bec9c60e7bb2a3107b87dcfff5e151e8616e6368cc240c8288285aa464b63",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/lifecycle.test.ts",
+      "sha256": "5292cfd2160379e03ce93004bbf63d545fdb2815440c474b85959b13e274e227",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/network-watchdog.test.ts",
+      "sha256": "0607b471b7998d9845065cbe12f54d172465db1e4490316132f39bc72f0a23bc",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/progression.test.ts",
+      "sha256": "33ba2f9f14d11b66439deab09ceebefd89899c46099eb21d7c12e622c1ba9889",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/render.test.ts",
+      "sha256": "b24fcc4af3a1d1d2d9d3ea6906d0e54a76a34108e64d3c05d82e12099ff5c22f",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/scene-audio.test.ts",
+      "sha256": "609c68210270083cba7354c13f22c270571a5bbb1ea81efb910585232fad894b",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/ui-accessibility.test.ts",
+      "sha256": "879b1b87f5afdaedc9e6b57aea4afa4fc16bf2a92d9b4f50c8e8474e53a9ea5c",
+      "unchanged": true
+    },
+    {
+      "file": "jogos/ecos-dos-farois/tests/ui.test.ts",
+      "sha256": "2a10c52ceea6bdd9ae4b1a7bf398a7c59bec78eb22de696cee3771c18c7a87f6",
+      "unchanged": true
+    }
+  ],
+  "new_tests_file_sha256": "6dd388d3ff150e10e56b313fa997b279e2e6f1096ab7fc186807fd44331a42ac",
+  "asset_files": {
+    "naquiro-male.gltf": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95",
+    "naquiro-male.bin": "11d4e92762111d18a955b0aecec2965c6c22d8a3aecf9cc2c83d76adcf33fb10"
+  },
+  "windows_executed": false
+}

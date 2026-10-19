@@ -1,0 +1,2343 @@
+{
+  "asset_id": "EDF-NAQUIRO-MALE-001",
+  "candidate_version": "0.1.0",
+  "class_id": "errante",
+  "status": "production candidate; artistic and Windows/GPU approval pending",
+  "source": "Original surface model, textures, rig and keyed animation generated in Blender by project scripts; concept sheets guide design, no third-party model/texture extraction.",
+  "runtime": "/art/characters/naquiro/naquiro-male.gltf",
+  "portable": "art-source/naquiro-male/naquiro-male.glb",
+  "coordinate_system": {
+    "source_up": "Z",
+    "source_front": "-Y",
+    "runtime_up": "Y",
+    "runtime_front": "+Z",
+    "origin": "feet",
+    "nominal_height": 2.3,
+    "height_is_canonical": false
+  },
+  "source_base": {
+    "file": "base.blend",
+    "bytes": 11007892,
+    "sha256": "257f577ad7ab65a15ff11d8b7c51039b9009352ed0507f80678834c1c5c331da"
+  },
+  "source_files": {
+    "inspect_asset.py": {
+      "bytes": 6266,
+      "sha256": "e0be0a57c68dd0f6b19a2c57c69d17ac0527068afcd76865894b72a0959ea80a"
+    },
+    "model.py": {
+      "bytes": 32335,
+      "sha256": "a45294b04e5302abeecef277c60a22311b0c39a75b63fee91e286eba6c49ca9e"
+    },
+    "rig_export.py": {
+      "bytes": 27781,
+      "sha256": "b19395bb153e38682211f256e27c7147091b1657b45423d83a2967a2509efea7"
+    },
+    "textures/naquiro_cloth_basecolor.png": {
+      "bytes": 217529,
+      "sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0"
+    },
+    "textures/naquiro_leather_basecolor.png": {
+      "bytes": 1264223,
+      "sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9"
+    },
+    "textures/naquiro_leather_roughness.png": {
+      "bytes": 1020257,
+      "sha256": "043ce48dd3da3923547cb8dc88ee661d65da28b0253a637185d9e5f4c9cb2090"
+    },
+    "textures/naquiro_skin_basecolor.png": {
+      "bytes": 1024807,
+      "sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b"
+    },
+    "textures/naquiro_skin_normal.png": {
+      "bytes": 2922746,
+      "sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e"
+    },
+    "textures/naquiro_skin_roughness.png": {
+      "bytes": 1108398,
+      "sha256": "b0fa0c636d3b3169b1bee4ecd2af0dad1b4a0457b696224c191a4e1fa8abed46"
+    }
+  },
+  "portable_source_images_packed": true,
+  "triangle_count": 29866,
+  "materials": 6,
+  "skins": 1,
+  "bones": [
+    "root",
+    "pelvis",
+    "spine_01",
+    "spine_02",
+    "chest",
+    "neck",
+    "head",
+    "hair_01",
+    "clavicle_L",
+    "upperarm_L",
+    "forearm_L",
+    "hand_L",
+    "finger1_01_L",
+    "finger1_02_L",
+    "finger2_01_L",
+    "finger2_02_L",
+    "finger3_01_L",
+    "finger3_02_L",
+    "finger4_01_L",
+    "finger4_02_L",
+    "thumb_01_L",
+    "thumb_02_L",
+    "thigh_L",
+    "shin_L",
+    "foot_L",
+    "toe_L",
+    "ear_L",
+    "clavicle_R",
+    "upperarm_R",
+    "forearm_R",
+    "hand_R",
+    "finger1_01_R",
+    "finger1_02_R",
+    "finger2_01_R",
+    "finger2_02_R",
+    "finger3_01_R",
+    "finger3_02_R",
+    "finger4_01_R",
+    "finger4_02_R",
+    "thumb_01_R",
+    "thumb_02_R",
+    "thigh_R",
+    "shin_R",
+    "foot_R",
+    "toe_R",
+    "ear_R"
+  ],
+  "bone_landmarks_blender": {
+    "root": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0.2
+      ]
+    ],
+    "pelvis": [
+      [
+        0,
+        0,
+        1.08
+      ],
+      [
+        0,
+        0,
+        1.23
+      ]
+    ],
+    "spine_01": [
+      [
+        0,
+        0,
+        1.23
+      ],
+      [
+        0,
+        0,
+        1.4
+      ]
+    ],
+    "spine_02": [
+      [
+        0,
+        0,
+        1.4
+      ],
+      [
+        0,
+        0,
+        1.57
+      ]
+    ],
+    "chest": [
+      [
+        0,
+        0,
+        1.57
+      ],
+      [
+        0,
+        0,
+        1.76
+      ]
+    ],
+    "neck": [
+      [
+        0,
+        0,
+        1.76
+      ],
+      [
+        0,
+        0,
+        1.91
+      ]
+    ],
+    "head": [
+      [
+        0,
+        0,
+        1.91
+      ],
+      [
+        0,
+        0,
+        2.25
+      ]
+    ],
+    "hair_01": [
+      [
+        0,
+        0.045,
+        2.12
+      ],
+      [
+        0,
+        0.17,
+        2.28
+      ]
+    ],
+    "clavicle_L": [
+      [
+        0,
+        0,
+        1.73
+      ],
+      [
+        0.31,
+        0,
+        1.73
+      ]
+    ],
+    "upperarm_L": [
+      [
+        0.31,
+        0,
+        1.73
+      ],
+      [
+        0.53,
+        -0.005,
+        1.44
+      ]
+    ],
+    "forearm_L": [
+      [
+        0.53,
+        -0.005,
+        1.44
+      ],
+      [
+        0.66,
+        -0.025,
+        1.18
+      ]
+    ],
+    "hand_L": [
+      [
+        0.66,
+        -0.025,
+        1.18
+      ],
+      [
+        0.69,
+        -0.03,
+        1.08
+      ]
+    ],
+    "finger1_01_L": [
+      [
+        0.655,
+        -0.03,
+        1.125
+      ],
+      [
+        0.655,
+        -0.035,
+        1.0775000000000001
+      ]
+    ],
+    "finger1_02_L": [
+      [
+        0.655,
+        -0.035,
+        1.0775000000000001
+      ],
+      [
+        0.655,
+        -0.04,
+        1.03
+      ]
+    ],
+    "finger2_01_L": [
+      [
+        0.678,
+        -0.03,
+        1.125
+      ],
+      [
+        0.678,
+        -0.035,
+        1.0675
+      ]
+    ],
+    "finger2_02_L": [
+      [
+        0.678,
+        -0.035,
+        1.0675
+      ],
+      [
+        0.678,
+        -0.04,
+        1.01
+      ]
+    ],
+    "finger3_01_L": [
+      [
+        0.703,
+        -0.03,
+        1.125
+      ],
+      [
+        0.703,
+        -0.035,
+        1.0675
+      ]
+    ],
+    "finger3_02_L": [
+      [
+        0.703,
+        -0.035,
+        1.0675
+      ],
+      [
+        0.703,
+        -0.04,
+        1.01
+      ]
+    ],
+    "finger4_01_L": [
+      [
+        0.725,
+        -0.03,
+        1.125
+      ],
+      [
+        0.725,
+        -0.035,
+        1.0775000000000001
+      ]
+    ],
+    "finger4_02_L": [
+      [
+        0.725,
+        -0.035,
+        1.0775000000000001
+      ],
+      [
+        0.725,
+        -0.04,
+        1.03
+      ]
+    ],
+    "thumb_01_L": [
+      [
+        0.651,
+        -0.032,
+        1.151
+      ],
+      [
+        0.644,
+        -0.045,
+        1.11
+      ]
+    ],
+    "thumb_02_L": [
+      [
+        0.644,
+        -0.045,
+        1.11
+      ],
+      [
+        0.637,
+        -0.058,
+        1.07
+      ]
+    ],
+    "thigh_L": [
+      [
+        0.145,
+        0,
+        1.05
+      ],
+      [
+        0.155,
+        -0.035,
+        0.61
+      ]
+    ],
+    "shin_L": [
+      [
+        0.155,
+        -0.035,
+        0.61
+      ],
+      [
+        0.15,
+        0.01,
+        0.15
+      ]
+    ],
+    "foot_L": [
+      [
+        0.15,
+        0.01,
+        0.15
+      ],
+      [
+        0.15,
+        -0.2,
+        0.075
+      ]
+    ],
+    "toe_L": [
+      [
+        0.15,
+        -0.2,
+        0.075
+      ],
+      [
+        0.15,
+        -0.3,
+        0.055
+      ]
+    ],
+    "ear_L": [
+      [
+        0.125,
+        0.015,
+        2.04
+      ],
+      [
+        0.36,
+        0.025,
+        2.12
+      ]
+    ],
+    "clavicle_R": [
+      [
+        0,
+        0,
+        1.73
+      ],
+      [
+        -0.31,
+        0,
+        1.73
+      ]
+    ],
+    "upperarm_R": [
+      [
+        -0.31,
+        0,
+        1.73
+      ],
+      [
+        -0.53,
+        -0.005,
+        1.44
+      ]
+    ],
+    "forearm_R": [
+      [
+        -0.53,
+        -0.005,
+        1.44
+      ],
+      [
+        -0.66,
+        -0.025,
+        1.18
+      ]
+    ],
+    "hand_R": [
+      [
+        -0.66,
+        -0.025,
+        1.18
+      ],
+      [
+        -0.69,
+        -0.03,
+        1.08
+      ]
+    ],
+    "finger1_01_R": [
+      [
+        -0.655,
+        -0.03,
+        1.125
+      ],
+      [
+        -0.655,
+        -0.035,
+        1.0775000000000001
+      ]
+    ],
+    "finger1_02_R": [
+      [
+        -0.655,
+        -0.035,
+        1.0775000000000001
+      ],
+      [
+        -0.655,
+        -0.04,
+        1.03
+      ]
+    ],
+    "finger2_01_R": [
+      [
+        -0.678,
+        -0.03,
+        1.125
+      ],
+      [
+        -0.678,
+        -0.035,
+        1.0675
+      ]
+    ],
+    "finger2_02_R": [
+      [
+        -0.678,
+        -0.035,
+        1.0675
+      ],
+      [
+        -0.678,
+        -0.04,
+        1.01
+      ]
+    ],
+    "finger3_01_R": [
+      [
+        -0.703,
+        -0.03,
+        1.125
+      ],
+      [
+        -0.703,
+        -0.035,
+        1.0675
+      ]
+    ],
+    "finger3_02_R": [
+      [
+        -0.703,
+        -0.035,
+        1.0675
+      ],
+      [
+        -0.703,
+        -0.04,
+        1.01
+      ]
+    ],
+    "finger4_01_R": [
+      [
+        -0.725,
+        -0.03,
+        1.125
+      ],
+      [
+        -0.725,
+        -0.035,
+        1.0775000000000001
+      ]
+    ],
+    "finger4_02_R": [
+      [
+        -0.725,
+        -0.035,
+        1.0775000000000001
+      ],
+      [
+        -0.725,
+        -0.04,
+        1.03
+      ]
+    ],
+    "thumb_01_R": [
+      [
+        -0.651,
+        -0.032,
+        1.151
+      ],
+      [
+        -0.644,
+        -0.045,
+        1.11
+      ]
+    ],
+    "thumb_02_R": [
+      [
+        -0.644,
+        -0.045,
+        1.11
+      ],
+      [
+        -0.637,
+        -0.058,
+        1.07
+      ]
+    ],
+    "thigh_R": [
+      [
+        -0.145,
+        0,
+        1.05
+      ],
+      [
+        -0.155,
+        -0.035,
+        0.61
+      ]
+    ],
+    "shin_R": [
+      [
+        -0.155,
+        -0.035,
+        0.61
+      ],
+      [
+        -0.15,
+        0.01,
+        0.15
+      ]
+    ],
+    "foot_R": [
+      [
+        -0.15,
+        0.01,
+        0.15
+      ],
+      [
+        -0.15,
+        -0.2,
+        0.075
+      ]
+    ],
+    "toe_R": [
+      [
+        -0.15,
+        -0.2,
+        0.075
+      ],
+      [
+        -0.15,
+        -0.3,
+        0.055
+      ]
+    ],
+    "ear_R": [
+      [
+        -0.125,
+        0.015,
+        2.04
+      ],
+      [
+        -0.36,
+        0.025,
+        2.12
+      ]
+    ]
+  },
+  "clips": [
+    {
+      "name": "Idle",
+      "frames": 61,
+      "duration_seconds": 2.5,
+      "channels": 322
+    },
+    {
+      "name": "Walk",
+      "frames": 25,
+      "duration_seconds": 1.0,
+      "channels": 322
+    },
+    {
+      "name": "Run",
+      "frames": 17,
+      "duration_seconds": 0.6666666666666666,
+      "channels": 322
+    },
+    {
+      "name": "Jump",
+      "frames": 23,
+      "duration_seconds": 0.9166666666666666,
+      "channels": 322
+    },
+    {
+      "name": "Land",
+      "frames": 13,
+      "duration_seconds": 0.5,
+      "channels": 322
+    },
+    {
+      "name": "Attack",
+      "frames": 25,
+      "duration_seconds": 1.0,
+      "channels": 322
+    },
+    {
+      "name": "Cast",
+      "frames": 37,
+      "duration_seconds": 1.5,
+      "channels": 322
+    },
+    {
+      "name": "Hit",
+      "frames": 13,
+      "duration_seconds": 0.5,
+      "channels": 322
+    },
+    {
+      "name": "Death",
+      "frames": 35,
+      "duration_seconds": 1.4166666666666667,
+      "channels": 322
+    },
+    {
+      "name": "Recover",
+      "frames": 37,
+      "duration_seconds": 1.5,
+      "channels": 322
+    },
+    {
+      "name": "Swim",
+      "frames": 37,
+      "duration_seconds": 1.5,
+      "channels": 322
+    }
+  ],
+  "exported_clips": [
+    "Attack",
+    "Cast",
+    "Death",
+    "Hit",
+    "Idle",
+    "Jump",
+    "Land",
+    "Recover",
+    "Run",
+    "Swim",
+    "Walk"
+  ],
+  "sockets": {
+    "bow": "hand_L",
+    "draw": "hand_R",
+    "back": "chest"
+  },
+  "max_vertex_influences": 4,
+  "locomotion_nominal_metres_per_second": {
+    "Walk": 0.967752426531497,
+    "Run": 3.0000324547290798
+  },
+  "locomotion_contact_measurements": {
+    "Walk": {
+      "measured_metres_per_second": 0.967752426531497,
+      "sides": {
+        "L": {
+          "samples": 14,
+          "measured_velocity_metres_per_second": 0.9677524193302611,
+          "linear_contact_residual_max_metres": 1.2625049772285735e-07,
+          "vertical_contact_range_metres": 0.0013198554515838623,
+          "lateral_contact_range_metres": 1.7881393432617188e-06,
+          "samples_blender_z_up": [
+            {
+              "time_in_stance": 0.041666666666666664,
+              "position": [
+                0.14999888837337494,
+                -0.2596803903579712,
+                0.11479610204696655
+              ]
+            },
+            {
+              "time_in_stance": 0.08333333333333333,
+              "position": [
+                0.14999893307685852,
+                -0.2193572223186493,
+                0.11476325988769531
+              ]
+            },
+            {
+              "time_in_stance": 0.125,
+              "position": [
+                0.1499989926815033,
+                -0.1790342628955841,
+                0.11357530951499939
+              ]
+            },
+            {
+              "time_in_stance": 0.16666666666666666,
+              "position": [
+                0.14999906718730927,
+                -0.13871142268180847,
+                0.11381673812866211
+              ]
+            },
+            {
+              "time_in_stance": 0.20833333333333334,
+              "position": [
+                0.14999917149543762,
+                -0.09838823229074478,
+                0.114035964012146
+              ]
+            },
+            {
+              "time_in_stance": 0.25,
+              "position": [
+                0.14999927580356598,
+                -0.058065325021743774,
+                0.1142338216304779
+              ]
+            },
+            {
+              "time_in_stance": 0.2916666666666667,
+              "position": [
+                0.14999938011169434,
+                -0.017742246389389038,
+                0.11441004276275635
+              ]
+            },
+            {
+              "time_in_stance": 0.3333333333333333,
+              "position": [
+                0.1499994844198227,
+                0.022580817341804504,
+                0.11456295847892761
+              ]
+            },
+            {
+              "time_in_stance": 0.375,
+              "position": [
+                0.14999961853027344,
+                0.0629037618637085,
+                0.11468982696533203
+              ]
+            },
+            {
+              "time_in_stance": 0.4166666666666667,
+              "position": [
+                0.14999978244304657,
+                0.10322679579257965,
+                0.11478844285011292
+              ]
+            },
+            {
+              "time_in_stance": 0.4583333333333333,
+              "position": [
+                0.1499999463558197,
+                0.14354979991912842,
+                0.11485636234283447
+              ]
+            },
+            {
+              "time_in_stance": 0.5,
+              "position": [
+                0.15000015497207642,
+                0.18387287855148315,
+                0.11489242315292358
+              ]
+            },
+            {
+              "time_in_stance": 0.5416666666666666,
+              "position": [
+                0.15000039339065552,
+                0.22419583797454834,
+                0.11489516496658325
+              ]
+            },
+            {
+              "time_in_stance": 0.5833333333333334,
+              "position": [
+                0.1500006765127182,
+                0.2645189166069031,
+                0.11486321687698364
+              ]
+            }
+          ]
+        },
+        "R": {
+          "samples": 15,
+          "measured_velocity_metres_per_second": 0.9677524337327329,
+          "linear_contact_residual_max_metres": 1.2631717560829259e-07,
+          "vertical_contact_range_metres": 0.001382201910018921,
+          "lateral_contact_range_metres": 1.7881393432617188e-06,
+          "samples_blender_z_up": [
+            {
+              "time_in_stance": 0.5,
+              "position": [
+                -0.15000015497207642,
+                0.18387287855148315,
+                0.11479467153549194
+              ]
+            },
+            {
+              "time_in_stance": 0.5416666666666666,
+              "position": [
+                -0.15000039339065552,
+                0.22419583797454834,
+                0.11479568481445312
+              ]
+            },
+            {
+              "time_in_stance": 0.5833333333333334,
+              "position": [
+                -0.1500006765127182,
+                0.2645189166069031,
+                0.11476296186447144
+              ]
+            },
+            {
+              "time_in_stance": 0.04166666666666652,
+              "position": [
+                -0.14999888837337494,
+                -0.2596803903579712,
+                0.1148955225944519
+              ]
+            },
+            {
+              "time_in_stance": 0.08333333333333348,
+              "position": [
+                -0.14999893307685852,
+                -0.2193572223186493,
+                0.11486351490020752
+              ]
+            },
+            {
+              "time_in_stance": 0.125,
+              "position": [
+                -0.1499989926815033,
+                -0.1790342628955841,
+                0.11351332068443298
+              ]
+            },
+            {
+              "time_in_stance": 0.16666666666666652,
+              "position": [
+                -0.14999906718730927,
+                -0.13871142268180847,
+                0.11375004053115845
+              ]
+            },
+            {
+              "time_in_stance": 0.20833333333333348,
+              "position": [
+                -0.14999917149543762,
+                -0.09838823229074478,
+                0.11396491527557373
+              ]
+            },
+            {
+              "time_in_stance": 0.25,
+              "position": [
+                -0.14999927580356598,
+                -0.058065325021743774,
+                0.11415860056877136
+              ]
+            },
+            {
+              "time_in_stance": 0.2916666666666665,
+              "position": [
+                -0.14999938011169434,
+                -0.017742246389389038,
+                0.11433053016662598
+              ]
+            },
+            {
+              "time_in_stance": 0.3333333333333335,
+              "position": [
+                -0.1499994844198227,
+                0.022580817341804504,
+                0.11447909474372864
+              ]
+            },
+            {
+              "time_in_stance": 0.375,
+              "position": [
+                -0.14999961853027344,
+                0.0629037618637085,
+                0.11460185050964355
+              ]
+            },
+            {
+              "time_in_stance": 0.4166666666666665,
+              "position": [
+                -0.14999978244304657,
+                0.10322679579257965,
+                0.11469653248786926
+              ]
+            },
+            {
+              "time_in_stance": 0.4583333333333335,
+              "position": [
+                -0.1499999463558197,
+                0.14354979991912842,
+                0.11476123332977295
+              ]
+            },
+            {
+              "time_in_stance": 0.5,
+              "position": [
+                -0.15000015497207642,
+                0.18387287855148315,
+                0.11479467153549194
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "Run": {
+      "measured_metres_per_second": 3.0000324547290798,
+      "sides": {
+        "L": {
+          "samples": 7,
+          "measured_velocity_metres_per_second": 3.0000324547290798,
+          "linear_contact_residual_max_metres": 8.887478275543259e-08,
+          "vertical_contact_range_metres": 0.0020493268966674805,
+          "lateral_contact_range_metres": 2.518296241760254e-06,
+          "samples_blender_z_up": [
+            {
+              "time_in_stance": 0.041666666666666664,
+              "position": [
+                0.14999845623970032,
+                -0.3750041127204895,
+                0.11297938227653503
+              ]
+            },
+            {
+              "time_in_stance": 0.08333333333333333,
+              "position": [
+                0.14999845623970032,
+                -0.25000283122062683,
+                0.11357009410858154
+              ]
+            },
+            {
+              "time_in_stance": 0.125,
+              "position": [
+                0.14999866485595703,
+                -0.1250014305114746,
+                0.11404821276664734
+              ]
+            },
+            {
+              "time_in_stance": 0.16666666666666666,
+              "position": [
+                0.14999903738498688,
+                -1.341104507446289e-07,
+                0.1144305169582367
+              ]
+            },
+            {
+              "time_in_stance": 0.20833333333333334,
+              "position": [
+                0.14999952912330627,
+                0.12500135600566864,
+                0.11472269892692566
+              ]
+            },
+            {
+              "time_in_stance": 0.25,
+              "position": [
+                0.15000014007091522,
+                0.25000259280204773,
+                0.11492347717285156
+              ]
+            },
+            {
+              "time_in_stance": 0.2916666666666667,
+              "position": [
+                0.15000097453594208,
+                0.37500396370887756,
+                0.11502870917320251
+              ]
+            }
+          ]
+        },
+        "R": {
+          "samples": 7,
+          "measured_velocity_metres_per_second": 3.0000324547290798,
+          "linear_contact_residual_max_metres": 8.887478275543259e-08,
+          "vertical_contact_range_metres": 0.001964092254638672,
+          "lateral_contact_range_metres": 2.518296241760254e-06,
+          "samples_blender_z_up": [
+            {
+              "time_in_stance": 0.041666666666666664,
+              "position": [
+                -0.14999845623970032,
+                -0.3750041127204895,
+                0.11294862627983093
+              ]
+            },
+            {
+              "time_in_stance": 0.08333333333333333,
+              "position": [
+                -0.14999845623970032,
+                -0.25000283122062683,
+                0.11350888013839722
+              ]
+            },
+            {
+              "time_in_stance": 0.125,
+              "position": [
+                -0.14999866485595703,
+                -0.1250014305114746,
+                0.11396655440330505
+              ]
+            },
+            {
+              "time_in_stance": 0.16666666666666666,
+              "position": [
+                -0.14999903738498688,
+                -1.341104507446289e-07,
+                0.11433389782905579
+              ]
+            },
+            {
+              "time_in_stance": 0.20833333333333334,
+              "position": [
+                -0.14999952912330627,
+                0.12500135600566864,
+                0.11461547017097473
+              ]
+            },
+            {
+              "time_in_stance": 0.25,
+              "position": [
+                -0.15000014007091522,
+                0.25000259280204773,
+                0.11480963230133057
+              ]
+            },
+            {
+              "time_in_stance": 0.2916666666666667,
+              "position": [
+                -0.15000097453594208,
+                0.37500396370887756,
+                0.1149127185344696
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "foot_grounding": {
+    "source_neutral_surface_min_z": 0.03963794931769371,
+    "neutral_pelvis_offset_z": -0.03663794931769371,
+    "target_surface_min_z": 0.003,
+    "grounded_clips": [
+      "Attack",
+      "Cast",
+      "Hit",
+      "Idle",
+      "Run",
+      "Walk"
+    ],
+    "airborne_or_fallen_clips": [
+      "Jump",
+      "Land",
+      "Death",
+      "Recover"
+    ],
+    "swim_uses_floor_constraint": false,
+    "logical_root_translation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "evaluated_animation_bounds": {
+    "Idle": {
+      "frames_evaluated": 61,
+      "minimum_floor_z": 0.0029999278485774994,
+      "maximum_height_z": 2.2544057369232178,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.2350597009062767,
+          2.253742218017578
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4822835549712181,
+          2.2507422901690006
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 7.21514225006728e-08,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 7.21514225006728e-08
+    },
+    "Walk": {
+      "frames_evaluated": 25,
+      "minimum_floor_z": 0.0029999129474163055,
+      "maximum_height_z": 2.1861400604248047,
+      "final_bounds": {
+        "minimum": [
+          -0.47301599383354187,
+          -0.5571651458740234,
+          0.002999972552061081
+        ],
+        "maximum": [
+          0.6612738370895386,
+          0.28045907616615295,
+          2.170372486114502
+        ],
+        "size": [
+          1.1342898309230804,
+          0.8376242220401764,
+          2.167372513562441
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.0015336028039455414,
+      "minimum_floor_correction": 0.00015140089392662055,
+      "maximum_floor_correction": 0.0015336028039455414
+    },
+    "Run": {
+      "frames_evaluated": 17,
+      "minimum_floor_z": 0.0029999390244483948,
+      "maximum_height_z": 2.105647087097168,
+      "final_bounds": {
+        "minimum": [
+          -0.49571937322616577,
+          -0.7571660876274109,
+          0.002999972552061081
+        ],
+        "maximum": [
+          0.6481228470802307,
+          0.5999563932418823,
+          2.070836067199707
+        ],
+        "size": [
+          1.1438422203063965,
+          1.3571224808692932,
+          2.067836094647646
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.004062024384737015,
+      "minimum_floor_correction": -0.0004134052693843841,
+      "maximum_floor_correction": 0.004062024384737015
+    },
+    "Jump": {
+      "frames_evaluated": 23,
+      "minimum_floor_z": 0.0029999278485774994,
+      "maximum_height_z": 2.6155247688293457,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.07390108096599579,
+      "minimum_floor_correction": 0.0,
+      "maximum_floor_correction": 0.07390108096599579
+    },
+    "Land": {
+      "frames_evaluated": 13,
+      "minimum_floor_z": 0.002999868243932724,
+      "maximum_height_z": 2.2534384727478027,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.04121251168847084,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 0.04121251168847084
+    },
+    "Attack": {
+      "frames_evaluated": 25,
+      "minimum_floor_z": 0.0029999278485774994,
+      "maximum_height_z": 2.253706455230713,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 7.21514225006728e-08,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 7.21514225006728e-08
+    },
+    "Cast": {
+      "frames_evaluated": 37,
+      "minimum_floor_z": 0.0029999278485774994,
+      "maximum_height_z": 2.2534384727478027,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 7.21514225006728e-08,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 7.21514225006728e-08
+    },
+    "Hit": {
+      "frames_evaluated": 13,
+      "minimum_floor_z": 0.0029998905956745148,
+      "maximum_height_z": 2.2584123611450195,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.02340193974971771,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 0.02340193974971771
+    },
+    "Death": {
+      "frames_evaluated": 35,
+      "minimum_floor_z": 0.0029998868703842163,
+      "maximum_height_z": 2.279895305633545,
+      "final_bounds": {
+        "minimum": [
+          -0.9368006587028503,
+          -0.6329039111733437,
+          0.003000020980834961
+        ],
+        "maximum": [
+          1.181270819157362,
+          0.4231477677822113,
+          0.7690515518188477
+        ],
+        "size": [
+          2.1180714778602123,
+          1.056051678955555,
+          0.7660515308380127
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.2619476704597473,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 0.2619476704597473
+    },
+    "Recover": {
+      "frames_evaluated": 37,
+      "minimum_floor_z": 0.0029998980462551117,
+      "maximum_height_z": 2.2801334857940674,
+      "final_bounds": {
+        "minimum": [
+          -0.47042375802993774,
+          -0.2472238540649414,
+          0.0029999278485774994
+        ],
+        "maximum": [
+          0.6631804704666138,
+          0.237102173268795,
+          2.2534384727478027
+        ],
+        "size": [
+          1.1336042284965515,
+          0.4843260273337364,
+          2.2504385448992252
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.26216320085525513,
+      "minimum_floor_correction": 7.21514225006728e-08,
+      "maximum_floor_correction": 0.26216320085525513
+    },
+    "Swim": {
+      "frames_evaluated": 37,
+      "minimum_floor_z": 0.37799444794654846,
+      "maximum_height_z": 2.533757209777832,
+      "final_bounds": {
+        "minimum": [
+          -0.8386430144309998,
+          -0.9562774896621704,
+          0.6413750648498535
+        ],
+        "maximum": [
+          0.6076805591583252,
+          1.1382206305861473,
+          2.533194065093994
+        ],
+        "size": [
+          1.446323573589325,
+          2.0944981202483177,
+          1.8918190002441406
+        ],
+        "vertices": 15269
+      },
+      "maximum_floor_lift": 0.0,
+      "minimum_floor_correction": 0.0,
+      "maximum_floor_correction": 0.0
+    }
+  },
+  "locomotion_contact": {
+    "Walk": {
+      "stride_metres": 0.6,
+      "stance_fraction": 0.62
+    },
+    "Run": {
+      "stride_metres": 1.0,
+      "stance_fraction": 0.5
+    }
+  },
+  "locomotion": "in-place; root bone has no translated or rotated animation; pelvis motion only",
+  "laboratory_only_clips": [
+    "Jump",
+    "Land",
+    "Swim"
+  ],
+  "mesh_source_stats": [
+    {
+      "name": "Anatomia_Continua",
+      "region": "body",
+      "vertices": 5002,
+      "base_polygons": 9537
+    },
+    {
+      "name": "Cabeca_Esculpida",
+      "region": "head",
+      "vertices": 2304,
+      "base_polygons": 4604
+    },
+    {
+      "name": "Olho_3D_L",
+      "region": "head",
+      "vertices": 362,
+      "base_polygons": 384
+    },
+    {
+      "name": "Iris_L",
+      "region": "head",
+      "vertices": 222,
+      "base_polygons": 240
+    },
+    {
+      "name": "Anel_Iris_L",
+      "region": "head",
+      "vertices": 146,
+      "base_polygons": 160
+    },
+    {
+      "name": "Pupila_L",
+      "region": "head",
+      "vertices": 146,
+      "base_polygons": 160
+    },
+    {
+      "name": "Orbita_Anatomica_L",
+      "region": "head",
+      "vertices": 128,
+      "base_polygons": 96
+    },
+    {
+      "name": "Palpebra_Superior_L",
+      "region": "head",
+      "vertices": 102,
+      "base_polygons": 200
+    },
+    {
+      "name": "Palpebra_Inferior_L",
+      "region": "head",
+      "vertices": 102,
+      "base_polygons": 200
+    },
+    {
+      "name": "Sobrancelha_L",
+      "region": "head",
+      "vertices": 28,
+      "base_polygons": 52
+    },
+    {
+      "name": "Narina_L",
+      "region": "head",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Olho_3D_R",
+      "region": "head",
+      "vertices": 362,
+      "base_polygons": 384
+    },
+    {
+      "name": "Iris_R",
+      "region": "head",
+      "vertices": 222,
+      "base_polygons": 240
+    },
+    {
+      "name": "Anel_Iris_R",
+      "region": "head",
+      "vertices": 146,
+      "base_polygons": 160
+    },
+    {
+      "name": "Pupila_R",
+      "region": "head",
+      "vertices": 146,
+      "base_polygons": 160
+    },
+    {
+      "name": "Orbita_Anatomica_R",
+      "region": "head",
+      "vertices": 128,
+      "base_polygons": 96
+    },
+    {
+      "name": "Palpebra_Superior_R",
+      "region": "head",
+      "vertices": 102,
+      "base_polygons": 200
+    },
+    {
+      "name": "Palpebra_Inferior_R",
+      "region": "head",
+      "vertices": 102,
+      "base_polygons": 200
+    },
+    {
+      "name": "Sobrancelha_R",
+      "region": "head",
+      "vertices": 28,
+      "base_polygons": 52
+    },
+    {
+      "name": "Narina_R",
+      "region": "head",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Labio_Superior",
+      "region": "head",
+      "vertices": 175,
+      "base_polygons": 346
+    },
+    {
+      "name": "Labio_Inferior",
+      "region": "head",
+      "vertices": 175,
+      "base_polygons": 346
+    },
+    {
+      "name": "Linha_Oral",
+      "region": "head",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Orelha_Membrana_L",
+      "region": "ear.L",
+      "vertices": 60,
+      "base_polygons": 58
+    },
+    {
+      "name": "Nervura_Orelha_L_0",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_L_1",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_L_2",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_L_3",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_L_4",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_L_5",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Borda_Orelha_L",
+      "region": "ear.L",
+      "vertices": 35,
+      "base_polygons": 66
+    },
+    {
+      "name": "Orelha_Membrana_R",
+      "region": "ear.R",
+      "vertices": 60,
+      "base_polygons": 58
+    },
+    {
+      "name": "Nervura_Orelha_R_0",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_R_1",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_R_2",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_R_3",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_R_4",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Nervura_Orelha_R_5",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Borda_Orelha_R",
+      "region": "ear.R",
+      "vertices": 35,
+      "base_polygons": 66
+    },
+    {
+      "name": "Membrana_Mao_L_0",
+      "region": "hand.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Mao_L_1",
+      "region": "hand.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Mao_L_2",
+      "region": "hand.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_L_0",
+      "region": "foot.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_L_1",
+      "region": "foot.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_L_2",
+      "region": "foot.L",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Mao_R_0",
+      "region": "hand.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Mao_R_1",
+      "region": "hand.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Mao_R_2",
+      "region": "hand.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_R_0",
+      "region": "foot.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_R_1",
+      "region": "foot.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Membrana_Pe_R_2",
+      "region": "foot.R",
+      "vertices": 10,
+      "base_polygons": 16
+    },
+    {
+      "name": "Mecha_Cabelo_00",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Reflexo_Mecha_00",
+      "region": "hair",
+      "vertices": 20,
+      "base_polygons": 36
+    },
+    {
+      "name": "Mecha_Cabelo_01",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_02",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_03",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_04",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_05",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_06",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_07",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Reflexo_Mecha_07",
+      "region": "hair",
+      "vertices": 20,
+      "base_polygons": 36
+    },
+    {
+      "name": "Mecha_Cabelo_08",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_09",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_10",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_11",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_12",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_13",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_14",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Reflexo_Mecha_14",
+      "region": "hair",
+      "vertices": 20,
+      "base_polygons": 36
+    },
+    {
+      "name": "Mecha_Cabelo_15",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_16",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_17",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_18",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_19",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_20",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Cabelo_21",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Reflexo_Mecha_21",
+      "region": "hair",
+      "vertices": 20,
+      "base_polygons": 36
+    },
+    {
+      "name": "Mecha_Cabelo_22",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_00",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_01",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_02",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_03",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_04",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_05",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Mecha_Frontal_06",
+      "region": "hair",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Tranca_L_0",
+      "region": "hair",
+      "vertices": 105,
+      "base_polygons": 206
+    },
+    {
+      "name": "Conta_Tranca_L_0_5",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Conta_Tranca_L_0_10",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Tranca_L_1",
+      "region": "hair",
+      "vertices": 105,
+      "base_polygons": 206
+    },
+    {
+      "name": "Conta_Tranca_L_1_5",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Conta_Tranca_L_1_10",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Tranca_R_0",
+      "region": "hair",
+      "vertices": 105,
+      "base_polygons": 206
+    },
+    {
+      "name": "Conta_Tranca_R_0_5",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Conta_Tranca_R_0_10",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Tranca_R_1",
+      "region": "hair",
+      "vertices": 105,
+      "base_polygons": 206
+    },
+    {
+      "name": "Conta_Tranca_R_1_5",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Conta_Tranca_R_1_10",
+      "region": "hair",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Colete_Lateral_L",
+      "region": "chest",
+      "vertices": 120,
+      "base_polygons": 118
+    },
+    {
+      "name": "Costura_Colete_L",
+      "region": "chest",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Colete_Lateral_R",
+      "region": "chest",
+      "vertices": 120,
+      "base_polygons": 118
+    },
+    {
+      "name": "Costura_Colete_R",
+      "region": "chest",
+      "vertices": 30,
+      "base_polygons": 56
+    },
+    {
+      "name": "Cinto_Couro",
+      "region": "pelvis",
+      "vertices": 80,
+      "base_polygons": 156
+    },
+    {
+      "name": "Tecido_Frontal",
+      "region": "pelvis",
+      "vertices": 70,
+      "base_polygons": 68
+    },
+    {
+      "name": "Tecido_Traseiro",
+      "region": "pelvis",
+      "vertices": 70,
+      "base_polygons": 68
+    },
+    {
+      "name": "Saia_Couro_L",
+      "region": "thigh.L",
+      "vertices": 70,
+      "base_polygons": 68
+    },
+    {
+      "name": "Borda_Saia_L",
+      "region": "thigh.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Saia_Couro_R",
+      "region": "thigh.R",
+      "vertices": 70,
+      "base_polygons": 68
+    },
+    {
+      "name": "Borda_Saia_R",
+      "region": "thigh.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Correia_Diagonal",
+      "region": "chest",
+      "vertices": 128,
+      "base_polygons": 252
+    },
+    {
+      "name": "Costura_Correia_-0.015",
+      "region": "chest",
+      "vertices": 80,
+      "base_polygons": 156
+    },
+    {
+      "name": "Costura_Correia_0.015",
+      "region": "chest",
+      "vertices": 80,
+      "base_polygons": 156
+    },
+    {
+      "name": "Fecho_Madreperola",
+      "region": "pelvis",
+      "vertices": 266,
+      "base_polygons": 288
+    },
+    {
+      "name": "Fecho_Pedra",
+      "region": "pelvis",
+      "vertices": 222,
+      "base_polygons": 240
+    },
+    {
+      "name": "Colar_Fibra",
+      "region": "neck",
+      "vertices": 126,
+      "base_polygons": 248
+    },
+    {
+      "name": "Colar_Perola",
+      "region": "chest",
+      "vertices": 164,
+      "base_polygons": 180
+    },
+    {
+      "name": "Bracadeira_L",
+      "region": "forearm.L",
+      "vertices": 48,
+      "base_polygons": 92
+    },
+    {
+      "name": "Aro_Bracadeira_L_0",
+      "region": "forearm.L",
+      "vertices": 32,
+      "base_polygons": 60
+    },
+    {
+      "name": "Aro_Bracadeira_L_1",
+      "region": "forearm.L",
+      "vertices": 32,
+      "base_polygons": 60
+    },
+    {
+      "name": "Tornozeleira_L",
+      "region": "shin.L",
+      "vertices": 40,
+      "base_polygons": 76
+    },
+    {
+      "name": "Brinco_L",
+      "region": "ear.L",
+      "vertices": 100,
+      "base_polygons": 112
+    },
+    {
+      "name": "Brinco_Pendente_L",
+      "region": "ear.L",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Brinco_Perola_L",
+      "region": "ear.L",
+      "vertices": 86,
+      "base_polygons": 96
+    },
+    {
+      "name": "Bracadeira_R",
+      "region": "forearm.R",
+      "vertices": 48,
+      "base_polygons": 92
+    },
+    {
+      "name": "Aro_Bracadeira_R_0",
+      "region": "forearm.R",
+      "vertices": 32,
+      "base_polygons": 60
+    },
+    {
+      "name": "Aro_Bracadeira_R_1",
+      "region": "forearm.R",
+      "vertices": 32,
+      "base_polygons": 60
+    },
+    {
+      "name": "Tornozeleira_R",
+      "region": "shin.R",
+      "vertices": 40,
+      "base_polygons": 76
+    },
+    {
+      "name": "Brinco_R",
+      "region": "ear.R",
+      "vertices": 100,
+      "base_polygons": 112
+    },
+    {
+      "name": "Brinco_Pendente_R",
+      "region": "ear.R",
+      "vertices": 18,
+      "base_polygons": 32
+    },
+    {
+      "name": "Brinco_Perola_R",
+      "region": "ear.R",
+      "vertices": 86,
+      "base_polygons": 96
+    },
+    {
+      "name": "Arco_Piloto",
+      "region": "bow_L",
+      "vertices": 184,
+      "base_polygons": 364
+    },
+    {
+      "name": "Corda_Arco",
+      "region": "bow_L",
+      "vertices": 15,
+      "base_polygons": 26
+    },
+    {
+      "name": "Empunhadura_Arco",
+      "region": "bow_L",
+      "vertices": 20,
+      "base_polygons": 36
+    },
+    {
+      "name": "Escama_Temporal_L_0",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    },
+    {
+      "name": "Escama_Temporal_L_1",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    },
+    {
+      "name": "Escama_Temporal_L_2",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    },
+    {
+      "name": "Escama_Temporal_R_0",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    },
+    {
+      "name": "Escama_Temporal_R_1",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    },
+    {
+      "name": "Escama_Temporal_R_2",
+      "region": "head",
+      "vertices": 52,
+      "base_polygons": 60
+    }
+  ],
+  "files": {
+    "naquiro-male.bin": {
+      "bytes": 1752928,
+      "sha256": "ec6c48c8a2f9d449274f91a5bfd20720427bafdc58bf5ffb5cebbc7e5b333d1f"
+    },
+    "naquiro-male.gltf": {
+      "bytes": 535440,
+      "sha256": "64cd799e07057499f512a5c7847f2a1b5d8a58ae324515eb4133d77b4f571a95"
+    },
+    "textures/naquiro_cloth_basecolor.png": {
+      "bytes": 217529,
+      "sha256": "0597fdfac5b25fed3d4a0441125b07c329a076821b9466e9d59ecc7235a0b5c0"
+    },
+    "textures/naquiro_leather_basecolor.png": {
+      "bytes": 1264223,
+      "sha256": "57b5ccb22a4effcf210b34049db0eeb0d609abc601a0760f8e132292c326afe9"
+    },
+    "textures/naquiro_leather_roughness.png": {
+      "bytes": 979804,
+      "sha256": "97e48a7b9b98cbdbd1d926ffe945b1ff03ff7236813c6afe1d044dc4dca0794b"
+    },
+    "textures/naquiro_skin_basecolor.png": {
+      "bytes": 1024807,
+      "sha256": "aa5bcfd81f736614278601d6898c896754e1b5b157b0adb0030be3ffb56b5c7b"
+    },
+    "textures/naquiro_skin_normal.png": {
+      "bytes": 2922746,
+      "sha256": "87a00a94d8d830ec39bd90098ba382bd0c2850744c57f2e2590937d4a469938e"
+    },
+    "textures/naquiro_skin_roughness.png": {
+      "bytes": 1064842,
+      "sha256": "0cf53cdb13e4bd3347696cb49e27a8c536fc4d284feaadceef8f81c2440057e2"
+    }
+  }
+}

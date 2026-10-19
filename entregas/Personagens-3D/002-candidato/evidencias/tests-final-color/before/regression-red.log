@@ -1,0 +1,29 @@
+✖ export preserves bright skin and pearl tints instead of wrapping HDR vertex colours (2654.633252ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5137.395167
+
+✖ failing tests:
+
+test at tests/character.test.ts:1:8339
+✖ export preserves bright skin and pearl tints instead of wrapping HDR vertex colours (2654.633252ms)
+  AssertionError [ERR_ASSERTION]: 01_Pele_Escamas_PBR_glTF: vertex 1843 tint [0.8357824063477531, 0.9463797970550087, 0.004242008087281605] violates bright modulation ≥0.5; possible HDR→U16 wrap
+      at <anonymous> (/workspace/projetinhos/jogos/ecos-dos-farois/tests/character.test.ts:183:14)
+      at SkinnedMesh.traverse (file:///workspace/projetinhos/jogos/ecos-dos-farois/node_modules/three/build/three.core.js:12974:3)
+      at Object3D.traverse (file:///workspace/projetinhos/jogos/ecos-dos-farois/node_modules/three/build/three.core.js:12980:18)
+      at Group.traverse (file:///workspace/projetinhos/jogos/ecos-dos-farois/node_modules/three/build/three.core.js:12980:18)
+      at TestContext.<anonymous> (/workspace/projetinhos/jogos/ecos-dos-farois/tests/character.test.ts:169:14)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

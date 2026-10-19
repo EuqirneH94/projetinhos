@@ -19,6 +19,7 @@ import {
   warrior,
 } from "./models.js";
 import { scenery } from "./scenery.js";
+import { SkeletalCharacter, usesExperimentalCharacter } from "./character-runtime.js";
 export type Pick = {
   kind: "enemy" | "npc" | "loot" | "fragment" | "player";
   id: string;
@@ -32,6 +33,11 @@ export class SceneView {
   zoom = 10.5;
   target = new T.Vector3(0, 1.3, 19);
   private players = new Map<string, Actor>();
+  private skeletal = new Map<Actor, SkeletalCharacter>();
+  private readonly characterSearch = window.location.search;
+  private disposed = false;
+  private previousCharacterTime?: number;
+  private readonly onResize = () => this.resize();
   private enemies = new Map<string, Actor>();
   private companions = new Map<string, Actor>();
   private loot = new Map<string, T.Group>();
@@ -127,7 +133,7 @@ export class SceneView {
     this.abilityPreview.visible = false;
     this.scene.add(this.abilityPreview);
     this.resize();
-    window.addEventListener("resize", () => this.resize());
+    window.addEventListener("resize", this.onResize);
   }
   setCreation(c: Creation) {
     this.setFaction(c.factionId);
@@ -145,10 +151,17 @@ export class SceneView {
       c.classId,
       c.appearance,
     );
+    this.attachCharacter(this.previewActor, c.raceId, c.classId);
     this.previewActor.root.position.set(0, 0, 24);
     this.previewActor.root.rotation.y = -0.2;
     this.scene.add(this.previewActor.root);
     this.scenery.setState(0);
+  }
+  private attachCharacter(actor: Actor, raceId?: string, classId?: string) {
+    if (!usesExperimentalCharacter(this.characterSearch, raceId, classId)) return;
+    const character = new SkeletalCharacter(actor.body);
+    actor.root.add(character.root);
+    this.skeletal.set(actor, character);
   }
   private setFaction(f: FactionId) {
     if (f === this.faction) return;
@@ -250,6 +263,11 @@ export class SceneView {
     time: number,
     dt: number,
   ) {
+    if (this.disposed) return;
+    // The simulation dt is intentionally capped for movement. Animation needs
+    // real frame time to avoid interpreting a suspended tab as a fast sprint.
+    const characterDt = this.previousCharacterTime === undefined ? dt : Math.max(0, time - this.previousCharacterTime);
+    this.previousCharacterTime = time;
     this.scenery.animate(time);
     animate(this.scenery.npc, false, time);
     if (state && render) {
@@ -284,6 +302,7 @@ export class SceneView {
             p.classId ?? "sentinela",
             p.appearance ?? 0,
           );
+          this.attachCharacter(actor, p.raceId, p.classId);
           actor.root.userData.kind = "player";
           actor.root.userData.id = p.id;
           const barrier = new T.Mesh(
@@ -310,22 +329,27 @@ export class SceneView {
           actor.root.add(actor.label);
         }
         const pos = p.id === state.you.id && local ? local : p;
+        const character = this.skeletal.get(actor);
+        character?.update({ x: pos.x, z: pos.z, dt: characterDt, dead: p.dead, casting: !!p.casting });
+        const hasSkeleton = character?.status === "loaded";
         actor.root.position.set(
           pos.x,
-          terrainHeight(pos.x, pos.z) + (p.dead ? 0.55 : 0),
+          terrainHeight(pos.x, pos.z) + (p.dead && !hasSkeleton ? 0.55 : 0),
           pos.z,
         );
         actor.root.rotation.y = pos.angle;
-        actor.body.rotation.z = p.dead ? -Math.PI / 2 : 0;
-        animate(actor, p.moving && !p.dead, time);
+        if (!hasSkeleton) {
+          actor.body.rotation.z = p.dead ? -Math.PI / 2 : 0;
+          animate(actor, p.moving && !p.dead, time);
+        }
         const barrier = actor.root.getObjectByName("barrier");
         if (barrier) barrier.visible = !!p.barrier;
-        if (p.casting) {
+        if (p.casting && !hasSkeleton) {
           actor.arm.rotation.x = -1.45 + Math.sin(time * 5) * 0.05;
           const other = actor.root.userData.otherArm as T.Group;
           if (other) other.rotation.x = -0.95;
         }
-        if (actor.sword)
+        if (actor.sword && !hasSkeleton)
           (actor.sword.material as T.MeshStandardMaterial).color.setHex(
             p.weapon === "dawnSword"
               ? 0xf1d18d
@@ -333,7 +357,7 @@ export class SceneView {
                 ? 0x85c3ae
                 : 0xadbcc0,
           );
-        if (!p.dead && actor.root.userData.swingUntil > time)
+        if (!hasSkeleton && !p.dead && actor.root.userData.swingUntil > time)
           actor.arm.rotation.x -=
             Math.sin(
               ((actor.root.userData.swingUntil - time) / 0.28) * Math.PI,
@@ -476,6 +500,14 @@ export class SceneView {
       if (state.tick !== this.lastEvents) {
         this.lastEvents = state.tick;
         for (const e of state.events) {
+          // Body animation follows authoritative events even when cosmetic
+          // effects are reduced or their transient-object budget is exhausted.
+          const source = e.sourceId ? this.players.get(e.sourceId) : undefined;
+          const target = e.targetId ? this.players.get(e.targetId) : undefined;
+          if (source && ["hit", "slash", "projectile", "nova"].includes(e.kind))
+            this.skeletal.get(source)?.event("attack");
+          if (target && e.kind === "hit") this.skeletal.get(target)?.event("hit");
+          if (target && e.kind === "respawn") this.skeletal.get(target)?.event("respawn");
           // Essential numeric feedback remains in reduced mode. Cosmetic
           // waves/projectiles are capped and can be disabled independently.
           if (this.reducedEffects && !["hit","heal"].includes(e.kind)) continue;
@@ -574,7 +606,11 @@ export class SceneView {
       this.abilityPreview.visible = false;
       this.target.set(0, 1.6, 24);
       this.yaw = -0.25 + Math.sin(time * 0.04) * 0.07;
-      if (this.previewActor) animate(this.previewActor, false, time);
+      if (this.previewActor) {
+        const character = this.skeletal.get(this.previewActor);
+        character?.update({ x: 0, z: 24, dt: characterDt, dead: false, casting: false });
+        if (character?.status !== "loaded") animate(this.previewActor, false, time);
+      }
     }
     for (let i = this.effects.length - 1; i >= 0; i--) {
       const fx = this.effects[i],
@@ -635,9 +671,40 @@ export class SceneView {
       cameraDistance: Math.round(this.cameraDistance*100)/100,
       cameraObstructed: this.cameraObstructed,
       asset: this.scenery.assetState(),
+      character: this.characterMetrics(state?.you.id),
+      characters: [...this.skeletal].map(([actor, character]) => ({
+        id: actor.root.userData.id ?? "preview",
+        x: actor.root.position.x,
+        z: actor.root.position.z,
+        ...character.diagnostics(),
+      })),
     };
   }
+  private characterMetrics(playerId?: string) {
+    const actor = playerId ? this.players.get(playerId) : this.previewActor;
+    const character = actor ? this.skeletal.get(actor) : undefined;
+    return character?.diagnostics() ?? {
+      status: new URLSearchParams(this.characterSearch).get("character") === "naquiro-male" ? "ineligible" : "disabled",
+      experimental: new URLSearchParams(this.characterSearch).get("character") === "naquiro-male",
+      assetId: null, clip: null, stats: null,
+    };
+  }
+  /** Explicit teardown for page/laboratory owners; pending assets cannot return. */
+  dispose() {
+    if (this.disposed) return;
+    this.disposed = true;
+    window.removeEventListener("resize", this.onResize);
+    for (const character of this.skeletal.values()) character.dispose();
+    this.skeletal.clear();
+    this.scenery.disposeAssets();
+    this.disposeObject(this.scene);
+    this.scene.clear();
+    this.players.clear(); this.enemies.clear(); this.companions.clear(); this.loot.clear();
+    this.renderer.dispose();
+  }
   private disposeActor(a: Actor) {
+    this.skeletal.get(a)?.dispose();
+    this.skeletal.delete(a);
     a.root.traverse((o) => {
       if (o instanceof T.Mesh) {
         o.geometry.dispose();

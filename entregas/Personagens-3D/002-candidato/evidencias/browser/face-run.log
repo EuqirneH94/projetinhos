@@ -1,0 +1,6 @@
+CAPTURE review-face-1280x720.png
+CAPTURE review-front-1280x720.png
+CAPTURE review-three-quarter-1280x720.png
+color_review_asset_loaded {'passed': True, 'detail': None}
+color_review_no_unhandled_errors {'passed': True, 'detail': None}
+DONE {'completed': True, 'errors': 0}

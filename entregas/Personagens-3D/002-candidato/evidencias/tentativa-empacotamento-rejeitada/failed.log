@@ -1,0 +1,17 @@
+/workspace/edf-naquiro-production/delivery/EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch:202353: trailing whitespace.
+	#if defined( USE_CLEARCOAT ) 
+/workspace/edf-naquiro-production/delivery/EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch:202356: trailing whitespace.
+	#if defined( USE_SHEEN ) 
+/workspace/edf-naquiro-production/delivery/EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch:202841: trailing whitespace.
+		
+/workspace/edf-naquiro-production/delivery/EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch:203508: trailing whitespace.
+ 
+/workspace/edf-naquiro-production/delivery/EDF_ALPHA_0_3_PARA_NAQUIRO_001.patch:203509: space before tab in indent.
+ 		sheenSpecularDirect += irradiance * BRDF_Sheen( directLight.direction, geometryViewDir, geometryNormal, material.sheenColor, material.sheenRoughness );
+warning: squelched 16 whitespace errors
+warning: 21 lines add whitespace errors.
+Traceback (most recent call last):
+  File "/workspace/edf-naquiro-production/support/package-naquiro.py", line 105, in <module>
+    assert stage_set == patch_set, (sorted(stage_set-patch_set), sorted(patch_set-stage_set))
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ([], ['checkpoints/etapa-01.zip', 'checkpoints/etapa-02.zip', 'checkpoints/etapa-03.zip'])

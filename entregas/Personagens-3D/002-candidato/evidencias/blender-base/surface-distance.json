@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "maximum_allowed_metres": 0.008,
+  "objects": {
+    "Narina_L": {
+      "vertices": 18,
+      "maximum_nearest_head_distance": 0.0032507451251149178,
+      "mean_nearest_head_distance": 0.0014665669724409883
+    },
+    "Narina_R": {
+      "vertices": 18,
+      "maximum_nearest_head_distance": 0.0032507451251149178,
+      "mean_nearest_head_distance": 0.0012032431303749844
+    },
+    "Labio_Superior": {
+      "vertices": 175,
+      "maximum_nearest_head_distance": 0.00592441949993372,
+      "mean_nearest_head_distance": 0.002016892555319438
+    },
+    "Labio_Inferior": {
+      "vertices": 175,
+      "maximum_nearest_head_distance": 0.005190584808588028,
+      "mean_nearest_head_distance": 0.0019024813210957552
+    },
+    "Linha_Oral": {
+      "vertices": 30,
+      "maximum_nearest_head_distance": 0.0028377845883369446,
+      "mean_nearest_head_distance": 0.0011488094254067012
+    }
+  },
+  "note": "Spatial proximity corroborates renders; mouth remains an editable fitted surface, not a watertight fused sculpt."
+}

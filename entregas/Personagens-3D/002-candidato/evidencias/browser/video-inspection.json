@@ -1,0 +1,30 @@
+{
+  "video": "naquiro-atelie-360.mp4",
+  "source": "naquiro-atelie-360.webm",
+  "sourceIs": "Actual continuous Chromium compositor capture, not Blender studio rendering",
+  "durationSeconds": 50.28,
+  "width": 960,
+  "height": 720,
+  "encodingFrameRate": "25/1",
+  "frameRateCaveat": "Container encoding rate is not measured unique render FPS; software compositor may duplicate frames.",
+  "mp4Sha256": "a9d4329f8571e2dbf04657756110cf39449a891d38b991e1a50b148d24a7d1ac",
+  "sourceWebmSha256": "7b1499a28511ad0371fb75258e0e0e5fd2a3245bc598c9c38352142f03fa6531",
+  "conversion": "FFmpeg libx264, two threads, veryfast, CRF23, yuv420p, faststart; no speed change, interpolation or invented frames",
+  "extractedFrames": [
+    {
+      "file": "video-lab-frame-1.png",
+      "timestampSeconds": 12.57,
+      "fraction": 0.25
+    },
+    {
+      "file": "video-lab-frame-2.png",
+      "timestampSeconds": 25.14,
+      "fraction": 0.5
+    },
+    {
+      "file": "video-lab-frame-3.png",
+      "timestampSeconds": 37.71,
+      "fraction": 0.75
+    }
+  ]
+}

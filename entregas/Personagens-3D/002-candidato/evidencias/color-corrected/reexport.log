@@ -1,0 +1,38 @@
+Info: No new files have been packed
+Info: Saved "naquiro-male.blend"
+ERROR Draco mesh compression is not available because library could not be found at /usr/bin/4.3/python/lib/python3.13/site-packages/libextern_draco.so
+12:06:04 | INFO: Starting glTF 2.0 export
+12:06:04 | INFO: Extracting primitive: torso_sections
+12:06:07 | INFO: Primitives created: 1
+12:06:07 | INFO: Extracting primitive: Sphere
+12:06:07 | INFO: Primitives created: 1
+12:06:07 | INFO: Extracting primitive: Sphere.003
+12:06:07 | INFO: Primitives created: 1
+12:06:07 | INFO: Extracting primitive: Conta_Tranca_L_0_5
+12:06:08 | INFO: Primitives created: 1
+12:06:08 | INFO: Extracting primitive: Colete_Lateral_L
+12:06:09 | INFO: Primitives created: 1
+12:06:09 | INFO: Extracting primitive: Tecido_Frontal
+12:06:09 | INFO: Primitives created: 1
+12:06:38 | INFO: Finished glTF 2.0 export in 33.72805094718933 s
+
+12:06:38 | INFO: Starting glTF 2.0 export
+12:06:38 | INFO: Extracting primitive: torso_sections
+12:06:53 | INFO: Primitives created: 1
+12:06:53 | INFO: Extracting primitive: Sphere
+12:06:54 | INFO: Primitives created: 1
+12:06:54 | INFO: Extracting primitive: Sphere.003
+12:06:54 | INFO: Primitives created: 1
+12:06:54 | INFO: Extracting primitive: Conta_Tranca_L_0_5
+12:07:06 | INFO: Primitives created: 1
+12:07:06 | INFO: Extracting primitive: Colete_Lateral_L
+12:07:10 | INFO: Primitives created: 1
+12:07:10 | INFO: Extracting primitive: Tecido_Frontal
+12:07:10 | INFO: Primitives created: 1
+12:07:40 | INFO: Finished glTF 2.0 export in 62.2726194858551 s
+
+NAQUIRO_EXPORT_REPORT {"triangles": 29866, "materials": 6, "bones": 46, "clips": ["Attack", "Cast", "Death", "Hit", "Idle", "Jump", "Land", "Recover", "Run", "Swim", "Walk"], "files": 8}
+Blender 4.3.2
+Read blend: "/workspace/projetinhos/jogos/ecos-dos-farois/art-source/naquiro-male/base.blend"
+
+Blender quit

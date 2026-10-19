@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#102b33" />
+  <title>Náquiro masculino · Ateliê de Ecos dos Faróis</title>
+  <link rel="icon" href="data:," />
+  <script type="module" crossorigin src="/assets/characterLab-BqSbiFTr.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="modulepreload" crossorigin href="/assets/character-assets-Bs3qe43D.js">
+  <link rel="stylesheet" crossorigin href="/assets/characterLab-Csoda7jg.css">
+</head>
+<body>
+  <header>
+    <div><span class="eyebrow">ECOS DOS FARÓIS · ATELIÊ 3D</span><h1>Náquiro masculino</h1></div>
+    <a href="/?character=naquiro-male">Experimentar no jogo ↗</a>
+  </header>
+  <main>
+    <section class="stage" aria-label="Inspeção tridimensional do personagem">
+      <canvas id="character" aria-label="Modelo 3D Náquiro, use o mouse para girar e a roda para aproximar"></canvas>
+      <div class="stage-caption"><span id="load-state" role="status">Carregando o estudo 3D…</span><span>Arraste para girar · Roda para aproximar</span></div>
+    </section>
+    <aside aria-label="Controles de apresentação">
+      <span class="eyebrow">ESTUDO DE PERSONAGEM · 001</span>
+      <p class="intro">Anatomia anfíbia, pele turquesa e materiais marítimos. Candidato artístico em revisão.</p>
+      <fieldset><legend>Inspecionar</legend><div class="views">
+        <button data-view="front">Frente</button><button data-view="side">Perfil</button><button data-view="back">Costas</button>
+        <button data-view="face">Rosto</button><button data-view="hands">Mãos</button><button data-view="feet">Pés</button>
+      </div></fieldset>
+      <label for="clip">Animação</label>
+      <select id="clip" disabled><option value="Neutral">Pose neutra</option></select>
+      <div class="playback"><button id="play" disabled>Pausar</button><output id="time">0,00 s</output></div>
+      <label for="timeline">Posição no clip</label>
+      <input id="timeline" type="range" min="0" max="1" value="0" step="0.001" disabled />
+      <label class="check"><input id="turntable" type="checkbox" /> Giro 360°</label>
+      <label class="check"><input id="wireframe" type="checkbox" /> Ver topologia</label>
+      <details><summary>Dados do modelo</summary><pre id="stats">Aguardando o arquivo…</pre></details>
+      <p class="scope">Salto e natação são demonstrações de animação neste ateliê. O jogo mantém seus controles e regras atuais. No mundo, a opção experimental aplica-se apenas a Náquiros Errantes.</p>
+      <p id="error" role="alert" hidden></p>
+    </aside>
+  </main>
+</body>
+</html>

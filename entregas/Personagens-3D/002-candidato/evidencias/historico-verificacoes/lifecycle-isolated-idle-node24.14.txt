@@ -1,0 +1,20 @@
+(node:5737) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ processo real: character_enter recebe 20 estados, encerra e reabre preservando conta/personagem (2267.117328ms)
+✔ processo real: falha controlada tick libera lock e permite reinício (699.555218ms)
+✔ processo real: falha controlada rejection libera lock e permite reinício (763.856314ms)
+✔ processo real: falha controlada exception libera lock e permite reinício (759.90142ms)
+✔ processo real: falha controlada exit libera lock e permite reinício (797.077331ms)
+✔ término forçado: guard liberado pelo SO, órfão arquivado, dois reinícios disputam um único escritor (912.410617ms)
+✔ lock B1 vazio e proprietário vivo são preservados e bloqueiam recuperação automática (4.965565ms)
+✔ falha de inicialização diagnosticada libera somente recursos próprios (342.855535ms)
+✔ API: origem inválida libera recursos e encerramento é idempotente (14.069792ms)
+✔ release recusa apagar metadado substituído e falha de schema limpa lock próprio (6.053367ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 6920.946002

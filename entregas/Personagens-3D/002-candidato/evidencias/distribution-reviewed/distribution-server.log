@@ -1,0 +1,12 @@
+(node:72475) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"time":"2026-10-19T12:34:37.172Z","event":"server_ready","pid":72475,"ppid":72457,"node":"v24.14.0","platform":"linux","port":41921,"accountsEnabled":true}
+Ecos dos Faróis • servidor em http://127.0.0.1:41921
+{"time":"2026-10-19T12:34:39.625Z","event":"server_shutdown_begin","pid":72475,"ppid":72457,"node":"v24.14.0","platform":"linux","phase":"SIGINT","exitCode":0}
+{"time":"2026-10-19T12:34:39.636Z","event":"server_shutdown_complete","pid":72475,"ppid":72457,"node":"v24.14.0","platform":"linux","phase":"SIGINT","exitCode":0}
+(node:72522) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"time":"2026-10-19T12:34:40.017Z","event":"server_ready","pid":72522,"ppid":72457,"node":"v24.14.0","platform":"linux","port":41921,"accountsEnabled":true}
+Ecos dos Faróis • servidor em http://127.0.0.1:41921
+{"time":"2026-10-19T12:34:40.213Z","event":"server_shutdown_begin","pid":72522,"ppid":72457,"node":"v24.14.0","platform":"linux","phase":"SIGINT","exitCode":0}
+{"time":"2026-10-19T12:34:40.214Z","event":"server_shutdown_complete","pid":72522,"ppid":72457,"node":"v24.14.0","platform":"linux","phase":"SIGINT","exitCode":0}
