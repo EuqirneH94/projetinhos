@@ -4,6 +4,7 @@ import { spawn } from 'node:child_process';
 import { mkdtempSync, rmSync, existsSync, readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { randomUUID } from 'node:crypto';
 import { createGameServer } from '../server/src/server.js';
 import { createServer } from 'node:net';
@@ -27,7 +28,7 @@ function fixture() {
 }
 async function launch(f:ReturnType<typeof fixture>, failure='none', env:NodeJS.ProcessEnv={}) {
   const p = await port(); let log = '', exited = false;
-  const child = spawn(process.execPath, ['--import','tsx','--import',resolve('tests/support/lifecycle-hook.ts'),'server/src/index.ts'], {
+  const child = spawn(process.execPath, ['--import','tsx','--import',pathToFileURL(resolve('tests/support/lifecycle-hook.ts')).href,'server/src/index.ts'], {
     cwd:process.cwd(), env:{...process.env, PORT:String(p), HOST:'127.0.0.1', DB_PATH:join(f.dir,'legacy.sqlite'), ACCOUNTS_DB_PATH:f.path, EDF_TEST_FAILURE:failure,...env},
     stdio:['ignore','pipe','pipe','ipc'], windowsHide:true
   });
