@@ -6,9 +6,9 @@ Este fluxo reutiliza o `AccountStore` real (SQLite) e mantém os saves legados s
 
 1. Faça cópia da pasta do projeto antes de atualizar o código. Pare qualquer processo Node da cópia em uso.
 2. Na raiz deste repositório, execute `npm.cmd ci --no-fund --no-audit`.
-3. Execute `.\scripts\INICIAR_CONTAS_WINDOWS.ps1` **no PowerShell**. Se sua política bloquear scripts, use `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\INICIAR_CONTAS_WINDOWS.ps1`; isto não instala nada.
-4. No **mesmo PowerShell**, execute `npm.cmd run account:create:local` com o servidor desligado. Guarde a chave exibida sem enviá-la a ninguém.
-5. Execute `npm.cmd run build`, `npm.cmd test` e então `npm.cmd run dev`.
+3. Com o servidor parado, execute `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\INICIAR_CONTAS_WINDOWS.ps1 -CriarConta`. Guarde a chave exibida sem enviá-la a ninguém.
+4. Execute `npm.cmd run build` e `npm.cmd test`.
+5. Inicie com `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\INICIAR_CONTAS_WINDOWS.ps1 -IniciarJogo`.
 6. Abra `http://localhost:5173/accounts.html`, cole sua chave **no navegador local** e crie personagem dentro das combinações canônicas.
 7. Clique em **Entrar no mundo**. A sessão da conta é mantida somente na guia atual (`sessionStorage`).
 
