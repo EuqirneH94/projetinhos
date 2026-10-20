@@ -5,7 +5,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $project = Split-Path -Parent $PSScriptRoot
 Set-Location -LiteralPath $project
-$env:ACCOUNTS_DB_PATH = Join-Path $project 'data\edf-accounts-v1.sqlite'
+$env:ACCOUNTS_DB_PATH = Join-Path $project 'data\edf-accounts-v2.sqlite'
 Write-Host 'ECOS DOS FAROIS - CONTAS LOCAIS' -ForegroundColor Cyan
 Write-Host 'Banco de contas isolado:' $env:ACCOUNTS_DB_PATH
 if (-not (Test-Path -LiteralPath (Join-Path $project 'node_modules'))) {
