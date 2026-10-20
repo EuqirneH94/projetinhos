@@ -21,7 +21,8 @@
     "verify:files": "node scripts/verify-files.mjs",
     "test:journey": "node --import tsx scripts/replay-alpha.ts",
     "test:slice": "node --import tsx scripts/replay-slice.ts",
-    "test:soak": "node --import tsx scripts/soak-alpha.ts"
+    "test:soak": "node --import tsx scripts/soak-alpha.ts",
+    "account:create:local": "node --import tsx scripts/create-local-account.ts"
   },
   "dependencies": {
     "three": "0.186.1",
