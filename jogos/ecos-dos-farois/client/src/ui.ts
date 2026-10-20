@@ -31,6 +31,7 @@ import {
   type Creation,
 } from "../../shared/alpha.js";
 import { distance } from "../../shared/movement.js";
+import { factionMark, raceMark, classMark, skillMark } from "./iconography.js";
 import { DEFAULT_AUDIO, type AudioSettings } from "./audio-synth.js";
 import { actionHint } from "./ui-state.js";
 import { CRAFT_STATION, RECIPE, MATERIAL, TAMING } from "../../shared/extended.js";
@@ -108,14 +109,14 @@ export class UI {
     root.innerHTML = `
  <header class="topbar"><div class="wordmark"><span class="brand-glyph">◇</span><span>ECOS DOS FARÓIS<small>FANTASIA HEROICA ARCANA</small></span><b class="build">ALPHA 0.3 · CANDIDATA</b></div><div class="top-actions"><button id="sound-button" aria-label="Configurar áudio">♫</button><button id="quality">Qualidade: alta</button><button id="help-button">Controles <kbd>H</kbd></button><button id="exit" hidden>Sair</button></div></header>
  <section id="entry" class="entry"><div class="eyebrow">QUANDO A LUZ SE APAGA, O MUNDO MUDA.</div><h1>Escolha<br>seu caminho.</h1><p class="intro">Dois povos unidos pela vigília.<br>Dois povos guiados pelas correntes.<br>Uma mesma luz começa a falhar.</p>
- <form id="entry-form" class="entry-card"><div class="creation-step"><span>01</span> SUA FACÇÃO</div><div class="faction-options"><button type="button" data-faction="vigilia" class="selected"><i>◇</i>A Vigília</button><button type="button" data-faction="confluencia"><i>◈</i>A Confluência</button></div>
+ <form id="entry-form" class="entry-card"><div class="creation-step"><span>01</span> SUA FACÇÃO</div><div class="faction-options"><button type="button" data-faction="vigilia" class="selected">${factionMark("vigilia")}A Vigília</button><button type="button" data-faction="confluencia">${factionMark("confluencia")}A Confluência</button></div>
  <label class="race-row" for="race"><span class="creation-step"><span>02</span> SEU POVO</span><select id="race"></select></label>
- <div class="creation-step"><span>03</span> SUA CLASSE</div><div class="class-options">${(["sentinela", "arcanista", "errante", "ressonante"] as ClassId[]).map((id, i) => `<button type="button" data-class="${id}" class="${i === 0 ? "selected" : ""}">${icon(["shield", "nova", "cleave", "nova"][i])}<span>${CLASS_NAMES[id]}</span></button>`).join("")}</div><p id="class-description" class="class-description"></p>
+ <div class="creation-step"><span>03</span> SUA CLASSE</div><div class="class-options">${(["sentinela", "arcanista", "errante", "ressonante"] as ClassId[]).map((id, i) => `<button type="button" data-class="${id}" class="${i === 0 ? "selected" : ""}">${classMark(id)}<span>${CLASS_NAMES[id]}</span></button>`).join("")}</div><p id="class-description" class="class-description"></p>
  <div class="appearance-inline"><span class="creation-step"><span>04</span> APARÊNCIA</span><div class="appearance-options">${[0, 1, 2].map((i) => `<button type="button" data-appearance="${i}" class="swatch swatch-${i} ${i === 0 ? "selected" : ""}" aria-label="Aparência ${i + 1}"></button>`).join("")}</div></div>
  <label class="name-label" for="nickname">Como devemos chamar você?</label><input id="nickname" maxlength="18" minlength="3" placeholder="Nome do personagem" autocomplete="nickname" required>
  <button class="primary" id="enter" type="submit">Entrar no mundo <span>→</span></button><button type="button" id="continue" class="secondary" hidden>Continuar jornada</button>
  <details class="recovery"><summary>Tenho uma chave de retorno</summary><input id="recovery-token" aria-label="Chave privada de retorno" maxlength="43" autocomplete="off" placeholder="Cole sua chave privada"><button type="button" id="recover" class="secondary">Recuperar personagem</button></details><p id="entry-error" role="status"></p><small class="entry-note">Progresso salvo neste servidor · mundo compartilhado</small></form></section>
- <div id="preview-caption"><span id="preview-race">VALDÁRIOS</span><strong id="preview-class">Sentinela</strong><small id="preview-faction">A Vigília</small><span class="preview-detail">A aparência não altera seus atributos.</span></div>
+ <div id="preview-caption"><span id="preview-race">${raceMark("valdarios")} VALDÁRIOS</span><strong id="preview-class">Sentinela</strong><small id="preview-faction">A Vigília</small><span class="preview-detail">A aparência não altera seus atributos.</span></div>
  <div id="hud" hidden>
  <section class="vitals panel"><div class="avatar"><span id="class-avatar">◇</span><b id="level">1</b></div><div class="vitals-body"><div class="name-row"><strong id="name"></strong><small id="class-label"></small></div><div class="bar health"><i id="health-fill"></i><span id="health-text"></span></div><div class="bar energy"><i id="energy-fill"></i><span id="energy-text"></span></div></div></section>
  <aside class="world-info"><div class="zone-label"><span class="eyebrow" id="faction-label"></span><h2 id="zone"></h2><small id="connection"></small></div><button id="map-toggle" class="map-toggle" aria-expanded="true" aria-controls="map-wrap" title="Mostrar ou recolher mapa">Mapa da região <span>⌃</span></button><div class="panel map-wrap" id="map-wrap"><canvas id="minimap" width="220" height="200" aria-label="Mapa da região"></canvas><span class="map-north">N</span></div><section class="quest-tracker panel" id="quest-tracker"></section></aside>
@@ -123,7 +124,7 @@ export class UI {
  <section id="cast" class="cast panel" hidden><span id="cast-label"></span><div class="bar"><i id="cast-fill"></i></div></section>
  <div class="combat-hint"><kbd>Tab</kbd> selecionar alvo · <kbd>1</kbd> autoataque · <kbd>E</kbd> interagir</div>
  <div id="action-feedback" class="action-feedback" role="status" hidden></div><div id="skill-tooltip" class="skill-tooltip panel" role="tooltip" hidden></div>
- <nav class="hotbar panel" aria-label="Habilidades e atalhos">${ABILITY_KEYS.map((skill, i) => `<button class="skill" id="skill-${skill}"><kbd>${i + 1}</kbd>${icon(["sword", "cleave", "nova", "shield", "nova"][i])}<i class="cooldown-cover"></i><b class="cooldown-number"></b><span></span><small></small><em class="skill-state"></em></button>`).join("")}<button id="quick-potion" class="skill potion-skill"><kbd>6</kbd>${icon("potion")}<i class="cooldown-cover"></i><b class="cooldown-number"></b><span>Tônico</span><small id="potion-count"></small></button><div class="utility-buttons"><button id="bag-button" title="Mochila · I">${icon("bag")}<span>Mochila <kbd>I</kbd></span></button><button id="journal-button" title="Diário · J">${icon("scroll")}<span>Diário <kbd>J</kbd></span></button></div></nav>
+ <nav class="hotbar panel" aria-label="Habilidades e atalhos">${ABILITY_KEYS.map((skill, i) => `<button class="skill" id="skill-${skill}"><kbd>${i + 1}</kbd>${skillMark("sentinela", skill)}<i class="cooldown-cover"></i><b class="cooldown-number"></b><span></span><small></small><em class="skill-state"></em></button>`).join("")}<button id="quick-potion" class="skill potion-skill"><kbd>6</kbd>${icon("potion")}<i class="cooldown-cover"></i><b class="cooldown-number"></b><span>Tônico</span><small id="potion-count"></small></button><div class="utility-buttons"><button id="bag-button" title="Mochila · I">${icon("bag")}<span>Mochila <kbd>I</kbd></span></button><button id="journal-button" title="Diário · J">${icon("scroll")}<span>Diário <kbd>J</kbd></span></button></div></nav>
  <button id="context" class="context panel" hidden></button>
  <div class="xp-wrap"><div class="xp-caption" id="xp-caption"></div><div class="xp-bar"><i id="xp-fill"></i></div></div><div class="bottom-brand">ECOS DOS FARÓIS <span>·</span> NEXO FORTE TECNOLOGIA</div>
  <div id="joystick" class="joystick"><span></span></div><div class="touch-zoom"><button id="zoom-in" aria-label="Aproximar">+</button><button id="zoom-out" aria-label="Afastar">−</button></div>
@@ -348,7 +349,7 @@ export class UI {
         );
     this.el("class-description").textContent =
       CLASS_DESCRIPTION[this.creation.classId];
-    this.el("preview-race").textContent = RACE_NAMES[this.creation.raceId];
+    this.el("preview-race").innerHTML = `${raceMark(this.creation.raceId)} ${RACE_NAMES[this.creation.raceId]}`;
     this.el("preview-class").textContent = CLASS_NAMES[this.creation.classId];
     this.el("preview-faction").textContent =
       FACTION_NAMES[this.creation.factionId];
@@ -684,8 +685,7 @@ export class UI {
       for (const key of ABILITY_KEYS) {
         const a = p.classId ? CLASS_KITS[p.classId][key] : SKILLS[key],
           b = this.el("skill-" + key);
-        const symbols = p.classId === "errante" ? ["bow", "bow", "ring", "shield", "heart"] : p.classId === "ressonante" ? ["note", "bolt", "ring", "shield", "heart"] : p.classId === "arcanista" ? ["nova", "bolt", "ring", "shield", "heart"] : ["sword", "shield", "ring", "shield", "heart"];
-        b.querySelector("svg")!.outerHTML = icon(symbols[ABILITY_KEYS.indexOf(key)]);
+        b.querySelector("svg")!.outerHTML = skillMark(p.classId ?? "sentinela", key);
         b.querySelector("span")!.textContent = a.name;
         b.querySelector("small")!.textContent = a.cost
           ? `${a.cost} energia`
